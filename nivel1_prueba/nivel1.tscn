@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dl37rbmvhcxkw"]
+
+[ext_resource type="PackedScene" uid="uid://bcwb5s7inarp2" path="res://map/cabin.tscn" id="1_11ijd"]
+[ext_resource type="PackedScene" uid="uid://5mgb2l278x3l" path="res://addons/jugador.tscn" id="2_milgm"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_11ijd"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_milgm"]
+sky_material = SubResource("ProceduralSkyMaterial_11ijd")
+
+[sub_resource type="Environment" id="Environment_ont3d"]
+background_mode = 2
+sky = SubResource("Sky_milgm")
+tonemap_mode = 2
+
+[node name="Nivel1" type="Node3D" unique_id=1505825485]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=873909723]
+environment = SubResource("Environment_ont3d")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1239209663]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Player" parent="." unique_id=2146257891 instance=ExtResource("2_milgm")]
+transform = Transform3D(-0.99282634, 0, 0.11956501, 0, 1, 0, -0.11956501, 0, -0.99282634, 12.941864, 0.26777482, -6.238762)
+
+[node name="GreyBoxing" parent="." unique_id=1843936670 instance=ExtResource("1_11ijd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.861023e-06, 1.4305115e-06, 0)
