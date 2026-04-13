@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://brn3oavhdankg"]
+
+[ext_resource type="Script" uid="uid://b11ruvv7eeeyc" path="res://main_menu/button.gd" id="1_tq1aa"]
+[ext_resource type="FontFile" uid="uid://dnch4xopn1vy1" path="res://font/VCR_OSD_MONO_1.001.ttf" id="2_ssbos"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_oaksq"]
+size = Vector3(2, 0.5, 0.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j7ijc"]
+resource_local_to_scene = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xqquv"]
+size = Vector3(2.1152344, 0.5761719, 0.25)
+
+[node name="Area3D" type="Area3D" unique_id=1417454990]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0027290732, -0.003169477, 0)
+script = ExtResource("1_tq1aa")
+
+[node name="Label3D" type="Label3D" parent="." unique_id=2124245023]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.12162721)
+text = "Sample Text"
+font = ExtResource("2_ssbos")
+font_size = 60
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1884674552]
+mesh = SubResource("BoxMesh_oaksq")
+surface_material_override/0 = SubResource("StandardMaterial3D_j7ijc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1484263324]
+shape = SubResource("BoxShape3D_xqquv")
