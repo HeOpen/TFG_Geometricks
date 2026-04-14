@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b8xnnxrh37x80"
+path="res://.godot/imported/cabinWall_Corner_1.obj-2e675aded05b89e0834206f04d51942f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cabinWall_Corner_1.obj-2e675aded05b89e0834206f04d51942f.mesh"]
+
+source_file="res://assets_props/PSX - Assets/Log Cabin AssetPack/cabinWall_Corner_1.obj"
+dest_files=["res://.godot/imported/cabinWall_Corner_1.obj-2e675aded05b89e0834206f04d51942f.mesh", "res://.godot/imported/cabinWall_Corner_1.obj-2e675aded05b89e0834206f04d51942f.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

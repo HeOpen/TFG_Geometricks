@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d0qm6g2gy1sdq"
+path="res://.godot/imported/cabinWall_Stone_Half_1.obj-7445077d524db4cbd53af66b7b8890f7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cabinWall_Stone_Half_1.obj-7445077d524db4cbd53af66b7b8890f7.mesh"]
+
+source_file="res://assets_props/PSX - Assets/Log Cabin AssetPack/cabinWall_Stone_Half_1.obj"
+dest_files=["res://.godot/imported/cabinWall_Stone_Half_1.obj-7445077d524db4cbd53af66b7b8890f7.mesh", "res://.godot/imported/cabinWall_Stone_Half_1.obj-7445077d524db4cbd53af66b7b8890f7.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b2nefn2aiylx7"
+path="res://.godot/imported/cabinStairs_1.obj-dc4b813b7332e8a2286a0b2f78a81e3b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cabinStairs_1.obj-dc4b813b7332e8a2286a0b2f78a81e3b.mesh"]
+
+source_file="res://assets_props/PSX - Assets/Log Cabin AssetPack/cabinStairs_1.obj"
+dest_files=["res://.godot/imported/cabinStairs_1.obj-dc4b813b7332e8a2286a0b2f78a81e3b.mesh", "res://.godot/imported/cabinStairs_1.obj-dc4b813b7332e8a2286a0b2f78a81e3b.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

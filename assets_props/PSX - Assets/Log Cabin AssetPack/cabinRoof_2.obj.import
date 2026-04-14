@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d2s8q6kbwu6rt"
+path="res://.godot/imported/cabinRoof_2.obj-c3ef7c1cc726b0d1bd8c32a6b4f12bcd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cabinRoof_2.obj-c3ef7c1cc726b0d1bd8c32a6b4f12bcd.mesh"]
+
+source_file="res://assets_props/PSX - Assets/Log Cabin AssetPack/cabinRoof_2.obj"
+dest_files=["res://.godot/imported/cabinRoof_2.obj-c3ef7c1cc726b0d1bd8c32a6b4f12bcd.mesh", "res://.godot/imported/cabinRoof_2.obj-c3ef7c1cc726b0d1bd8c32a6b4f12bcd.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
