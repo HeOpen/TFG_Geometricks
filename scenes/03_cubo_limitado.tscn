@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://l4n4vmj2yr5j"]
+
+[ext_resource type="Script" uid="uid://c1fivuega5tu" path="res://scripts/bola.gd" id="1_16fgm"]
+[ext_resource type="Script" uid="uid://dwdwmxt0jj7re" path="res://scripts/camera_3d.gd" id="2_exm3u"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_20vo2"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_tyffc"]
+
+[sub_resource type="Environment" id="Environment_16fgm"]
+ambient_light_source = 1
+ambient_light_color = Color(1, 1, 1, 1)
+
+[node name="Node3D" type="Node3D" unique_id=102578322]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=241227300]
+use_collision = true
+size = Vector3(10, 10, 10)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D" unique_id=1939702680]
+operation = 2
+size = Vector3(10, 2, 10)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGBox3D" unique_id=1794565619]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.7831912, 4.344)
+operation = 2
+size = Vector3(2.0664063, 3.7854614, 1.9477539)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=19656811]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2176833, 0, 4.470055)
+script = ExtResource("1_16fgm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1100012187]
+shape = SubResource("SphereShape3D_20vo2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D" unique_id=1692433396]
+mesh = SubResource("SphereMesh_tyffc")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D" unique_id=1353515763]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.2552752)
+projection = 1
+size = 5.0
+script = ExtResource("2_exm3u")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="CharacterBody3D/Camera3D" unique_id=1201484538]
+transform = Transform3D(1, 0, 0, 0, 0.7071067, 0.7071067, 0, -0.7071067, 0.7071067, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1408877187]
+environment = SubResource("Environment_16fgm")

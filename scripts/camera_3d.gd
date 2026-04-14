@@ -1,20 +1,28 @@
 extends Camera3D
 
-var angle = 0.0
 var target: Node3D
 var distance: float
+var orientation: Basis
 
 func _ready() -> void:
 	target = get_parent()
 	distance = global_position.distance_to(target.global_position)
-
-func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("cam_left"):
-		angle -= 90.0
-	if Input.is_action_just_pressed("cam_right"):
-		angle += 90.0
-
-	var rad = deg_to_rad(angle)
-	var height = position.y
-	global_position = target.global_position + Vector3(sin(rad), height, cos(rad)) * distance
 	look_at(target.global_position, Vector3.UP)
+	orientation = global_transform.basis
+
+func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("cam_left"):
+		orientation = Basis(orientation.y.normalized(), deg_to_rad(-90)) * orientation
+	if Input.is_action_just_pressed("cam_right"):
+		orientation = Basis(orientation.y.normalized(), deg_to_rad(90)) * orientation
+	if Input.is_action_just_pressed("cam_up"):
+		orientation = Basis(orientation.x.normalized(), deg_to_rad(-90)) * orientation
+	if Input.is_action_just_pressed("cam_down"):
+		orientation = Basis(orientation.x.normalized(), deg_to_rad(90)) * orientation
+	if Input.is_action_just_pressed("cam_roll_left"):
+		orientation = Basis(orientation.z.normalized(), deg_to_rad(-90)) * orientation
+	if Input.is_action_just_pressed("cam_roll_right"):
+		orientation = Basis(orientation.z.normalized(), deg_to_rad(90)) * orientation
+
+	global_position = target.global_position + orientation.z * distance
+	global_transform.basis = orientation
