@@ -159,7 +159,7 @@ transform = Transform3D(0.62457514, -0.6763354, 0.3904823, 7.117194e-08, 0.49999
 shadow_enabled = true
 
 [node name="Billboard" type="Node3D" parent="." unique_id=1650519097]
-transform = Transform3D(0.615, 0, 0, 0, 0.615, 0, 0, 0, 0.615, 0.41478336, 0.3287304, 0)
+transform = Transform3D(0.615, 0, 0, 0, 0.615, 0, 0, 0, 0.615, 0.25326097, 0.3287304, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Billboard" unique_id=313261818]
 script = ExtResource("5_t6bnd")

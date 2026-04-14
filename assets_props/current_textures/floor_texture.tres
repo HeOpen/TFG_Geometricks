@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://x8e77kr2c664"]
+
+[ext_resource type="Texture2D" uid="uid://dywqgv23iocba" path="res://assets_props/Horror Textures by Canvas Coven/Wooden/Wooden_13.png" id="1_py5ua"]
+
+[resource]
+albedo_color = Color(0.55927205, 0.4996119, 0.30497143, 1)
+albedo_texture = ExtResource("1_py5ua")
+uv1_scale = Vector3(0.695, 0.695, 0.695)
+uv1_triplanar = true

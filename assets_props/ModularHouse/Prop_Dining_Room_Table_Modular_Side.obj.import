@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dm1xah56ka07s"
+path="res://.godot/imported/Prop_Dining_Room_Table_Modular_Side.obj-09ef11990197987cfd1f2dcb637ea4ae.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Prop_Dining_Room_Table_Modular_Side.obj-09ef11990197987cfd1f2dcb637ea4ae.mesh"]
+
+source_file="res://assets_props/ModularHouse/Prop_Dining_Room_Table_Modular_Side.obj"
+dest_files=["res://.godot/imported/Prop_Dining_Room_Table_Modular_Side.obj-09ef11990197987cfd1f2dcb637ea4ae.mesh", "res://.godot/imported/Prop_Dining_Room_Table_Modular_Side.obj-09ef11990197987cfd1f2dcb637ea4ae.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

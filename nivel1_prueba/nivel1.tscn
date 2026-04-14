@@ -21,7 +21,7 @@ tonemap_mode = 2
 environment = SubResource("Environment_ont3d")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1239209663]
-transform = Transform3D(-0.81809235, -0.57308376, -0.04795873, -0.11155496, 0.07633031, 0.9908225, -0.56416357, 0.81593424, -0.1263756, 0, 7.2592635, 0)
+transform = Transform3D(-0.94670427, -0.060714077, 0.3163308, 0.2507411, 0.47754708, 0.8420673, -0.2021882, 0.87650585, -0.43687254, -10.272077, 7.2592635, -5.8151436)
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=2146257891 instance=ExtResource("2_milgm")]
