@@ -4,6 +4,8 @@ const SPEED = 5.0
 const JUMP_VELOCITY = 5.0
 const GRAVITY_STRENGTH = 9.8
 
+@export var cube_half_size: float = 10.0
+
 @onready var camera = $Camera3D
 
 func _physics_process(delta: float) -> void:
@@ -41,3 +43,11 @@ func _physics_process(delta: float) -> void:
 
 	up_direction = up
 	move_and_slide()
+
+	# Mantener al player dentro del cubo
+	var pos = global_position
+	global_position = Vector3(
+		clamp(pos.x, -cube_half_size, cube_half_size),
+		clamp(pos.y, -cube_half_size, cube_half_size),
+		clamp(pos.z, -cube_half_size, cube_half_size)
+	)

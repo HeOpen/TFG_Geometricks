@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://dmx2yyfj4h3w7"]
+
+[ext_resource type="Script" uid="uid://c1fivuega5tu" path="res://scripts/bola.gd" id="1_m5h14"]
+[ext_resource type="Script" uid="uid://dwdwmxt0jj7re" path="res://scripts/camera_3d.gd" id="2_pj85s"]
+[ext_resource type="PackedScene" uid="uid://bj0qcpy8gnbaj" path="res://assets/Cubo.glb" id="3_pj85s"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_20vo2"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_tyffc"]
+
+[sub_resource type="Environment" id="Environment_16fgm"]
+ambient_light_source = 1
+ambient_light_color = Color(1, 1, 1, 1)
+
+[node name="Node3D" type="Node3D" unique_id=102578322]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=19656811]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 9)
+script = ExtResource("1_m5h14")
+cube_half_size = 9.5
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1100012187]
+shape = SubResource("SphereShape3D_20vo2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D" unique_id=1692433396]
+mesh = SubResource("SphereMesh_tyffc")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D" unique_id=1353515763]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, 10)
+projection = 1
+size = 10.0
+script = ExtResource("2_pj85s")
+distance = 50.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="CharacterBody3D/Camera3D" unique_id=1201484538]
+transform = Transform3D(1, 0, 0, 0, 0.9396925, 0.3420201, 0, -0.3420201, 0.9396925, 0, 1, 0)
+light_energy = 0.25
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1408877187]
+environment = SubResource("Environment_16fgm")
+
+[node name="Cubo" parent="." unique_id=802290731 instance=ExtResource("3_pj85s")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
