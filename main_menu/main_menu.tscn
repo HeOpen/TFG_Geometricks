@@ -5,8 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://dig7h0bs33bke" path="res://assets_props/PSX - Assets/Textures/Wood_02.jpg" id="2_3shxk"]
 [ext_resource type="PackedScene" uid="uid://brn3oavhdankg" path="res://main_menu/button.tscn" id="4_3f7m4"]
 [ext_resource type="Texture2D" uid="uid://bg8g6b8ko3pks" path="res://icon.svg" id="5_3f7m4"]
+[ext_resource type="Material" uid="uid://x8e77kr2c664" path="res://assets_props/current_textures/floor_texture.tres" id="5_6at21"]
 [ext_resource type="Script" uid="uid://c8bx5n25636e" path="res://main_menu/repository_link.gd" id="5_t6bnd"]
 [ext_resource type="FontFile" uid="uid://dnch4xopn1vy1" path="res://font/VCR_OSD_MONO_1.001.ttf" id="6_6tl50"]
+[ext_resource type="Material" uid="uid://bd36hxh1yiesq" path="res://assets_props/current_textures/wall_texture.tres" id="6_og6xe"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mlgns"]
 resource_name = "Metal_04"
@@ -136,16 +138,19 @@ fov = 45.0
 
 [node name="Floor" type="CSGBox3D" parent="World" unique_id=843586680]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.7996199, 0, 3.3440742)
+material_override = ExtResource("5_6at21")
 use_collision = true
 size = Vector3(9.761, 0, 9.412)
 
 [node name="Wall2" type="CSGBox3D" parent="World" unique_id=1473804610]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.344129, 1.382782, -1.5340856)
+material_override = ExtResource("6_og6xe")
 use_collision = true
 size = Vector3(9.760864, 5.23053, 0.2998047)
 
 [node name="Wall1" type="CSGBox3D" parent="World" unique_id=1542906800]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.3945671, 1.3776517, 3.1910412)
+material_override = ExtResource("6_og6xe")
 use_collision = true
 size = Vector3(9.760864, 5.229553, 0.2998047)
 

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://pf72gafnofjw"]
+
+[ext_resource type="ArrayMesh" uid="uid://cfd6m7ihdv5h5" path="res://PSX_Case/Models/psx_case_NTSC.obj" id="1_qyayo"]
+
+[node name="PSX_Case" type="Node3D" unique_id=1773378820]
+
+[node name="PsxCaseNtsc" type="MeshInstance3D" parent="." unique_id=4588086]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.9990773, 0, 0.2691095)
+mesh = ExtResource("1_qyayo")

@@ -4,28 +4,38 @@
 [ext_resource type="PackedScene" uid="uid://5mgb2l278x3l" path="res://addons/jugador.tscn" id="2_milgm"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_11ijd"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+sky_top_color = Color(0.2041617, 0.21830595, 0.5387305, 1)
+sky_horizon_color = Color(0.7279226, 0.54190516, 1, 1)
 
 [sub_resource type="Sky" id="Sky_milgm"]
 sky_material = SubResource("ProceduralSkyMaterial_11ijd")
 
 [sub_resource type="Environment" id="Environment_ont3d"]
-background_energy_multiplier = 0.0
+background_mode = 1
+background_color = Color(0.00087697536, 0, 0.075802915, 1)
 sky = SubResource("Sky_milgm")
-tonemap_mode = 2
+ambient_light_source = 3
 
 [node name="Nivel1" type="Node3D" unique_id=1505825485]
+
+[node name="Lights" type="Node3D" parent="." unique_id=1311688055]
+
+[node name="Sunset" type="DirectionalLight3D" parent="Lights" unique_id=527821605]
+transform = Transform3D(-0.5008162, 0.6703946, 0.54749817, 0.7744482, 0.064586096, 0.6293319, 0.3865399, 0.7391886, -0.5515317, -11.994422, 12.766493, 1.1362104)
+light_color = Color(0.5500515, 0.5887637, 0.6835686, 1)
+shadow_enabled = true
+
+[node name="LUZ NUCELAR" type="DirectionalLight3D" parent="Lights" unique_id=463751621]
+transform = Transform3D(-0.5008162, 0.6703946, 0.54749817, 0.7744482, 0.064586096, 0.6293319, 0.3865399, 0.7391886, -0.5515317, -11.994422, 12.766493, 1.1362104)
+visible = false
+light_energy = 5.923
+shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=873909723]
 environment = SubResource("Environment_ont3d")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1239209663]
-transform = Transform3D(-0.94670427, -0.060714077, 0.3163308, 0.2507411, 0.47754708, 0.8420673, -0.2021882, 0.87650585, -0.43687254, -10.272077, 7.2592635, -5.8151436)
-shadow_enabled = true
-
 [node name="Player" parent="." unique_id=2146257891 instance=ExtResource("2_milgm")]
-transform = Transform3D(-0.99282634, 0, 0.11956501, 0, 1, 0, -0.11956501, 0, -0.99282634, 12.941864, 0.26777482, -6.238762)
+transform = Transform3D(-0.9996251, 0, 0.027380854, 0, 1, 0, -0.027380854, 0, -0.9996251, 13.248835, 0.2677753, -9.805543)
 
 [node name="GreyBoxing" parent="." unique_id=1843936670 instance=ExtResource("1_11ijd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.861023e-06, 1.4305115e-06, 0)

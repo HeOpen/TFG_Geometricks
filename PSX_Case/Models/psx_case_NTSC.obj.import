@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cfd6m7ihdv5h5"
+path="res://.godot/imported/psx_case_NTSC.obj-e8a60bc29f9fca177643b1dcd0212eed.mesh"
+
+[deps]
+
+files=["res://.godot/imported/psx_case_NTSC.obj-e8a60bc29f9fca177643b1dcd0212eed.mesh"]
+
+source_file="res://PSX_Case/Models/psx_case_NTSC.obj"
+dest_files=["res://.godot/imported/psx_case_NTSC.obj-e8a60bc29f9fca177643b1dcd0212eed.mesh", "res://.godot/imported/psx_case_NTSC.obj-e8a60bc29f9fca177643b1dcd0212eed.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

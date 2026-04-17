@@ -1531,7 +1531,7 @@ use_collision = true
 size = Vector3(1.6025391, 1.2075195, 0.7480469)
 
 [node name="Wall_N2" type="CSGBox3D" parent="CSGCombiner3D/Structure/Walls" unique_id=154476657]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7225599, -1.2684033, -10.8201065)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7162676, -1.248738, -10.799231)
 material_override = ExtResource("2_2wewc")
 use_collision = true
 size = Vector3(31.389011, 2.6284332, 0.2998047)
@@ -1646,22 +1646,17 @@ material_override = ExtResource("2_2wewc")
 use_collision = true
 size = Vector3(9.691467, 2.4649658, 0.2998047)
 
-[node name="Pared4" type="CSGBox3D" parent="CSGCombiner3D/Structure/Walls" unique_id=1616942065]
-transform = Transform3D(0.00017355956, 0.0013710657, 0.99999905, 0.0002975948, 0.999999, -0.0013711181, -0.99999994, 0.00029783582, 0.00017314564, 11.7507715, 1.1923649, 5.4255676)
-use_collision = true
-size = Vector3(9.599762, 2.4649658, 0.2998047)
-
-[node name="Ceiling" type="CSGBox3D" parent="CSGCombiner3D/Structure" unique_id=1052455829]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.69606495, 2.4192643, -0.35713577)
-visible = false
-use_collision = true
-size = Vector3(31.321102, 0, 20.948757)
-
 [node name="Floor2" type="CSGBox3D" parent="CSGCombiner3D/Structure" unique_id=1001566552]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.331406, 0, -6.1083145)
 material_override = ExtResource("3_tw37w")
 use_collision = true
 size = Vector3(9.147545, 0, 9.561796)
+
+[node name="Floor8" type="CSGBox3D" parent="CSGCombiner3D/Structure" unique_id=1734688816]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.331406, 0, 5.469675)
+material_override = ExtResource("3_tw37w")
+use_collision = true
+size = Vector3(9.147545, 0, 9.343452)
 
 [node name="Floor4" type="CSGBox3D" parent="CSGCombiner3D/Structure" unique_id=1171172828]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2022896, 0, -3.5765567)
@@ -1669,14 +1664,27 @@ use_collision = true
 size = Vector3(22.013226, 0, 14.625313)
 material = ExtResource("3_tw37w")
 
-[node name="Floor6" type="CSGBox3D" parent="CSGCombiner3D/Structure" unique_id=1530960159]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2022896, 0, 6.951218)
+[node name="Ceiling" type="CSGBox3D" parent="CSGCombiner3D/Structure" unique_id=111399334]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6984391, 2.3962588, -0.3227334)
+visible = false
 use_collision = true
-size = Vector3(22.013226, 0, 6.451206)
+size = Vector3(31.259655, 0, 21.16292)
+material = ExtResource("3_tw37w")
+
+[node name="Floor7" type="CSGBox3D" parent="CSGCombiner3D/Structure" unique_id=473908298]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.194025, -2.4223616, -0.31004667)
+use_collision = true
+size = Vector3(22.317211, 0, 21.079285)
+material = ExtResource("3_tw37w")
+
+[node name="Floor6" type="CSGBox3D" parent="CSGCombiner3D/Structure" unique_id=1530960159]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.141366, 0, 6.951218)
+use_collision = true
+size = Vector3(19.891378, 0, 6.451206)
 material = ExtResource("3_tw37w")
 
 [node name="Floor5" type="CSGBox3D" parent="CSGCombiner3D/Structure" unique_id=1469985612]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.110625, 0, 9.002785)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.110625, 0, 9.093291)
 use_collision = true
 size = Vector3(2.1965542, 0, 2.478672)
 material = ExtResource("3_tw37w")
@@ -1843,7 +1851,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14268875, -1.9073486e-06, 0
 mesh = ExtResource("25_tw37w")
 
 [node name="Puerta2" type="Node3D" parent="." unique_id=1443972507]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.236774, 1.1920929e-07, -1.4224267)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.160179, 1.1920929e-07, -1.4224267)
 
 [node name="StructureWallDoor" type="MeshInstance3D" parent="Puerta2" unique_id=146535362]
 transform = Transform3D(1.04, 0, 0, 0, 1, 0, 0, 0, 1, 0.13327599, -1.9073486e-06, 0.5896636)

@@ -34,6 +34,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=851470035]
 
+[node name="OmniLight3D" type="OmniLight3D" parent="Head/Camera3D" unique_id=7960164]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1617794, 0.20698643, -1.3433533)
+light_color = Color(0.56645066, 0.33312207, 9.62615e-08, 1)
+light_energy = 1.5
+shadow_enabled = true
+omni_range = 4.0
+
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=919673764]
 transform = Transform3D(-0.3, 0, 2.6226834e-08, 0, 0.3, 0, -2.6226834e-08, 0, -0.3, 0, 2.1817033, -0.08664012)
 double_sided = false
