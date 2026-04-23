@@ -1,9 +1,19 @@
 [gd_scene format=3 uid="uid://pf72gafnofjw"]
 
 [ext_resource type="ArrayMesh" uid="uid://cfd6m7ihdv5h5" path="res://PSX_Case/Models/psx_case_NTSC.obj" id="1_qyayo"]
+[ext_resource type="Texture2D" uid="uid://da2n81v7s8i6i" path="res://PSX_Case/PSX_Case_Front.png" id="2_c5xfw"]
+[ext_resource type="Texture2D" uid="uid://ce5p6wde87j5" path="res://PSX_Case/PSX_Case_Back.png" id="3_2ck2t"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ercmb"]
+albedo_texture = ExtResource("2_c5xfw")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q74ae"]
+albedo_texture = ExtResource("3_2ck2t")
 
 [node name="PSX_Case" type="Node3D" unique_id=1773378820]
 
 [node name="PsxCaseNtsc" type="MeshInstance3D" parent="." unique_id=4588086]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.9990773, 0, 0.2691095)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 mesh = ExtResource("1_qyayo")
+surface_material_override/0 = SubResource("StandardMaterial3D_ercmb")
+surface_material_override/2 = SubResource("StandardMaterial3D_q74ae")

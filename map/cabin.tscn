@@ -26,6 +26,7 @@
 [ext_resource type="ArrayMesh" uid="uid://cuqi3klvawcyq" path="res://assets_props/ModularHouse/Prop_Bathroom_Shower.obj" id="25_2wewc"]
 [ext_resource type="ArrayMesh" uid="uid://clfgrn2hgrlcd" path="res://assets_props/ModularHouse/Structure_Wall_Doorway.obj" id="25_tw37w"]
 [ext_resource type="ArrayMesh" uid="uid://cl8ja24eg1y6j" path="res://assets_props/ModularHouse/Prop_Bathroom_Shower_Curtain.obj" id="26_2wewc"]
+[ext_resource type="PackedScene" uid="uid://pf72gafnofjw" path="res://PSX_Case/psx_case.tscn" id="27_tw37w"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_36kbo"]
 transparency = 1
@@ -1493,8 +1494,14 @@ material_override = SubResource("StandardMaterial3D_36kbo")
 cast_shadow = 0
 mesh = SubResource("CapsuleMesh_1huyk")
 
+[node name="Encapuchado6" type="MeshInstance3D" parent="." unique_id=964003315]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.106739, 0.88328385, -0.33229756)
+material_override = SubResource("StandardMaterial3D_36kbo")
+cast_shadow = 0
+mesh = SubResource("CapsuleMesh_1huyk")
+
 [node name="Player_Size_Reference" type="MeshInstance3D" parent="." unique_id=1490760470]
-transform = Transform3D(0.9996878, -0.024990462, 1.0923717e-09, 2.2141375e-16, -4.371139e-08, -1, 0.024990462, 0.9996878, -4.3697742e-08, 10.76554, 1.4226533, -9.435136)
+transform = Transform3D(0.9996878, -0.024990462, 1.0923717e-09, 2.2141375e-16, -4.371139e-08, -1, 0.024990462, 0.9996878, -4.3697742e-08, 10.76554, 1.165949, -9.389235)
 material_override = SubResource("StandardMaterial3D_36kbo")
 cast_shadow = 0
 mesh = SubResource("CapsuleMesh_1huyk")
@@ -1864,3 +1871,12 @@ mesh = ExtResource("25_tw37w")
 [node name="PropBathroomShowerCurtain2" type="MeshInstance3D" parent="." unique_id=1313818239]
 transform = Transform3D(1.6, 0, 0, 0, 1, 0, 0, 0, 1, 12.648227, -1.4305115e-06, 9.077246)
 mesh = ExtResource("26_2wewc")
+
+[node name="PSX_Case" parent="." unique_id=1773378820 instance=ExtResource("27_tw37w")]
+transform = Transform3D(-0.049999993, 4.3711386e-09, 0, 1.9106852e-16, 2.1855693e-09, 0.049999997, 4.371138e-09, 0.049999997, -2.1855693e-09, 2.9426064, 0.7674724, 5.7309976)
+
+[node name="PSX_Case2" parent="." unique_id=1860840559 instance=ExtResource("27_tw37w")]
+transform = Transform3D(0.049999993, 0, 0, 0, -2.1855693e-09, -0.049999997, 0, 0.049999997, -2.1855693e-09, 2.5921748, 0.7674724, 5.7309976)
+
+[node name="PSX_Case3" parent="." unique_id=625446921 instance=ExtResource("27_tw37w")]
+transform = Transform3D(-0.03335134, 0, -0.03725169, 0, 0.049999997, 0, 0.03725169, 0, -0.03335134, 5.0839834, 1.277329, 4.5880647)
