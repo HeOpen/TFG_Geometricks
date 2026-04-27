@@ -11,6 +11,9 @@ const SPHERE_RADIUS = 0.4
 enum Forma { ESFERA, CUBO, PIRAMIDE }
 var forma_actual: Forma = Forma.ESFERA
 
+var current_face_dir: Vector3 = Vector3(0, 0, 1)
+const FACE_THRESHOLD = 0.5
+
 @onready var camera = $Camera3D
 @onready var mesh = $MeshInstance3D
 @onready var col_shape = $CollisionShape3D
@@ -24,6 +27,7 @@ var shape_cubo: BoxShape3D
 var shape_piramide: ConvexPolygonShape3D
 
 func _ready() -> void:
+	_init_current_face()
 	mesh_esfera = mesh.mesh
 	var mat: Material = mesh_esfera.surface_get_material(0)
 
@@ -158,3 +162,42 @@ func _physics_process(delta: float) -> void:
 		clamp(pos.y, -cube_half_size, cube_half_size),
 		clamp(pos.z, -cube_half_size, cube_half_size)
 	)
+	_check_face_change()
+
+func _init_current_face() -> void:
+	var pos = global_position
+	var hs = cube_half_size
+	var faces = [
+		[Vector3(0, -1, 0), pos.y + hs],
+		[Vector3(0,  1, 0), hs - pos.y],
+		[Vector3(-1, 0, 0), pos.x + hs],
+		[Vector3( 1, 0, 0), hs - pos.x],
+		[Vector3(0, 0, -1), pos.z + hs],
+		[Vector3(0, 0,  1), hs - pos.z],
+	]
+	var min_dist = INF
+	for face in faces:
+		if face[1] < min_dist:
+			min_dist = face[1]
+			current_face_dir = face[0]
+
+func _check_face_change() -> void:
+	var pos = global_position
+	var hs = cube_half_size
+	var faces = [
+		[Vector3(0, -1, 0), pos.y + hs],
+		[Vector3(0,  1, 0), hs - pos.y],
+		[Vector3(-1, 0, 0), pos.x + hs],
+		[Vector3( 1, 0, 0), hs - pos.x],
+		[Vector3(0, 0, -1), pos.z + hs],
+		[Vector3(0, 0,  1), hs - pos.z],
+	]
+	var best_dir = current_face_dir
+	var min_dist = FACE_THRESHOLD
+	for face in faces:
+		if face[1] < min_dist:
+			min_dist = face[1]
+			best_dir = face[0]
+	if min_dist < FACE_THRESHOLD and not best_dir.is_equal_approx(current_face_dir):
+		current_face_dir = best_dir
+		camera.rotate_to_face(best_dir)

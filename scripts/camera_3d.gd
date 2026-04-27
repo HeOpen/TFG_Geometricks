@@ -6,6 +6,7 @@ var target: Node3D
 
 var orientation: Basis
 var target_orientation: Basis
+var _auto_speed: float = 0.0
 
 func _ready() -> void:
 	target = get_parent()
@@ -13,6 +14,16 @@ func _ready() -> void:
 	look_at(target.global_position, Vector3.UP)
 	orientation = global_transform.basis
 	target_orientation = orientation
+
+func rotate_to_face(face_dir: Vector3, speed: float = 5) -> void:
+	var horizontal := Vector3(face_dir.x, 0, face_dir.z)
+	if horizontal.length() < 0.1:
+		return
+	var new_z := horizontal.normalized()
+	var new_y := Vector3(0, 1, 0)
+	var new_x := new_y.cross(new_z).normalized()
+	target_orientation = Basis(new_x, new_y, new_z)
+	_auto_speed = speed
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("cam_left"):
@@ -28,6 +39,9 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("cam_roll_right"):
 		target_orientation = Basis(target_orientation.z.normalized(), deg_to_rad(90)) * target_orientation
 
-	orientation = orientation.slerp(target_orientation, rotation_speed * delta)
+	var speed := _auto_speed if _auto_speed > 0.0 else rotation_speed
+	orientation = orientation.slerp(target_orientation, speed * delta)
+	if _auto_speed > 0.0 and orientation.is_equal_approx(target_orientation):
+		_auto_speed = 0.0
 
 	global_transform = Transform3D(orientation, target.global_position + orientation.z * distance)
