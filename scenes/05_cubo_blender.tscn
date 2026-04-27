@@ -11,6 +11,8 @@
 [sub_resource type="Environment" id="Environment_16fgm"]
 ambient_light_source = 1
 ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.7
+tonemap_exposure = 2.5
 
 [node name="Node3D" type="Node3D" unique_id=102578322]
 
@@ -32,9 +34,21 @@ size = 10.0
 script = ExtResource("2_pj85s")
 distance = 50.0
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="CharacterBody3D/Camera3D" unique_id=1201484538]
-transform = Transform3D(1, 0, 0, 0, 0.9396925, 0.3420201, 0, -0.3420201, 0.9396925, 0, 1, 0)
-light_energy = 0.25
+[node name="LightMain" type="DirectionalLight3D" parent="." unique_id=1201484538]
+transform = Transform3D(0.7071069, -0.49999982, 0.49999997, 0, 0.7071069, 0.70710665, -0.70710665, -0.49999997, 0.5000002, 0, 0, 0)
+shadow_enabled = true
+
+[node name="LightFill" type="DirectionalLight3D" parent="." unique_id=1201484539]
+transform = Transform3D(-0.7071065, -0.5000002, 0.5000003, 0, 0.7071069, 0.70710665, -0.7071071, 0.4999997, -0.49999985, 0, 0, 0)
+light_energy = 0.5
+
+[node name="LightBounce" type="DirectionalLight3D" parent="." unique_id=1201484540]
+transform = Transform3D(0.7071069, -0.49999982, -0.49999997, 0, 0.7071069, -0.70710665, 0.70710665, 0.49999997, 0.5000002, 0, 0, 0)
+light_energy = 0.3
+
+[node name="LightBack" type="DirectionalLight3D" parent="." unique_id=1201484541]
+transform = Transform3D(-0.7071065, -0.5000002, -0.5000003, 0, 0.7071069, -0.7071067, 0.7071071, -0.4999997, -0.49999982, 0, 0, -24.2)
+light_energy = 0.7
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1408877187]
