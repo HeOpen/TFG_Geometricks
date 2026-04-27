@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://chlfydjastdwf"]
+
+[ext_resource type="Script" uid="uid://c1fivuega5tu" path="res://scripts/bola.gd" id="1_hxltl"]
+[ext_resource type="Texture2D" uid="uid://gxomnrfv7j5h" path="res://assets/bola_test.png" id="2_oq0wh"]
+[ext_resource type="Script" uid="uid://dwdwmxt0jj7re" path="res://scripts/camera_3d.gd" id="3_mqd6v"]
+[ext_resource type="PackedScene" uid="uid://nppenckh2m6i" path="res://assets/Pulsador.glb" id="4_mqd6v"]
+[ext_resource type="PackedScene" uid="uid://bj0qcpy8gnbaj" path="res://assets/Cubo.glb" id="4_p7jmm"]
+[ext_resource type="Script" uid="uid://bvgedjqeyjdg" path="res://scripts/porton.gd" id="6_cht1f"]
+[ext_resource type="PackedScene" uid="uid://cr02t0o34bnpa" path="res://assets/Porton.glb" id="6_p7jmm"]
+[ext_resource type="Script" uid="uid://2vq5rb2er33s" path="res://scripts/pulsador.gd" id="7_p7jmm"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_20vo2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pj85s"]
+albedo_texture = ExtResource("2_oq0wh")
+
+[sub_resource type="SphereMesh" id="SphereMesh_tyffc"]
+material = SubResource("StandardMaterial3D_pj85s")
+
+[sub_resource type="Environment" id="Environment_16fgm"]
+ambient_light_source = 1
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.7
+tonemap_exposure = 2.5
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p7jmm"]
+size = Vector3(1, 0.2, 1)
+
+[node name="Node3D" type="Node3D" unique_id=102578322]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=19656811]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, -2.6000001, 9)
+script = ExtResource("1_hxltl")
+cube_half_size = 9.5
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1100012187]
+shape = SubResource("SphereShape3D_20vo2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D" unique_id=1692433396]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1175871e-07, 0)
+mesh = SubResource("SphereMesh_tyffc")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D" unique_id=1353515763]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, 10)
+projection = 1
+size = 10.0
+script = ExtResource("3_mqd6v")
+distance = 50.0
+
+[node name="LightMain" type="DirectionalLight3D" parent="." unique_id=1201484538]
+transform = Transform3D(0.7071069, -0.49999982, 0.49999997, 0, 0.7071069, 0.70710665, -0.70710665, -0.49999997, 0.5000002, 0, 0, 0)
+shadow_enabled = true
+
+[node name="LightFill" type="DirectionalLight3D" parent="." unique_id=1201484539]
+transform = Transform3D(-0.7071065, -0.5000002, 0.5000003, 0, 0.7071069, 0.70710665, -0.7071071, 0.4999997, -0.49999985, 0, 0, 0)
+light_energy = 0.5
+
+[node name="LightBounce" type="DirectionalLight3D" parent="." unique_id=1201484540]
+transform = Transform3D(0.7071069, -0.49999982, -0.49999997, 0, 0.7071069, -0.70710665, 0.70710665, 0.49999997, 0.5000002, 0, 0, 0)
+light_energy = 0.3
+
+[node name="LightBack" type="DirectionalLight3D" parent="." unique_id=1201484541]
+transform = Transform3D(-0.7071065, -0.5000002, -0.5000003, 0, 0.7071069, -0.7071067, 0.7071071, -0.4999997, -0.49999982, 0, 0, -24.2)
+light_energy = 0.7
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1408877187]
+environment = SubResource("Environment_16fgm")
+
+[node name="Cubo" parent="." unique_id=802290731 instance=ExtResource("4_p7jmm")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="Porton" parent="." unique_id=1218474478 instance=ExtResource("6_p7jmm")]
+transform = Transform3D(-0.11970704, 0, 0.3288924, 0, 0.385, 0, -0.3288924, 0, -0.11970704, 6, -4, 9.4)
+script = ExtResource("6_cht1f")
+
+[node name="Pulsador" parent="." unique_id=1355752289 node_paths=PackedStringArray("porton") instance=ExtResource("4_mqd6v")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 3.1999998, -5, 8.999999)
+script = ExtResource("7_p7jmm")
+porton = NodePath("../Porton")
+
+[node name="Area3D" type="Area3D" parent="Pulsador" unique_id=1835550045]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pulsador/Area3D" unique_id=1360796683]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 0.599998, 0)
+shape = SubResource("BoxShape3D_p7jmm")
