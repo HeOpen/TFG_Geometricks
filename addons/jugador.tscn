@@ -15,12 +15,14 @@ radius = 0.4
 height = 1.8
 
 [node name="Jugador" type="CharacterBody3D" unique_id=2146257891]
+collision_layer = 2
 script = ExtResource("1_mfgp6")
 can_sprint = true
 can_freefly = true
 
 [node name="Mesh" type="MeshInstance3D" parent="." unique_id=940037550]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+layers = 2
 material_override = SubResource("StandardMaterial3D_iof21")
 cast_shadow = 0
 mesh = SubResource("CapsuleMesh_ucva2")
@@ -34,12 +36,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=851470035]
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Head/Camera3D" unique_id=7960164]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1617794, 0.20698643, -1.3433533)
-light_color = Color(0.56645066, 0.33312207, 9.62615e-08, 1)
-light_energy = 1.5
-shadow_enabled = true
-omni_range = 4.0
+[node name="SpotLight3D" type="SpotLight3D" parent="Head/Camera3D" unique_id=1076554066]
+light_color = Color(0.9999997, 0.8604058, 0.6383575, 1)
+spot_range = 6.058
+spot_attenuation = -0.54
+spot_angle = 39.46
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=919673764]
 transform = Transform3D(-0.3, 0, 2.6226834e-08, 0, 0.3, 0, -2.6226834e-08, 0, -0.3, 0, 2.1817033, -0.08664012)

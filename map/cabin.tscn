@@ -38,6 +38,8 @@ height = 1.8
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f7gje"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tw37w"]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u8n47"]
 resource_name = "Metal_03"
 vertex_color_use_as_albedo = true
@@ -1622,6 +1624,7 @@ size = Vector3(21.232315, 2.3815384, 0.2998047)
 [node name="Pared_Pasillo" type="CSGBox3D" parent="CSGCombiner3D/Structure/Walls" unique_id=1429009061]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.239622, 1.2202804, -1.3097925)
 material_override = ExtResource("2_2wewc")
+material_overlay = SubResource("StandardMaterial3D_tw37w")
 use_collision = true
 size = Vector3(9.187561, 2.4649658, 0.2998047)
 
@@ -1697,10 +1700,10 @@ size = Vector3(2.1965542, 0, 2.478672)
 material = ExtResource("3_tw37w")
 
 [node name="Floor3" type="CSGBox3D" parent="CSGCombiner3D/Structure" unique_id=1999442762]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.331406, 0, -0.36795855)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.331406, 0, -0.32221627)
 material_override = ExtResource("3_tw37w")
 use_collision = true
-size = Vector3(9.147545, 0, 1.7291403)
+size = Vector3(9.147545, 0, 1.8206248)
 
 [node name="Rooms" type="Node3D" parent="CSGCombiner3D" unique_id=803857187]
 
