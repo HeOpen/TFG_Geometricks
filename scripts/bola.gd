@@ -5,8 +5,11 @@ const JUMP_VELOCITY = 5.0
 const GRAVITY_STRENGTH = 9.8
 
 @export var cube_half_size: float = 10.0
+# Radio en world-space: SphereShape radio 0.5 * escala padre 0.8
+const SPHERE_RADIUS = 0.4
 
 @onready var camera = $Camera3D
+@onready var mesh = $MeshInstance3D
 
 func _physics_process(delta: float) -> void:
 	var gravity_dir = -(camera.global_transform.basis.y).normalized()
@@ -43,6 +46,14 @@ func _physics_process(delta: float) -> void:
 
 	up_direction = up
 	move_and_slide()
+
+	# Animación de rodadura: rotar la mesh según la velocidad horizontal
+	var horizontal_vel = velocity - velocity.dot(gravity_dir) * gravity_dir
+	if horizontal_vel.length() > 0.01:
+		var roll_axis_world = up.cross(horizontal_vel).normalized()
+		var roll_angle = horizontal_vel.length() * delta / SPHERE_RADIUS
+		var roll_basis = Basis(roll_axis_world, roll_angle)
+		mesh.transform.basis = (roll_basis * mesh.transform.basis).orthonormalized()
 
 	# Mantener al player dentro del cubo
 	var pos = global_position

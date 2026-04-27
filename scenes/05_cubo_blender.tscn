@@ -1,12 +1,17 @@
 [gd_scene format=3 uid="uid://dmx2yyfj4h3w7"]
 
 [ext_resource type="Script" uid="uid://c1fivuega5tu" path="res://scripts/bola.gd" id="1_m5h14"]
+[ext_resource type="Texture2D" uid="uid://gxomnrfv7j5h" path="res://assets/bola_test.png" id="2_do43t"]
 [ext_resource type="Script" uid="uid://dwdwmxt0jj7re" path="res://scripts/camera_3d.gd" id="2_pj85s"]
 [ext_resource type="PackedScene" uid="uid://bj0qcpy8gnbaj" path="res://assets/Cubo.glb" id="3_pj85s"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_20vo2"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pj85s"]
+albedo_texture = ExtResource("2_do43t")
+
 [sub_resource type="SphereMesh" id="SphereMesh_tyffc"]
+material = SubResource("StandardMaterial3D_pj85s")
 
 [sub_resource type="Environment" id="Environment_16fgm"]
 ambient_light_source = 1
