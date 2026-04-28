@@ -18,7 +18,7 @@ func _on_button_presionado(nombre_del_boton):
 
 func _empezar_juego():
 	print("Cargando nivel...")
-	get_tree().change_scene_to_file("res://nivel1_prueba/nivel1.tscn")
+	get_tree().change_scene_to_file("res://level/nivel1.tscn")
 
 func _abrir_opciones():
 	# Pendiente de desarrollar

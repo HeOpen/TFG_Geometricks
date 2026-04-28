@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://bcwb5s7inarp2"]
 
 [ext_resource type="Texture2D" uid="uid://c5tp8pajhl2gq" path="res://sprites/Mapa.png" id="1_36kbo"]
-[ext_resource type="Material" uid="uid://bd36hxh1yiesq" path="res://assets_props/current_textures/wall_texture.tres" id="2_2wewc"]
-[ext_resource type="Material" uid="uid://x8e77kr2c664" path="res://assets_props/current_textures/floor_texture.tres" id="3_tw37w"]
+[ext_resource type="Material" uid="uid://bd36hxh1yiesq" path="res://materials/wall_texture.tres" id="2_2wewc"]
+[ext_resource type="Material" uid="uid://x8e77kr2c664" path="res://materials/floor_texture.tres" id="3_tw37w"]
 [ext_resource type="Texture2D" uid="uid://6827o7w0indc" path="res://assets_props/PSX - Assets/Textures/Fabric_09.jpg" id="4_w6t86"]
 [ext_resource type="Texture2D" uid="uid://bcm06ud4iqfcd" path="res://assets_props/PSX - Assets/Textures/Wood_08.jpg" id="7_w6t86"]
 [ext_resource type="Texture2D" uid="uid://dr12xkbb5o37x" path="res://assets_props/PSX - Assets/Textures/Leather.jpg" id="8_wo6f0"]
@@ -1569,10 +1569,10 @@ operation = 2
 size = Vector3(2.1693115, 2.0341797, 0.3935547)
 
 [node name="Wall_E" type="CSGBox3D" parent="CSGCombiner3D/Structure/Walls" unique_id=847727430]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14.892347, 1.2202809, -0.35508537)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14.892347, 1.2202809, -0.3154688)
 material_override = ExtResource("2_2wewc")
 use_collision = true
-size = Vector3(21.23127, 2.4649658, 0.2998047)
+size = Vector3(21.310503, 2.4649658, 0.2998047)
 
 [node name="Window" type="CSGBox3D" parent="CSGCombiner3D/Structure/Walls/Wall_E" unique_id=1220908809]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.003112793, 0.31629252, -0.08708191)
@@ -1655,6 +1655,19 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.94
 material_override = ExtResource("2_2wewc")
 use_collision = true
 size = Vector3(9.691467, 2.4649658, 0.2998047)
+
+[node name="Hueco Puerta" type="CSGBox3D" parent="CSGCombiner3D/Structure/Walls/Pared3" unique_id=1653866771]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1676693, -0.21200562, 0)
+material_override = ExtResource("2_2wewc")
+operation = 2
+use_collision = true
+size = Vector3(0.94553375, 2.0409546, 0.2998047)
+
+[node name="Pared4" type="CSGBox3D" parent="CSGCombiner3D/Structure/Walls" unique_id=2141760380]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.755345, 1.1923785, 5.4134827)
+material_override = ExtResource("2_2wewc")
+use_collision = true
+size = Vector3(9.623932, 2.4649658, 0.2998047)
 
 [node name="Floor2" type="CSGBox3D" parent="CSGCombiner3D/Structure" unique_id=1001566552]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.331406, 0, -6.1083145)
@@ -1849,25 +1862,36 @@ mesh = ExtResource("24_ldy4m")
 transform = Transform3D(-5.5294905e-08, 0, 1.445, 0, 1.195, 0, -1.265, 0, -6.316296e-08, 12.56545, 0, 9.448508)
 mesh = ExtResource("25_2wewc")
 
-[node name="Puerta" type="Node3D" parent="." unique_id=1463751630]
+[node name="PuertaBaño" type="Node3D" parent="." unique_id=1463751630]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.236774, 1.1920929e-07, 0.59856105)
 
-[node name="StructureWallDoor" type="MeshInstance3D" parent="Puerta" unique_id=1764325096]
+[node name="StructureWallDoor" type="MeshInstance3D" parent="PuertaBaño" unique_id=1764325096]
 transform = Transform3D(1.04, 0, 0, 0, 1, 0, 0, 0, 1, 0.13327599, -1.9073486e-06, 0.5896636)
 mesh = ExtResource("24_2wewc")
 
-[node name="StructureWallDoorway" type="MeshInstance3D" parent="Puerta" unique_id=1607440272]
+[node name="StructureWallDoorway" type="MeshInstance3D" parent="PuertaBaño" unique_id=1607440272]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14268875, -1.9073486e-06, 0.58526254)
 mesh = ExtResource("25_tw37w")
 
-[node name="Puerta2" type="Node3D" parent="." unique_id=1443972507]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.160179, 1.1920929e-07, -1.4224267)
+[node name="PuertaTV" type="Node3D" parent="." unique_id=90386247]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.8361697, 1.1920929e-07, 2.35263)
 
-[node name="StructureWallDoor" type="MeshInstance3D" parent="Puerta2" unique_id=146535362]
+[node name="StructureWallDoor" type="MeshInstance3D" parent="PuertaTV" unique_id=1361003951]
 transform = Transform3D(1.04, 0, 0, 0, 1, 0, 0, 0, 1, 0.13327599, -1.9073486e-06, 0.5896636)
 mesh = ExtResource("24_2wewc")
 
-[node name="StructureWallDoorway" type="MeshInstance3D" parent="Puerta2" unique_id=329967459]
+[node name="StructureWallDoorway" type="MeshInstance3D" parent="PuertaTV" unique_id=626035207]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14268875, -1.9073486e-06, 0.58526254)
+mesh = ExtResource("25_tw37w")
+
+[node name="PuertaCuarto" type="Node3D" parent="." unique_id=1443972507]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.160179, 1.1920929e-07, -1.4224267)
+
+[node name="StructureWallDoor" type="MeshInstance3D" parent="PuertaCuarto" unique_id=146535362]
+transform = Transform3D(1.04, 0, 0, 0, 1, 0, 0, 0, 1, 0.13327599, -1.9073486e-06, 0.5896636)
+mesh = ExtResource("24_2wewc")
+
+[node name="StructureWallDoorway" type="MeshInstance3D" parent="PuertaCuarto" unique_id=329967459]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14268875, -1.9073486e-06, 0.58526254)
 mesh = ExtResource("25_tw37w")
 

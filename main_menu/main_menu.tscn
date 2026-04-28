@@ -5,10 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://dig7h0bs33bke" path="res://assets_props/PSX - Assets/Textures/Wood_02.jpg" id="2_3shxk"]
 [ext_resource type="PackedScene" uid="uid://brn3oavhdankg" path="res://main_menu/button.tscn" id="4_3f7m4"]
 [ext_resource type="Texture2D" uid="uid://bg8g6b8ko3pks" path="res://icon.svg" id="5_3f7m4"]
-[ext_resource type="Material" uid="uid://x8e77kr2c664" path="res://assets_props/current_textures/floor_texture.tres" id="5_6at21"]
+[ext_resource type="Material" uid="uid://x8e77kr2c664" path="res://materials/floor_texture.tres" id="5_6at21"]
 [ext_resource type="Script" uid="uid://c8bx5n25636e" path="res://main_menu/repository_link.gd" id="5_t6bnd"]
 [ext_resource type="FontFile" uid="uid://dnch4xopn1vy1" path="res://font/VCR_OSD_MONO_1.001.ttf" id="6_6tl50"]
-[ext_resource type="Material" uid="uid://bd36hxh1yiesq" path="res://assets_props/current_textures/wall_texture.tres" id="6_og6xe"]
+[ext_resource type="Material" uid="uid://bd36hxh1yiesq" path="res://materials/wall_texture.tres" id="6_og6xe"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mlgns"]
 resource_name = "Metal_04"

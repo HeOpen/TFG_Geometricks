@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://5mgb2l278x3l"]
 
-[ext_resource type="Script" uid="uid://df56djgf3xhl7" path="res://addons/jugador_script.gd" id="1_mfgp6"]
+[ext_resource type="Script" uid="uid://df56djgf3xhl7" path="res://player/jugador_script.gd" id="1_mfgp6"]
 [ext_resource type="Texture2D" uid="uid://bxqoku762shnd" path="res://sprites/obama.png" id="2_sddfd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iof21"]

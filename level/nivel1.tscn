@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dl37rbmvhcxkw"]
 
-[ext_resource type="PackedScene" uid="uid://bcwb5s7inarp2" path="res://map/cabin.tscn" id="1_11ijd"]
-[ext_resource type="PackedScene" uid="uid://5mgb2l278x3l" path="res://addons/jugador.tscn" id="2_milgm"]
+[ext_resource type="PackedScene" uid="uid://5mgb2l278x3l" path="res://player/jugador.tscn" id="1_to13d"]
+[ext_resource type="PackedScene" uid="uid://bcwb5s7inarp2" path="res://map/cabin.tscn" id="2_rcpjj"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_11ijd"]
 sky_top_color = Color(0.1254417, 9.2026e-05, 0.3970784, 1)
@@ -35,10 +35,10 @@ albedo = Color(0.67435306, 0.61203474, 0.96962804, 1)
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1517203887]
 environment = SubResource("Environment_ont3d")
 
-[node name="Player" parent="." unique_id=2146257891 instance=ExtResource("2_milgm")]
+[node name="Player" parent="." unique_id=2146257891 instance=ExtResource("1_to13d")]
 transform = Transform3D(-0.12422505, 0, -0.99225414, 0, 1, 0, 0.99225414, 0, -0.12422505, -15.047757, 0.2677753, -0.29725552)
 
-[node name="GreyBoxing" parent="." unique_id=1843936670 instance=ExtResource("1_11ijd")]
+[node name="GreyBoxing" parent="." unique_id=1843936670 instance=ExtResource("2_rcpjj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.861023e-06, 1.4305115e-06, 0)
 
 [node name="FogVolume" type="FogVolume" parent="." unique_id=989422566]
