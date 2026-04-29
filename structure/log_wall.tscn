@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://cu8bpdw2s6yow"]
+
+[ext_resource type="Texture2D" uid="uid://bldht0dkn70ib" path="res://assets_props/Horror Textures by Canvas Coven/Tree bark/Tree_Bark_04.png" id="1_7ce2m"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tsdyd"]
+albedo_texture = ExtResource("1_7ce2m")
+uv1_scale = Vector3(1, 32.065, 1)
+uv1_offset = Vector3(3.27, 0.89, 0.075)
+
+[node name="LogWall" type="Node3D" unique_id=1997429010]
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="." unique_id=442683792]
+transform = Transform3D(-4.3711385e-08, -1.3287333, 0, 0.99999994, -5.808078e-08, 0, 0, 0, 1, 0, 0, 0)
+radius = 0.14697266
+height = 7.7958984
+material = SubResource("StandardMaterial3D_tsdyd")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="." unique_id=187899607]
+transform = Transform3D(-4.3711385e-08, -1.3287333, 0, 0.99999994, -5.808078e-08, 0, 0, 0, 1, -1.2635777e-08, 0.28907287, 0)
+radius = 0.14697266
+height = 7.7958984
+material = SubResource("StandardMaterial3D_tsdyd")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="." unique_id=82203175]
+transform = Transform3D(-4.3711385e-08, -1.3287333, 0, 0.99999994, -5.808078e-08, 0, 0, 0, 1, -2.5377823e-08, 0.5805769, 0)
+radius = 0.14697266
+height = 7.7958984
+material = SubResource("StandardMaterial3D_tsdyd")
+
+[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="." unique_id=2113995892]
+transform = Transform3D(-4.3711385e-08, -1.3287333, 0, 0.99999994, -5.808078e-08, 0, 0, 0, 1, -3.8048817e-08, 0.8704555, 0)
+radius = 0.14697266
+height = 7.7958984
+material = SubResource("StandardMaterial3D_tsdyd")
+
+[node name="CSGCylinder3D5" type="CSGCylinder3D" parent="." unique_id=1051884422]
+transform = Transform3D(-4.3711385e-08, -1.3287333, 0, 0.99999994, -5.808078e-08, 0, 0, 0, 1, -5.087962e-08, 1.16399, 0)
+radius = 0.14697266
+height = 7.7958984
+material = SubResource("StandardMaterial3D_tsdyd")
+
+[node name="CSGCylinder3D6" type="CSGCylinder3D" parent="." unique_id=1729917534]
+transform = Transform3D(-4.3711385e-08, -1.3287333, 0, 0.99999994, -5.808078e-08, 0, 0, 0, 1, -6.356228e-08, 1.4541354, 0)
+radius = 0.14697266
+height = 7.7958984
+material = SubResource("StandardMaterial3D_tsdyd")
+
+[node name="CSGCylinder3D7" type="CSGCylinder3D" parent="." unique_id=1008440229]
+transform = Transform3D(-4.3711385e-08, -1.3287333, 0, 0.99999994, -5.808078e-08, 0, 0, 0, 1, -7.625739e-08, 1.7445657, 0)
+radius = 0.14697266
+height = 7.7958984
+material = SubResource("StandardMaterial3D_tsdyd")
+
+[node name="CSGCylinder3D8" type="CSGCylinder3D" parent="." unique_id=1235386143]
+transform = Transform3D(-4.3711385e-08, -1.3287333, 0, 0.99999994, -5.808078e-08, 0, 0, 0, 1, -8.895677e-08, 2.0350935, 0)
+radius = 0.14697266
+height = 7.7958984
+material = SubResource("StandardMaterial3D_tsdyd")
+
+[node name="CSGCylinder3D9" type="CSGCylinder3D" parent="." unique_id=540993365]
+transform = Transform3D(-4.3711385e-08, -1.3287333, 0, 0.99999994, -5.808078e-08, 0, 0, 0, 1, -1.0152434e-07, 2.322606, 0)
+radius = 0.14697266
+height = 7.7958984
+material = SubResource("StandardMaterial3D_tsdyd")

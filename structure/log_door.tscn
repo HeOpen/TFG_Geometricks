@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://de3xteiwir712"]
+
+[ext_resource type="Texture2D" uid="uid://bldht0dkn70ib" path="res://assets_props/Horror Textures by Canvas Coven/Tree bark/Tree_Bark_04.png" id="1_5s3mu"]
+[ext_resource type="ArrayMesh" uid="uid://dgbmsds5lc2h5" path="res://assets_props/ModularHouse/Structure_Wall_Door.obj" id="2_sm2xp"]
+[ext_resource type="ArrayMesh" uid="uid://clfgrn2hgrlcd" path="res://assets_props/ModularHouse/Structure_Wall_Doorway.obj" id="3_tj62q"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tsdyd"]
+albedo_texture = ExtResource("1_5s3mu")
+uv1_scale = Vector3(1, 32.065, 1)
+uv1_offset = Vector3(3.27, 0.89, 0.075)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sm2xp"]
+transparency = 1
+albedo_color = Color(0.83137256, 0, 0.11764706, 0.41568628)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_tj62q"]
+radius = 0.4
+height = 1.8
+
+[node name="LogWall" type="Node3D" unique_id=1997429010]
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="." unique_id=1956005007]
+transform = Transform3D(-4.3711385e-08, -0.41061535, 0, 0.99999994, -1.7948569e-08, 0, 0, 0, 1, -1.1190004, 0.10623403, 0)
+operation = 2
+radius = 0.14697266
+height = 2.3712769
+material = SubResource("StandardMaterial3D_tsdyd")
+
+[node name="CSGCylinder3D17" type="CSGCylinder3D" parent="." unique_id=438702969]
+transform = Transform3D(-4.3711385e-08, -0.41061535, 0, 0.99999994, -1.7948569e-08, 0, 0, 0, 1, -1.1190004, 0.39964947, 0)
+operation = 2
+radius = 0.14697266
+height = 2.3712769
+material = SubResource("StandardMaterial3D_tsdyd")
+
+[node name="CSGCylinder3D18" type="CSGCylinder3D" parent="." unique_id=229566277]
+transform = Transform3D(-4.3711385e-08, -0.41061535, 0, 0.99999994, -1.7948569e-08, 0, 0, 0, 1, -1.1190004, 0.68981075, 0)
+operation = 2
+radius = 0.14697266
+height = 2.3712769
+material = SubResource("StandardMaterial3D_tsdyd")
+
+[node name="CSGCylinder3D19" type="CSGCylinder3D" parent="." unique_id=1546590180]
+transform = Transform3D(-4.3711385e-08, -0.41061535, 0, 0.99999994, -1.7948569e-08, 0, 0, 0, 1, -1.1190004, 0.9862286, 0)
+operation = 2
+radius = 0.14697266
+height = 2.3712769
+material = SubResource("StandardMaterial3D_tsdyd")
+
+[node name="CSGCylinder3D20" type="CSGCylinder3D" parent="." unique_id=78310051]
+transform = Transform3D(-4.3711385e-08, -0.41061535, 0, 0.99999994, -1.7948569e-08, 0, 0, 0, 1, -1.1190004, 1.2795628, 0)
+operation = 2
+radius = 0.14697266
+height = 2.3712769
+material = SubResource("StandardMaterial3D_tsdyd")
+
+[node name="CSGCylinder3D21" type="CSGCylinder3D" parent="." unique_id=1359290869]
+transform = Transform3D(-4.3711385e-08, -0.41061535, 0, 0.99999994, -1.7948569e-08, 0, 0, 0, 1, -1.1190004, 1.5722661, 0)
+operation = 2
+radius = 0.14697266
+height = 2.3712769
+material = SubResource("StandardMaterial3D_tsdyd")
+
+[node name="CSGCylinder3D22" type="CSGCylinder3D" parent="." unique_id=1891733222]
+transform = Transform3D(-4.3711385e-08, -0.41061535, 0, 0.99999994, -1.7948569e-08, 0, 0, 0, 1, -1.1190004, 1.8643231, 0)
+operation = 2
+radius = 0.14697266
+height = 2.3712769
+material = SubResource("StandardMaterial3D_tsdyd")
+
+[node name="CSGCylinder3D23" type="CSGCylinder3D" parent="." unique_id=1781107304]
+transform = Transform3D(-4.3711385e-08, -0.41061535, 0, 0.99999994, -1.7948569e-08, 0, 0, 0, 1, 0.00038939808, 2.161368, 0)
+operation = 2
+radius = 0.14697266
+height = 7.823532
+material = SubResource("StandardMaterial3D_tsdyd")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="." unique_id=304037706]
+transform = Transform3D(-4.3711385e-08, -0.41061535, 0, 0.99999994, -1.7948569e-08, 0, 0, 0, 1, 1.1191101, 0.106234126, 0)
+operation = 2
+radius = 0.14697266
+height = 2.3712769
+material = SubResource("StandardMaterial3D_tsdyd")
+
+[node name="CSGCylinder3D24" type="CSGCylinder3D" parent="." unique_id=2085323573]
+transform = Transform3D(-4.3711385e-08, -0.41061535, 0, 0.99999994, -1.7948569e-08, 0, 0, 0, 1, 1.1191101, 0.39964956, 0)
+operation = 2
+radius = 0.14697266
+height = 2.3712769
+material = SubResource("StandardMaterial3D_tsdyd")
+
+[node name="CSGCylinder3D25" type="CSGCylinder3D" parent="." unique_id=114658388]
+transform = Transform3D(-4.3711385e-08, -0.41061535, 0, 0.99999994, -1.7948569e-08, 0, 0, 0, 1, 1.1191101, 0.6898109, 0)
+operation = 2
+radius = 0.14697266
+height = 2.3712769
+material = SubResource("StandardMaterial3D_tsdyd")
+
+[node name="CSGCylinder3D26" type="CSGCylinder3D" parent="." unique_id=421760618]
+transform = Transform3D(-4.3711385e-08, -0.41061535, 0, 0.99999994, -1.7948569e-08, 0, 0, 0, 1, 1.1191101, 0.9862287, 0)
+operation = 2
+radius = 0.14697266
+height = 2.3712769
+material = SubResource("StandardMaterial3D_tsdyd")
+
+[node name="CSGCylinder3D27" type="CSGCylinder3D" parent="." unique_id=1494336606]
+transform = Transform3D(-4.3711385e-08, -0.41061535, 0, 0.99999994, -1.7948569e-08, 0, 0, 0, 1, 1.1191101, 1.279563, 0)
+operation = 2
+radius = 0.14697266
+height = 2.3712769
+material = SubResource("StandardMaterial3D_tsdyd")
+
+[node name="CSGCylinder3D28" type="CSGCylinder3D" parent="." unique_id=184539872]
+transform = Transform3D(-4.3711385e-08, -0.41061535, 0, 0.99999994, -1.7948569e-08, 0, 0, 0, 1, 1.1191101, 1.5722662, 0)
+operation = 2
+radius = 0.14697266
+height = 2.3712769
+material = SubResource("StandardMaterial3D_tsdyd")
+
+[node name="CSGCylinder3D29" type="CSGCylinder3D" parent="." unique_id=122511903]
+transform = Transform3D(-4.3711385e-08, -0.41061535, 0, 0.99999994, -1.7948569e-08, 0, 0, 0, 1, 1.1191101, 1.8643233, 0)
+operation = 2
+radius = 0.14697266
+height = 2.3712769
+material = SubResource("StandardMaterial3D_tsdyd")
+
+[node name="PuertaCuarto" type="Node3D" parent="." unique_id=469485085]
+transform = Transform3D(1.265, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.07759634)
+
+[node name="StructureWallDoor" type="MeshInstance3D" parent="PuertaCuarto" unique_id=150907823]
+transform = Transform3D(1.04, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.59)
+mesh = ExtResource("2_sm2xp")
+
+[node name="StructureWallDoorway" type="MeshInstance3D" parent="PuertaCuarto" unique_id=1548610150]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.585)
+mesh = ExtResource("3_tj62q")
+
+[node name="Encapuchado6" type="MeshInstance3D" parent="." unique_id=634168688]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04852867, 0.88328385, -0.002722621)
+visible = false
+material_override = SubResource("StandardMaterial3D_sm2xp")
+cast_shadow = 0
+mesh = SubResource("CapsuleMesh_tj62q")
