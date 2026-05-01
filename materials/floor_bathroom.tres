@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dmur1xekm1r64"]
+
+[ext_resource type="Texture2D" uid="uid://ca731y5ibw6vb" path="res://assets_props/Horror Textures by Canvas Coven/Stone tiles/Stone_tiles_11.png" id="1_u5bfq"]
+
+[resource]
+albedo_color = Color(0.7447446, 1, 0.99555105, 1)
+albedo_texture = ExtResource("1_u5bfq")
+uv1_scale = Vector3(3.025, 3.025, 3.025)
+uv1_triplanar = true
