@@ -1,0 +1,171 @@
+[gd_scene format=3 uid="uid://56nsp86yvo5n"]
+
+[ext_resource type="PackedScene" uid="uid://c5uhu7xls3u3d" path="res://Mundo.tscn" id="1_p7x6o"]
+[ext_resource type="Script" uid="uid://bpfumbjyhvf62" path="res://proyector.gd" id="2_ox31j"]
+[ext_resource type="Script" uid="uid://c0lldq05ortt6" path="res://cubo.gd" id="3_wi256"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wi256"]
+size = Vector2(1, 1)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_wi256"]
+viewport_path = NodePath("Proyectores/SubViewport_Cara1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ox31j"]
+resource_local_to_scene = true
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_wi256")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_xhdvh"]
+size = Vector2(1, 1)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_xhdvh"]
+viewport_path = NodePath("Proyectores/SubViewport_Cara2")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pb4vf"]
+resource_local_to_scene = true
+cull_mode = 2
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_xhdvh")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_pb4vf"]
+size = Vector2(1, 1)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_0kkiv"]
+viewport_path = NodePath("Proyectores/SubViewport_Cara3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ml48"]
+resource_local_to_scene = true
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_0kkiv")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0kkiv"]
+size = Vector2(1, 1)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_16uee"]
+viewport_path = NodePath("Proyectores/SubViewport_Cara4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rv8c1"]
+resource_local_to_scene = true
+cull_mode = 2
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_16uee")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1ml48"]
+size = Vector2(1, 1)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ox31j"]
+viewport_path = NodePath("Proyectores/SubViewport_Cara5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vxs2e"]
+resource_local_to_scene = true
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_ox31j")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ox31j"]
+size = Vector2(1, 1)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_pb4vf"]
+viewport_path = NodePath("Proyectores/SubViewport_Cara6")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ujir7"]
+resource_local_to_scene = true
+cull_mode = 2
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_pb4vf")
+
+[node name="VistaCubo3D" type="Node3D" unique_id=615227949]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.3443898)
+
+[node name="ContenedorLogica" type="SubViewport" parent="." unique_id=1981711965]
+handle_input_locally = false
+size = Vector2i(2500, 2500)
+
+[node name="Mundo" parent="ContenedorLogica" unique_id=2114180671 instance=ExtResource("1_p7x6o")]
+
+[node name="Proyectores" type="Node" parent="." unique_id=617264154]
+
+[node name="SubViewport_Cara1" type="SubViewport" parent="Proyectores" unique_id=1250603987]
+size = Vector2i(1152, 648)
+render_target_update_mode = 4
+script = ExtResource("2_ox31j")
+
+[node name="Camera2D" type="Camera2D" parent="Proyectores/SubViewport_Cara1" unique_id=84261026]
+position = Vector2(576, 324)
+
+[node name="SubViewport_Cara2" type="SubViewport" parent="Proyectores" unique_id=1236912922]
+size = Vector2i(1152, 648)
+render_target_update_mode = 4
+script = ExtResource("2_ox31j")
+
+[node name="Camera2D" type="Camera2D" parent="Proyectores/SubViewport_Cara2" unique_id=1299769594]
+position = Vector2(1728, 324)
+
+[node name="SubViewport_Cara3" type="SubViewport" parent="Proyectores" unique_id=1410816550]
+size = Vector2i(1152, 648)
+render_target_update_mode = 4
+script = ExtResource("2_ox31j")
+
+[node name="Camera2D" type="Camera2D" parent="Proyectores/SubViewport_Cara3" unique_id=34449413]
+position = Vector2(-576, 324)
+rotation = 1.5707964
+
+[node name="SubViewport_Cara4" type="SubViewport" parent="Proyectores" unique_id=363731638]
+size = Vector2i(1152, 648)
+render_target_update_mode = 4
+script = ExtResource("2_ox31j")
+
+[node name="Camera2D" type="Camera2D" parent="Proyectores/SubViewport_Cara4" unique_id=262145151]
+position = Vector2(2880, 324)
+
+[node name="SubViewport_Cara5" type="SubViewport" parent="Proyectores" unique_id=743345462]
+size = Vector2i(1152, 648)
+render_target_update_mode = 4
+script = ExtResource("2_ox31j")
+
+[node name="Camera2D" type="Camera2D" parent="Proyectores/SubViewport_Cara5" unique_id=1553663666]
+position = Vector2(576, -324)
+
+[node name="SubViewport_Cara6" type="SubViewport" parent="Proyectores" unique_id=2003907514]
+size = Vector2i(1152, 648)
+render_target_update_mode = 4
+script = ExtResource("2_ox31j")
+
+[node name="Camera2D" type="Camera2D" parent="Proyectores/SubViewport_Cara6" unique_id=523777792]
+position = Vector2(576, 972)
+
+[node name="Node3D" type="Node3D" parent="." unique_id=344526178]
+script = ExtResource("3_wi256")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D" unique_id=1415081339]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0.5)
+mesh = SubResource("PlaneMesh_wi256")
+surface_material_override/0 = SubResource("StandardMaterial3D_ox31j")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Node3D" unique_id=529078040]
+transform = Transform3D(-4.371139e-08, 0.99999994, 4.3711385e-08, -3.821371e-15, 4.3711385e-08, -0.99999994, -1, -4.3711385e-08, 1.9106853e-15, 0.5, 0, 0)
+mesh = SubResource("PlaneMesh_xhdvh")
+surface_material_override/0 = SubResource("StandardMaterial3D_pb4vf")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Node3D" unique_id=2044852860]
+transform = Transform3D(-4.371139e-08, -1, -3.821371e-15, 4.371139e-08, 1.9106855e-15, -1, 1, -4.371139e-08, 4.371139e-08, -0.5, 0, 0)
+mesh = SubResource("PlaneMesh_pb4vf")
+surface_material_override/0 = SubResource("StandardMaterial3D_1ml48")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Node3D" unique_id=1793939204]
+transform = Transform3D(-1, 8.742278e-08, 4.371139e-08, -4.371139e-08, 1.9106855e-15, -1, -8.742278e-08, -1, 1.9106855e-15, 0, 0, -0.5)
+mesh = SubResource("PlaneMesh_0kkiv")
+surface_material_override/0 = SubResource("StandardMaterial3D_rv8c1")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Node3D" unique_id=887698654]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("PlaneMesh_1ml48")
+surface_material_override/0 = SubResource("StandardMaterial3D_vxs2e")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Node3D" unique_id=128509576]
+transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, -0.5, 0)
+mesh = SubResource("PlaneMesh_ox31j")
+surface_material_override/0 = SubResource("StandardMaterial3D_ujir7")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1133124732]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.3002106)
+current = true

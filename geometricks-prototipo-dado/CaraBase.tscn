@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b6g1ody41noju"]
+
+[node name="CaraBase" type="Node2D" unique_id=1884650650]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1434160555]
+custom_minimum_size = Vector2(1151, 648)
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.4933148, 0.4933148, 0.4933148, 1)

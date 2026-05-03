@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://c5uhu7xls3u3d"]
+
+[ext_resource type="PackedScene" uid="uid://b6g1ody41noju" path="res://CaraBase.tscn" id="1_pe05s"]
+[ext_resource type="Script" uid="uid://dls2xultx8cwt" path="res://mundo.gd" id="1_xywc0"]
+[ext_resource type="PackedScene" uid="uid://e6413nr1t22k" path="res://player_2d.tscn" id="3_gejyx"]
+
+[node name="Mundo" type="Node2D" unique_id=2114180671]
+position = Vector2(-4, 0)
+script = ExtResource("1_xywc0")
+
+[node name="Cara1" parent="." unique_id=1884650650 instance=ExtResource("1_pe05s")]
+
+[node name="ColorRect" parent="Cara1" index="0" unique_id=1434160555]
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 1152.0
+offset_bottom = 652.0
+color = Color(0, 0.5907, 0.33626172, 1)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Cara1" unique_id=361236648]
+
+[node name="Cara2" parent="." unique_id=2070696399 instance=ExtResource("1_pe05s")]
+position = Vector2(1152, 0)
+
+[node name="ColorRect" parent="Cara2" index="0" unique_id=1434160555]
+color = Color(0.9274806, 0, 0.004380861, 1)
+
+[node name="Cara3" parent="." unique_id=2027964955 instance=ExtResource("1_pe05s")]
+position = Vector2(-1152, 0)
+
+[node name="ColorRect" parent="Cara3" index="0" unique_id=1434160555]
+color = Color(0.13153306, 0.45196146, 0.9999998, 1)
+
+[node name="Cara4" parent="." unique_id=1929637360 instance=ExtResource("1_pe05s")]
+position = Vector2(2304, 0)
+
+[node name="ColorRect" parent="Cara4" index="0" unique_id=1434160555]
+color = Color(0.8763187, 0.03728795, 0.5228116, 1)
+
+[node name="Cara5" parent="." unique_id=1478059207 instance=ExtResource("1_pe05s")]
+position = Vector2(0, -648)
+
+[node name="ColorRect" parent="Cara5" index="0" unique_id=1434160555]
+color = Color(0.54263616, 0.50650376, 1.92523e-07, 1)
+
+[node name="Cara6" parent="." unique_id=1420452785 instance=ExtResource("1_pe05s")]
+position = Vector2(0, 648)
+
+[node name="ColorRect" parent="Cara6" index="0" unique_id=1434160555]
+color = Color(0.7853613, 0.34430206, 0.009515835, 1)
+
+[node name="Player2D" parent="." unique_id=1755147713 instance=ExtResource("3_gejyx")]
+position = Vector2(426, 508)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1086207180]
+position = Vector2(2, 0)
+
+[editable path="Cara1"]
+[editable path="Cara2"]
+[editable path="Cara3"]
+[editable path="Cara4"]
+[editable path="Cara5"]
+[editable path="Cara6"]
