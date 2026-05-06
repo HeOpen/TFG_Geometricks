@@ -1,0 +1,54 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/subviewport_01/CaraBase.tscn" id="1_cara"]
+[ext_resource type="Script" path="res://scripts/subviewport_01/mundo.gd" id="2_mundo"]
+[ext_resource type="PackedScene" path="res://scenes/subviewport_01/player_2d.tscn" id="3_player"]
+[ext_resource type="PackedScene" path="res://scenes/subviewport_01/caras/Cara1.tscn" id="4_cara1"]
+
+[node name="Mundo" type="Node2D" unique_id=2114180671]
+position = Vector2(-4, 0)
+script = ExtResource("2_mundo")
+
+[node name="Cara1" parent="." unique_id=1884650650 instance=ExtResource("4_cara1")]
+
+[node name="Cara2" parent="." unique_id=2070696399 instance=ExtResource("1_cara")]
+position = Vector2(1152, 0)
+
+[node name="ColorRect" parent="Cara2" index="0" unique_id=1434160555]
+color = Color(0.9274, 0, 0.00438, 1)
+
+[node name="Cara3" parent="." unique_id=2027964955 instance=ExtResource("1_cara")]
+position = Vector2(-1152, 0)
+
+[node name="ColorRect" parent="Cara3" index="0" unique_id=1434160555]
+color = Color(0.13153, 0.45196, 1.0, 1)
+
+[node name="Cara4" parent="." unique_id=1929637360 instance=ExtResource("1_cara")]
+position = Vector2(2304, 0)
+
+[node name="ColorRect" parent="Cara4" index="0" unique_id=1434160555]
+color = Color(0.87631, 0.03728, 0.52281, 1)
+
+[node name="Cara5" parent="." unique_id=1478059207 instance=ExtResource("1_cara")]
+position = Vector2(0, -648)
+
+[node name="ColorRect" parent="Cara5" index="0" unique_id=1434160555]
+color = Color(0.54263, 0.50650, 0.0, 1)
+
+[node name="Cara6" parent="." unique_id=1420452785 instance=ExtResource("1_cara")]
+position = Vector2(0, 648)
+
+[node name="ColorRect" parent="Cara6" index="0" unique_id=1434160555]
+color = Color(0.78536, 0.34430, 0.00951, 1)
+
+[node name="Player2D" parent="." unique_id=1755147713 instance=ExtResource("3_player")]
+position = Vector2(426, 508)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1086207180]
+position = Vector2(2, 0)
+
+[editable path="Cara2"]
+[editable path="Cara3"]
+[editable path="Cara4"]
+[editable path="Cara5"]
+[editable path="Cara6"]
