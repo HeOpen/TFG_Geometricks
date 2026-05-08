@@ -35,12 +35,19 @@ shape = SubResource("CapsuleShape3D_iof21")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=851470035]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12530899, 0)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Head/Camera3D" unique_id=1076554066]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.04202473, -0.025304228)
 light_color = Color(0.7529412, 0.50980395, 0.14901961, 1)
-spot_range = 6.058
-spot_attenuation = -0.08
-spot_angle = 29.77
+light_cull_mask = 4294967293
+shadow_enabled = true
+shadow_bias = 0.01
+shadow_normal_bias = 2.0
+spot_range = 3.0
+spot_attenuation = -4.0
+spot_angle = 26.39
+spot_angle_attenuation = 0.00097006356
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Head/Camera3D" unique_id=1038113874]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.333177, -1.1395255)

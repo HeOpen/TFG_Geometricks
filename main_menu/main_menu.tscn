@@ -93,7 +93,7 @@ background_mode = 2
 sky = SubResource("Sky_og6xe")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6tl50"]
-size = Vector3(1.7207031, 1.4443359, 0.44909668)
+size = Vector3(1.289978, 0.8096924, 0.043945313)
 
 [node name="MainMenu" type="Node3D" unique_id=944016157]
 script = ExtResource("1_bws42")
@@ -156,17 +156,17 @@ transform = Transform3D(0.36158895, -0.63251805, 0.68496305, -0.35395202, 0.5865
 shadow_enabled = true
 
 [node name="Billboard" type="Node3D" parent="." unique_id=1650519097]
-transform = Transform3D(0.615, 0, 0, 0, 0.615, 0, 0, 0, 0.615, 0.25326097, 0.3287304, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Billboard" unique_id=313261818]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.119, -0.05, 0.434)
 script = ExtResource("5_t6bnd")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Billboard/StaticBody3D" unique_id=190920587]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13413441, 1.0678985, -1.359539)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08340454, 1.0856978, -1.3448843)
 shape = SubResource("BoxShape3D_6tl50")
 
 [node name="Sprite3D" type="Sprite3D" parent="Billboard/StaticBody3D" unique_id=768649911]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.076391935, 1.1217685, -1.3629854)
+transform = Transform3D(0.55, 0, 0, 0, 0.55, 0, 0, 0, 0.55, 0.076391935, 1.1217685, -1.3629854)
 texture = ExtResource("5_3f7m4")
 
 [node name="Label3D2" type="Label3D" parent="Billboard/StaticBody3D/Sprite3D" unique_id=1585340964]

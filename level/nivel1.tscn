@@ -1,32 +1,8 @@
 [gd_scene format=3 uid="uid://dl37rbmvhcxkw"]
 
+[ext_resource type="Environment" uid="uid://d0d6qe5jpibkk" path="res://world/pesadilla_env.tres" id="1_rcpjj"]
 [ext_resource type="PackedScene" uid="uid://5mgb2l278x3l" path="res://player/jugador.tscn" id="1_to13d"]
 [ext_resource type="PackedScene" uid="uid://bcwb5s7inarp2" path="res://map/cabin.tscn" id="2_rcpjj"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_11ijd"]
-sky_top_color = Color(0, 0, 0, 1)
-sky_horizon_color = Color(0.24909386, 0.021343756, 0.09786741, 1)
-sky_cover_modulate = Color(0, 0, 0, 1)
-ground_bottom_color = Color(0, 0, 0, 1)
-ground_horizon_color = Color(0.2509804, 0.019607844, 0.09803922, 1)
-ground_curve = 0.2111255
-
-[sub_resource type="Sky" id="Sky_milgm"]
-sky_material = SubResource("ProceduralSkyMaterial_11ijd")
-
-[sub_resource type="Environment" id="Environment_ont3d"]
-background_mode = 2
-background_energy_multiplier = 0.49
-sky = SubResource("Sky_milgm")
-tonemap_mode = 3
-sdfgi_enabled = true
-sdfgi_read_sky_light = false
-fog_light_color = Color(0.4117647, 0.3764706, 0.46666667, 1)
-fog_density = 0.0711
-fog_aerial_perspective = 0.127
-volumetric_fog_enabled = true
-volumetric_fog_density = 0.0
-adjustment_enabled = true
 
 [sub_resource type="FogMaterial" id="FogMaterial_11ijd"]
 density = 1.254
@@ -34,33 +10,35 @@ albedo = Color(0.55122495, 0.6738945, 0.9313169, 1)
 
 [node name="Nivel1" type="Node3D" unique_id=1505825485]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=941520016]
-transform = Transform3D(-4.371139e-08, -0.92050487, 0.39073107, 0, 0.39073107, 0.92050487, -1, 4.0236547e-08, -1.7079397e-08, 0, 0, 0)
-light_color = Color(0.5424473, 0.57330143, 0.9242061, 1)
-light_energy = 0.2
-light_volumetric_fog_energy = 3.658
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=159508972]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_color = Color(0.42450976, 0.551252, 0.8053238, 1)
+light_energy = 0.055
+light_indirect_energy = 4.569
+light_volumetric_fog_energy = 0.0
 shadow_enabled = true
 directional_shadow_max_distance = 130.0
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1517203887]
-environment = SubResource("Environment_ont3d")
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1135325726]
+environment = ExtResource("1_rcpjj")
 
 [node name="Player" parent="." unique_id=2146257891 instance=ExtResource("1_to13d")]
-transform = Transform3D(-0.9998821, 0, -0.015358269, 0, 1, 0, 0.015358269, 0, -0.9998821, 10.554219, 0.2677753, -7.6271367)
-
-[node name="GreyBoxing" parent="." unique_id=1843936670 instance=ExtResource("2_rcpjj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.861023e-06, 1.4305115e-06, 0)
+transform = Transform3D(-0.9998821, 0, -0.015358269, 0, 1, 0, 0.015358269, 0, -0.9998821, 14.029105, 0.2677753, 0.78374624)
 
 [node name="FogVolume" type="FogVolume" parent="." unique_id=989422566]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.015499, 0.2574904, -0.08062744)
-size = Vector3(24.031776, 0.36558914, 16.116577)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.015499, 0.17203021, -0.08062744)
+visible = false
+size = Vector3(24.031776, 0.19466877, 16.116577)
 material = SubResource("FogMaterial_11ijd")
 
-[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=381258039]
-transform = Transform3D(0.88592416, 0.46090737, -0.051986784, 0.03641589, 0.04261875, 0.99842757, 0.46239826, -0.8864242, 0.020972759, -1.2451642, 2.0190508, 10.115867)
+[node name="Red_Exit_Light" type="SpotLight3D" parent="." unique_id=381258039]
+transform = Transform3D(0.9211844, 0.3868295, -0.04221673, 0.24455619, -0.49113658, 0.83604854, 0.30267406, -0.7804792, -0.54702896, -1.3902333, 2.282713, 7.2202706)
 light_color = Color(0.6189329, 1.732707e-06, 3.85046e-07, 1)
-light_energy = 1.387
-light_volumetric_fog_energy = 0.637
-spot_range = 4.372
-spot_attenuation = -3.68
-spot_angle = 47.9
+light_energy = 1.805
+light_volumetric_fog_energy = 6.292
+spot_range = 2.637
+spot_attenuation = -2.53
+spot_angle = 25.36
+spot_angle_attenuation = 0.029157264
+
+[node name="map_cabin" parent="." unique_id=1843936670 instance=ExtResource("2_rcpjj")]

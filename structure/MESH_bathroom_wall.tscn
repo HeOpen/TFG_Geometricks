@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dt867y0irgj7r"]
+
+[ext_resource type="Material" uid="uid://db4i8lgatk17o" path="res://materials/wall_bathroom.tres" id="1_ja5gj"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_7ircw"]
+size = Vector3(8, 3, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bs16l"]
+size = Vector3(8.004028, 3.0107422, 0.15039063)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bs16l"]
+size = Vector3(8, 3, 0.1)
+
+[node name="Node3D" type="Node3D" unique_id=461717543]
+
+[node name="Bathroom_wall" type="MeshInstance3D" parent="." unique_id=2064801751]
+visible = false
+mesh = SubResource("BoxMesh_7ircw")
+surface_material_override/0 = ExtResource("1_ja5gj")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Bathroom_wall" unique_id=3154465]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bathroom_wall/StaticBody3D" unique_id=973409222]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0022583008, -0.0084728, -0.01514709)
+shape = SubResource("BoxShape3D_bs16l")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=831674222]
+material_override = ExtResource("1_ja5gj")
+mesh = SubResource("BoxMesh_bs16l")
