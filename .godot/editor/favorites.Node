@@ -1,0 +1,8 @@
+Node3D
+CSGBox3D
+OmniLight3D
+MeshInstance3D
+CSGCombiner3D
+Node
+StaticBody3D
+CollisionShape3D

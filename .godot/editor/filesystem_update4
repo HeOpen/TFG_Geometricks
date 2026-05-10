@@ -1,0 +1,5 @@
+res://objects/props/all.tscn
+res://level/3d_cabin/cabin_structure.tscn
+res://level/3d_cabin/nivel_1.tscn
+res://level/3d_cabin/pesadilla_env.tres
+res://objects/props/CabinProps.tscn

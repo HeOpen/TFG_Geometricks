@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://g0kani8vum5b"
+path="res://.godot/imported/cabinDoor_Door_Closed_1.obj-899d0030d8ebc3d08cd3f4d75c4ad0bd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cabinDoor_Door_Closed_1.obj-899d0030d8ebc3d08cd3f4d75c4ad0bd.mesh"]
+
+source_file="res://assets/models_3d/PSX - Assets/Log Cabin AssetPack/cabinDoor_Door_Closed_1.obj"
+dest_files=["res://.godot/imported/cabinDoor_Door_Closed_1.obj-899d0030d8ebc3d08cd3f4d75c4ad0bd.mesh", "res://.godot/imported/cabinDoor_Door_Closed_1.obj-899d0030d8ebc3d08cd3f4d75c4ad0bd.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
