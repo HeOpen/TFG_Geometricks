@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://byf2pkk4vob8n"
+path="res://.godot/imported/Structure_Balcony_2_Edges_Corner.obj-be887dfcfb8b384b1e223417ee41a3ce.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Structure_Balcony_2_Edges_Corner.obj-be887dfcfb8b384b1e223417ee41a3ce.mesh"]
+
+source_file="res://assets/models_3d/ModularHouse/Structure_Balcony_2_Edges_Corner.obj"
+dest_files=["res://.godot/imported/Structure_Balcony_2_Edges_Corner.obj-be887dfcfb8b384b1e223417ee41a3ce.mesh", "res://.godot/imported/Structure_Balcony_2_Edges_Corner.obj-be887dfcfb8b384b1e223417ee41a3ce.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

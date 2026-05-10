@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://86rhbrl7ars4"]
+
+[ext_resource type="Material" uid="uid://bd36hxh1yiesq" path="res://assets/materials/wall_texture.tres" id="1_2or3n"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_2or3n"]
+top_radius = 0.14
+bottom_radius = 0.14
+height = 2.5
+
+[node name="LogWall" type="Node3D" unique_id=1997429010]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1928947826]
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="StaticBody3D" unique_id=1091153814]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1.107, 0)
+mesh = SubResource("CylinderMesh_2or3n")
+surface_material_override/0 = ExtResource("1_2or3n")

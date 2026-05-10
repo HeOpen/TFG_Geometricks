@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://d2cumnew2w4bc"]
+
+[ext_resource type="ArrayMesh" uid="uid://i0i4c538prmn" path="res://assets/models_3d/ModularHouse/Structure_Stairs_Straight.obj" id="1_6n8mn"]
+[ext_resource type="Texture2D" uid="uid://dx3hq1g5va7lj" path="res://assets/textures/Horror Textures by Canvas Coven/Tree bark/Tree_Bark_16.png" id="1_6tjl7"]
+[ext_resource type="ArrayMesh" uid="uid://koc1es8vcceh" path="res://assets/models_3d/PSX - Assets/Log Cabin AssetPack/cabinBanister_Stairs_Left_1.obj" id="3_tt3ai"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2o6xb"]
+albedo_texture = ExtResource("1_6tjl7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tt3ai"]
+albedo_texture = ExtResource("1_6tjl7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bnx4j"]
+albedo_texture = ExtResource("1_6tjl7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bksar"]
+albedo_color = Color(0.57254905, 0.56078434, 0.54509807, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x6ndu"]
+albedo_texture = ExtResource("1_6tjl7")
+uv1_scale = Vector3(6.185, 7.165, 8.15)
+uv1_triplanar = true
+
+[node name="Node3D" type="Node3D" unique_id=1515075192]
+
+[node name="Staircase" type="Node3D" parent="." unique_id=972621384]
+
+[node name="StructureStairsStraight" type="MeshInstance3D" parent="Staircase" unique_id=1981935539]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -0.017130375, -0.008533955, -0.002477765)
+material_override = SubResource("StandardMaterial3D_2o6xb")
+mesh = ExtResource("1_6n8mn")
+
+[node name="StructureStairsStraight2" type="MeshInstance3D" parent="Staircase" unique_id=294777311]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, 0.9615226, -1.0084822, -0.0012136698)
+material_override = SubResource("StandardMaterial3D_2o6xb")
+mesh = ExtResource("1_6n8mn")
+
+[node name="StructureStairsStraight3" type="MeshInstance3D" parent="Staircase" unique_id=154575965]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -0.017130375, -0.008533955, 1.0888633)
+material_override = SubResource("StandardMaterial3D_2o6xb")
+mesh = ExtResource("1_6n8mn")
+
+[node name="StructureStairsStraight4" type="MeshInstance3D" parent="Staircase" unique_id=499782503]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, 0.9615226, -1.0084822, 1.0901273)
+material_override = SubResource("StandardMaterial3D_2o6xb")
+mesh = ExtResource("1_6n8mn")
+
+[node name="StructureStairsStraight5" type="MeshInstance3D" parent="Staircase" unique_id=2016314548]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, 1.9598393, -2.0087407, -0.0012136698)
+material_override = SubResource("StandardMaterial3D_2o6xb")
+mesh = ExtResource("1_6n8mn")
+
+[node name="StructureStairsStraight6" type="MeshInstance3D" parent="Staircase" unique_id=228522637]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, 1.9598393, -2.0087407, 1.0901273)
+material_override = SubResource("StandardMaterial3D_2o6xb")
+mesh = ExtResource("1_6n8mn")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1957420142]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0274449, -1.1919923, 0.54302025)
+material_override = SubResource("StandardMaterial3D_tt3ai")
+size = Vector3(0.9794464, 2.0333147, 2.1909485)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=527571370]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.96036935, -1.7067946, 0.543005)
+material_override = SubResource("StandardMaterial3D_bnx4j")
+size = Vector3(1.0009537, 1.0040257, 2.190979)
+material = SubResource("StandardMaterial3D_bksar")
+
+[node name="CabinBanisterStairsLeft1" type="MeshInstance3D" parent="." unique_id=2082224960]
+transform = Transform3D(-1.3113416e-07, 0, -3, 0, 3, 0, 3, 0, -1.3113416e-07, 0.9797193, -2.3761587, 0.29145354)
+material_override = SubResource("StandardMaterial3D_x6ndu")
+mesh = ExtResource("3_tt3ai")

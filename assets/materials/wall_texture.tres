@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bd36hxh1yiesq"]
+
+[ext_resource type="Texture2D" uid="uid://bldht0dkn70ib" path="res://assets/textures/Horror Textures by Canvas Coven/Tree bark/Tree_Bark_04.png" id="1_qdjw1"]
+
+[resource]
+albedo_texture = ExtResource("1_qdjw1")
+normal_enabled = true
+uv1_scale = Vector3(7.495, 3.34, 4.805)
+uv1_triplanar = true
