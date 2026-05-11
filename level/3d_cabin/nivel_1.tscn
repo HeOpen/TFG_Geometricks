@@ -2,7 +2,7 @@
 
 [ext_resource type="Environment" uid="uid://d0d6qe5jpibkk" path="res://level/3d_cabin/pesadilla_env.tres" id="1_edpxn"]
 [ext_resource type="PackedScene" uid="uid://5mgb2l278x3l" path="res://entities/player_3d/player_3d.tscn" id="2_27ww1"]
-[ext_resource type="PackedScene" uid="uid://tdskgmk6nir8" path="res://level/3d_cabin/cabin_structure.tscn" id="3_27ww1"]
+[ext_resource type="PackedScene" uid="uid://c18tc2son874o" path="res://objects/props/Cabin_Completed.tscn" id="3_27ww1"]
 
 [sub_resource type="FogMaterial" id="FogMaterial_11ijd"]
 density = 1.254
@@ -30,6 +30,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.8679752)
 size = Vector3(16.08, 0.19, 24.17)
 material = SubResource("FogMaterial_11ijd")
 
+[node name="FogVolume2" type="FogVolume" parent="." unique_id=1664138319]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.475937, 3.8679752)
+size = Vector3(16.08, 0.19, 24.17)
+material = SubResource("FogMaterial_11ijd")
+
+[node name="Node3D" parent="." unique_id=293068168 instance=ExtResource("3_27ww1")]
+
 [node name="Red_Exit_Light" type="SpotLight3D" parent="." unique_id=381258039]
 transform = Transform3D(-0.26986942, 0.79368573, 0.5451912, 0.24455619, -0.49113658, 0.83604854, 0.9313232, 0.35895383, -0.06155801, -7.0945296, 2.282713, -1.5727593)
 light_color = Color(0.6189329, 1.732707e-06, 3.85046e-07, 1)
@@ -40,4 +47,55 @@ spot_attenuation = -2.53
 spot_angle = 25.36
 spot_angle_attenuation = 0.029157264
 
-[node name="Cabin_Structure" parent="." unique_id=125884885 instance=ExtResource("3_27ww1")]
+[node name="Red_Exit_Light2" type="SpotLight3D" parent="." unique_id=1700811883]
+transform = Transform3D(-0.36329567, 0.927523, -0.08784843, 0.025562957, 0.10417904, 0.99423, 0.9313232, 0.35895377, -0.061558023, 0.0319252, -0.6054597, -0.69119704)
+light_color = Color(0.6189329, 1.732707e-06, 3.85046e-07, 1)
+light_energy = 1.805
+light_volumetric_fog_energy = 6.292
+spot_attenuation = -1.13
+
+[node name="Red_Exit_Light3" type="SpotLight3D" parent="." unique_id=2022232282]
+transform = Transform3D(-0.36329567, 0.927523, -0.08784843, 0.025562957, 0.10417904, 0.99423, 0.9313232, 0.35895377, -0.061558023, 0.0319252, -0.6054597, 7.9907646)
+light_color = Color(0.6189329, 1.732707e-06, 3.85046e-07, 1)
+light_energy = 1.805
+light_volumetric_fog_energy = 6.292
+spot_attenuation = -1.13
+
+[node name="Red_Exit_Light8" type="SpotLight3D" parent="." unique_id=1482100835]
+transform = Transform3D(-0.36329567, 0.927523, -0.08784843, 0.15693323, 0.15386538, 0.9755498, 0.9183619, 0.34062675, -0.20145783, 0.0319252, -0.6054597, 15.27793)
+light_color = Color(0.6189329, 1.732707e-06, 3.85046e-07, 1)
+light_energy = 1.805
+light_volumetric_fog_energy = 6.292
+spot_attenuation = -2.63
+
+[node name="Red_Exit_Light4" type="SpotLight3D" parent="." unique_id=536476188]
+transform = Transform3D(-0.36329567, 0.927523, -0.08784843, 0.025562957, 0.10417904, 0.99423, 0.9313232, 0.35895377, -0.061558023, 7.4669, -0.6054597, -0.69119704)
+light_color = Color(0.6189329, 1.732707e-06, 3.85046e-07, 1)
+light_energy = 1.805
+light_volumetric_fog_energy = 6.292
+spot_attenuation = -1.13
+
+[node name="Red_Exit_Light5" type="SpotLight3D" parent="." unique_id=1061994547]
+transform = Transform3D(-0.36329567, 0.927523, -0.08784843, 0.025562957, 0.10417904, 0.99423, 0.9313232, 0.35895377, -0.061558023, 7.4669, -0.6054597, 7.9907646)
+light_color = Color(0.6189329, 1.732707e-06, 3.85046e-07, 1)
+light_energy = 1.805
+light_volumetric_fog_energy = 6.292
+spot_attenuation = -1.13
+
+[node name="Red_Exit_Light6" type="SpotLight3D" parent="." unique_id=1262489648]
+transform = Transform3D(-0.36329567, 0.927523, -0.08784843, 0.025562957, 0.10417904, 0.99423, 0.9313232, 0.35895377, -0.061558023, -7.66924, -0.6054597, -0.69119704)
+light_color = Color(0.6189329, 1.732707e-06, 3.85046e-07, 1)
+light_energy = 1.805
+light_volumetric_fog_energy = 6.292
+spot_attenuation = -1.13
+
+[node name="Red_Exit_Light7" type="SpotLight3D" parent="." unique_id=769766712]
+transform = Transform3D(-0.36329567, 0.927523, -0.08784843, 0.025562957, 0.10417904, 0.99423, 0.9313232, 0.35895377, -0.061558023, -7.66924, -0.6054597, 7.9907646)
+light_color = Color(0.6189329, 1.732707e-06, 3.85046e-07, 1)
+light_energy = 1.805
+light_volumetric_fog_energy = 6.292
+spot_attenuation = -1.13
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1502080244]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.079975, -0.6557021, -6.974357)
+light_color = Color(0.33361515, 1, 0, 1)

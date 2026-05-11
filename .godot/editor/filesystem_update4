@@ -1,5 +1,5 @@
-res://objects/props/all.tscn
-res://level/3d_cabin/cabin_structure.tscn
-res://level/3d_cabin/nivel_1.tscn
+res://objects/props/Cabin_Completed.tscn
 res://level/3d_cabin/pesadilla_env.tres
-res://objects/props/CabinProps.tscn
+res://objects/props/living_room.tscn
+res://objects/props/Kitchen.tscn
+res://objects/props/all.tscn
