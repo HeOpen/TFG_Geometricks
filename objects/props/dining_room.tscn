@@ -136,11 +136,11 @@ transform = Transform3D(50.779396, 86.14786, 2.5674062e-06, 2.9802322e-06, 0, 10
 mesh = SubResource("ArrayMesh_jq5hf")
 
 [node name="Chair_27" type="MeshInstance3D" parent="." unique_id=2017250082]
-transform = Transform3D(87.70288, -48.04378, -2.1000603e-06, 0, -4.371139e-06, 100, -48.04378, -87.70288, -3.8336148e-06, 0.13032937, 0.3783136, -1.9049748)
+transform = Transform3D(-45.62129, -88.98707, -3.8897483e-06, -1.5579161e-13, -4.371139e-06, 100, -88.98707, 45.62129, 1.9941695e-06, -0.5868795, 0.3783136, -1.1742246)
 mesh = SubResource("ArrayMesh_jq5hf")
 
 [node name="Chair_28" type="MeshInstance3D" parent="." unique_id=1302802821]
-transform = Transform3D(65.303734, -75.73257, -3.3103759e-06, 0, -4.371139e-06, 100, -75.73257, -65.303734, -2.8545169e-06, 1.1123168, 0.3783136, -0.853619)
+transform = Transform3D(97.92793, 20.251377, 8.852156e-07, 1.3452806e-13, -4.371139e-06, 100, 20.251377, -97.92793, -4.280566e-06, 1.2831428, 0.37831384, -1.3088709)
 mesh = SubResource("ArrayMesh_jq5hf")
 
 [node name="Flower_Table_01" type="MeshInstance3D" parent="." unique_id=283690876]
