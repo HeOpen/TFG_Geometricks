@@ -379,11 +379,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1206106, -0.20476753, -1.12
 mesh = ExtResource("5_ukrer")
 
 [node name="Washing_machine_03" type="MeshInstance3D" parent="." unique_id=2023484495]
-transform = Transform3D(-100, 8.742277e-06, 3.8213706e-13, 0, -4.3711384e-06, 99.99999, 8.742278e-06, 99.99999, 4.3711384e-06, 2.5678053, 0.3823135, -0.82980037)
+transform = Transform3D(-80, 1.2079664e-05, 5.2801887e-13, 0, -3.4969112e-06, 80, 1.2079664e-05, 80, 3.4969112e-06, 2.5678053, 0.3823135, -0.82980037)
 mesh = SubResource("ArrayMesh_q0tbc")
 
 [node name="Washing_machine_d_03" type="MeshInstance3D" parent="." unique_id=140389340]
-transform = Transform3D(-100, 8.742277e-06, 3.8213706e-13, 0, -4.3711384e-06, 99.99999, 8.742278e-06, 99.99999, 4.3711384e-06, 2.5678034, 1.1921424, -1.0579996)
+transform = Transform3D(-80, 1.2079665e-05, 5.046472e-13, 1.4698389e-06, 9.734301, 79.40557, 1.1989908e-05, 79.40557, -9.734301, 2.5678034, 1.010801, -1.0213495)
 mesh = SubResource("ArrayMesh_586hx")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=2091064324]
@@ -392,11 +392,11 @@ material_override = ExtResource("5_yms55")
 size = Vector3(6.028595, 0.1, 2.880188)
 
 [node name="Washing_machine_01" type="MeshInstance3D" parent="." unique_id=937509470]
-transform = Transform3D(-102.48865, 8.959842e-06, 3.916471e-13, 0, -4.479921e-06, 102.48864, 8.9598425e-06, 102.48864, 4.479921e-06, 3.4533958, 0.5572423, -0.7662449)
+transform = Transform3D(-80, 1.2079664e-05, 5.2801887e-13, 0, -3.4969112e-06, 80, 1.2079664e-05, 80, 3.4969112e-06, 3.4533958, 0.5572423, -0.7662449)
 mesh = SubResource("ArrayMesh_ukrer")
 
 [node name="Washing_machine_d_01" type="MeshInstance3D" parent="." unique_id=1727229490]
-transform = Transform3D(-97.743454, -21.123936, -9.2335733e-07, -2.3284494e-13, -4.371139e-06, 100.00001, -21.123943, 97.74344, 4.2725023e-06, 3.1212997, 0.6443973, -0.3726344)
+transform = Transform3D(-78.19475, -16.899157, -7.386856e-07, 0, -3.4969112e-06, 80, -16.899157, 78.19475, 3.4180011e-06, 3.183557, 0.6443973, -0.4547773)
 mesh = SubResource("ArrayMesh_gopy1")
 
 [node name="Washbasin_06" type="MeshInstance3D" parent="." unique_id=1448098618]

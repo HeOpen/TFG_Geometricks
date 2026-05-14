@@ -10,14 +10,20 @@
 [ext_resource type="PackedScene" uid="uid://bn3v0umcbf8ww" path="res://objects/modular_architecture/MESH_Floor.tscn" id="8_srhx0"]
 [ext_resource type="PackedScene" uid="uid://bqiw721ebocq5" path="res://objects/modular_architecture/MESH_log_wall_50medium.tscn" id="9_4r2id"]
 [ext_resource type="PackedScene" uid="uid://bdfdcairymynr" path="res://objects/modular_architecture/MESH_Floor_Stair.tscn" id="9_lnuhh"]
+[ext_resource type="PackedScene" uid="uid://beyiy5qk85cp7" path="res://objects/modular_architecture/MESH_ceiling.tscn" id="11_gm0rs"]
 
 [node name="Cabin_Structure" type="Node3D" unique_id=125884885]
 
+[node name="Ceiling" parent="." unique_id=2093770012 instance=ExtResource("11_gm0rs")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.015185118, 2.3561263, 3.9888422)
+visible = false
+size = Vector3(23.936768, 0.01, 16.021362)
+
 [node name="Staircase" parent="." unique_id=1515075192 instance=ExtResource("7_blnp6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.540736, -1.1223166, -7.423)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7259035, -1.1223166, -7.423)
 
 [node name="Staircase2" parent="." unique_id=1819403609 instance=ExtResource("7_blnp6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.321, 2.075, -7.423)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5112476, 2.075, -7.423)
 
 [node name="0_Floor" type="Node3D" parent="." unique_id=678177921]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
@@ -89,7 +95,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.0
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2, 0, 10.8885145)
 
 [node name="LogWall19" parent="Wall" unique_id=1997429010 instance=ExtResource("2_j7wxx")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2, 0, 5.395988)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2, 0, 4.98626)
 
 [node name="Bathrrom_Wall" parent="Wall" unique_id=461717543 instance=ExtResource("5_bawhu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.988245, 1.116202, 13.067217)
@@ -101,16 +107,16 @@ transform = Transform3D(-2.1637137e-08, 0, 1, 0, 1, 0, -0.495, 0, -4.371139e-08,
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.988, 1.113, 15.894)
 
 [node name="LogWall" parent="Wall" unique_id=222226347 instance=ExtResource("9_4r2id")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.008, 0.01, 4.206)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.008, 0.01, 3.99803)
 
 [node name="LogWall2" parent="Wall" unique_id=1852428696 instance=ExtResource("9_4r2id")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9084558, 0.01, 2.2907183)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9084558, 0.01, 2.0827484)
 
 [node name="LogWall3" parent="Wall" unique_id=1395911423 instance=ExtResource("9_4r2id")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.908, 0.01, -2.987)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0788994, 0.01, -3)
 
 [node name="LogWall4" parent="Wall" unique_id=434875406 instance=ExtResource("9_4r2id")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.092306376, 0.01, -2.987)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9214067, 0.01, -3)
 
 [node name="Columns" type="Node3D" parent="." unique_id=1645464690]
 
@@ -126,19 +132,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9822614, 0.07517803, 13.013
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9999526, 0.07517803, 8.0134945)
 
 [node name="Column8" parent="Columns/0" unique_id=937407765 instance=ExtResource("6_gyucb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9999526, 0.07517803, 2.2518687)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9999526, 0.07517803, 2.0438988)
 
 [node name="Column11" parent="Columns/0" unique_id=1046286775 instance=ExtResource("6_gyucb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0086377, 0.07517803, 6.2170777)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0086377, 0.07517803, 6.0091076)
 
 [node name="Column10" parent="Columns/0" unique_id=1881152638 instance=ExtResource("6_gyucb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.999998, 0.07517803, 2.2931058)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.999998, 0.07517803, 2.085136)
 
 [node name="Column4" parent="Columns/0" unique_id=64757032 instance=ExtResource("6_gyucb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9579504, 0.07517803, 7.9588766)
 
 [node name="Column9" parent="Columns/0" unique_id=1390131525 instance=ExtResource("6_gyucb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.996712, 0.075, 2.4527643)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.997, 0.075, 2)
 
 [node name="Column5" parent="Columns/0" unique_id=1432949471 instance=ExtResource("6_gyucb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9904633, 0.07517803, 0.018045425)
@@ -156,16 +162,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9984555, 0.029979527, -0.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9984555, 0.029979527, -2.9873188)
 
 [node name="LogWall7" parent="Columns/0" unique_id=1239471761 instance=ExtResource("6_gyucb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8835193, 0.029979527, -2.9873188)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.054418802, 0.029979527, -3)
 
 [node name="LogWall8" parent="Columns/0" unique_id=1327712912 instance=ExtResource("6_gyucb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8756495, 0.029979527, -2.9873188)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.046549, 0.029979527, -3)
 
 [node name="LogWall9" parent="Columns/0" unique_id=1167058699 instance=ExtResource("6_gyucb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0408752, 0.029979527, -2.9873188)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8699756, 0.029979527, -3)
 
 [node name="LogWall10" parent="Columns/0" unique_id=1518260954 instance=ExtResource("6_gyucb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.879055, 0.029979527, -2.9873188)
+
+[node name="LogWall13" parent="Columns/0" unique_id=96611474 instance=ExtResource("6_gyucb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.006111, 0.029979527, -5.8792033)
+
+[node name="LogWall11" parent="Columns/0" unique_id=495932638 instance=ExtResource("6_gyucb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.879055, 0.029979527, 2)
+
+[node name="LogWall12" parent="Columns/0" unique_id=767609606 instance=ExtResource("6_gyucb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9834523, 0.029979527, 2)
 
 [node name="LogWall3" parent="Columns/0" unique_id=1094508692 instance=ExtResource("6_gyucb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9270563, 0.029979527, 7.900346)
@@ -180,9 +195,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9270563, 0.029979527, 12.8
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.940996, 0.029979527, -7.882342)
 
 [node name="-1" type="Node3D" parent="Columns" unique_id=1368008364]
-
-[node name="LogWall" parent="Columns/-1" unique_id=673837755 instance=ExtResource("6_gyucb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.075, -2.434, -5.687)
 
 [node name="LogWall2" parent="Columns/-1" unique_id=1855764880 instance=ExtResource("6_gyucb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.047630966, -2.493963, -0.11883736)
@@ -222,3 +234,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.878167, -2.493963, -7.9476
 
 [node name="LogWall" parent="." unique_id=514964330 instance=ExtResource("4_oi8ug")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.878, 0.01, -2.987)
+
+[node name="LogWall2" parent="." unique_id=518729063 instance=ExtResource("4_oi8ug")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.878, 0.01, 2)
+
+[node name="LogWall3" parent="." unique_id=1546008182 instance=ExtResource("4_oi8ug")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9444056, 0.01, 2)
+
+[node name="LogWall4" parent="." unique_id=1297736767 instance=ExtResource("4_oi8ug")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2, 0.01, -6.906)

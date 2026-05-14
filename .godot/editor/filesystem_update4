@@ -1,1 +1,5 @@
+res://entities/player_3d/player_3d.tscn
+res://level/3d_cabin/pesadilla_env.tres
+res://level/3d_cabin/cabin_structure.tscn
+res://level/3d_cabin/nivel_1.tscn
 res://objects/props/Cabin_Completed.tscn

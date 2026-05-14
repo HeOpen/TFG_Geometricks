@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://c5j8us38h0mv"]
+
+[ext_resource type="PackedScene" uid="uid://c0yvn6cf8wbtc" path="res://assets/models_3d/LowPolyAssetPack_Free/FBX and Blend Files/Technology Props/Computer Parts/Mesh_PC_Speaker_02.fbx" id="1_4xg5k"]
+[ext_resource type="Texture2D" uid="uid://u8i6ipmojglx" path="res://assets/textures/Horror Textures by Canvas Coven/Metal/Metal_16.png" id="2_t8f0x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_axwav"]
+albedo_color = Color(0.54532987, 0.515593, 0.44834715, 1)
+albedo_texture = ExtResource("2_t8f0x")
+
+[node name="Mesh_PC_Speaker_02" unique_id=382811099 instance=ExtResource("1_4xg5k")]
+
+[node name="Mesh_Speaker_02" parent="." index="0" unique_id=463740662]
+surface_material_override/0 = SubResource("StandardMaterial3D_axwav")

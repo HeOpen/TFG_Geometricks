@@ -10,15 +10,6 @@ albedo = Color(0.55122495, 0.6738945, 0.9313169, 1)
 
 [node name="Nivel1" type="Node3D" unique_id=1505825485]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=159508972]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
-light_color = Color(0.5943188, 0.5041239, 0.7218641, 1)
-light_energy = 0.6
-light_indirect_energy = 4.569
-light_volumetric_fog_energy = 4.5
-shadow_enabled = true
-directional_shadow_max_distance = 130.0
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1135325726]
 environment = ExtResource("1_edpxn")
 
@@ -35,13 +26,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.475937, 3.8679752)
 size = Vector3(16.08, 0.19, 24.17)
 material = SubResource("FogMaterial_11ijd")
 
-[node name="Node3D" parent="." unique_id=293068168 instance=ExtResource("3_27ww1")]
+[node name="Cabin" parent="." unique_id=293068168 instance=ExtResource("3_27ww1")]
 
 [node name="Red_Exit_Light" type="SpotLight3D" parent="." unique_id=381258039]
 transform = Transform3D(-0.26986942, 0.79368573, 0.5451912, 0.24455619, -0.49113658, 0.83604854, 0.9313232, 0.35895383, -0.06155801, -7.0945296, 2.282713, -1.5727593)
 light_color = Color(0.6189329, 1.732707e-06, 3.85046e-07, 1)
 light_energy = 1.805
-light_volumetric_fog_energy = 6.292
+light_volumetric_fog_energy = 16.0
 spot_range = 2.637
 spot_attenuation = -2.53
 spot_angle = 25.36
@@ -96,6 +87,7 @@ light_energy = 1.805
 light_volumetric_fog_energy = 6.292
 spot_attenuation = -1.13
 
-[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1502080244]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.079975, -0.6557021, -6.974357)
-light_color = Color(0.33361515, 1, 0, 1)
+[node name="BasementLight" type="OmniLight3D" parent="." unique_id=1502080244]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4045157, -1.5128889, -7.148869)
+light_color = Color(0.61960787, 0, 0, 1)
+omni_attenuation = -0.545

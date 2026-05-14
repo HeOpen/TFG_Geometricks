@@ -2,10 +2,9 @@
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_11ijd"]
 sky_top_color = Color(0, 0, 0, 1)
-sky_horizon_color = Color(0.24909386, 0.021343756, 0.09786741, 1)
-sky_cover_modulate = Color(0, 0, 0, 1)
+sky_horizon_color = Color(0, 0, 0, 1)
 ground_bottom_color = Color(0, 0, 0, 1)
-ground_horizon_color = Color(0.2509804, 0.019607844, 0.09803922, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
 ground_curve = 0.2111255
 
 [sub_resource type="Sky" id="Sky_milgm"]
