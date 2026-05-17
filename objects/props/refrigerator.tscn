@@ -729,7 +729,7 @@ transform = Transform3D(-0.5029145, -0.86433625, -3.778136e-08, 0.8643365, -0.50
 mesh = SubResource("ArrayMesh_twcic")
 
 [node name="Watermelon_02" type="MeshInstance3D" parent="Down_Refrigerator_Door_002" unique_id=959978595]
-transform = Transform3D(-0.04598791, -0.1545707, 0.100464135, -0.1843468, 0.03788899, -0.026090888, 0.0011916066, -0.10378989, -0.15914221, 0.00088328775, 0.0044520977, 0.005716156)
+transform = Transform3D(-0.045987915, -0.1545707, 0.100464135, -0.18434682, 0.03788899, -0.026090885, 0.0011916065, -0.10378989, -0.15914221, 1.6457634e-05, 0.004947813, 0.0057161567)
 mesh = SubResource("ArrayMesh_0rm4b")
 
 [node name="Eggs_01" type="MeshInstance3D" parent="Down_Refrigerator_Door_002" unique_id=1447687902]

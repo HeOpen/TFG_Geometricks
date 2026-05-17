@@ -14,3 +14,8 @@ res://objects/props/all.tscn
 res://objects/props/analog_clock.tscn
 res://level/3d_cabin/cabin_amueblada.tscn
 res://objects/props/pc_room.tscn
+res://objects/props/living_room.tscn
+res://objects/props/Kitchen.tscn
+res://objects/props/refrigerator.tscn
+res://objects/props/trash_and_debris.tscn
+res://level/3d_cabin/cabin_structure.tscn

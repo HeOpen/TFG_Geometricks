@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://btgn7kwbxrv7q" path="res://objects/props/living_room.tscn" id="5_8vpnn"]
 [ext_resource type="PackedScene" uid="uid://djjsv3h404ien" path="res://objects/props/pc_room.tscn" id="9_8vpnn"]
 [ext_resource type="Texture2D" uid="uid://bu1yw2guiod2b" path="res://assets/textures/Horror Textures by Canvas Coven/Metal/Metal_01.png" id="10_yvel7"]
-[ext_resource type="PackedScene" uid="uid://ngwu7ooje5c" path="res://objects/props/refrigerator.tscn" id="11_t5j46"]
+[ext_resource type="PackedScene" uid="uid://01yrumtseoqp" path="res://objects/props/wall_clock.tscn" id="11_bdrwf"]
 [ext_resource type="PackedScene" uid="uid://cn8f0gv1dd5k2" path="res://assets/models_3d/closed_lock.tscn" id="16_36tuj"]
 [ext_resource type="PackedScene" uid="uid://c5oh352epgdcg" path="res://assets/models_3d/box.tscn" id="16_vx2m5"]
 
@@ -68,7 +68,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9131947, 0, 8.99782)
 
 [node name="LivingRoom" parent="Cabin_Structure" unique_id=1620067552 instance=ExtResource("5_8vpnn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.0237894, 0.0060016513, 5.2409225)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6743796, 0.0060016513, 5.108233)
 
 [node name="Kitchen2" parent="Cabin_Structure" unique_id=733641497 instance=ExtResource("2_gwr2c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.629645, 0.5943948, -6.5659027)
@@ -82,51 +82,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.003413, 0.0029295683, 5.325
 [node name="Bedroom" parent="Cabin_Structure" unique_id=1395123931 instance=ExtResource("4_em03w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1232243, 0.035841137, 11.122396)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1578013858]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.165345, 1.3743279, 4.7926297)
-size = Vector3(0.6425781, 1, 1.8970642)
-material = SubResource("StandardMaterial3D_n82xp")
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=361906546]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.176559, 1.3743279, 4.6192627)
-size = Vector3(0.6425781, 1, 3.053936)
-material = SubResource("StandardMaterial3D_n82xp")
-
-[node name="CSGBox3D7" type="CSGBox3D" parent="." unique_id=533826039]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.10903, 1.3743279, -5.441249)
-size = Vector3(0.6425781, 1, 3.3847656)
-material = SubResource("StandardMaterial3D_n82xp")
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=432113054]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.167997, 1.3743279, 10.4311695)
-size = Vector3(0.6425781, 1, 3.0758972)
-material = SubResource("StandardMaterial3D_n82xp")
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=268323331]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.046426, 1.3743279, 12.040474)
-size = Vector3(0.39990234, 1, 1.815918)
-material = SubResource("StandardMaterial3D_n82xp")
-
-[node name="CSGBox3D5" type="CSGBox3D" parent="." unique_id=1401391449]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.06754875, 1.3743279, 15.94491)
-size = Vector3(0.6425781, 1, 2.1699219)
-material = SubResource("StandardMaterial3D_n82xp")
-
-[node name="CSGBox3D8" type="CSGBox3D" parent="." unique_id=302256409]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.5600972, 1.3743279, -7.980477)
-size = Vector3(0.6425781, 1, 2.1699219)
-material = SubResource("StandardMaterial3D_n82xp")
-
-[node name="CSGBox3D9" type="CSGBox3D" parent="." unique_id=928230446]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.050274134, 1.1701411, -2.8384075)
-size = Vector3(0.020507813, 1.7462158, 2.088379)
-material = SubResource("StandardMaterial3D_yvel7")
-
-[node name="CSGBox3D6" type="CSGBox3D" parent="." unique_id=1975632431]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.7453303, 1.9225235, 15.94491)
-size = Vector3(0.6425781, 0.4725952, 2.1699219)
-material = SubResource("StandardMaterial3D_n82xp")
-
 [node name="TapaSotano" parent="." unique_id=718466876 instance=ExtResource("16_vx2m5")]
 transform = Transform3D(1.0949999, 0, 0, 0, 1.0949999, 0, 0, 0, 1.0949999, -5.0436277, -2.312, -6.722)
 
@@ -136,50 +91,108 @@ transform = Transform3D(0.081417, 0, -0.28874084, 0, 0.29999998, 0, 0.28874084, 
 [node name="Lock_Sotano" parent="." unique_id=311865494 instance=ExtResource("16_36tuj")]
 transform = Transform3D(0.0076967007, 0.59985703, -0.010596188, 0, -0.01059706, -0.59990644, -0.5999507, 0.007695501, -0.00013593734, -5.417345, 0.02443692, -5.7797613)
 
-[node name="Mesh_Shelf_05" type="MeshInstance3D" parent="." unique_id=78370004]
+[node name="Windows" type="Node3D" parent="." unique_id=809931369]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Windows" unique_id=1578013858]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.165345, 1.3743279, 4.7926297)
+size = Vector3(0.6425781, 1, 1.8970642)
+material = SubResource("StandardMaterial3D_n82xp")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Windows" unique_id=361906546]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.176559, 1.3743279, 4.6192627)
+size = Vector3(0.6425781, 1, 3.053936)
+material = SubResource("StandardMaterial3D_n82xp")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Windows" unique_id=533826039]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.10903, 1.3743279, -5.441249)
+size = Vector3(0.6425781, 1, 3.3847656)
+material = SubResource("StandardMaterial3D_n82xp")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Windows" unique_id=432113054]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.167997, 1.3743279, 10.4311695)
+size = Vector3(0.6425781, 1, 3.0758972)
+material = SubResource("StandardMaterial3D_n82xp")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Windows" unique_id=268323331]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.046426, 1.3743279, 12.040474)
+size = Vector3(0.39990234, 1, 1.815918)
+material = SubResource("StandardMaterial3D_n82xp")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Windows" unique_id=1401391449]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.06754875, 1.3743279, 15.94491)
+size = Vector3(0.6425781, 1, 2.1699219)
+material = SubResource("StandardMaterial3D_n82xp")
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Windows" unique_id=302256409]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.3711631, 1.3743279, -7.980477)
+size = Vector3(0.6425781, 1, 2.1699219)
+material = SubResource("StandardMaterial3D_n82xp")
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="Windows" unique_id=928230446]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.0445867, 1.1701411, -2.8384075)
+size = Vector3(0.020507813, 1.7462158, 2.088379)
+material = SubResource("StandardMaterial3D_yvel7")
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="Windows" unique_id=86652008]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.2897196, 1.1701411, -2.8384075)
+size = Vector3(0.020507813, 1.7462158, 2.088379)
+material = SubResource("StandardMaterial3D_yvel7")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Windows" unique_id=1975632431]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.7453303, 1.9225235, 15.94491)
+size = Vector3(0.6425781, 0.4725952, 2.1699219)
+material = SubResource("StandardMaterial3D_n82xp")
+
+[node name="Sotano" type="Node3D" parent="." unique_id=1313403498]
+
+[node name="Mesh_Shelf_05" type="MeshInstance3D" parent="Sotano" unique_id=78370004]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -7.2863746, -2.5698981, 0.0018595979)
 material_override = SubResource("StandardMaterial3D_t5j46")
 mesh = SubResource("ArrayMesh_rlcvt")
 
-[node name="Mesh_Shelf_06" type="MeshInstance3D" parent="." unique_id=1515997091]
+[node name="Mesh_Shelf_06" type="MeshInstance3D" parent="Sotano" unique_id=1515997091]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -7.2863746, -2.5698981, 3.246035)
 material_override = SubResource("StandardMaterial3D_t5j46")
 mesh = SubResource("ArrayMesh_rlcvt")
 
-[node name="Mesh_Shelf_07" type="MeshInstance3D" parent="." unique_id=1883751022]
+[node name="Mesh_Shelf_07" type="MeshInstance3D" parent="Sotano" unique_id=1883751022]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -7.2863746, -2.5698981, 6.4856925)
 material_override = SubResource("StandardMaterial3D_t5j46")
 mesh = SubResource("ArrayMesh_rlcvt")
 
-[node name="Mesh_Shelf_08" type="MeshInstance3D" parent="." unique_id=1561955475]
+[node name="Mesh_Shelf_08" type="MeshInstance3D" parent="Sotano" unique_id=1561955475]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -7.2863746, -2.5698981, 9.729868)
 material_override = SubResource("StandardMaterial3D_t5j46")
 mesh = SubResource("ArrayMesh_rlcvt")
 
-[node name="Mesh_Shelf_09" type="MeshInstance3D" parent="." unique_id=2060841282]
+[node name="Mesh_Shelf_09" type="MeshInstance3D" parent="Sotano" unique_id=2060841282]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 7.20409, -2.5698981, 0.0018595979)
 material_override = SubResource("StandardMaterial3D_t5j46")
 mesh = SubResource("ArrayMesh_rlcvt")
 
-[node name="Mesh_Shelf_10" type="MeshInstance3D" parent="." unique_id=1388573211]
+[node name="Mesh_Shelf_10" type="MeshInstance3D" parent="Sotano" unique_id=1388573211]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 7.167877, -2.5698981, 3.246035)
 material_override = SubResource("StandardMaterial3D_t5j46")
 mesh = SubResource("ArrayMesh_rlcvt")
 
-[node name="Mesh_Shelf_11" type="MeshInstance3D" parent="." unique_id=150614007]
+[node name="Mesh_Shelf_11" type="MeshInstance3D" parent="Sotano" unique_id=150614007]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 7.167877, -2.5698981, 6.4856925)
 material_override = SubResource("StandardMaterial3D_t5j46")
 mesh = SubResource("ArrayMesh_rlcvt")
 
-[node name="Mesh_Shelf_12" type="MeshInstance3D" parent="." unique_id=737708788]
+[node name="Mesh_Shelf_12" type="MeshInstance3D" parent="Sotano" unique_id=737708788]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 7.167877, -2.5698981, 9.729868)
 material_override = SubResource("StandardMaterial3D_t5j46")
 mesh = SubResource("ArrayMesh_rlcvt")
 
-[node name="Mesh_Shelf_13" type="MeshInstance3D" parent="." unique_id=1687193381]
-transform = Transform3D(-4.371139e-06, -99.99999, -4.3711384e-06, 0, -4.3711384e-06, 99.99999, -100, 4.3711384e-06, 1.9106853e-13, 0.1841793, -2.5698981, 10.8629265)
+[node name="Mesh_Shelf_13" type="MeshInstance3D" parent="Sotano" unique_id=1687193381]
+transform = Transform3D(-4.371139e-06, -99.99999, -4.3711384e-06, 0, -4.3711384e-06, 99.99999, -100, 4.3711384e-06, 1.9106853e-13, 0.18417929, -2.5698981, 10.8629265)
 material_override = SubResource("StandardMaterial3D_t5j46")
 mesh = SubResource("ArrayMesh_rlcvt")
 
-[node name="Refrigerator_002" parent="." unique_id=1277572071 instance=ExtResource("11_t5j46")]
-transform = Transform3D(-99.99718, -0.7487507, -3.2728963e-08, -1.9969749e-13, -4.3711393e-06, 100.000015, -0.7487507, 99.99718, 4.3710165e-06, 7.52047, 0.937655, -4.132938)
+[node name="Wall_Clock" parent="." unique_id=1228142654 instance=ExtResource("11_bdrwf")]
+transform = Transform3D(-0.7, 0, -6.119594e-08, 0, 0.7, 0, 6.119594e-08, 0, -0.7, 0.0052081794, -0.130009, -2.452329)
+
+[node name="Label3D" type="Label3D" parent="." unique_id=938222082]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.583323, 1.3848698, -0.55842733)
+text = "Pared MUY vacia, hay que rellenarla con algo"

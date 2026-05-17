@@ -1,0 +1,311 @@
+[gd_scene format=3 uid="uid://dxl1qmlf7xoaw"]
+
+[ext_resource type="PackedScene" uid="uid://b7j0r33d5v6k2" path="res://assets/models_3d/Trash and Debris/TrashAndDebris.fbx" id="1_1ewui"]
+
+[node name="TrashAndDebris" unique_id=372577074 instance=ExtResource("1_1ewui")]
+
+[node name="Barriar" parent="." index="0" unique_id=1105279211]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 2.926567, 0.02652686, -6.8282385)
+
+[node name="Brick_1" parent="." index="1" unique_id=440452354]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 2.0653496, 0.026526622, -5.041957)
+
+[node name="Brick_2" parent="." index="2" unique_id=1336248976]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 3.982861, 0.4046523, -4.7977266)
+
+[node name="Can_1" parent="." index="3" unique_id=1510289231]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 10.138, 0.02652686, -2.0663495)
+
+[node name="Can_1_Crushed" parent="." index="4" unique_id=603989690]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 10.138, 0.02652686, -3.744)
+
+[node name="Can_2" parent="." index="5" unique_id=1826006210]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 10.138, 0.02652686, -4.2748113)
+
+[node name="Can_2_Crushed" parent="." index="6" unique_id=304832311]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 9.65139, 0.02652686, -4.494025)
+
+[node name="Can_3" parent="." index="7" unique_id=1865637378]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 10.138, 0.02652686, -4.4973197)
+
+[node name="Can_3_Crushed" parent="." index="8" unique_id=347955218]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 10.138, 0.02652686, -2.6089296)
+
+[node name="Can_4" parent="." index="9" unique_id=1592169842]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 10.138, 0.02652686, -3.2090516)
+
+[node name="Can_4_Crushed" parent="." index="10" unique_id=1712694442]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 9.673011, 0.02652686, -3.4775352)
+
+[node name="Can_5" parent="." index="11" unique_id=601498848]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 10.138, 0.02652686, -3.4053397)
+
+[node name="Can_5_Crushed" parent="." index="12" unique_id=1640916734]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 10.138, 0.02652686, -4.670133)
+
+[node name="Can_6" parent="." index="13" unique_id=2109556069]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 10.138, 0.02652686, -2.2496066)
+
+[node name="Can_6_Crushed" parent="." index="14" unique_id=398333861]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 10.138, 0.02652686, -1.8048608)
+
+[node name="Can_7" parent="." index="15" unique_id=591036990]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 10.138, 0.02652686, -3.038086)
+
+[node name="Can_7_Crushed" parent="." index="16" unique_id=1095316291]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 10.138, 0.02652686, -0.6361995)
+
+[node name="Can_8" parent="." index="17" unique_id=2273206]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 9.675917, 0.02652686, -2.8182187)
+
+[node name="Can_8_Crushed" parent="." index="18" unique_id=528762272]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 7.8700147, 0.02652686, -3.914001)
+
+[node name="CardboardBox_1" parent="." index="19" unique_id=1210497205]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, -5.079, 0.02652686, -1.7041173)
+
+[node name="CardboardBox_2" parent="." index="20" unique_id=2123066677]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, -5.079, 0.02652686, -3.111042)
+
+[node name="CardboardBox_3" parent="." index="21" unique_id=1345508765]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, -5.079, 0.02652686, -4.868094)
+
+[node name="CardboardBox_4" parent="." index="22" unique_id=1173922284]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, -5.079, 0.026526384, -7.7531724)
+
+[node name="Cardboard_Cutout_1" parent="." index="23" unique_id=1351724818]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, -5.079, 0.026527338, -0.5082655)
+
+[node name="Cardboard_Cutout_2" parent="." index="24" unique_id=1301042565]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, -5.079, 0.0265271, 0.6538967)
+
+[node name="Chip_Bag_1" parent="." index="25" unique_id=744965099]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 11.243, 0.02652686, -3.2075849)
+
+[node name="Chip_Bag_2" parent="." index="26" unique_id=405453495]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 11.243, 0.02652686, -1.9732102)
+
+[node name="Chip_Bag_3" parent="." index="27" unique_id=854950872]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 11.243, 0.02652686, -4.130233)
+
+[node name="Chip_Bag_4" parent="." index="28" unique_id=495144505]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 11.243, 0.02652686, -2.8477442)
+
+[node name="Cinder_Block_1" parent="." index="29" unique_id=489253716]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 8.492, 0.0265271, -6.702068)
+
+[node name="Cinder_Block_2" parent="." index="30" unique_id=903509132]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 8.492, 0.026526622, -7.986626)
+
+[node name="Coffee Cup_Lid" parent="." index="31" unique_id=1344247962]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 9.34, 0.02652686, 0.55066395)
+
+[node name="Coffee_Cup" parent="." index="32" unique_id=1637821273]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 9.34, 0.02652686, -1.1186476)
+
+[node name="Coffee_Cup_Crushed" parent="." index="33" unique_id=1305844944]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 9.34, 0.02652686, 1.0308084)
+
+[node name="Coffee_Cup_WithLid" parent="." index="34" unique_id=631738984]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 9.34, 0.02652686, 2.2523036)
+
+[node name="Concrete_Debris_1" parent="." index="35" unique_id=141213549]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 13.26, 0.02652686, -2.5850642)
+
+[node name="Concrete_Debris_2" parent="." index="36" unique_id=1654760805]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 13.26, 0.02652686, -0.48315048)
+
+[node name="Condom_1" parent="." index="37" unique_id=352093640]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 3.4799905, 0.02652686, -4.631653)
+
+[node name="Condom_2" parent="." index="38" unique_id=1610564450]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 4.2466054, 0.02652686, -1.5866256)
+
+[node name="Flat_Can_1" parent="." index="39" unique_id=1648558954]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 12.303, 0.02652686, -2.6885643)
+
+[node name="Flat_Can_2" parent="." index="40" unique_id=752155950]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 12.303, 0.02652686, 2.4769564)
+
+[node name="Flat_Can_3" parent="." index="41" unique_id=1544643258]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 12.303, 0.02652686, 0.42223263)
+
+[node name="Flat_Can_4" parent="." index="42" unique_id=444873429]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 12.303, 0.02652686, -3.4314957)
+
+[node name="FracturedBarriar" parent="." index="43" unique_id=950181980]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 10.26, 0.027, -3.744)
+
+[node name="Barriar_cell" parent="FracturedBarriar" index="0" unique_id=997493543]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.87, 1.4619905e-10, -3.744)
+
+[node name="Barriar_cell_001" parent="FracturedBarriar" index="1" unique_id=20649649]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.87, 1.4619905e-10, -3.744)
+
+[node name="Barriar_cell_002" parent="FracturedBarriar" index="2" unique_id=2114237134]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.87, 1.4619905e-10, -3.744)
+
+[node name="Barriar_cell_003" parent="FracturedBarriar" index="3" unique_id=1596996031]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.87, 1.4619905e-10, -3.744)
+
+[node name="Barriar_cell_004" parent="FracturedBarriar" index="4" unique_id=186977210]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.87, 1.4619905e-10, -3.744)
+
+[node name="Barriar_cell_005" parent="FracturedBarriar" index="5" unique_id=475957302]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.87, 1.4619905e-10, -3.744)
+
+[node name="Barriar_cell_007" parent="FracturedBarriar" index="6" unique_id=1757911166]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.87, 1.4619905e-10, -3.744)
+
+[node name="Barriar_cell_008" parent="FracturedBarriar" index="7" unique_id=1904317686]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.87, 1.4619905e-10, -3.744)
+
+[node name="Barriar_cell_009" parent="FracturedBarriar" index="8" unique_id=2047800506]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.87, 1.4619905e-10, -3.744)
+
+[node name="Barriar_cell_010" parent="FracturedBarriar" index="9" unique_id=452827845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.87, 1.4619905e-10, -3.744)
+
+[node name="Barriar_cell_011" parent="FracturedBarriar" index="10" unique_id=480469690]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.87, 1.4619905e-10, -3.744)
+
+[node name="Fry_Container" parent="." index="44" unique_id=2070133600]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 2.87, 0.02652686, -3.744)
+
+[node name="GasCan" parent="." index="45" unique_id=1305426543]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 0.88430405, 0.0265271, -4.3931427)
+
+[node name="GlassBottle_1" parent="." index="46" unique_id=222935945]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 15.397, 0.026526622, -5.6143064)
+
+[node name="GlassBottle_1_Broken" parent="." index="47" unique_id=1863299422]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 15.397, 0.026526384, -0.7285018)
+
+[node name="GlassBottle_2" parent="." index="48" unique_id=2035984600]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 15.397, 0.02652686, -5.491046)
+
+[node name="GlassBottle_2_Broken" parent="." index="49" unique_id=29677658]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 15.397, 0.02652686, -3.4949493)
+
+[node name="GlassBottle_3" parent="." index="50" unique_id=1493888140]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 15.397, 0.02652686, 0.72068167)
+
+[node name="GlassBottle_3_Broken" parent="." index="51" unique_id=740084672]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 15.397, 0.02652686, 1.7907405)
+
+[node name="GlassBottle_4" parent="." index="52" unique_id=1149277898]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 15.397, 0.02652686, -3.0218868)
+
+[node name="GlassBottle_4_Broken" parent="." index="53" unique_id=190652900]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 15.397, 0.026526384, 1.8532062)
+
+[node name="Glass_Shards_1" parent="." index="54" unique_id=1499417034]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 15.397, 0.02652686, -2.8234367)
+
+[node name="Glass_Shards_2" parent="." index="55" unique_id=1732727116]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 15.397, 0.02652686, -2.1414495)
+
+[node name="Litter_1" parent="." index="56" unique_id=1233098658]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, -11.833, 0.02652686, -0.38090825)
+
+[node name="Litter_2" parent="." index="57" unique_id=1570627523]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 7.1638794, 0.02652686, -0.90223515)
+
+[node name="Mask_1" parent="." index="58" unique_id=862112835]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, -11.833, 0.02652686, -3.7175317)
+
+[node name="Mask_2" parent="." index="59" unique_id=1131616511]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, -11.833, 0.02652686, -1.536623)
+
+[node name="News_1" parent="." index="60" unique_id=421268538]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, -15.083091, 0.026526622, -0.046752572)
+
+[node name="News_2" parent="." index="61" unique_id=1426413933]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, -13.785342, 0.0265271, 1.4208337)
+
+[node name="News_3" parent="." index="62" unique_id=469342595]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, -12.973691, 0.026526146, 2.5068922)
+
+[node name="News_Stack" parent="." index="63" unique_id=1397405896]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, -14.01736, 0.0265271, 2.5251644)
+
+[node name="Paper_1" parent="." index="64" unique_id=1341942360]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, -13.675463, 0.02652686, 0.30578637)
+
+[node name="Paper_2" parent="." index="65" unique_id=575054146]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, -13.62895, 0.02652686, -0.91528285)
+
+[node name="Paper_Bag_1" parent="." index="66" unique_id=1264075374]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, -11.833, 0.02652686, 1.3307252)
+
+[node name="Paper_Bag_2" parent="." index="67" unique_id=1810079417]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, -11.833, 0.02652686, 2.67003)
+
+[node name="Paper_Bag_3" parent="." index="68" unique_id=1780308639]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, -11.833, 0.026527338, -0.020323753)
+
+[node name="Pills_1" parent="." index="69" unique_id=2085646631]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, -11.366972, 0.02652686, -4.393147)
+
+[node name="Pills_2" parent="." index="70" unique_id=1751918986]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, -11.833, 0.02652686, -4.1826153)
+
+[node name="Rebar" parent="." index="71" unique_id=1573027800]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, -11.833, 0.026526622, 0.33753586)
+
+[node name="ShampooBottle" parent="." index="72" unique_id=423898524]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 2.2616467, 0.02652686, -5.8325157)
+
+[node name="Sheet_Metal_1" parent="." index="73" unique_id=2136198996]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 1.8517413, 0.026525907, 3.761639)
+
+[node name="Sheet_Metal_2" parent="." index="74" unique_id=1176755283]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 2.3762054, 0.0265271, -2.1407418)
+
+[node name="SoapBottle" parent="." index="75" unique_id=520734068]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, -0.36748362, 0.026527815, 2.07027)
+
+[node name="Soda_Cup" parent="." index="76" unique_id=289098422]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 3.1930175, 0.02652686, 0.9120383)
+
+[node name="Soda_Cup_Crushed" parent="." index="77" unique_id=102596423]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 5.0545764, 0.02652686, -4.494208)
+
+[node name="Soda_Cup_Lid" parent="." index="78" unique_id=283685835]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 6.662132, 0.02652686, -2.6762261)
+
+[node name="Tin_1" parent="." index="79" unique_id=849822709]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 3.0412824, 0.026526622, -5.263189)
+
+[node name="Tin_2" parent="." index="80" unique_id=413990375]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 3.2306108, 0.02652686, -5.045999)
+
+[node name="Tin_3" parent="." index="81" unique_id=673859215]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 3.09125, 0.02652686, 1.4701152)
+
+[node name="Tin_4" parent="." index="82" unique_id=1947171316]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 4.289362, 0.02652686, -4.1588025)
+
+[node name="TrashBag_1" parent="." index="83" unique_id=1581894219]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 0.49290466, 0.02652686, -5.4179015)
+
+[node name="TrashBag_2" parent="." index="84" unique_id=664334080]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, -1.414988, 0.02652686, -1.7139568)
+
+[node name="WaterBottle" parent="." index="85" unique_id=2134028394]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 3.9536533, 0.02652686, -4.7176957)
+
+[node name="Wheel_1" parent="." index="86" unique_id=256828197]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, -1.921175, 0.026526622, -4.833125)
+
+[node name="Wheel_2" parent="." index="87" unique_id=498078029]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 6.230386, -1.0749692, -4.586419)
+
+[node name="Wooden_Plank_1" parent="." index="88" unique_id=1100419128]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 7.044748, 0.02652686, -5.213105)
+
+[node name="Wooden_Plank_2" parent="." index="89" unique_id=725735802]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 7.6547403, 0.0265271, -5.504958)
+
+[node name="Wooden_Plank_3" parent="." index="90" unique_id=385614219]
+transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 6.4206295, 0.02652686, -5.2879887)

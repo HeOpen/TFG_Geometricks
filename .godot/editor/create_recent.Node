@@ -1,9 +1,9 @@
+Label3D
+Node3D
+StaticBody3D
 CollisionShape3D
 Sprite3D
-StaticBody3D
-Node3D
 WorldEnvironment
-Label3D
 Label
 SubViewportContainer
 VideoStreamPlayer

@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://ca731y5ibw6vb" path="res://assets/textures/Horror Textures by Canvas Coven/Stone tiles/Stone_tiles_11.png" id="12_7u6nb"]
 [ext_resource type="Texture2D" uid="uid://dba3nejcygbas" path="res://assets/models_3d/PSX - Assets/Textures/Foods.jpg" id="12_dx82n"]
 [ext_resource type="Texture2D" uid="uid://ciirqxwktepxi" path="res://assets/models_3d/PSX - Assets/Textures/Foods_01.jpg" id="13_cq3mg"]
+[ext_resource type="PackedScene" uid="uid://ngwu7ooje5c" path="res://objects/props/refrigerator.tscn" id="13_dx82n"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1p6lu"]
 resource_name = "Cupboard"
@@ -780,3 +781,6 @@ mesh = SubResource("ArrayMesh_1a07y")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6394427, -0.76521534, 1.030077)
 material_override = SubResource("StandardMaterial3D_dx82n")
 size = Vector3(5.9984174, 0.1, 5.1049232)
+
+[node name="Refrigerator_002" parent="." unique_id=1277572071 instance=ExtResource("13_dx82n")]
+transform = Transform3D(-99.99718, -0.7487507, -3.2728963e-08, -1.9969749e-13, -4.3711393e-06, 100.000015, -0.7487507, 99.99718, 4.3710165e-06, 0.9098091, 0.36695683, 2.4064298)
