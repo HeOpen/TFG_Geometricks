@@ -443,7 +443,7 @@ transform = Transform3D(-100, 8.742277e-06, 3.8213706e-13, 0, -4.3711384e-06, 99
 mesh = SubResource("ArrayMesh_31kxn")
 
 [node name="Table_24" type="MeshInstance3D" parent="Muebles" unique_id=691767023]
-transform = Transform3D(72.346, 0, 0, 0, -3.1623442e-06, 72.346, 0, -72.346, -3.1623442e-06, -4.7637596, 0.14925896, 5.4943624)
+transform = Transform3D(72.346, 0, 0, 0, -3.1623442e-06, 72.346, 0, -72.346, -3.1623442e-06, -4.7637596, 0.06228952, 5.4943624)
 mesh = SubResource("ArrayMesh_djt0d")
 
 [node name="Lamps_01" type="MeshInstance3D" parent="Muebles" unique_id=781424846]
@@ -492,7 +492,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4.7
 transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, -4.7777743, 0.93213904, 7.5894547)
 
 [node name="Mesh_VHS_01" parent="." unique_id=1862911067 instance=ExtResource("23_i16pj")]
-transform = Transform3D(1.1401082, 0, 1.6432142, 0, 2, 0, -1.6432142, 0, 1.1401082, -4.7123556, 0.41173714, 5.466847)
+transform = Transform3D(-0.2534021, 0, 1.9838818, 0, 2, 0, -1.9838818, 0, -0.2534021, -4.7123556, 0.3043006, 5.34099)
 
 [node name="VHS-Tape" parent="." unique_id=1811958041 instance=ExtResource("24_a3yov")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -4.713404, 0.40537554, 5.7798476)
+transform = Transform3D(0.04950609, 0, -0.007010502, 0, 0.05, 0, 0.007010502, 0, 0.04950609, -4.713404, 0.297939, 5.590313)

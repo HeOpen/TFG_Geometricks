@@ -6,3 +6,6 @@ res://assets/models_3d/VHS_player.tscn
 res://assets/models_3d/VHS.tscn
 res://entities/player_3d/player_3d.tscn
 res://assets/models_3d/VHS_Tape.tscn
+res://level/3d_cabin/nivel_1.tscn
+res://level/3d_cabin/pesadilla_env.tres
+res://ui/main_menu/main_menu.tscn

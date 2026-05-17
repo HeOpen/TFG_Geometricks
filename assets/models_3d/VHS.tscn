@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://bo2yh8n51xgjl" path="res://assets/models_3d/LowPolyAssetPack_Free/FBX and Blend Files/Misc Props/Mesh_VHS_01.fbx" id="1_2dtk7"]
 [ext_resource type="Texture2D" uid="uid://7xkipest3a0l" path="res://assets/models_3d/LowPolyAssetPack_Free/TextureMap/MasterMaterial1px.png" id="2_o83sp"]
-[ext_resource type="Texture2D" uid="uid://bfd552pyx2x08" path="res://assets/textures/logo_Geometrix.png" id="3_o83sp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rq4ov"]
 albedo_color = Color(0, 0.5568628, 0.7058824, 1)
@@ -12,7 +11,3 @@ albedo_texture = ExtResource("2_o83sp")
 
 [node name="Mesh_VHS_01" parent="." index="0" unique_id=1009751361]
 surface_material_override/0 = SubResource("StandardMaterial3D_rq4ov")
-
-[node name="Sprite3D" type="Sprite3D" parent="." index="1" unique_id=1463543007]
-transform = Transform3D(3.496911e-10, -0.008, 3.496911e-10, 3.0570968e-17, -3.496911e-10, -0.008, -0.008, -3.496911e-10, -1.5285484e-17, 0.01565182, 0.02488438, -0.0006835442)
-texture = ExtResource("3_o83sp")

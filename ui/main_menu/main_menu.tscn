@@ -4,11 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://brrhkhlqf7a1p" path="res://assets/models_3d/PSX - Assets/Textures/Metal_04.jpg" id="1_d3a7t"]
 [ext_resource type="Texture2D" uid="uid://dig7h0bs33bke" path="res://assets/models_3d/PSX - Assets/Textures/Wood_02.jpg" id="2_3shxk"]
 [ext_resource type="PackedScene" uid="uid://brn3oavhdankg" path="res://ui/main_menu/button.tscn" id="4_3f7m4"]
-[ext_resource type="Texture2D" uid="uid://bg8g6b8ko3pks" path="res://assets/textures/icon.svg" id="5_3f7m4"]
 [ext_resource type="Material" uid="uid://x8e77kr2c664" path="res://assets/materials/floor_texture.tres" id="5_6at21"]
 [ext_resource type="Script" uid="uid://c8bx5n25636e" path="res://ui/main_menu/repository_link.gd" id="5_t6bnd"]
-[ext_resource type="PackedScene" uid="uid://cor5b5oxlam32" path="res://objects/modular_architecture/MESH_log_100wall.tscn" id="6_6at21"]
 [ext_resource type="FontFile" uid="uid://dnch4xopn1vy1" path="res://assets/fonts/VCR_OSD_MONO_1.001.ttf" id="6_6tl50"]
+[ext_resource type="Environment" uid="uid://d0d6qe5jpibkk" path="res://level/3d_cabin/pesadilla_env.tres" id="7_4e78x"]
+[ext_resource type="Texture2D" uid="uid://bfd552pyx2x08" path="res://assets/textures/logo_Geometrix.png" id="9_w2r0d"]
+[ext_resource type="PackedScene" uid="uid://ba40k8ka1bu8a" path="res://objects/modular_architecture/MESH_log_wall_25small.tscn" id="10_4e78x"]
+[ext_resource type="PackedScene" uid="uid://86rhbrl7ars4" path="res://objects/modular_architecture/MESH_log_column.tscn" id="11_s4pem"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mlgns"]
 resource_name = "Metal_04"
@@ -81,19 +83,8 @@ shadow_mesh = SubResource("ArrayMesh_xq28v")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bws42"]
 albedo_color = Color(0.101960786, 0.101960786, 0.101960786, 1)
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6at21"]
-sky_top_color = Color(0.36660182, 0.3637665, 0.8813409, 1)
-sky_horizon_color = Color(4.042983e-06, 0.72393817, 0.90733135, 1)
-
-[sub_resource type="Sky" id="Sky_og6xe"]
-sky_material = SubResource("ProceduralSkyMaterial_6at21")
-
-[sub_resource type="Environment" id="Environment_k6eem"]
-background_mode = 2
-sky = SubResource("Sky_og6xe")
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_6tl50"]
-size = Vector3(1.289978, 0.8096924, 0.043945313)
+size = Vector3(1.617157, 0.4807129, 0.043945313)
 
 [node name="MainMenu" type="Node3D" unique_id=944016157]
 script = ExtResource("1_bws42")
@@ -129,10 +120,16 @@ transform = Transform3D(0.112700984, 0, 0.12727334, 0, 0.17, 0, -0.12727334, 0, 
 texto_boton = "SALIR"
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=613478874]
-transform = Transform3D(0.6433775, -0.045063052, 0.76422167, 0.004191887, 0.9984584, 0.05534601, -0.7655376, -0.032404855, 0.6425744, 1.6025499, 0.9464018, 0.9967756)
+transform = Transform3D(0.609359, -0.046434183, 0.79153365, 0.004191888, 0.99845856, 0.05534602, -0.7928834, -0.030407574, 0.6086143, 1.6951778, 1.0160984, 1.0082415)
 fov = 45.0
 
 [node name="World" type="Node3D" parent="." unique_id=1765461141]
+
+[node name="LogWall2" parent="World" unique_id=2005710227 instance=ExtResource("10_4e78x")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.0988612, 0.1420002, 0.1352309)
+
+[node name="LogWall" parent="World" unique_id=1997429010 instance=ExtResource("10_4e78x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0678612, 0.1400002, -0.87313354)
 
 [node name="Floor" type="CSGBox3D" parent="World" unique_id=843586680]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.43310916, 0, -0.08837646)
@@ -140,45 +137,21 @@ material_override = ExtResource("5_6at21")
 use_collision = true
 size = Vector3(2.5179477, 0, 2.398349)
 
-[node name="LogWall" parent="World" unique_id=1997429010 instance=ExtResource("6_6at21")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2206936, 0, -1.4609443)
-
-[node name="LogWall2" parent="World" unique_id=1642069209 instance=ExtResource("6_6at21")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.7626565, 0, -1.4609439)
-
 [node name="Env" type="Node3D" parent="." unique_id=298357268]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="Env" unique_id=100514244]
-environment = SubResource("Environment_k6eem")
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Env" unique_id=2027843275]
+environment = ExtResource("7_4e78x")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Env" unique_id=836711960]
-transform = Transform3D(0.36158895, -0.63251805, 0.68496305, -0.35395202, 0.5865421, 0.7284824, -0.86253774, -0.50585526, -0.011793833, 2.6612697, 2.7990713, 1.4151442)
-shadow_enabled = true
-
-[node name="Billboard" type="Node3D" parent="." unique_id=1650519097]
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Billboard" unique_id=313261818]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.119, -0.05, 0.434)
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=313261818]
+transform = Transform3D(0.6276507, 0, 0.7784951, 0, 1, 0, -0.7784951, 0, 0.6276507, 0.3167355, 1.3594737, -0.07178599)
 script = ExtResource("5_t6bnd")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Billboard/StaticBody3D" unique_id=190920587]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08340454, 1.0856978, -1.3448843)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=190920587]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.032458156, 0, -0.03283623)
 shape = SubResource("BoxShape3D_6tl50")
 
-[node name="Sprite3D" type="Sprite3D" parent="Billboard/StaticBody3D" unique_id=768649911]
-transform = Transform3D(0.55, 0, 0, 0, 0.55, 0, 0, 0, 0.55, 0.076391935, 1.1217685, -1.3629854)
-texture = ExtResource("5_3f7m4")
-
-[node name="Label3D2" type="Label3D" parent="Billboard/StaticBody3D/Sprite3D" unique_id=1585340964]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.026094258, 0.52091384, 0.12956935)
-modulate = Color(1, 1, 0, 1)
-text = "(Logo Geometrix)"
-font = ExtResource("6_6tl50")
-font_size = 14
-uppercase = true
-
-[node name="URL" type="Label3D" parent="Billboard/StaticBody3D/Sprite3D" unique_id=1711783081]
-transform = Transform3D(0.003, 0, 0, 0, 0.003, 0, 0, 0, 0.003, 0.026094258, -0.68223494, 0.073268116)
+[node name="URL" type="Label3D" parent="StaticBody3D/CollisionShape3D" unique_id=1711783081]
+transform = Transform3D(0.0016500001, 0, 0, 0, 0.0016500001, 0, 0, 0, 0.0016500001, 0.007339239, -0.16774935, 0.022196412)
 pixel_size = 1.0
 double_sided = false
 outline_modulate = Color(0, 0, 0, 0)
@@ -186,7 +159,14 @@ text = "https://github.com/HeOpen/TFG_Geometricks"
 font = ExtResource("6_6tl50")
 uppercase = true
 
+[node name="Logo" type="Sprite3D" parent="StaticBody3D/CollisionShape3D" unique_id=768649911]
+transform = Transform3D(0.16, 0, 0, 0, 0.16, 0, 0, 0, 0.16, -0.0070126057, 0.036070704, -0.018101096)
+texture = ExtResource("9_w2r0d")
+
+[node name="LogWall" parent="." unique_id=1142263542 instance=ExtResource("11_s4pem")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0067332, 0.15459919, -0.7914546)
+
 [connection signal="presionado" from="CuboMilenario/PlayButton/Area3D" to="." method="_on_button_presionado"]
 [connection signal="presionado" from="CuboMilenario/OptionsButton/Area3D" to="." method="_on_button_presionado"]
 [connection signal="presionado" from="CuboMilenario/SalirButton/Area3D" to="." method="_on_button_presionado"]
-[connection signal="input_event" from="Billboard/StaticBody3D" to="." method="_input_event"]
+[connection signal="input_event" from="StaticBody3D" to="." method="_input_event"]
