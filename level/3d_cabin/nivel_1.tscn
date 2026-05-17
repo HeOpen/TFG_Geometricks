@@ -2,7 +2,7 @@
 
 [ext_resource type="Environment" uid="uid://d0d6qe5jpibkk" path="res://level/3d_cabin/pesadilla_env.tres" id="1_edpxn"]
 [ext_resource type="PackedScene" uid="uid://5mgb2l278x3l" path="res://entities/player_3d/player_3d.tscn" id="2_27ww1"]
-[ext_resource type="PackedScene" uid="uid://c18tc2son874o" path="res://objects/props/Cabin_Completed.tscn" id="3_27ww1"]
+[ext_resource type="PackedScene" uid="uid://c18tc2son874o" path="res://level/3d_cabin/cabin_amueblada.tscn" id="3_27ww1"]
 
 [sub_resource type="FogMaterial" id="FogMaterial_11ijd"]
 density = 1.254

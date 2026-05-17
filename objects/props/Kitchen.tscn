@@ -720,6 +720,10 @@ mesh = SubResource("ArrayMesh_dx82n")
 transform = Transform3D(0, 31.282211, 9.3228255e-07, 9.3228255e-07, 0, 31.282211, 31.282211, 9.3228255e-07, 0, -1.498, 1.215, -0.972)
 mesh = SubResource("ArrayMesh_cq3mg")
 
+[node name="Cupboard_01_006" type="MeshInstance3D" parent="Kitchen1" unique_id=730660514]
+transform = Transform3D(-31.282211, 2.7347778e-06, 1.1954093e-13, 0, -1.3673889e-06, 31.282211, 2.7347778e-06, 31.282211, 1.3673889e-06, 0.9022051, 1.215, 0.49120575)
+mesh = SubResource("ArrayMesh_cq3mg")
+
 [node name="Cupboard_01_005" type="MeshInstance3D" parent="Kitchen1" unique_id=401869842]
 transform = Transform3D(0, 31.282211, 9.3228255e-07, 9.3228255e-07, 0, 31.282211, 31.282211, 9.3228255e-07, 0, 0.06294298, 1.215199, -0.97168034)
 mesh = SubResource("ArrayMesh_8d65h")

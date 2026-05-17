@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://df56djgf3xhl7" path="res://entities/player_3d/player3d.gd" id="1_mfgp6"]
 [ext_resource type="Texture2D" uid="uid://bxqoku762shnd" path="res://assets/textures/obama.png" id="2_sddfd"]
+[ext_resource type="PackedScene" uid="uid://c2xr6tv7tiarr" path="res://assets/models_3d/VHS_Tape.tscn" id="3_vlt6u"]
+[ext_resource type="PackedScene" uid="uid://c5xwjrq7h1m2p" path="res://assets/models_3d/VHS.tscn" id="4_04scv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iof21"]
 albedo_color = Color(0.91806, 0.575202, 0.222449, 1)
@@ -59,3 +61,11 @@ spot_angle_attenuation = 0.0018865991
 transform = Transform3D(-0.3, 0, 2.6226834e-08, 0, 0.3, 0, -2.6226834e-08, 0, -0.3, 0, 2.1817033, -0.08664012)
 double_sided = false
 texture = ExtResource("2_sddfd")
+
+[node name="VHS-Tape" parent="." unique_id=1811958041 instance=ExtResource("3_vlt6u")]
+transform = Transform3D(-0.011545129, -0.041614775, -0.025197625, -0.04701046, 0.016207531, -0.005227873, 0.012518964, 0.022483919, -0.042868968, 0.26912647, 1.2111514, -0.27109176)
+visible = false
+
+[node name="Mesh_VHS_01" parent="." unique_id=1862911067 instance=ExtResource("4_04scv")]
+transform = Transform3D(1.4134083, -1.2768292, -0.60990596, 0.45525956, 1.2265434, -1.5127236, 1.3397827, 0.93021464, 1.1574477, 0.23178384, 1.1935999, -0.35323483)
+visible = false

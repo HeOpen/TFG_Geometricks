@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c2xr6tv7tiarr"]
+
+[ext_resource type="PackedScene" uid="uid://bbmtps01cdtwp" path="res://assets/models_3d/VHS-Tape.fbx" id="1_auy1m"]
+[ext_resource type="Texture2D" uid="uid://bfd552pyx2x08" path="res://assets/textures/logo_Geometrix.png" id="2_pd16g"]
+
+[node name="VHS-Tape" unique_id=1811958041 instance=ExtResource("1_auy1m")]
+
+[node name="Sprite3D" type="Sprite3D" parent="." index="1" unique_id=1002786481]
+transform = Transform3D(0.3, 0, 0, 0, -2.3385594e-08, 0.3, 0, -0.535, -1.3113417e-08, 0.01565182, 0.51146185, 0.08901739)
+texture = ExtResource("2_pd16g")

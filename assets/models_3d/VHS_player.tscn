@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://baktdh2euejty"]
+
+[ext_resource type="PackedScene" uid="uid://b5qn2b816qckw" path="res://assets/models_3d/LowPolyAssetPack_Free/FBX and Blend Files/Misc Props/Mesh_VHSPlayer_01.fbx" id="1_5tlqq"]
+[ext_resource type="Texture2D" uid="uid://7xkipest3a0l" path="res://assets/models_3d/LowPolyAssetPack_Free/TextureMap/MasterMaterial1px.png" id="2_fqgwv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_epdff"]
+albedo_color = Color(0, 0.5568628, 0.7058824, 1)
+albedo_texture = ExtResource("2_fqgwv")
+
+[node name="Mesh_VHSPlayer_01" unique_id=1922792998 instance=ExtResource("1_5tlqq")]
+
+[node name="Mesh_VHSPlayer_01" parent="." index="0" unique_id=762614129]
+surface_material_override/0 = SubResource("StandardMaterial3D_epdff")

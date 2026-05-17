@@ -558,11 +558,11 @@ transform = Transform3D(-1.938052e-06, -44.33746, -1.9380518e-06, 0, -1.9380518e
 mesh = SubResource("ArrayMesh_xoa8e")
 
 [node name="Ceiling_Fan_02" type="MeshInstance3D" parent="." unique_id=1109900625]
-transform = Transform3D(79.69934, 0, 0, 0, -9.500902e-06, 79.69933, 0, -79.69933, -9.500902e-06, 0.31639642, 2.162279, -0.75417554)
+transform = Transform3D(79.69934, 0, 0, 0, -9.500902e-06, 79.69933, 0, -79.69933, -9.500902e-06, 0.31639642, 2.045875, -0.75417554)
 mesh = SubResource("ArrayMesh_p8b7v")
 
 [node name="Ceiling_Fan_Blades_02" type="MeshInstance3D" parent="." unique_id=1487982544]
-transform = Transform3D(-70.76187, -36.670753, -4.750451e-06, 1.1876128e-06, -1.9001805e-05, 79.69934, -36.670753, 70.76187, 9.500902e-06, 0.3301784, 2.0621805, -0.76779455)
+transform = Transform3D(-70.76187, -36.670753, -4.750451e-06, 1.1876128e-06, -1.9001805e-05, 79.69934, -36.670753, 70.76187, 9.500902e-06, 0.3301784, 1.9457767, -0.76779455)
 mesh = SubResource("ArrayMesh_opiea")
 
 [node name="PropCurtainsDouble" type="MeshInstance3D" parent="." unique_id=102132688]
