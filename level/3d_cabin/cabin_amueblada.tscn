@@ -64,6 +64,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08, 0, 0)
 
 [node name="Cabin_Structure" parent="." unique_id=125884885 instance=ExtResource("1_n82xp")]
 
+[node name="PC_Room" parent="Cabin_Structure" unique_id=649241162 instance=ExtResource("9_8vpnn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9131947, 0, 8.99782)
+
 [node name="LivingRoom" parent="Cabin_Structure" unique_id=1620067552 instance=ExtResource("5_8vpnn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.0237894, 0.0060016513, 5.2409225)
 
@@ -132,9 +135,6 @@ transform = Transform3D(0.081417, 0, -0.28874084, 0, 0.29999998, 0, 0.28874084, 
 
 [node name="Lock_Sotano" parent="." unique_id=311865494 instance=ExtResource("16_36tuj")]
 transform = Transform3D(0.0076967007, 0.59985703, -0.010596188, 0, -0.01059706, -0.59990644, -0.5999507, 0.007695501, -0.00013593734, -5.417345, 0.02443692, -5.7797613)
-
-[node name="PC_Room" parent="." unique_id=649241162 instance=ExtResource("9_8vpnn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9131947, 0, 8.99782)
 
 [node name="Mesh_Shelf_05" type="MeshInstance3D" parent="." unique_id=78370004]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -7.2863746, -2.5698981, 0.0018595979)

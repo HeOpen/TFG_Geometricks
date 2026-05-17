@@ -143,7 +143,7 @@ size = Vector3(2.5179477, 0, 2.398349)
 environment = ExtResource("7_4e78x")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=313261818]
-transform = Transform3D(0.6276507, 0, 0.7784951, 0, 1, 0, -0.7784951, 0, 0.6276507, 0.3167355, 1.3594737, -0.07178599)
+transform = Transform3D(0.6276507, 0, 0.7784951, 0, 1, 0, -0.7784951, 0, 0.6276507, 0.3167355, 1.3594737, 0.030828953)
 script = ExtResource("5_t6bnd")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=190920587]

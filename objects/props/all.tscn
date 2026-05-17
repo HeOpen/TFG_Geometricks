@@ -2297,7 +2297,7 @@ vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("26_2ks46")
 emission_enabled = true
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_siih3"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_jb8v8"]
 _surfaces = [{
 "aabb": AABB(-0.018495224, -0.0044571557, -0.010063063, 0.03699045, 0.008914312, 0.020001218),
 "format": 34359742465,
@@ -2327,7 +2327,7 @@ _surfaces = [{
 "vertex_data": PackedByteArray("xFiUvEFQjzvMNgc8xFiUvEFQj7vMNgc8xFiUvEFQj7uM3yS8xFiUvEFQjzuM3yS8xFiUPEFQjzvMNgc8xFiUvEFQjzvMNgc8xFiUvEFQjzuM3yS8xFiUPEFQjzuM3yS8xFiUPEFQj7vMNgc8xFiUPEFQjzvMNgc8xFiUPEFQjzuM3yS8xFiUPEFQj7uM3yS8xFiUvEFQj7vMNgc8xFiUPEFQj7vMNgc8xFiUPEFQj7uM3yS8xFiUvEFQj7uM3yS8xFiUPEFQj7uM3yS8xFiUPEFQjzuM3yS8xFiUvEFQjzuM3yS8xFiUvEFQj7uM3yS8TIOXvFYNkjuj0yI8xFiUvEFQjzvMNgc8xFiUPEFQjzvMNgc8TYOXPFYNkjuj0yI8TIOXvFUNkruj0yI8TIOXvFYNkjuj0yI8TYOXPFYNkjuj0yI8TYOXPFUNkruj0yI8TYOXPFUNkruj0yI8TYOXPFYNkjuj0yI8xFiUPEFQjzvMNgc8xFiUPEFQj7vMNgc8TIOXvFUNkruj0yI8xFiUvEFQj7vMNgc8xFiUvEFQjzvMNgc8TIOXvFYNkjuj0yI8TIOXvFUNkruj0yI8TYOXPFUNkruj0yI8xFiUPEFQj7vMNgc8xFiUvEFQj7vMNgc8AAD/f/9/AAAAAP9//38AAAAA/3//fwAAAAD/f/9/AAD/f///AAAAAP9//////wAA/3///wAAAAD/f///AAAAAP///3//f///////f/9///////9//3///////3//f////38AAP//////fwAAAAD+//9/AAD//////38AAP///////////38AAP//////fwAA//////9/AAD//////38AAAuG//8MBv5/C4b//wwG/n8Lhv//DAb+fwuG//8MBv5//3//f/9/////f/9//3////9//3//f////3//f/9//////+CXAAAO9P//4JcAAO+L///glwAA74v//+CXAAAO9AAA4Jf+//ALAADgl/7/8AsAAOCX/v8PdAAA4Jf+/w90C4YAAAwG/v8LhgAADAb+/wuGAAAMBv7/C4YAAAwG/v8=")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_siih3")
+shadow_mesh = SubResource("ArrayMesh_jb8v8")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3yfms"]
 resource_name = "Bookcase_01"
@@ -2375,7 +2375,7 @@ vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("28_65qvp")
 emission_enabled = true
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_darfo"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_vsu3n"]
 _surfaces = [{
 "aabb": AABB(-0.008314351, -0.0042473655, -0.008991114, 0.016623374, 0.0071678543, 0.018938377),
 "format": 34359742465,
@@ -2405,7 +2405,7 @@ _surfaces = [{
 "vertex_data": PackedByteArray("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/3///wAA/3//f///AAD/f/9////VAil9/3//P9UCKX3/f/8/1QIpff9//z/VAil9/3//P////3//fwAA////f/9/AAD///9//38AAP///3//fwAA////f/9/AAD///9//38AAP///3//fwAA/38AAAAA/7//fwAAAAD/v/9/AAAAAP+//38AAAAA/7//f///AAD/P/9///8AAP8//3///wAA/z//f///AAD/P/9//3//fwCA/3//f/9/AID/f/9//38AgP9//3//fwCA/3//f/9/AID/f/9//38AgP9//3//fwCA/3//f/9/AID/f/9//38AgP9//3//fwCA/3//f/9/AID/f/9//38AgP9//3//fwCA//////9//n///////3/+f///////f/5///////9//n///////3/+f///////f/5///////9//n///////3/+f///////f/5///////9//n///////3/+f///////f/5///////9//n///////3/+f///////f/5//3///wAA/z//f///AAD/P/9///8AAP8//3///wAA/z//f///AAD/P/9///8AAP8/Kf0pff9//78p/Sl9/3//vyn9KX3/f/+/Kf0pff9//7//f/9//3/+//9//3//f////3//f/9//v//f/9//3/+////////f/5///////9//n///////3/+f///////f/5//3///wAA/z//f///AAD/P/9///8AAP8//3///wAA/z//f/9//3/+//9//3//f/7//3//f/9//v//f/9//3/+//9///8AAP8//3///wAA/z//f///AAD/P/9///8AAP8//38AAP9//7//fwAA/3//v/9/AAD/f/+//38AAP9//7//fwAA/3//v/9/AAD/f/+//38AAP9//7//fwAA/3//v/9/AAD///+//38AAP///7//fwAA////v/9/AAD///+/////f/9///////9//3///////3//f///////f/9/////f/9//3/+//9//3//f/7//3//f/9//v//f/9//3///wAA/3//fwAAAAD/f/9/AAAAAP9//38AAAAA/3//fwAA////f/9/AID///9//38AgP///3//fwCA////f/9/AID/fwAA////P/9/AAD///8//38AAP///z//fwAA////P///////f/5///////9//n///////3/+f///////f/5//3///wAA/z//f///AAD/P/9///8AAP8//3///wAA/z8AAP9//3/+fwAA/3//f/5/AAD/f/9//n8AAP9//3/+f/9//3//f/7//3//f/9//v//f/9//3/+//9//3//f////38AAP9//7//fwAA/3//v/9/AAD/f/+//38AAP9//78AAP9//3/+/wAA/3//f/7/AAD/f/9//v8AAP9//3/+/////v//f/5////+//9//n////7//3/+f////v//f/5///////9//n///////3/+f///////f/5///////9//n//f/9//3/+//9//3//f////3//f/9//v//f/9//3/+/w==")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_darfo")
+shadow_mesh = SubResource("ArrayMesh_vsu3n")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l5joh"]
 resource_name = "Fitment"

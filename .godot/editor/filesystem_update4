@@ -9,3 +9,8 @@ res://assets/models_3d/VHS_Tape.tscn
 res://level/3d_cabin/nivel_1.tscn
 res://level/3d_cabin/pesadilla_env.tres
 res://ui/main_menu/main_menu.tscn
+res://objects/props/poster.tscn
+res://objects/props/all.tscn
+res://objects/props/analog_clock.tscn
+res://level/3d_cabin/cabin_amueblada.tscn
+res://objects/props/pc_room.tscn

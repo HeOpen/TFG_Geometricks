@@ -389,3 +389,5 @@ transform = Transform3D(-0.14644624, 0, -0.68450963, 0, 0.7, 0, 0.68450963, 0, -
 
 [node name="Mesh_PC_Speaker_03" parent="." unique_id=511345260 instance=ExtResource("10_n7lp6")]
 transform = Transform3D(0.49629474, 0, -0.49365115, 0, 0.7, 0, 0.49365115, 0, 0.49629474, -0.52576953, 0.6301066, -0.13268664)
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1118172276]
