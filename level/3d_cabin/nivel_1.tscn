@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://dl37rbmvhcxkw"]
 
-[ext_resource type="Environment" uid="uid://d0d6qe5jpibkk" path="res://level/3d_cabin/pesadilla_env.tres" id="1_edpxn"]
+[ext_resource type="Environment" uid="uid://4nd2xkar5b3u" path="res://entities/env_lightning/ingame_env.tres" id="1_gxhxh"]
 [ext_resource type="PackedScene" uid="uid://5mgb2l278x3l" path="res://entities/player_3d/player_3d.tscn" id="2_27ww1"]
 [ext_resource type="PackedScene" uid="uid://c18tc2son874o" path="res://level/3d_cabin/cabin_amueblada.tscn" id="3_27ww1"]
+[ext_resource type="Texture2D" uid="uid://cm5kkk16rphha" path="res://assets/textures/goods.png" id="4_gxhxh"]
 
 [sub_resource type="FogMaterial" id="FogMaterial_11ijd"]
 density = 1.254
@@ -11,10 +12,10 @@ albedo = Color(0.55122495, 0.6738945, 0.9313169, 1)
 [node name="Nivel1" type="Node3D" unique_id=1505825485]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1135325726]
-environment = ExtResource("1_edpxn")
+environment = ExtResource("1_gxhxh")
 
 [node name="Player" parent="." unique_id=2146257891 instance=ExtResource("2_27ww1")]
-transform = Transform3D(-0.757166, 0, 0.6532224, 0, 1, 0, -0.6532224, 0, -0.757166, 6.407581, 0.2677753, 8.991823)
+transform = Transform3D(-0.98934335, 0.018996367, 0.1443562, 0.019197442, 0.9998158, 0, -0.1443296, 0.0027712702, -0.9895258, -5.2092004, 0.2677753, 4.207436)
 
 [node name="FogVolume" type="FogVolume" parent="." unique_id=989422566]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.8679752)
@@ -91,3 +92,48 @@ spot_attenuation = -1.13
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4045157, -1.5128889, -7.148869)
 light_color = Color(0.61960787, 0, 0, 1)
 omni_attenuation = -0.545
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1382341819]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5500827, 1.0782483, 8.33907)
+light_color = Color(0, 1, 0, 1)
+light_energy = 16.0
+omni_range = 0.1
+omni_attenuation = 1.69
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="." unique_id=402554536]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4202833, 0.9837587, 13.509944)
+light_color = Color(0, 1, 0, 1)
+light_energy = 16.0
+omni_range = 0.1
+omni_attenuation = 1.69
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="." unique_id=1139245063]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.0051064, 0.88486254, 9.122515)
+light_color = Color(0, 1, 0, 1)
+light_energy = 16.0
+omni_range = 0.1
+omni_attenuation = 1.69
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1754173726]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.549757, 1.0782483, 6.1386843)
+light_color = Color(0, 1, 0, 1)
+light_energy = 16.0
+omni_range = 0.1
+omni_attenuation = 1.69
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=2054339464]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5763454, 1.4242034, -3.969538)
+light_color = Color(0, 1, 0, 1)
+light_energy = 16.0
+omni_range = 0.1
+omni_attenuation = 1.69
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=79574776]
+transform = Transform3D(-6.5567074e-10, 0, 0.014999998, 0, 0.014999999, 0, -0.014999998, 0, -6.5567074e-10, -7.28295, 1.442129, 7.130961)
+billboard = 1
+texture = ExtResource("4_gxhxh")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=947840378]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07924557, -0.18170786, 3.977192)
+flip_faces = true
+size = Vector3(16.210571, 4.8473816, 24.234497)

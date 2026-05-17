@@ -122,7 +122,7 @@ mesh = SubResource("CylinderMesh_sm2xp")
 surface_material_override/0 = ExtResource("2_ur1wj")
 
 [node name="StructureWallDoor" type="MeshInstance3D" parent="." unique_id=115679024]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.13833761, 0.50550467)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0007895231, -0.13833761, 0.50550467)
 mesh = ExtResource("3_tj62q")
 
 [node name="StructureWallDoorway" type="MeshInstance3D" parent="." unique_id=1081716475]

@@ -1,0 +1,13 @@
+[gd_resource type="Environment" format=3 uid="uid://bghv16p4gw5fv"]
+
+[resource]
+background_mode = 2
+tonemap_mode = 3
+sdfgi_read_sky_light = false
+fog_enabled = true
+fog_light_color = Color(0.4117647, 0.3764706, 0.46666667, 1)
+fog_density = 0.0711
+fog_aerial_perspective = 0.127
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.01
+adjustment_enabled = true

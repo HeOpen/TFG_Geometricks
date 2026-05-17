@@ -7,7 +7,7 @@
 [ext_resource type="Material" uid="uid://x8e77kr2c664" path="res://assets/materials/floor_texture.tres" id="5_6at21"]
 [ext_resource type="Script" uid="uid://c8bx5n25636e" path="res://ui/main_menu/repository_link.gd" id="5_t6bnd"]
 [ext_resource type="FontFile" uid="uid://dnch4xopn1vy1" path="res://assets/fonts/VCR_OSD_MONO_1.001.ttf" id="6_6tl50"]
-[ext_resource type="Environment" uid="uid://d0d6qe5jpibkk" path="res://level/3d_cabin/pesadilla_env.tres" id="7_4e78x"]
+[ext_resource type="Material" uid="uid://b53pnenw6on51" path="res://entities/env_lightning/menu_sky.tres" id="8_s4pem"]
 [ext_resource type="Texture2D" uid="uid://bfd552pyx2x08" path="res://assets/textures/logo_Geometrix.png" id="9_w2r0d"]
 [ext_resource type="PackedScene" uid="uid://ba40k8ka1bu8a" path="res://objects/modular_architecture/MESH_log_wall_25small.tscn" id="10_4e78x"]
 [ext_resource type="PackedScene" uid="uid://86rhbrl7ars4" path="res://objects/modular_architecture/MESH_log_column.tscn" id="11_s4pem"]
@@ -83,6 +83,13 @@ shadow_mesh = SubResource("ArrayMesh_xq28v")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bws42"]
 albedo_color = Color(0.101960786, 0.101960786, 0.101960786, 1)
 
+[sub_resource type="Sky" id="Sky_s4pem"]
+sky_material = ExtResource("8_s4pem")
+
+[sub_resource type="Environment" id="Environment_xio0d"]
+background_mode = 2
+sky = SubResource("Sky_s4pem")
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_6tl50"]
 size = Vector3(1.617157, 0.4807129, 0.043945313)
 
@@ -125,6 +132,9 @@ fov = 45.0
 
 [node name="World" type="Node3D" parent="." unique_id=1765461141]
 
+[node name="LogColumn" parent="World" unique_id=1142263542 instance=ExtResource("11_s4pem")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0067332, 0.15459919, -0.7914546)
+
 [node name="LogWall2" parent="World" unique_id=2005710227 instance=ExtResource("10_4e78x")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.0988612, 0.1420002, 0.1352309)
 
@@ -132,15 +142,20 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0678612, 0.1400002, -0.87313354)
 
 [node name="Floor" type="CSGBox3D" parent="World" unique_id=843586680]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.43310916, 0, -0.08837646)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.15860268, 0, 0.08738271)
 material_override = ExtResource("5_6at21")
 use_collision = true
-size = Vector3(2.5179477, 0, 2.398349)
+size = Vector3(1.9689348, 0, 2.0468307)
 
 [node name="Env" type="Node3D" parent="." unique_id=298357268]
 
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Env" unique_id=1868436296]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_color = Color(1, 0.49019608, 0.011764706, 1)
+shadow_enabled = true
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Env" unique_id=2027843275]
-environment = ExtResource("7_4e78x")
+environment = SubResource("Environment_xio0d")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=313261818]
 transform = Transform3D(0.6276507, 0, 0.7784951, 0, 1, 0, -0.7784951, 0, 0.6276507, 0.3167355, 1.3594737, 0.030828953)
@@ -163,8 +178,18 @@ uppercase = true
 transform = Transform3D(0.16, 0, 0, 0, 0.16, 0, 0, 0, 0.16, -0.0070126057, 0.036070704, -0.018101096)
 texture = ExtResource("9_w2r0d")
 
-[node name="LogWall" parent="." unique_id=1142263542 instance=ExtResource("11_s4pem")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0067332, 0.15459919, -0.7914546)
+[node name="Copyright" type="Label3D" parent="." unique_id=1079143512]
+transform = Transform3D(0.0012553014, 0, 0.0015569902, 0, 0.002, 0, -0.0015569902, 0, 0.0012553014, 1.3032775, 0.6413593, 0.09327468)
+pixel_size = 1.0
+double_sided = false
+modulate = Color(1, 1, 1, 0.020000001)
+outline_modulate = Color(0, 0, 0, 0)
+text = "GEOMETRICKS es un proyecto académico independiente.
+© 2026. Todos los derechos reservados."
+font = ExtResource("6_6tl50")
+font_size = 15
+horizontal_alignment = 2
+uppercase = true
 
 [connection signal="presionado" from="CuboMilenario/PlayButton/Area3D" to="." method="_on_button_presionado"]
 [connection signal="presionado" from="CuboMilenario/OptionsButton/Area3D" to="." method="_on_button_presionado"]

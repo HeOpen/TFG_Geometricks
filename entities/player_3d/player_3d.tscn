@@ -37,9 +37,9 @@ shape = SubResource("CapsuleShape3D_iof21")
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1038113874]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.483967, -0.35388273)
 light_color = Color(0.37036434, 0.37036452, 0.37036446, 1)
-light_energy = 1.1
+light_energy = 3.0
 light_volumetric_fog_energy = 0.0
-omni_range = 3.0
+omni_range = 2.0
 
 [node name="Head" type="Node3D" parent="." unique_id=1958393506]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
@@ -50,6 +50,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12530899, 0)
 [node name="SpotLight3D" type="SpotLight3D" parent="Head/Camera3D" unique_id=1076554066]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.04202473, -0.025304228)
 light_color = Color(0.7529412, 0.50980395, 0.14901961, 1)
+light_energy = 2.3
 light_cull_mask = 4294967293
 shadow_enabled = true
 shadow_bias = 0.01
@@ -58,7 +59,8 @@ spot_angle = 15.75
 spot_angle_attenuation = 0.0018865991
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=919673764]
-transform = Transform3D(-0.3, 0, 2.6226834e-08, 0, 0.3, 0, -2.6226834e-08, 0, -0.3, 0, 2.1817033, -0.08664012)
+transform = Transform3D(0.29937467, -0.019359691, -1.4589873e-08, -0.010769724, -0.16654083, -0.24929535, 0.016087595, 0.24877572, -0.1668887, 0, 2.1817033, -0.29188937)
+modulate = Color(1, 1, 1, 0.030000001)
 double_sided = false
 texture = ExtResource("2_sddfd")
 

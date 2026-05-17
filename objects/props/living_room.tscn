@@ -20,7 +20,12 @@
 [ext_resource type="Texture2D" uid="uid://drstpw0mky4v6" path="res://assets/textures/Posters/game1.jpg" id="19_q7qkt"]
 [ext_resource type="Texture2D" uid="uid://dkheqvxyaa80o" path="res://assets/textures/Posters/game2.jpg" id="20_gfdk5"]
 [ext_resource type="Texture2D" uid="uid://b3bbolllgoxch" path="res://assets/textures/Posters/game5.jpg" id="21_qf86i"]
+[ext_resource type="Texture2D" uid="uid://d186j8cqnobrn" path="res://assets/textures/Posters/movie1.jpg" id="22_2ftla"]
 [ext_resource type="Texture2D" uid="uid://suqn0jysg4u3" path="res://assets/textures/Posters/misc1.jpg" id="22_k3y4f"]
+[ext_resource type="Texture2D" uid="uid://bahx1v2ipushh" path="res://assets/textures/Posters/movie3.jpg" id="23_wygva"]
+[ext_resource type="Texture2D" uid="uid://d2cqsu8tigumb" path="res://assets/textures/Posters/movie2.jpg" id="24_lbmob"]
+[ext_resource type="Texture2D" uid="uid://ccsqw3kbr7ycb" path="res://assets/textures/Posters/movie4.jpg" id="25_le5ns"]
+[ext_resource type="Texture2D" uid="uid://cjiya3af6ssrt" path="res://assets/textures/Posters/movie5.jpg" id="26_wygva"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8n818"]
 resource_name = "Bookcase_02"
@@ -280,6 +285,21 @@ albedo_texture = ExtResource("20_gfdk5")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8mf2w"]
 albedo_texture = ExtResource("21_qf86i")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q7qkt"]
+albedo_texture = ExtResource("22_2ftla")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gfdk5"]
+albedo_texture = ExtResource("23_wygva")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qf86i"]
+albedo_texture = ExtResource("24_lbmob")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k3y4f"]
+albedo_texture = ExtResource("25_le5ns")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_prbld"]
+albedo_texture = ExtResource("26_wygva")
+
 [node name="LivingRoom" type="Node3D" unique_id=1620067552]
 
 [node name="Furniture" type="Node3D" parent="." unique_id=457295960]
@@ -369,3 +389,28 @@ texture = ExtResource("21_qf86i")
 [node name="Poster3" type="Sprite3D" parent="Furniture" unique_id=1748344441]
 transform = Transform3D(-2.8412401e-09, 0, -0.065, 0, 0.065, 0, 0.065, 0, -2.8412401e-09, -2.1554937, 1.1157395, 3.029475)
 texture = ExtResource("22_k3y4f")
+
+[node name="Poster6" type="Sprite3D" parent="." unique_id=1239746424]
+transform = Transform3D(-2.8412401e-09, 0, -0.065, 0, 0.065, 0, 0.065, 0, -2.8412401e-09, 1.4937006, 1.8781269, -0.536838)
+material_override = SubResource("StandardMaterial3D_q7qkt")
+texture = ExtResource("22_2ftla")
+
+[node name="Poster12" type="Sprite3D" parent="." unique_id=1966828566]
+transform = Transform3D(-5.6824803e-09, 0, -0.13, 0, 0.13, 0, 0.13, 0, -5.6824803e-09, 1.4937006, 1.13913, 0.40335375)
+material_override = SubResource("StandardMaterial3D_gfdk5")
+texture = ExtResource("23_wygva")
+
+[node name="Poster7" type="Sprite3D" parent="." unique_id=1605305024]
+transform = Transform3D(-2.8412401e-09, 0, -0.065, 0, 0.065, 0, 0.065, 0, -2.8412401e-09, 1.4937006, 1.0548564, -0.22425266)
+material_override = SubResource("StandardMaterial3D_qf86i")
+texture = ExtResource("24_lbmob")
+
+[node name="Poster13" type="Sprite3D" parent="." unique_id=2123070439]
+transform = Transform3D(-2.8412401e-09, 0, -0.065, 0, 0.065, 0, 0.065, 0, -2.8412401e-09, 1.4937006, 1.909745, 0.054384753)
+material_override = SubResource("StandardMaterial3D_k3y4f")
+texture = ExtResource("25_le5ns")
+
+[node name="Poster14" type="Sprite3D" parent="." unique_id=793417810]
+transform = Transform3D(-3.496911e-09, 0, -0.08, 0, 0.08, 0, 0.08, 0, -3.496911e-09, 1.4937006, 1.1310415, -0.8091063)
+material_override = SubResource("StandardMaterial3D_prbld")
+texture = ExtResource("26_wygva")

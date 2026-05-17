@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://vef148s8cj82"]
 
 [ext_resource type="PackedScene" uid="uid://bn3v0umcbf8ww" path="res://objects/modular_architecture/MESH_Floor.tscn" id="1_a8v70"]
-[ext_resource type="Environment" uid="uid://csojv3b114y6o" path="res://level/3d_cabin/sunset.tres" id="1_ufbth"]
+[ext_resource type="Environment" uid="uid://bfhf63wtq60ir" path="res://entities/env_lightning/intro_sunset_env.tres" id="2_36f10"]
 [ext_resource type="PackedScene" uid="uid://8fq1gfnfnl5h" path="res://objects/modular_architecture/MESH_log_75wall.tscn" id="2_jcjsx"]
 [ext_resource type="PackedScene" uid="uid://bqiw721ebocq5" path="res://objects/modular_architecture/MESH_log_wall_50medium.tscn" id="3_dgrx3"]
 [ext_resource type="PackedScene" uid="uid://86rhbrl7ars4" path="res://objects/modular_architecture/MESH_log_column.tscn" id="4_ufbth"]
@@ -28,8 +28,13 @@
 [ext_resource type="Texture2D" uid="uid://dkheqvxyaa80o" path="res://assets/textures/Posters/game2.jpg" id="27_ehn6b"]
 [ext_resource type="Texture2D" uid="uid://drstpw0mky4v6" path="res://assets/textures/Posters/game1.jpg" id="30_2x7qg"]
 [ext_resource type="Texture2D" uid="uid://suqn0jysg4u3" path="res://assets/textures/Posters/misc1.jpg" id="31_per1h"]
+[ext_resource type="Texture2D" uid="uid://d186j8cqnobrn" path="res://assets/textures/Posters/movie1.jpg" id="31_sr0v5"]
 [ext_resource type="Texture2D" uid="uid://bhfeb27ew20ev" path="res://assets/models_3d/Objects_Interior(Village)_Demo/Textures/Bookcase_02.png" id="32_0stqn"]
+[ext_resource type="Texture2D" uid="uid://d2cqsu8tigumb" path="res://assets/textures/Posters/movie2.jpg" id="32_hnaum"]
+[ext_resource type="Texture2D" uid="uid://bahx1v2ipushh" path="res://assets/textures/Posters/movie3.jpg" id="32_ovth3"]
 [ext_resource type="Texture2D" uid="uid://lwux5blliw5a" path="res://assets/models_3d/Objects_Interior(Village)_Demo/Textures/Bookcase.png" id="33_hnaum"]
+[ext_resource type="Texture2D" uid="uid://ccsqw3kbr7ycb" path="res://assets/textures/Posters/movie4.jpg" id="34_ehn6b"]
+[ext_resource type="Texture2D" uid="uid://cjiya3af6ssrt" path="res://assets/textures/Posters/movie5.jpg" id="35_ovth3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v5b82"]
 albedo_color = Color(0.59575874, 0.5872641, 0.962526, 1)
@@ -296,6 +301,21 @@ albedo_texture = ExtResource("27_ehn6b")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ehn6b"]
 albedo_texture = ExtResource("26_ovth3")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ovth3"]
+albedo_texture = ExtResource("31_sr0v5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aiwdk"]
+albedo_texture = ExtResource("32_ovth3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_evuln"]
+albedo_texture = ExtResource("32_hnaum")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2x7qg"]
+albedo_texture = ExtResource("34_ehn6b")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_per1h"]
+albedo_texture = ExtResource("35_ovth3")
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_i16pj"]
 size = Vector3(0.3173828, 2.7711792, 1.979248)
 
@@ -314,7 +334,7 @@ light_energy = 0.2
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=646517633]
-environment = ExtResource("1_ufbth")
+environment = ExtResource("2_36f10")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1247036135]
 transform = Transform3D(-0.2089512, 0.43283257, -0.8769238, 0.07038426, 0.9010486, 0.42796904, 0.9753899, 0.027703015, -0.21873978, -9.663025, 2.3376148, 4.2130036)
@@ -418,7 +438,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3062606, 0.06422283, 5.418
 [node name="TV" parent="Furniture" unique_id=2025396337 instance=ExtResource("22_ufbth")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5.378168, 1.3685726, 7.5935397)
 
-[node name="Mesh_VHSPlayer_01" parent="Furniture" unique_id=1922792998 instance=ExtResource("22_i16pj")]
+[node name="Player_01" parent="Furniture" unique_id=1922792998 instance=ExtResource("22_i16pj")]
 transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, -5.425863, 0.8859005, 7.5894547)
 
 [node name="Mesh_VHS_01" parent="Furniture" unique_id=1862911067 instance=ExtResource("23_i16pj")]
@@ -458,6 +478,31 @@ texture = ExtResource("26_ovth3")
 [node name="Poster3" type="Sprite3D" parent="Furniture" unique_id=284708158]
 transform = Transform3D(-2.8412401e-09, 0, -0.065, 0, 0.065, 0, 0.065, 0, -2.8412401e-09, -2.1554937, 1.1157395, 3.029475)
 texture = ExtResource("31_per1h")
+
+[node name="Poster4" type="Sprite3D" parent="Furniture" unique_id=437062649]
+transform = Transform3D(-2.8412401e-09, 0, -0.065, 0, 0.065, 0, 0.065, 0, -2.8412401e-09, -2.1554937, 1.878127, 4.5497646)
+material_override = SubResource("StandardMaterial3D_ovth3")
+texture = ExtResource("31_sr0v5")
+
+[node name="Poster10" type="Sprite3D" parent="Furniture" unique_id=1388230271]
+transform = Transform3D(-5.6824803e-09, 0, -0.13, 0, 0.13, 0, 0.13, 0, -5.6824803e-09, -2.1554937, 1.1391301, 5.4899564)
+material_override = SubResource("StandardMaterial3D_aiwdk")
+texture = ExtResource("32_ovth3")
+
+[node name="Poster5" type="Sprite3D" parent="Furniture" unique_id=1265292985]
+transform = Transform3D(-2.8412401e-09, 0, -0.065, 0, 0.065, 0, 0.065, 0, -2.8412401e-09, -2.1554937, 1.0548565, 4.86235)
+material_override = SubResource("StandardMaterial3D_evuln")
+texture = ExtResource("32_hnaum")
+
+[node name="Poster11" type="Sprite3D" parent="Furniture" unique_id=1723278439]
+transform = Transform3D(-2.8412401e-09, 0, -0.065, 0, 0.065, 0, 0.065, 0, -2.8412401e-09, -2.1554937, 1.9097451, 5.1409874)
+material_override = SubResource("StandardMaterial3D_2x7qg")
+texture = ExtResource("34_ehn6b")
+
+[node name="Poster12" type="Sprite3D" parent="Furniture" unique_id=817481851]
+transform = Transform3D(-3.496911e-09, 0, -0.08, 0, 0.08, 0, 0.08, 0, -3.496911e-09, -2.1554937, 1.1310416, 4.2774963)
+material_override = SubResource("StandardMaterial3D_per1h")
+texture = ExtResource("35_ovth3")
 
 [node name="Boundaries" type="Node3D" parent="." unique_id=1938084184]
 
