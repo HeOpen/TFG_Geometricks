@@ -6,3 +6,8 @@ res://objects/props/wall_clock.tscn
 res://level/3d_cabin/cabin_amueblada.tscn
 res://level/3d_cabin/cabin_structure.tscn
 res://objects/modular_architecture/MESH_log_door.tscn
+res://ui/main_menu/main_menu.tscn
+res://ui/hud/fade_transition.tscn
+res://ui/main_menu/main_menu.gd
+res://level/3d_cabin/cabin_intro_structure.tscn
+res://level/3d_cabin/cabin_intro_structure.gd

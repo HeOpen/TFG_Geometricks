@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bfd552pyx2x08" path="res://assets/textures/logo_Geometrix.png" id="9_w2r0d"]
 [ext_resource type="PackedScene" uid="uid://ba40k8ka1bu8a" path="res://objects/modular_architecture/MESH_log_wall_25small.tscn" id="10_4e78x"]
 [ext_resource type="PackedScene" uid="uid://86rhbrl7ars4" path="res://objects/modular_architecture/MESH_log_column.tscn" id="11_s4pem"]
+[ext_resource type="PackedScene" uid="uid://fywlwgjbt75w" path="res://ui/hud/fade_transition.tscn" id="12_xio0d"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mlgns"]
 resource_name = "Metal_04"
@@ -191,7 +192,14 @@ font_size = 15
 horizontal_alignment = 2
 uppercase = true
 
+[node name="Fade_transition" parent="." unique_id=865143108 instance=ExtResource("12_xio0d")]
+visible = false
+
+[node name="Fade_timer" type="Timer" parent="Fade_transition" unique_id=1372340370]
+wait_time = 5.0
+
 [connection signal="presionado" from="CuboMilenario/PlayButton/Area3D" to="." method="_on_button_presionado"]
 [connection signal="presionado" from="CuboMilenario/OptionsButton/Area3D" to="." method="_on_button_presionado"]
 [connection signal="presionado" from="CuboMilenario/SalirButton/Area3D" to="." method="_on_button_presionado"]
 [connection signal="input_event" from="StaticBody3D" to="." method="_input_event"]
+[connection signal="timeout" from="Fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]

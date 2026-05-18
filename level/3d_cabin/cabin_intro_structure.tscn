@@ -1,7 +1,9 @@
 [gd_scene format=4 uid="uid://vef148s8cj82"]
 
 [ext_resource type="PackedScene" uid="uid://bn3v0umcbf8ww" path="res://objects/modular_architecture/MESH_Floor.tscn" id="1_a8v70"]
+[ext_resource type="Script" uid="uid://qdm2p4gnitu8" path="res://level/3d_cabin/cabin_intro_structure.gd" id="1_evuln"]
 [ext_resource type="Environment" uid="uid://bfhf63wtq60ir" path="res://entities/env_lightning/intro_sunset_env.tres" id="2_36f10"]
+[ext_resource type="PackedScene" uid="uid://fywlwgjbt75w" path="res://ui/hud/fade_transition.tscn" id="2_aiwdk"]
 [ext_resource type="PackedScene" uid="uid://8fq1gfnfnl5h" path="res://objects/modular_architecture/MESH_log_75wall.tscn" id="2_jcjsx"]
 [ext_resource type="PackedScene" uid="uid://bqiw721ebocq5" path="res://objects/modular_architecture/MESH_log_wall_50medium.tscn" id="3_dgrx3"]
 [ext_resource type="PackedScene" uid="uid://86rhbrl7ars4" path="res://objects/modular_architecture/MESH_log_column.tscn" id="4_ufbth"]
@@ -323,9 +325,15 @@ size = Vector3(0.3173828, 2.7711792, 1.979248)
 size = Vector3(0.64941406, 1.2645264, 1.6940918)
 
 [node name="Node3D" type="Node3D" unique_id=1927939690]
+script = ExtResource("1_evuln")
+
+[node name="Fade_transition" parent="." unique_id=865143108 instance=ExtResource("2_aiwdk")]
+
+[node name="Fade_timer" type="Timer" parent="Fade_transition" unique_id=1826057302]
+wait_time = 5.0
 
 [node name="Jugador" parent="." unique_id=2146257891 instance=ExtResource("20_jcjsx")]
-transform = Transform3D(-0.5088911, 0, 0.8608309, 0, 1, 0, -0.8608309, 0, -0.5088911, -2.77844, -0.26503158, 3.114441)
+transform = Transform3D(-0.5088911, 0, 0.8608309, 0, 1, 0, -0.8608309, 0, -0.5088911, -3.2999835, -0.26503158, 3.025759)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=682652495]
 transform = Transform3D(-0.66147554, -0.5663326, -0.49164817, -0.4740645, -0.19223088, 0.8592498, -0.5811311, 0.8014456, -0.14132214, -8.065992, 2.5518427, 4.458272)
@@ -519,3 +527,5 @@ shape = SubResource("BoxShape3D_i16pj")
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="Boundaries/StaticBody3D" unique_id=690544380]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3867636, 0.13226318, 4.894541)
 shape = SubResource("BoxShape3D_sr0v5")
+
+[connection signal="timeout" from="Fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]

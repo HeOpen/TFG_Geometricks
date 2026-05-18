@@ -1,5 +1,7 @@
-CollisionShape3D
+Timer
 AnimationPlayer
+ColorRect
+CollisionShape3D
 CSGBox3D
 WorldEnvironment
 Node3D
@@ -11,4 +13,3 @@ Label
 SubViewportContainer
 VideoStreamPlayer
 SubViewport
-MeshInstance3D

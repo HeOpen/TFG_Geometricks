@@ -9,7 +9,9 @@ func _on_button_presionado(nombre_del_boton):
 	# match es un switch. Es case sensitive, tenedlo en cuenta
 	match nombre_del_boton:
 		"JUGAR":
-			_empezar_juego()
+			$Fade_transition.show()
+			$Fade_transition/Fade_timer.start()
+			$Fade_transition/AnimationPlayer.play("fade_in")
 		"OPCIONES":
 			_abrir_opciones()
 		"SALIR":
@@ -25,3 +27,7 @@ func _abrir_opciones():
 	# Debe contemplar:
 	# Efectos de sonido, Banda sonora, Fullscreen, Filtro PSX (?)
 	print("Abriendo menú de opciones...")
+
+
+func _on_fade_timer_timeout() -> void:
+	_empezar_juego()
