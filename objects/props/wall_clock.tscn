@@ -110,6 +110,44 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ju1sg")
 
+[sub_resource type="Animation" id="Animation_pywyq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("plane:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.2482816, 1.5683978, -1.5717733)]
+}
+
+[sub_resource type="Animation" id="Animation_qpklj"]
+resource_name = "clock_loop"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("plane:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.2482816, 1.5683978, -1.5717733), Vector3(-1.1766601, -1.5688167, 1.5657165), Vector3(-1.2482816, 1.5683978, -1.5717733)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_44jrj"]
+_data = {
+&"RESET": SubResource("Animation_pywyq"),
+&"clock_loop": SubResource("Animation_qpklj")
+}
+
 [node name="Wall_Clock" type="Node3D" unique_id=1228142654]
 
 [node name="cuboid" type="MeshInstance3D" parent="." unique_id=794461475]
@@ -117,9 +155,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.003125, 0, 0)
 mesh = SubResource("ArrayMesh_s5j5o")
 
 [node name="plane" type="MeshInstance3D" parent="." unique_id=949128227]
-transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -0.0625, 2.125, -0.25)
+transform = Transform3D(0.96455896, 0.0047024754, 0.3070058, -0.3223406, -0.00043791288, 0.91867924, 0.0033071379, -1.4142054, 0.0007363751, -0.127, 2.125, -0.25)
 mesh = SubResource("ArrayMesh_6m0b5")
 
 [node name="plane2" type="MeshInstance3D" parent="." unique_id=1288108109]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -0.0625, 1.625, 0)
 mesh = SubResource("ArrayMesh_7s13s")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=145863399]
+libraries/ = SubResource("AnimationLibrary_44jrj")

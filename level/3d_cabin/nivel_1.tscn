@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://5mgb2l278x3l" path="res://entities/player_3d/player_3d.tscn" id="2_27ww1"]
 [ext_resource type="PackedScene" uid="uid://c18tc2son874o" path="res://level/3d_cabin/cabin_amueblada.tscn" id="3_27ww1"]
 [ext_resource type="Texture2D" uid="uid://cm5kkk16rphha" path="res://assets/textures/goods.png" id="4_gxhxh"]
+[ext_resource type="PackedScene" uid="uid://blipekt62xeax" path="res://objects/modular_architecture/door_animation.tscn" id="5_c48bb"]
 
 [sub_resource type="FogMaterial" id="FogMaterial_11ijd"]
 density = 1.254
@@ -137,3 +138,6 @@ texture = ExtResource("4_gxhxh")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07924557, -0.18170786, 3.977192)
 flip_faces = true
 size = Vector3(16.210571, 4.8473816, 24.234497)
+
+[node name="DoorAnimation" parent="." unique_id=1997429010 instance=ExtResource("5_c48bb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.922655, 0, 2.776372)
