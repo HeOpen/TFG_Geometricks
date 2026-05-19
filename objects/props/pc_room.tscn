@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://bcl03pplaygdf" path="res://assets/models_3d/Trash and Debris/NewsPapers.png" id="17_lb74w"]
 [ext_resource type="Texture2D" uid="uid://bu4q8ckstclw7" path="res://assets/models_3d/Trash and Debris/CardboardPaper.png" id="18_c6hj2"]
 [ext_resource type="Texture2D" uid="uid://dywqgv23iocba" path="res://assets/textures/Horror Textures by Canvas Coven/Wooden/Wooden_13.png" id="20_00b20"]
+[ext_resource type="PackedScene" uid="uid://blpyiem17obbn" path="res://objects/props/rubick_cube.tscn" id="21_fimin"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v6dtr"]
 resource_name = "Brass"
@@ -1038,6 +1039,9 @@ albedo_texture = ExtResource("20_00b20")
 uv1_scale = Vector3(0.55, 0.55, 0.55)
 uv1_triplanar = true
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_00b20"]
+size = Vector3(2.2667236, 0.8208008, 1.4082031)
+
 [node name="PC_Room" type="Node3D" unique_id=649241162]
 
 [node name="PropCurtainsDouble" type="MeshInstance3D" parent="." unique_id=1097256156]
@@ -1086,23 +1090,23 @@ transform = Transform3D(0.5, 0, 0, 0, 0.02216715, 0.49950838, 0, -0.49950838, 0.
 mesh = SubResource("ArrayMesh_s4ew5")
 
 [node name="Can_4" type="MeshInstance3D" parent="Props" unique_id=1773760705]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, -2.1855694e-08, 0, 2.1855694e-08, 0.5, 0.5711508, 0.7784911, -0.15180415)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, -2.1855694e-08, 0, 2.1855694e-08, 0.5, 0.4490115, 0.7784911, -0.55986965)
 mesh = SubResource("ArrayMesh_ghm2b")
 
 [node name="Can_5" type="MeshInstance3D" parent="Props" unique_id=264076083]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, -2.1855694e-08, 0, 2.1855694e-08, 0.5, 0.63391435, 0.7784911, -0.03117752)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, -2.1855694e-08, 0, 2.1855694e-08, 0.5, 0.5117751, 0.7784911, -0.43924302)
 mesh = SubResource("ArrayMesh_7vf1o")
 
 [node name="Chip_Bag_3" type="MeshInstance3D" parent="Props" unique_id=1134110640]
-transform = Transform3D(-0.5363378, -0.2682359, 0.01978265, 2.7781638e-10, 0.044130713, 0.59837496, -0.26896444, 0.5348851, -0.03944828, 0.416512, 0.69394773, 0.20876533)
+transform = Transform3D(-0.5363378, -0.2682359, 0.01978265, 2.7781638e-10, 0.044130713, 0.59837496, -0.26896444, 0.5348851, -0.03944828, 0.29437274, 0.69394773, -0.19930017)
 mesh = SubResource("ArrayMesh_lb74w")
 
 [node name="Can_1_Crushed" type="MeshInstance3D" parent="Props" unique_id=939889508]
-transform = Transform3D(-0.007573005, -0.2870956, 0.40929055, 0.4998261, -0.013184406, 1.1526177e-09, 0.010792504, 0.40914822, 0.28719544, 0.68880266, 0.74156976, 0.22588158)
+transform = Transform3D(-0.007573005, -0.2870956, 0.40929055, 0.4998261, -0.013184406, 1.1526177e-09, 0.010792504, 0.40914822, 0.28719544, 0.5666634, 0.74156976, -0.18218392)
 mesh = SubResource("ArrayMesh_c6hj2")
 
 [node name="Frying_05" type="MeshInstance3D" parent="Props" unique_id=270783556]
-transform = Transform3D(-47.459743, 15.734434, 8.813823e-07, -1.002327e-19, -2.1855692e-06, 64.075, 15.734434, 47.459743, 2.658512e-06, 0.7644068, 0.7612945, -0.20703617)
+transform = Transform3D(-47.459743, 15.734434, 8.813823e-07, -1.002327e-19, -2.1855692e-06, 64.075, 15.734434, 47.459743, 2.658512e-06, 0.7176885, 0.7612945, -0.5305475)
 mesh = SubResource("ArrayMesh_00b20")
 
 [node name="Coffee_Cup_WithLid" type="MeshInstance3D" parent="Props" unique_id=397748484]
@@ -1146,7 +1150,7 @@ transform = Transform3D(0.0055963695, -0.99938285, -0.027017884, 0.51596177, -4.
 mesh = SubResource("ArrayMesh_ft4qi")
 
 [node name="Bookcase" type="MeshInstance3D" parent="Props" unique_id=527946266]
-transform = Transform3D(-2.0243385e-06, -46.311462, 2.0243383e-06, 0, -2.0243383e-06, -46.311462, 46.311466, -2.0243383e-06, 8.848664e-14, -2.5524101, 0.24141255, 1.4011933)
+transform = Transform3D(-2.0243385e-06, -46.311462, 2.0243383e-06, 0, -2.0243383e-06, -46.311462, 46.311466, -2.0243383e-06, 8.848664e-14, -2.549405, 0.35060564, 1.4011067)
 mesh = SubResource("ArrayMesh_10q0y")
 
 [node name="News_1" type="MeshInstance3D" parent="Props" unique_id=1567600934]
@@ -1170,7 +1174,7 @@ transform = Transform3D(0.31288207, 4.1516724e-08, 0.94979197, 0, 1, -4.371139e-
 mesh = SubResource("ArrayMesh_u0hpp")
 
 [node name="News_Stack" type="MeshInstance3D" parent="Props" unique_id=893070736]
-transform = Transform3D(0.39932665, -1.0140978e-09, -0.023199853, 0, 0.4, -1.7484556e-08, 0.023199853, 1.7455122e-08, 0.39932665, -0.12655032, 0.7370984, 0.19183731)
+transform = Transform3D(0.39713976, -2.0872086e-09, -0.047749765, 8.2422434e-17, 0.4, -1.7484554e-08, 0.047749765, 1.7359529e-08, 0.39713976, -0.20909923, 0.7370984, 0.17465544)
 mesh = SubResource("ArrayMesh_q513m")
 
 [node name="Paper_1" type="MeshInstance3D" parent="Props" unique_id=637533402]
@@ -1210,3 +1214,12 @@ texture = ExtResource("15_c6hj2")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0065237284, 1.1169984, 3.7772346)
 size = Vector3(2.5664063, 1.4394531, 0.03515625)
 material = SubResource("StandardMaterial3D_fimin")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1879179128]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=908361848]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15081787, 0.32517427, -0.20410156)
+shape = SubResource("BoxShape3D_00b20")
+
+[node name="Mesh_PuzzleCube_01" parent="." unique_id=1447461069 instance=ExtResource("21_fimin")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0.39712942, 0.71089107, 0.24983954)

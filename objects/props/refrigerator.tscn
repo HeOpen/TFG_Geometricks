@@ -704,6 +704,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_taxou")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_gw8j8"]
+size = Vector3(0.007873535, 0.010314941, 0.0146484375)
+
 [node name="Refrigerator_002" type="MeshInstance3D" unique_id=1277572071]
 transform = Transform3D(-99.99718, -0.7487507, -3.2728963e-08, -1.9969749e-13, -4.3711393e-06, 100.000015, -0.7487507, 99.99718, 4.3710165e-06, 0, 0, 0)
 mesh = SubResource("ArrayMesh_7qk0c")
@@ -779,3 +782,9 @@ mesh = SubResource("ArrayMesh_m3f4b")
 [node name="Rice" type="MeshInstance3D" parent="Down_Refrigerator_Door_002" unique_id=1814854914]
 transform = Transform3D(-0.082605004, 0.78566945, 3.4342698e-08, -0.78566974, -0.082604975, -3.8142765e-08, -3.434269e-08, -3.814275e-08, 0.78999954, -0.0035099438, 0.006964461, -0.002725145)
 mesh = SubResource("ArrayMesh_h42oe")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=265038388]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=46841577]
+transform = Transform3D(1, 0, -5.356826e-15, 0, 1, -2.4868996e-14, 0, 0, 1.0001361, 0.00045776222, 0.00027465855, -1.2316537e-16)
+shape = SubResource("BoxShape3D_gw8j8")

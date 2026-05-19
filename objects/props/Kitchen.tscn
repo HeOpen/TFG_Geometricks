@@ -1098,6 +1098,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ai2m4")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_jhgwq"]
+size = Vector3(2.840454, 2.5020752, 0.6727295)
+
 [node name="Node3D" type="Node3D" unique_id=733641497]
 
 [node name="Kitchen1" type="Node3D" parent="." unique_id=1481883802]
@@ -1211,23 +1214,23 @@ transform = Transform3D(-0.14953963, -2.1541464e-08, -0.4928112, 0, 0.515, -2.25
 mesh = SubResource("ArrayMesh_b0wbd")
 
 [node name="TrashBag_2" type="MeshInstance3D" parent="." unique_id=1977740310]
-transform = Transform3D(0.57, 0, 0, 0, 0.57, -2.4915492e-08, 0, 2.4915492e-08, 0.57, -2.589975, -0.74363196, -1.1218429)
+transform = Transform3D(0.57, 0, 0, 0, 0.57, -2.4915492e-08, 0, 2.4915492e-08, 0.57, -2.589975, -0.7259878, -1.1218429)
 mesh = SubResource("ArrayMesh_uccqm")
 
 [node name="TrashBag_3" type="MeshInstance3D" parent="." unique_id=1321260307]
-transform = Transform3D(0.375, 0, 0, 0, 0.375, -1.639177e-08, 0, 1.639177e-08, 0.375, -1.8898926, -0.74363196, -0.4671923)
+transform = Transform3D(0.375, 0, 0, 0, 0.375, -1.639177e-08, 0, 1.639177e-08, 0.375, -1.8898926, -0.7259878, -0.4671923)
 mesh = SubResource("ArrayMesh_uccqm")
 
 [node name="TrashBag_4" type="MeshInstance3D" parent="." unique_id=207106702]
-transform = Transform3D(0.5386274, 8.151973e-09, 0.1864954, 0, 0.57, -2.4915492e-08, -0.1864954, 2.3544152e-08, 0.5386274, -4.174452, -0.74363196, 3.1557257)
+transform = Transform3D(0.5386274, 8.151973e-09, 0.1864954, 0, 0.57, -2.4915492e-08, -0.1864954, 2.3544152e-08, 0.5386274, -4.174452, -0.7030777, 3.1557257)
 mesh = SubResource("ArrayMesh_uccqm")
 
 [node name="TrashBag_5" type="MeshInstance3D" parent="." unique_id=1883771305]
-transform = Transform3D(0.3222707, 8.38149e-09, 0.19174616, 0, 0.375, -1.639177e-08, -0.19174616, 1.4086899e-08, 0.3222707, -3.8831933, -0.74363196, 2.6721175)
+transform = Transform3D(0.3222707, 8.38149e-09, 0.19174616, 0, 0.375, -1.639177e-08, -0.19174616, 1.4086899e-08, 0.3222707, -3.8831933, -0.7030777, 2.6721175)
 mesh = SubResource("ArrayMesh_uccqm")
 
 [node name="TrashBag_6" type="MeshInstance3D" parent="." unique_id=135510437]
-transform = Transform3D(0.3222707, 8.38149e-09, 0.19174616, 0, 0.375, -1.639177e-08, -0.19174616, 1.4086899e-08, 0.3222707, -3.7617013, -0.74363196, 3.1069207)
+transform = Transform3D(0.3222707, 8.38149e-09, 0.19174616, 0, 0.375, -1.639177e-08, -0.19174616, 1.4086899e-08, 0.3222707, -3.7617013, -0.7030777, 3.1069207)
 mesh = SubResource("ArrayMesh_uccqm")
 
 [node name="Tin_1" type="MeshInstance3D" parent="." unique_id=1387791303]
@@ -1241,3 +1244,13 @@ mesh = SubResource("ArrayMesh_ls3y0")
 [node name="SoapBottle" type="MeshInstance3D" parent="." unique_id=1766628457]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, -1.3113417e-08, 0, 1.3113417e-08, 0.3, 1.1142377, 0.41919333, 0.86637264)
 mesh = SubResource("ArrayMesh_fchu1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=713285221]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=736785473]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.92022705, 0.5918579, -0.8491539)
+shape = SubResource("BoxShape3D_jhgwq")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=1560704921]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.8280896, 0.5918579, 0.8122797)
+shape = SubResource("BoxShape3D_jhgwq")

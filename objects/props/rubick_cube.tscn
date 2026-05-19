@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://blpyiem17obbn"]
+
+[ext_resource type="PackedScene" uid="uid://ciepxgtglv0kc" path="res://assets/models_3d/LowPolyAssetPack_Free/FBX and Blend Files/Misc Props/Mesh_PuzzleCube_01.fbx" id="1_npnki"]
+[ext_resource type="Texture2D" uid="uid://7xkipest3a0l" path="res://assets/models_3d/LowPolyAssetPack_Free/TextureMap/MasterMaterial1px.png" id="2_hmhui"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dn5y8"]
+albedo_color = Color(0.66092694, 0.4167508, 1.92523e-07, 1)
+albedo_texture = ExtResource("2_hmhui")
+
+[node name="Mesh_PuzzleCube_01" unique_id=1447461069 instance=ExtResource("1_npnki")]
+
+[node name="Mesh_PuzzleCube_01" parent="." index="0" unique_id=1292996663]
+surface_material_override/0 = SubResource("StandardMaterial3D_dn5y8")

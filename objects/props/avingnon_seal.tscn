@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://vka0leii2h10"]
+
+[ext_resource type="Texture2D" uid="uid://c1mpvhdmxpkv6" path="res://assets/textures/AvingnonSeal.png" id="1_uu1i4"]
+
+[node name="AvingnonSeal" type="Node3D" unique_id=1176024472]
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1610084940]
+transform = Transform3D(-0.99999994, 8.742278e-08, -4.3711385e-08, -4.3711385e-08, 1.9106855e-15, 0.99999994, 8.742277e-08, 1, 1.9106853e-15, 0, 0, 0)
+flip_v = true
+texture = ExtResource("1_uu1i4")

@@ -5,3 +5,11 @@ res://level/3d_cabin/cabin_amueblada.tscn
 res://objects/props/living_room.tscn
 res://objects/props/all.tscn
 res://level/3d_cabin/nivel_1.tscn
+res://level/3d_cabin/cabin_structure.tscn
+res://objects/props/Bedroom.tscn
+res://objects/props/pc_room.tscn
+res://objects/modular_architecture/3x2.tscn
+res://objects/modular_architecture/MESH_Floor_Stair.tscn
+res://objects/props/refrigerator.tscn
+res://objects/props/avingnon_seal.tscn
+res://entities/player_3d/player_3d.tscn

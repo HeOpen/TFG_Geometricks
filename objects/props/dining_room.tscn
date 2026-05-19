@@ -1654,14 +1654,17 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_v216e")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_opiea"]
+size = Vector3(2.9038086, 1.8818359, 2.9648438)
+
 [node name="DiningRoom" type="Node3D" unique_id=623458997]
 
 [node name="Chair_25" type="MeshInstance3D" parent="." unique_id=6027891]
-transform = Transform3D(-64.479095, 76.435905, 2.2779675e-06, 2.9802322e-06, 0, 100, 76.435905, 64.4791, 1.9216268e-06, -0.3215825, 0.3783136, 0.16017015)
+transform = Transform3D(-17.114346, 97.88498, -11.208901, -54.00354, 0.19565153, 84.164024, 82.405846, 20.457321, 52.82785, 0.13919634, 0.3783136, 1.3332688)
 mesh = SubResource("ArrayMesh_jq5hf")
 
 [node name="Chair_26" type="MeshInstance3D" parent="." unique_id=311619929]
-transform = Transform3D(57.50338, 81.812965, 2.438216e-06, 2.9802318e-06, 0, 99.999985, 81.81297, -57.503372, -1.7137339e-06, 1.041241, 0.3783136, 0.20972088)
+transform = Transform3D(2.4831464, 85.85072, 51.219955, -99.96736, 1.8246671, 1.7880372, 0.60045075, -51.247643, 85.86798, 1.8048329, 0.14206773, 0.72606087)
 mesh = SubResource("ArrayMesh_jq5hf")
 
 [node name="Chair_27" type="MeshInstance3D" parent="." unique_id=2017250082]
@@ -1669,7 +1672,7 @@ transform = Transform3D(-45.62129, -88.98707, -3.8897483e-06, -1.5579161e-13, -4
 mesh = SubResource("ArrayMesh_jq5hf")
 
 [node name="Chair_28" type="MeshInstance3D" parent="." unique_id=1302802821]
-transform = Transform3D(79.079636, 61.207916, 2.675483e-06, 1.3452808e-13, -4.3711393e-06, 100.000015, 61.207916, -79.079636, -3.4566813e-06, 1.4555136, 0.37831384, -1.593452)
+transform = Transform3D(80.03869, 3.2873862, 59.858162, -0.35017478, -99.822205, 5.9504504, 59.947327, -4.9722805, -79.88488, 2.0108895, 0.27614546, -1.0458548)
 mesh = SubResource("ArrayMesh_jq5hf")
 
 [node name="Flower_Table_01" type="MeshInstance3D" parent="." unique_id=283690876]
@@ -1777,19 +1780,19 @@ transform = Transform3D(85.53716, 0, 0, 0, -1.0196824e-05, 85.537155, 0, -85.537
 mesh = SubResource("ArrayMesh_axeqg")
 
 [node name="Canned_food" type="MeshInstance3D" parent="." unique_id=358171916]
-transform = Transform3D(6.8333344, 0, 0, 0, -8.1459694e-07, 6.833334, 0, -6.833334, -8.1459694e-07, -2.4985862, 1.0889834, 1.4645431)
+transform = Transform3D(-0.24992236, -8.14052e-07, 6.828762, -6.828762, 2.9793066e-08, -0.24992232, -2.8940297e-21, -6.8333335, -8.1459694e-07, -2.4985862, 1.0674503, 1.5324678)
 mesh = SubResource("ArrayMesh_jlp2o")
 
 [node name="Canned_food_01" type="MeshInstance3D" parent="." unique_id=1400260332]
-transform = Transform3D(6.8333344, 0, 0, 0, -8.1459694e-07, 6.833334, 0, -6.833334, -8.1459694e-07, -2.576007, 1.0889834, 1.3151963)
+transform = Transform3D(6.8333344, 0, 0, 0, -8.1459694e-07, 6.833334, 0, -6.833334, -8.1459694e-07, -2.665154, 1.0889834, 1.4347634)
 mesh = SubResource("ArrayMesh_8svee")
 
 [node name="Canned_food_05" type="MeshInstance3D" parent="." unique_id=938215960]
-transform = Transform3D(6.8333344, 0, 0, 0, -8.1459694e-07, 6.833334, 0, -6.833334, -8.1459694e-07, -2.529826, 1.0889834, 1.1737322)
+transform = Transform3D(6.8333344, 0, 0, 0, -8.1459694e-07, 6.833334, 0, -6.833334, -8.1459694e-07, -2.618973, 1.0889834, 1.2932993)
 mesh = SubResource("ArrayMesh_miaqx")
 
 [node name="Canned_food_04" type="MeshInstance3D" parent="." unique_id=1825952904]
-transform = Transform3D(6.8333344, 0, 0, 0, -8.1459694e-07, 6.833334, 0, -6.833334, -8.1459694e-07, -2.6191072, 1.0889834, 1.0767154)
+transform = Transform3D(5.549934, -0.01141151, 3.9865468, 0, -6.8333063, -0.019560374, 3.9865642, 0.015886651, -5.5499115, -2.6191072, 1.0772616, 1.0767154)
 mesh = SubResource("ArrayMesh_f8g1d")
 
 [node name="Canned_food_03" type="MeshInstance3D" parent="." unique_id=259229350]
@@ -1797,7 +1800,7 @@ transform = Transform3D(6.8333344, 0, 0, 0, -8.1459694e-07, 6.833334, 0, -6.8333
 mesh = SubResource("ArrayMesh_ut6dy")
 
 [node name="Canned_food_07" type="MeshInstance3D" parent="." unique_id=242561696]
-transform = Transform3D(3.957653, 0, 0, 0, -4.71789e-07, 3.9576528, 0, -3.9576528, -4.71789e-07, -2.4577644, 1.0468763, 1.3096511)
+transform = Transform3D(3.957653, 0, 0, 0, -4.71789e-07, 3.9576528, 0, -3.9576528, -4.71789e-07, -2.5360215, 1.0468763, 1.3532443)
 mesh = SubResource("ArrayMesh_fk23q")
 
 [node name="Canned_food_06" type="MeshInstance3D" parent="." unique_id=1059357291]
@@ -1805,19 +1808,19 @@ transform = Transform3D(5.691338, 0, 0, 0, -6.7846037e-07, 5.6913376, 0, -5.6913
 mesh = SubResource("ArrayMesh_yn7eg")
 
 [node name="Cereal_03" type="MeshInstance3D" parent="." unique_id=1979588185]
-transform = Transform3D(-3.496911e-07, 8, 3.496911e-07, 0, -3.496911e-07, 8, 8, 3.496911e-07, 1.5285484e-14, -2.4198165, 1.4623464, -1.6974244)
+transform = Transform3D(-1.94146e-07, 4.441543, -6.6537733, -2.9084566e-07, 6.6537733, 4.441543, 8, 3.496911e-07, 1.5285484e-14, -2.527603, 1.416066, -1.6974244)
 mesh = SubResource("ArrayMesh_14b3q")
 
 [node name="Cereal_04" type="MeshInstance3D" parent="." unique_id=511610132]
-transform = Transform3D(-3.496911e-07, 8, 3.496911e-07, 0, -3.496911e-07, 8, 8, 3.496911e-07, 1.5285484e-14, -2.3995998, 1.4623464, -2.1456523)
+transform = Transform3D(-7.7109437, 2.1310437, 9.3150874e-08, 1.2468419, 4.5115576, 6.4877753, 1.7282165, 6.253359, -4.6806803, -2.4656823, 1.4475571, -2.1456523)
 mesh = SubResource("ArrayMesh_rhopc")
 
 [node name="Cereal_05" type="MeshInstance3D" parent="." unique_id=182357043]
-transform = Transform3D(-3.496911e-07, 8, 3.496911e-07, 0, -3.496911e-07, 8, 8, 3.496911e-07, 1.5285484e-14, -2.4423149, 1.4623464, -2.4709146)
+transform = Transform3D(-3.496911e-07, 8, 3.496911e-07, 0, -3.496911e-07, 8, 8, 3.496911e-07, 1.5285484e-14, -2.5321057, 1.4623464, -2.4709146)
 mesh = SubResource("ArrayMesh_lbvw5")
 
 [node name="Cereal_06" type="MeshInstance3D" parent="." unique_id=328049064]
-transform = Transform3D(-3.496911e-07, 8, 3.496911e-07, 0, -3.496911e-07, 8, 8, 3.496911e-07, 1.5285484e-14, -2.4551864, 1.4623464, -1.940983)
+transform = Transform3D(7.961601, 0.014565286, -0.78275067, -3.496306e-07, 7.9986153, 0.14883326, 0.7828862, -0.14811884, 7.9602227, -2.4551864, 1.3397826, -1.940983)
 mesh = SubResource("ArrayMesh_v48dw")
 
 [node name="Cereal_07" type="MeshInstance3D" parent="." unique_id=1754548257]
@@ -1825,7 +1828,7 @@ transform = Transform3D(-3.496911e-07, 8, 3.496911e-07, 0, -3.496911e-07, 8, 8, 
 mesh = SubResource("ArrayMesh_fy7sv")
 
 [node name="Cereal_08" type="MeshInstance3D" parent="." unique_id=653617004]
-transform = Transform3D(-3.496911e-07, 8, 3.496911e-07, 0, -3.496911e-07, 8, 8, 3.496911e-07, 1.5285484e-14, -2.4620736, 1.4623464, -2.7700512)
+transform = Transform3D(7.9492164, 0.89755833, -0.06594196, -0.88879275, 7.9214487, 0.6787493, 0.14144665, -0.6671146, 7.9708815, -2.5175629, 1.3966287, -2.7700512)
 mesh = SubResource("ArrayMesh_dmu48")
 
 [node name="Rice" type="MeshInstance3D" parent="." unique_id=113939161]
@@ -1869,31 +1872,31 @@ transform = Transform3D(49.299007, 84.74834, 1.0102789e-05, 0, -1.1920929e-05, 9
 mesh = SubResource("ArrayMesh_udr2l")
 
 [node name="Box_cookies_03" type="MeshInstance3D" parent="." unique_id=1816482572]
-transform = Transform3D(-25.264084, 96.228905, -1.147138e-05, 0, 1.1920929e-05, 99.99999, -89.370674, -27.202833, 3.2428306e-06, -2.471242, 0.77818114, 1.2681415)
+transform = Transform3D(-12.276414, 46.759876, -87.40013, -22.080843, 84.10421, 48.592342, -89.370674, -27.20283, 3.24283e-06, -2.471242, 0.77818114, 1.2681415)
 mesh = SubResource("ArrayMesh_dmlph")
 
 [node name="Box_cookies_06" type="MeshInstance3D" parent="." unique_id=1875467475]
-transform = Transform3D(33.06014, -93.44966, -1.1140069e-05, 0, -1.1920929e-05, 99.99999, -86.789505, -35.597157, -4.2435117e-06, -2.521204, 0.8299279, 0.23815551)
+transform = Transform3D(48.894394, -76.406715, -37.28744, 1.2883167, -43.07964, 90.23425, -78.9498, -48.022446, -21.62003, -2.521204, 0.8299279, 0.23815551)
 mesh = SubResource("ArrayMesh_ffyjj")
 
 [node name="Milk_02" type="MeshInstance3D" parent="." unique_id=1837268677]
-transform = Transform3D(2.4843717, 4.0815783, 4.865621e-07, 0, -5.6960823e-07, 4.7782197, 4.0815787, -2.4843714, -2.9616018e-07, -2.6285992, 1.1303061, -1.7912482)
+transform = Transform3D(-1.2711835, 1.0066073, 4.494688, -2.4819424, -4.077587, 0.21125503, 3.880134, -2.278466, 1.6076497, -2.6285992, 1.0525047, -1.6566613)
 mesh = SubResource("ArrayMesh_b1owd")
 
 [node name="Milk_03" type="MeshInstance3D" parent="." unique_id=1648572174]
-transform = Transform3D(2.4843717, 4.0815783, 4.865621e-07, 0, -5.6960823e-07, 4.7782197, 4.0815787, -2.4843714, -2.9616018e-07, -2.6761904, 1.1303061, -1.9201884)
+transform = Transform3D(2.372174, 3.8972487, -1.4197276, 0.73816866, 1.2127379, 4.562429, 4.0815787, -2.4843714, -2.9616018e-07, -2.6761904, 1.1303061, -1.9201884)
 mesh = SubResource("ArrayMesh_b1owd")
 
 [node name="Milk_04" type="MeshInstance3D" parent="." unique_id=1802848345]
-transform = Transform3D(2.4843717, 4.0815783, 4.865621e-07, 0, -5.6960823e-07, 4.7782197, 4.0815787, -2.4843714, -2.9616018e-07, -2.677517, 1.1303061, -2.070188)
+transform = Transform3D(2.4645762, 4.088855, 0.19625401, 4.0899687, -2.449985, -0.31797567, -0.17147309, 0.3319955, -4.763587, -2.7013638, 1.0608823, -2.070188)
 mesh = SubResource("ArrayMesh_b1owd")
 
 [node name="Milk_05" type="MeshInstance3D" parent="." unique_id=655985221]
-transform = Transform3D(-1.7386465, 4.450673, 5.305617e-07, 0, -5.6960823e-07, 4.7782197, 4.4506736, 1.7386461, 2.0726281e-07, -2.6715963, 1.1303061, -2.3905275)
+transform = Transform3D(-1.7386465, 4.450673, 5.3056164e-07, 1.2690488, 0.49575067, 4.579861, 4.2659125, 1.6664697, -1.362444, -2.6715963, 1.1303061, -2.5353696)
 mesh = SubResource("ArrayMesh_b1owd")
 
 [node name="Milk_06" type="MeshInstance3D" parent="." unique_id=550883335]
-transform = Transform3D(-1.7386465, 4.450673, 5.305617e-07, 0, -5.6960823e-07, 4.7782197, 4.4506736, 1.7386461, 2.0726281e-07, -2.5979364, 1.1303061, -2.5065649)
+transform = Transform3D(0.5557158, 4.741274, -0.20707291, 4.7446656, -0.55959994, -0.07982218, -0.10345644, -0.19633548, -4.7730627, -2.5979364, 1.0572854, -2.8098903)
 mesh = SubResource("ArrayMesh_b1owd")
 
 [node name="Milk_07" type="MeshInstance3D" parent="." unique_id=1747234870]
@@ -1923,3 +1926,9 @@ mesh = SubResource("ArrayMesh_m1w6m")
 [node name="tumbler6" type="MeshInstance3D" parent="." unique_id=603303928]
 transform = Transform3D(-5.18458, 0, 0, 0, 6.180501e-07, -5.1845794, 0, 5.1845794, 6.180501e-07, -0.45049465, 1.3926125, 2.0661721)
 mesh = SubResource("ArrayMesh_m1w6m")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1515279098]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=463753875]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0412598, 0.99186385, 0.017578125)
+shape = SubResource("BoxShape3D_opiea")
