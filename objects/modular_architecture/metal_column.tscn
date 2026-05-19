@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cuk2da28gd53"]
+
+[ext_resource type="PackedScene" uid="uid://106ubbnf7aka" path="res://assets/models_3d/LowPolyAssetPack_Free/FBX and Blend Files/Furniture/Shelves/Shelf_03/Mesh_Shelf_03_Square_Tall.fbx" id="1_0erth"]
+[ext_resource type="Texture2D" uid="uid://7xkipest3a0l" path="res://assets/models_3d/LowPolyAssetPack_Free/TextureMap/MasterMaterial1px.png" id="2_r05o8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0qulv"]
+albedo_texture = ExtResource("2_r05o8")
+
+[node name="Mesh_Shelf_03_Square_Tall" unique_id=2027438355 instance=ExtResource("1_0erth")]
+
+[node name="Mesh_Shelf_03_Square_Tall" parent="." index="0" unique_id=532623747]
+surface_material_override/0 = SubResource("StandardMaterial3D_0qulv")

@@ -16,7 +16,7 @@ albedo = Color(0.55122495, 0.6738945, 0.9313169, 1)
 environment = ExtResource("1_gxhxh")
 
 [node name="Player" parent="." unique_id=2146257891 instance=ExtResource("2_27ww1")]
-transform = Transform3D(-0.98934335, 0.018996367, 0.1443562, 0.019197442, 0.9998158, 0, -0.1443296, 0.0027712702, -0.9895258, -5.2092004, 0.2677753, 4.207436)
+transform = Transform3D(-0.6845863, 0.0131447315, 0.7288133, 0.019197444, 0.99981594, 0, -0.72867894, 0.013991353, -0.6847125, -3.5549965, 0.2677753, 3.3761456)
 
 [node name="FogVolume" type="FogVolume" parent="." unique_id=989422566]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.8679752)

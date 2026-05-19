@@ -1218,6 +1218,18 @@ mesh = SubResource("ArrayMesh_uccqm")
 transform = Transform3D(0.375, 0, 0, 0, 0.375, -1.639177e-08, 0, 1.639177e-08, 0.375, -1.8898926, -0.74363196, -0.4671923)
 mesh = SubResource("ArrayMesh_uccqm")
 
+[node name="TrashBag_4" type="MeshInstance3D" parent="." unique_id=207106702]
+transform = Transform3D(0.5386274, 8.151973e-09, 0.1864954, 0, 0.57, -2.4915492e-08, -0.1864954, 2.3544152e-08, 0.5386274, -4.174452, -0.74363196, 3.1557257)
+mesh = SubResource("ArrayMesh_uccqm")
+
+[node name="TrashBag_5" type="MeshInstance3D" parent="." unique_id=1883771305]
+transform = Transform3D(0.3222707, 8.38149e-09, 0.19174616, 0, 0.375, -1.639177e-08, -0.19174616, 1.4086899e-08, 0.3222707, -3.8831933, -0.74363196, 2.6721175)
+mesh = SubResource("ArrayMesh_uccqm")
+
+[node name="TrashBag_6" type="MeshInstance3D" parent="." unique_id=135510437]
+transform = Transform3D(0.3222707, 8.38149e-09, 0.19174616, 0, 0.375, -1.639177e-08, -0.19174616, 1.4086899e-08, 0.3222707, -3.7617013, -0.74363196, 3.1069207)
+mesh = SubResource("ArrayMesh_uccqm")
+
 [node name="Tin_1" type="MeshInstance3D" parent="." unique_id=1387791303]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, -1.7484556e-08, 0, 1.7484556e-08, 0.4, 0.043090105, 0.2946021, -0.9947389)
 mesh = SubResource("ArrayMesh_87suf")

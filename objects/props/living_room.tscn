@@ -362,27 +362,27 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4260707, 0.3892215, 3.9506
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3783793, 0.4679885, 7.484864)
 
 [node name="Poster2" type="Sprite3D" parent="Furniture" unique_id=1600310593]
-transform = Transform3D(-0.11, 0, -1.6609539e-08, 0, 0.11, 0, 1.6609539e-08, 0, -0.11, -3.2717993, 1.6696339, 7.8572345)
+transform = Transform3D(-0.11, 0, -1.6609539e-08, 0, 0.11, 0, 1.6609539e-08, 0, -0.11, -3.2108133, 1.6696339, 7.8572345)
 material_override = SubResource("StandardMaterial3D_le5ns")
 texture = ExtResource("18_8mf2w")
 
 [node name="Poster6" type="Sprite3D" parent="Furniture" unique_id=394930443]
-transform = Transform3D(-0.095, 0, -1.4344601e-08, 0, 0.095, 0, 1.4344601e-08, 0, -0.095, -3.9496448, 1.6696339, 7.8572345)
+transform = Transform3D(-0.095, 0, -1.4344601e-08, 0, 0.095, 0, 1.4344601e-08, 0, -0.095, -3.7592938, 1.6101062, 7.8572345)
 material_override = SubResource("StandardMaterial3D_ysnjt")
 texture = ExtResource("19_q7qkt")
 
 [node name="Poster9" type="Sprite3D" parent="Furniture" unique_id=45854505]
-transform = Transform3D(-0.115, 0, -1.7364517e-08, 0, 0.115, 0, 1.7364517e-08, 0, -0.115, -4.5619993, 1.6696339, 7.8572345)
+transform = Transform3D(-0.115, 0, -1.7364517e-08, 0, 0.115, 0, 1.7364517e-08, 0, -0.115, -4.3166795, 1.6696339, 7.8572345)
 material_override = SubResource("StandardMaterial3D_ffeji")
 texture = ExtResource("18_8mf2w")
 
 [node name="Poster7" type="Sprite3D" parent="Furniture" unique_id=510738729]
-transform = Transform3D(-0.07, 0, -1.0569706e-08, 0, 0.07, 0, 1.0569706e-08, 0, -0.07, -3.2827084, 0.8487518, 7.8572345)
+transform = Transform3D(-0.07, 0, -1.0569706e-08, 0, 0.07, 0, 1.0569706e-08, 0, -0.07, -3.3666222, 0.8487518, 7.8572345)
 material_override = SubResource("StandardMaterial3D_t588x")
 texture = ExtResource("20_gfdk5")
 
 [node name="Poster8" type="Sprite3D" parent="Furniture" unique_id=21515139]
-transform = Transform3D(-0.085, 0, -1.2834644e-08, 0, 0.085, 0, 1.2834644e-08, 0, -0.085, -3.9581804, 0.8487518, 7.8572345)
+transform = Transform3D(-0.085, 0, -1.2834644e-08, 0, 0.085, 0, 1.2834644e-08, 0, -0.085, -4.042094, 0.8487518, 7.8572345)
 material_override = SubResource("StandardMaterial3D_8mf2w")
 texture = ExtResource("21_qf86i")
 

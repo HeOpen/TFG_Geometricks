@@ -9,6 +9,20 @@
 [ext_resource type="PackedScene" uid="uid://c5xwjrq7h1m2p" path="res://assets/models_3d/VHS.tscn" id="7_x1bxq"]
 [ext_resource type="Material" uid="uid://x8e77kr2c664" path="res://assets/materials/floor_texture.tres" id="9_j5q3g"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5fqtq"]
+sky_top_color = Color(0, 0, 0, 1)
+sky_horizon_color = Color(0, 0, 0, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Sky" id="Sky_j5q3g"]
+sky_material = SubResource("ProceduralSkyMaterial_5fqtq")
+
+[sub_resource type="Environment" id="Environment_x1bxq"]
+background_mode = 2
+sky = SubResource("Sky_j5q3g")
+tonemap_mode = 2
+
 [sub_resource type="CylinderMesh" id="CylinderMesh_sm2xp"]
 resource_local_to_scene = true
 lightmap_size_hint = Vector2i(6, 9)
@@ -117,6 +131,9 @@ radius = 0.4
 height = 1.8
 
 [node name="LogWall" type="Node3D" unique_id=1997429010]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=19628192]
+environment = SubResource("Environment_x1bxq")
 
 [node name="Node3D2" type="Node3D" parent="." unique_id=723943201]
 
