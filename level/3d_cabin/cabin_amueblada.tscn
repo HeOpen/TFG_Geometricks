@@ -35,31 +35,58 @@
 albedo_color = Color(0.59575874, 0.5872641, 0.962526, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hy7tc"]
-albedo_texture = ExtResource("12_33qu4")
+emission_enabled = true
+emission = Color(1, 0.00837636, 0, 1)
+emission_energy_multiplier = 3.0
+emission_texture = ExtResource("12_33qu4")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ut052"]
 albedo_texture = ExtResource("14_ibg3d")
+emission_enabled = true
+emission_energy_multiplier = 5.0
+emission_texture = ExtResource("14_ibg3d")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xf5mu"]
 albedo_texture = ExtResource("21_keyu8")
+emission_enabled = true
+emission_energy_multiplier = 5.0
+emission_texture = ExtResource("21_keyu8")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aiaxv"]
 albedo_texture = ExtResource("16_61dr2")
+emission_enabled = true
+emission_energy_multiplier = 10.0
+emission_texture = ExtResource("16_61dr2")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yjibc"]
 albedo_texture = ExtResource("17_cd7s3")
+emission_enabled = true
+emission_energy_multiplier = 5.0
+emission_texture = ExtResource("17_cd7s3")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8qnur"]
 albedo_texture = ExtResource("20_iwbte")
+emission_enabled = true
+emission_energy_multiplier = 5.0
+emission_texture = ExtResource("20_iwbte")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_whjgk"]
 albedo_texture = ExtResource("18_7g1k8")
+emission_enabled = true
+emission_energy_multiplier = 5.0
+emission_texture = ExtResource("18_7g1k8")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2rtus"]
 albedo_texture = ExtResource("19_0x3xf")
+emission_enabled = true
+emission_energy_multiplier = 2.0
+emission_texture = ExtResource("19_0x3xf")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6h17d"]
 albedo_texture = ExtResource("20_hy7tc")
+emission_enabled = true
+emission_energy_multiplier = 5.0
+emission_texture = ExtResource("20_hy7tc")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0igfk"]
 albedo_texture = ExtResource("13_w7afj")

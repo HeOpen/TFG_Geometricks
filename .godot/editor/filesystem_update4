@@ -13,3 +13,5 @@ res://objects/modular_architecture/MESH_Floor_Stair.tscn
 res://objects/props/refrigerator.tscn
 res://objects/props/avingnon_seal.tscn
 res://entities/player_3d/player_3d.tscn
+res://objects/props/avingnon_seal.gd
+res://objects/props/cubo.gd
