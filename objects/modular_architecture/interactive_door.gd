@@ -1,20 +1,36 @@
 extends Node3D
 
-# Al usar String, en el Inspector aparecerá un campo de texto en lugar de una casilla de nodo.
-@export var destination_name: String = ""
+@export var destination_front: String = ""
+@export var destination_back: String = ""
 
 func interact(player_node: CharacterBody3D):
-	# Verificación de seguridad
-	if destination_name == "":
-		push_error("Error crítico: Puerta sin nombre de destino configurado.")
+	# 1. Obtenemos el vector frontal de la puerta (Hacia dónde apunta su eje Z local)
+	var door_forward = global_transform.basis.z
+	
+	# 2. Calculamos la dirección exacta desde el centro de la puerta hacia el jugador
+	var direction_to_player = global_position.direction_to(player_node.global_position)
+	
+	# 3. Calculamos el Producto Punto (Dot Product)
+	var dot_product = door_forward.dot(direction_to_player)
+	
+	# 4. Determinamos el destino basado en el resultado matemático
+	var target_name = ""
+	if dot_product > 0:
+		# El jugador está en la parte delantera de la puerta
+		target_name = destination_front
+	else:
+		# El jugador está en la parte trasera de la puerta
+		target_name = destination_back
+		
+	# 5. Verificación de seguridad
+	if target_name == "":
+		push_error("Error crítico: Destino vacío en la puerta.")
 		return
 		
-	# Pedimos al árbol principal que busque de forma recursiva un nodo que tenga este nombre exacto
-	# Parámetros find_child: (Nombre_del_nodo, Búsqueda_Recursiva=true, Propiedad_estricta=false)
-	var marker_node = get_tree().get_root().find_child(destination_name, true, false)
+	# 6. Búsqueda y ejecución del salto
+	var marker_node = get_tree().get_root().find_child(target_name, true, false)
 	
-	# Validamos que el nodo existe y que es del tipo correcto antes de ejecutar la teletransportación
 	if marker_node != null and marker_node is Marker3D:
 		TransitionManager.execute_door_transition(player_node, marker_node.global_position)
 	else:
-		push_error("Error crítico: No se encontró ningún Marker3D en el nivel llamado: " + destination_name)
+		push_error("Error crítico: No se encontró el Marker3D llamado: " + target_name)

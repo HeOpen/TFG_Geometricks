@@ -40,7 +40,7 @@ visible = false
 size = Vector3(23.936768, 0.01, 16.021362)
 
 [node name="Staircase" parent="." unique_id=1515075192 instance=ExtResource("7_blnp6")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.4630253, -1.1223166, -6.0084333)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.4630253, -1.028329, -6.0084333)
 
 [node name="Staircase2" parent="." unique_id=1819403609 instance=ExtResource("7_blnp6")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -3.685822, 2.075, -6.1836443)
@@ -64,7 +64,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0517387, -0.185, -4.1026273
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9468307, -0.185, 3.9009104)
 
 [node name="Floor6" parent="0_Floor" unique_id=632052884 instance=ExtResource("9_lnuhh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8290544, -0.185, -4.0240846)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.803, -0.185, -4.024)
 
 [node name="-1_Floor" type="Node3D" parent="." unique_id=1535616371]
 

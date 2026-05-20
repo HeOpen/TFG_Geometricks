@@ -14,7 +14,8 @@ edge_fade = 27.437391
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1560316449]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
-light_color = Color(0, 0, 0.34409294, 1)
+light_color = Color(0.61328125, 0.61328125, 0.61328125, 1)
+light_energy = 6.47
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1135325726]
@@ -37,25 +38,36 @@ material = SubResource("FogMaterial_11ijd")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07394417, 0, 0.002947092)
 
 [node name="Door_PcRoom" parent="Cabin/Cabin_Structure/Door" parent_id_path=PackedInt32Array(293068168, 125884885, 132746731) index="0" unique_id=388257934]
-destination_name = "PC_TP"
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.008, 0.007, 9.66428)
+destination_front = "TP_In_PcRoom"
+destination_back = "TP_Out_PcRoom"
 
 [node name="Door_Batroom" parent="Cabin/Cabin_Structure/Door" parent_id_path=PackedInt32Array(293068168, 125884885, 132746731) index="1" unique_id=1641116012]
-destination_name = "BathroomTP"
+destination_front = "TP_In_Bath"
+destination_back = "TP_Out_Bath"
 
 [node name="Door_Bedroom" parent="Cabin/Cabin_Structure/Door" parent_id_path=PackedInt32Array(293068168, 125884885, 132746731) index="2" unique_id=1997389752]
-destination_name = "BedroomTP"
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2, 0.005, 14.388)
+destination_front = "TP_In_Bedroom"
+destination_back = "TP_Out_Bedroom"
 
 [node name="Door_LivingRoom1" parent="Cabin/Cabin_Structure/Door" parent_id_path=PackedInt32Array(293068168, 125884885, 132746731) index="3" unique_id=986305764]
-destination_name = "LivingRoom_TP2"
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -6.8802676, 0.005359851, 2.0941277)
+destination_front = "TP_In_LivingRoom3"
+destination_back = "TP_Out_LivingRoom4"
 
 [node name="Door_DiningRoom" parent="Cabin/Cabin_Structure/Door" parent_id_path=PackedInt32Array(293068168, 125884885, 132746731) index="4" unique_id=1887231876]
-destination_name = "DiningRoom_TP"
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5.104264, 0.027033769, 1.9927464)
+destination_front = "TP_In_DiningRoom"
+destination_back = "TP_Out_DiningRoom"
 
 [node name="Door_LivingRoom2" parent="Cabin/Cabin_Structure/Door" parent_id_path=PackedInt32Array(293068168, 125884885, 132746731) index="5" unique_id=1726044719]
-destination_name = "LivingRoom_TP1"
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.016726, 0.0030129775, 6.9730005)
+destination_front = "TP_In_LivingRoom1"
+destination_back = "TP_Out_LivingRoom2"
 
 [node name="plane" parent="Cabin/Wall_Clock" parent_id_path=PackedInt32Array(293068168, 1228142654) index="1" unique_id=949128227]
-transform = Transform3D(0.9645591, 0.004702476, 0.3070058, -0.32234064, -0.0004379129, 0.91867924, 0.003307138, -1.4142056, 0.0007363751, -0.127, 2.125, -0.25)
+transform = Transform3D(0.9645591, 0.0047024763, 0.3070058, -0.32234064, -0.00043791294, 0.91867924, 0.003307138, -1.4142057, 0.0007363751, -0.127, 2.125, -0.25)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1382341819]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5500827, 1.0782483, 8.33907)
@@ -173,23 +185,43 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3367577, -1.4250159, -3.902
 light_color = Color(1, 0, 0, 1)
 omni_range = 3.0
 
-[node name="BathroomTP" type="Marker3D" parent="." unique_id=1174439079]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2957551, 0, 14.520975)
+[node name="TPs" type="Node3D" parent="." unique_id=2094540658]
 
-[node name="BedroomTP" type="Marker3D" parent="." unique_id=807985985]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6116054, 0, 14.520975)
+[node name="TP_In_Bath" type="Marker3D" parent="TPs" unique_id=1174439079]
+transform = Transform3D(-0.022826977, 0, -0.9997394, 0, 1, 0, 0.9997394, 0, -0.022826977, -2.2301028, 0, 14.520975)
 
-[node name="PC_TP" type="Marker3D" parent="." unique_id=1011576727]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5553713, 0, 9.774151)
+[node name="TP_Out_Bath" type="Marker3D" parent="TPs" unique_id=2094785489]
+transform = Transform3D(0.0034557076, 0, 0.99999404, 0, 1, 0, -0.99999404, 0, 0.0034557076, -1.6046991, 0, 14.520975)
 
-[node name="DiningRoom_TP" type="Marker3D" parent="." unique_id=1757630563]
+[node name="TP_In_Bedroom" type="Marker3D" parent="TPs" unique_id=807985985]
+transform = Transform3D(0.020593455, 0, 0.9997879, 0, 1, 0, -0.9997879, 0, 0.020593455, 2.47943, 0, 14.369448)
+
+[node name="TP_Out_Bedroom" type="Marker3D" parent="TPs" unique_id=88300151]
+transform = Transform3D(-0.03250972, 0, -0.9994714, 0, 1, 0, 0.9994714, 0, -0.03250972, 1.6719706, 0, 14.369448)
+
+[node name="TP_In_PcRoom" type="Marker3D" parent="TPs" unique_id=1011576727]
+transform = Transform3D(0.030050002, 0, -0.9995484, 0, 1, 0, 0.9995484, 0, 0.030050002, -2.3388097, 0, 9.774151)
+
+[node name="TP_Out_PcRoom" type="Marker3D" parent="TPs" unique_id=1947251945]
+transform = Transform3D(0.033608735, 0, 0.99943507, 0, 1, 0, -0.99943507, 0, 0.033608735, -1.6696398, 0, 9.774151)
+
+[node name="TP_In_DiningRoom" type="Marker3D" parent="TPs" unique_id=1757630563]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2689157, 0, 2.430067)
 
-[node name="LivingRoom_TP1" type="Marker3D" parent="." unique_id=1186710884]
-transform = Transform3D(-0.4916943, 0, -0.8707679, 0, 1, 0, 0.8707679, 0, -0.4916943, -2.7587197, 0, 6.732299)
+[node name="TP_Out_DiningRoom" type="Marker3D" parent="TPs" unique_id=1632187277]
+transform = Transform3D(-0.9995578, 0, -0.0297361, 0, 1, 0, 0.0297361, 0, -0.9995578, 5.2689157, 0, 1.6105571)
 
-[node name="LivingRoom_TP2" type="Marker3D" parent="." unique_id=1181523357]
-transform = Transform3D(0.86870074, 0, 0.4953373, 0, 1, 0, -0.4953373, 0, 0.86870074, -6.9547386, 0, 2.9002185)
+[node name="TP_In_LivingRoom1" type="Marker3D" parent="TPs" unique_id=1186710884]
+transform = Transform3D(0.027816892, 0, -0.99961305, 0, 1, 0, 0.99961305, 0, 0.027816892, -2.3898146, 0, 6.9062037)
+
+[node name="TP_Out_LivingRoom2" type="Marker3D" parent="TPs" unique_id=552114073]
+transform = Transform3D(0.06763229, 0, 0.99771035, 0, 1, 0, -0.99771035, 0, 0.06763229, -1.5488987, 0, 6.9062037)
+
+[node name="TP_In_LivingRoom3" type="Marker3D" parent="TPs" unique_id=1181523357]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.9547386, 0, 2.4088957)
+
+[node name="TP_Out_LivingRoom4" type="Marker3D" parent="TPs" unique_id=705113437]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -6.9547386, 0, 1.6260276)
 
 [editable path="Player"]
 [editable path="Cabin"]

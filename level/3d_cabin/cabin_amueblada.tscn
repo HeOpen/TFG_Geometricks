@@ -151,10 +151,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.003413, 0.0029295683, 5.325
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1232243, 0.035841137, 11.122396)
 
 [node name="Lock_PC_Room" parent="." unique_id=340485007 instance=ExtResource("16_36tuj")]
-transform = Transform3D(0.081417, 0, -0.28874084, 0, 0.29999998, 0, 0.28874084, 0, 0.081417, -1.845611, 0.9174485, 10.024116)
+transform = Transform3D(0.10855601, 0, -0.3849878, 0, 0.4, 0, 0.3849878, 0, 0.10855601, -1.7791007, 0.9174485, 10.103961)
 
 [node name="Lock_Sotano" parent="." unique_id=311865494 instance=ExtResource("16_36tuj")]
-transform = Transform3D(-2.6218844e-08, -0.5999086, 0.010471431, -9.1544156e-10, -0.01047143, -0.59990865, 0.6, -2.6230826e-08, -4.5772078e-10, -2.0809162, 0.02443692, -5.7797613)
+transform = Transform3D(-0.9922955, 0.04349328, -0.11600858, 0.11511088, -0.022614002, -0.9930952, -0.045816384, -0.9987978, 0.017433222, -0.91629475, 0.21129614, -6.3419905)
 
 [node name="Windows" type="Node3D" parent="." unique_id=809931369]
 
@@ -327,7 +327,7 @@ material_override = SubResource("StandardMaterial3D_mxr04")
 texture = ExtResource("12_hdp7s")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1634475269]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0878859, -0.1341587, -6.8148975)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9844829, -0.078098774, -6.635259)
 material_override = SubResource("StandardMaterial3D_tjwvp")
-size = Vector3(2.3669434, 0.011, 2.15625)
+size = Vector3(2.367, 0.101, 2.461661)
 material = SubResource("StandardMaterial3D_6bov7")
