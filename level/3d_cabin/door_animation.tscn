@@ -36,7 +36,6 @@ size = Vector3(0.9963379, 2.4732666, 0.2788391)
 [sub_resource type="Animation" id="Animation_gh322"]
 resource_name = "Opening_Door"
 length = 5.0
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -295,6 +294,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Jugador/Head" unique_id=851470035]
 transform = Transform3D(1, 1.7010441e-08, 1.670891e-09, -1.701044e-08, 0.98088735, 0.19457677, 1.6708839e-09, -0.19457677, 0.98088735, -1.4901161e-08, -0.12530899, 0.23610938)
+current = true
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Jugador/Head/Camera3D" unique_id=1076554066]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.04202473, -0.025304228)

@@ -360,6 +360,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_3qhvg")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ukrer"]
+size = Vector3(1.3310547, 1, 0.8666992)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kqq5x"]
+size = Vector3(2.8040771, 1, 1.0640869)
+
 [node name="Node3D" type="Node3D" unique_id=917038488]
 
 [node name="PropBathroomShower" type="MeshInstance3D" parent="." unique_id=361861528]
@@ -410,3 +416,17 @@ mesh = SubResource("ArrayMesh_sv6p7")
 [node name="Manija_Washbasin_09" type="MeshInstance3D" parent="Washbasin_06" unique_id=1050363047]
 transform = Transform3D(0.993155, 0, 0, 0, 0.993155, 0, 0, 0, 0.993155, -0.00063280103, -0.0009109402, 0.008679894)
 mesh = SubResource("ArrayMesh_l1qfs")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1739929393]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=2019879649]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16552734, 0.5174028, -0.7853819)
+shape = SubResource("BoxShape3D_ukrer")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" unique_id=1033912611]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.848439, 0.5174028, -0.7853819)
+shape = SubResource("BoxShape3D_ukrer")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=549026849]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.0372019, 0.5174028, 0.18987179)
+shape = SubResource("BoxShape3D_kqq5x")

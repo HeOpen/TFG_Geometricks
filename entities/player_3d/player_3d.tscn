@@ -19,6 +19,7 @@ height = 1.8
 [node name="Jugador" type="CharacterBody3D" unique_id=2146257891]
 collision_layer = 2
 script = ExtResource("1_mfgp6")
+can_jump = false
 can_sprint = true
 can_freefly = true
 base_speed = 3.0
@@ -59,6 +60,9 @@ shadow_normal_bias = 2.0
 spot_angle = 15.75
 spot_angle_attenuation = 0.0018865991
 
+[node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D" unique_id=845778856]
+transform = Transform3D(1, 0, 0, 0, -0.00993073, -0.9999507, 0, 0.9999507, -0.00993073, 0, -0.10814357, -0.39720905)
+
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=919673764]
 transform = Transform3D(0.29937467, -0.019359691, -1.4589873e-08, -0.010769724, -0.16654083, -0.24929535, 0.016087595, 0.24877572, -0.1668887, 0, 2.1817033, -0.29188937)
 modulate = Color(1, 1, 1, 0.030000001)
@@ -72,3 +76,32 @@ visible = false
 [node name="Mesh_VHS_01" parent="." unique_id=1862911067 instance=ExtResource("4_04scv")]
 transform = Transform3D(1.4134083, -1.2768292, -0.60990596, 0.45525956, 1.2265434, -1.5127236, 1.3397827, 0.93021464, 1.1574477, 0.23178384, 1.1935999, -0.35323483)
 visible = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1190599710]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1047053599]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=2103998805]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.5
+offset_top = -11.5
+offset_right = 2.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 4
+text = "."
+horizontal_alignment = 1
+vertical_alignment = 1

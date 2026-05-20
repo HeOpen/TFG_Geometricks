@@ -1,3 +1,4 @@
+res://core/
 res://objects/props/
 res://objects/modular_architecture/
 res://ui/hud/
@@ -5,5 +6,4 @@ res://entities/env_lightning/
 res://level/3d_cabin/
 res://assets/models_3d/
 res://entities/player_3d/
-res://core/
 res://

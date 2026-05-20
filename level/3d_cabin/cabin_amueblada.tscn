@@ -19,7 +19,6 @@
 [ext_resource type="PackedScene" uid="uid://cn8f0gv1dd5k2" path="res://assets/models_3d/closed_lock.tscn" id="16_36tuj"]
 [ext_resource type="Texture2D" uid="uid://b0hqg8hf78uxa" path="res://assets/textures/Cuadros/judiashervidas.jpg" id="16_61dr2"]
 [ext_resource type="Texture2D" uid="uid://c0rh2lnm287j3" path="res://assets/textures/Cuadros/retrato2.png" id="16_buxkp"]
-[ext_resource type="PackedScene" uid="uid://c5oh352epgdcg" path="res://assets/models_3d/box.tscn" id="16_vx2m5"]
 [ext_resource type="Texture2D" uid="uid://jaqfifowi7e5" path="res://assets/textures/Cuadros/mujerllora.jpg" id="17_cd7s3"]
 [ext_resource type="Texture2D" uid="uid://dy3gfo1dteorj" path="res://assets/textures/Cuadros/retrato3.png" id="17_xf5mu"]
 [ext_resource type="Texture2D" uid="uid://byhuv3j432mee" path="res://assets/textures/Cuadros/nightmare.jpg" id="18_7g1k8"]
@@ -29,6 +28,8 @@
 [ext_resource type="Texture2D" uid="uid://bcm2mtvlqefm1" path="res://assets/textures/Cuadros/HijoDelHombre.jpg" id="20_hy7tc"]
 [ext_resource type="Texture2D" uid="uid://b8kupr6c7toaj" path="res://assets/textures/Cuadros/FaceOfWar.jpg" id="20_iwbte"]
 [ext_resource type="Texture2D" uid="uid://deutmyna66udv" path="res://assets/textures/Cuadros/papax.png" id="21_keyu8"]
+[ext_resource type="Texture2D" uid="uid://dywqgv23iocba" path="res://assets/textures/Horror Textures by Canvas Coven/Wooden/Wooden_13.png" id="30_61dr2"]
+[ext_resource type="Texture2D" uid="uid://2xwd867bgjka" path="res://assets/textures/Horror Textures by Canvas Coven/Metal/Metal_02.png" id="30_cd7s3"]
 [ext_resource type="Texture2D" uid="uid://c7bvdcr268sbl" path="res://assets/textures/Cuadros/Totenisel.jpg" id="30_ibg3d"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n82xp"]
@@ -118,6 +119,14 @@ albedo_texture = ExtResource("12_hdp7s")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mxr04"]
 albedo_texture = ExtResource("30_ibg3d")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tjwvp"]
+albedo_texture = ExtResource("30_cd7s3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6bov7"]
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("30_61dr2")
+metallic = 0.99
+
 [node name="Node3D" type="Node3D" unique_id=293068168]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08, 0, 0)
 
@@ -140,9 +149,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.003413, 0.0029295683, 5.325
 
 [node name="Bedroom" parent="Cabin_Structure" unique_id=1395123931 instance=ExtResource("4_em03w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1232243, 0.035841137, 11.122396)
-
-[node name="TapaSotano" parent="." unique_id=718466876 instance=ExtResource("16_vx2m5")]
-transform = Transform3D(1.0949999, 0, 0, 0, 1.0949999, 0, 0, 0, 1.0949999, -2.0527852, -2.312, -6.722)
 
 [node name="Lock_PC_Room" parent="." unique_id=340485007 instance=ExtResource("16_36tuj")]
 transform = Transform3D(0.081417, 0, -0.28874084, 0, 0.29999998, 0, 0.28874084, 0, 0.081417, -1.845611, 0.9174485, 10.024116)
@@ -319,3 +325,9 @@ texture = ExtResource("12_hdp7s")
 transform = Transform3D(-1.3113415e-08, 0, -0.29999998, -0.021987123, 0.29919317, 9.610875e-10, 0.29919317, 0.021987123, -1.3078148e-08, 1.7974142, 1.1887374, 8.019162)
 material_override = SubResource("StandardMaterial3D_mxr04")
 texture = ExtResource("12_hdp7s")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1634475269]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0878859, -0.1341587, -6.8148975)
+material_override = SubResource("StandardMaterial3D_tjwvp")
+size = Vector3(2.3669434, 0.011, 2.15625)
+material = SubResource("StandardMaterial3D_6bov7")

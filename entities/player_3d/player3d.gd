@@ -176,3 +176,24 @@ func check_input_mappings():
 	if can_freefly and not InputMap.has_action(input_freefly):
 		push_error("Freefly disabled. No InputAction found for input_freefly: " + input_freefly)
 		can_freefly = false
+
+###
+# Asegúrate de tener una referencia a tu nodo RayCast3D en el script del jugador
+@onready var interaction_raycast = $Head/Camera3D/RayCast3D
+
+func _input(event):
+	# Cuando el jugador presione la tecla de interactuar (ej. 'E' o botón de acción)
+	if event.is_action_pressed("interact"):
+		print("Jugador pulsó E")
+		
+		# Verificamos si el raycast está colisionando con algo
+		if interaction_raycast.is_colliding():
+			print("Raycast tocó en algo")
+			
+			# Obtenemos el objeto físico contra el que chocó el rayo (ej. la puerta)
+			var hit_object = interaction_raycast.get_collider()
+			
+			# Verificamos si ese objeto tiene la función "interact" programada
+			if hit_object.has_method("interact"):
+				# Llamamos a la función y le pasamos el propio jugador (self) como argumento
+				hit_object.interact(self)
