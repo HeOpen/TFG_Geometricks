@@ -121,6 +121,10 @@ func _process(_delta):
 		var diferencia = player.position - pos_anterior
 		camara.position += diferencia # Salto de cámara invisible
 		
+		# Actualizamos el punto de aparición para que coincida con la entrada de la nueva cara
+		if player.has_method("actualizar_punto_control"):
+			player.actualizar_punto_control(player.position)
+		
 	# Guardamos la posición actual para el frame que viene
 	pos_anterior = player.position
 

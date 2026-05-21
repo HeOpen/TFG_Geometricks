@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b30gmemcku2qo"]
+
+[ext_resource type="Script" uid="uid://b00idyn7ys7l" path="res://plataforma_movil.gd" id="1_ndwxg"]
+[ext_resource type="TileSet" uid="uid://lgvibaajoo7k" path="res://fisicas.tres" id="2_kmggk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4exxd"]
+size = Vector2(47, 16)
+
+[node name="PlataformaMovil" type="AnimatableBody2D" unique_id=1905848812]
+script = ExtResource("1_ndwxg")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2100239973]
+tile_map_data = PackedByteArray(0, 0, 10, 0, 31, 0, 0, 0, 10, 0, 5, 0, 0, 0, 11, 0, 31, 0, 0, 0, 10, 0, 5, 0, 0, 0, 12, 0, 31, 0, 0, 0, 10, 0, 5, 0, 0, 0)
+tile_set = ExtResource("2_kmggk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2018755594]
+position = Vector2(184.5, 504)
+shape = SubResource("RectangleShape2D_4exxd")
+
+[node name="PlataformaMovil" type="Node2D" parent="." unique_id=784313046]
