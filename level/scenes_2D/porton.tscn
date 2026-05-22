@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bqbsw0shrcw5l"]
+
+[ext_resource type="Texture2D" uid="uid://dm8scouwfn4jc" path="res://assets/models_2d/Porton.png" id="1_0xfpd"]
+[ext_resource type="Script" uid="uid://ckiqiba5y8o56" path="res://scripts_2d/porton.gd" id="2_171vb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t65xr"]
+size = Vector2(77, 81)
+
+[node name="Porton" type="AnimatableBody2D" unique_id=322319070]
+script = ExtResource("2_171vb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1487281493]
+position = Vector2(-3.5, -0.5)
+shape = SubResource("RectangleShape2D_t65xr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2027411966]
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("1_0xfpd")

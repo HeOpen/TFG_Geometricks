@@ -1,2 +1,4 @@
-res://ui/main_menu/main_menu.tscn
-res://ui/main_menu/cubo_milenario.tscn
+res://level/scenes_2D/cubo.tscn
+res://assets/models_2d/tileset.tres
+res://scripts_2d/bola.gd
+res://level/scenes_2D/bola.tscn
