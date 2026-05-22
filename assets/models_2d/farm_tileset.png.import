@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bct3kx32c6uiu"
-path="res://.godot/imported/texture_atlas_margins.png-9c6ce78f60a64c29599e94662ae0bbf7.ctex"
+uid="uid://c3fy5qg3rnrc5"
+path="res://.godot/imported/farm_tileset.png-9fbfb5a0a6b81942942802bd48776dfa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/models_2d/texture_atlas_margins.png"
-dest_files=["res://.godot/imported/texture_atlas_margins.png-9c6ce78f60a64c29599e94662ae0bbf7.ctex"]
+source_file="res://assets/models_2d/farm_tileset.png"
+dest_files=["res://.godot/imported/farm_tileset.png-9fbfb5a0a6b81942942802bd48776dfa.ctex"]
 
 [params]
 

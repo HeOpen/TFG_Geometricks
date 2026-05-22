@@ -3,7 +3,7 @@ extends CharacterBody2D
 enum Forma { CIRCULO, CUADRADO, TRIANGULO, RECTANGULO }
 
 const SPEED = 300.0
-const RADIUS = 19.0
+const RADIUS = 8.0
 const LEVITATION_ACCEL = 150.0
 const MAX_LEVITATION_SPEED = 250.0
 
@@ -24,19 +24,19 @@ var shape_rectangulo := RectangleShape2D.new()
 
 # Escala del sprite por forma — ajusta según el tamaño de tus imágenes
 var escalas := {
-	Forma.CIRCULO:    Vector2(0.05, 0.05),
-	Forma.CUADRADO:   Vector2(0.1, 0.1),
-	Forma.TRIANGULO:  Vector2(0.2, 0.2),
-	Forma.RECTANGULO: Vector2(0.03, 0.03),
+	Forma.CIRCULO:    Vector2(0.02, 0.02),
+	Forma.CUADRADO:   Vector2(0.05, 0.05),
+	Forma.TRIANGULO:  Vector2(0.1, 0.1),
+	Forma.RECTANGULO: Vector2(0.02, 0.02),
 }
 
 func _ready() -> void:
 	shape_circulo.radius = RADIUS
-	shape_cuadrado.size = Vector2(50.0, 50.0)
+	shape_cuadrado.size = Vector2(25.0, 25.0)
 	shape_triangulo.points = PackedVector2Array([
-		Vector2(0.0, -19.0), Vector2(19.0, 19.0), Vector2(-19.0, 19.0)
+		Vector2(0.0, -10.0), Vector2(10.0, 10.0), Vector2(-10.0, 10.0)
 	])
-	shape_rectangulo.size = Vector2(25.0, 50.0)
+	shape_rectangulo.size = Vector2(12.0, 25.0)
 
 # Detecta cambio de forma y delega la física según la forma activa
 func _physics_process(delta: float) -> void:

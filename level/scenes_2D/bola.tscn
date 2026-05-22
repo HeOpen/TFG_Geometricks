@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://7ex8jrbooywx" path="res://assets/models_2d/bola.png" id="1_quto8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pfw68"]
-radius = 19.0
+radius = 7.071068
 
 [node name="bola_2d" type="CharacterBody2D" unique_id=1789307371]
 script = ExtResource("1_pfw68")
@@ -13,5 +13,5 @@ script = ExtResource("1_pfw68")
 shape = SubResource("CircleShape2D_pfw68")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1670369154]
-scale = Vector2(0.05, 0.05)
+scale = Vector2(0.02, 0.02)
 texture = ExtResource("1_quto8")

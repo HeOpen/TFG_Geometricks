@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://e1ig483i6mj0"]
 
-[ext_resource type="Script" uid="uid://bcara0base00x0" path="res://scripts_2d/cara_base.gd" id="0_cbase"]
-[ext_resource type="TileSet" uid="uid://cf7r5hdmtjcns" path="res://assets/models_2d/tileset.tres" id="1_0vdja"]
+[ext_resource type="Script" uid="uid://bh3gor0jb6444" path="res://scripts_2d/cara_base.gd" id="0_cbase"]
+[ext_resource type="TileSet" uid="uid://cf7r5hdmtjcns" path="res://assets/models_2d/blackwhite_tileset.tres" id="1_0vdja"]
 
-[node name="Cara_z0" type="Node2D" unique_id=1930801849]
+[node name="Cara_x1" type="Node2D" unique_id=1930801849]
 script = ExtResource("0_cbase")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1202379603]

@@ -1,7 +1,7 @@
-[gd_scene format=4 uid="uid://c47k8vq3ctb5o"]
+[gd_scene format=4 uid="uid://bwv258yiba267"]
 
-[ext_resource type="Script" uid="uid://bcara0base00x0" path="res://scripts_2d/cara_base.gd" id="0_cbase"]
-[ext_resource type="TileSet" uid="uid://cf7r5hdmtjcns" path="res://assets/models_2d/tileset.tres" id="1_los4r"]
+[ext_resource type="Script" uid="uid://bh3gor0jb6444" path="res://scripts_2d/cara_base.gd" id="0_cbase"]
+[ext_resource type="TileSet" uid="uid://cf7r5hdmtjcns" path="res://assets/models_2d/blackwhite_tileset.tres" id="1_los4r"]
 [ext_resource type="PackedScene" uid="uid://qmworwyof6f5" path="res://level/scenes_2D/bola.tscn" id="2_jvjao"]
 [ext_resource type="PackedScene" uid="uid://bnc63qb0lo178" path="res://level/scenes_2D/pulsador.tscn" id="3_hkw77"]
 [ext_resource type="PackedScene" uid="uid://bqbsw0shrcw5l" path="res://level/scenes_2D/porton.tscn" id="4_j0rbn"]
@@ -21,8 +21,16 @@ offset_bottom = 512.0
 position = Vector2(62, 322)
 
 [node name="Pulsador" parent="." unique_id=13915304 node_paths=PackedStringArray("bloque") instance=ExtResource("3_hkw77")]
-position = Vector2(200, 411)
+position = Vector2(200, 410)
+scale = Vector2(0.5, 0.5)
 bloque = NodePath("../Porton")
 
 [node name="Porton" parent="." unique_id=322319070 instance=ExtResource("4_j0rbn")]
 position = Vector2(354, 371)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=927861755]
+show_behind_parent = true
+custom_minimum_size = Vector2(512, 512)
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.7287948, 0.05078125, 1, 1)
