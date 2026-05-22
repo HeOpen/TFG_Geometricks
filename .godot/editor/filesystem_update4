@@ -1,4 +1,3 @@
 res://level/scenes_2D/cubo.tscn
 res://assets/models_2d/tileset.tres
-res://scripts_2d/bola.gd
-res://level/scenes_2D/bola.tscn
+res://scripts_2d/cubo_manager.gd

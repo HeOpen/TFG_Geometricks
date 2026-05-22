@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dd2evn5jjn43f"]
 
+[ext_resource type="Script" uid="uid://bmanagercu3d0" path="res://scripts_2d/cubo_manager.gd" id="0_mgr"]
 [ext_resource type="PackedScene" uid="uid://c47k8vq3ctb5o" path="res://level/scenes_2D/caras/cara_z0.tscn" id="1_5lphy"]
 [ext_resource type="PackedScene" uid="uid://di24f576o320x" path="res://level/scenes_2D/caras/cara_x0.tscn" id="2_2mf3b"]
 [ext_resource type="PackedScene" uid="uid://nkvrgnaj3gts" path="res://level/scenes_2D/caras/cara_z1.tscn" id="3_8g237"]
@@ -72,6 +73,7 @@ albedo_texture = SubResource("ViewportTexture_8g237")
 resource_local_to_scene = true
 
 [node name="Cubo_3D" type="Node3D" unique_id=370014385]
+script = ExtResource("0_mgr")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1436729448]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
