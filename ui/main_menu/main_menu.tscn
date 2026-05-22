@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://helechiomynf" path="res://ui/main_menu/main_menu.gd" id="1_bws42"]
 [ext_resource type="Texture2D" uid="uid://brrhkhlqf7a1p" path="res://assets/models_3d/PSX - Assets/Textures/Metal_04.jpg" id="1_d3a7t"]
 [ext_resource type="Texture2D" uid="uid://dig7h0bs33bke" path="res://assets/models_3d/PSX - Assets/Textures/Wood_02.jpg" id="2_3shxk"]
-[ext_resource type="PackedScene" uid="uid://brn3oavhdankg" path="res://ui/main_menu/button.tscn" id="4_3f7m4"]
 [ext_resource type="Material" uid="uid://x8e77kr2c664" path="res://assets/materials/floor_texture.tres" id="5_6at21"]
 [ext_resource type="Script" uid="uid://c8bx5n25636e" path="res://ui/main_menu/repository_link.gd" id="5_t6bnd"]
 [ext_resource type="FontFile" uid="uid://dnch4xopn1vy1" path="res://assets/fonts/VCR_OSD_MONO_1.001.ttf" id="6_6tl50"]
@@ -11,7 +10,15 @@
 [ext_resource type="Texture2D" uid="uid://bfd552pyx2x08" path="res://assets/textures/logo_Geometrix.png" id="9_w2r0d"]
 [ext_resource type="PackedScene" uid="uid://ba40k8ka1bu8a" path="res://objects/modular_architecture/MESH_log_wall_25small.tscn" id="10_4e78x"]
 [ext_resource type="PackedScene" uid="uid://86rhbrl7ars4" path="res://objects/modular_architecture/MESH_log_column.tscn" id="11_s4pem"]
+[ext_resource type="PackedScene" uid="uid://dfodt17jrw78d" path="res://ui/main_menu/cubo_milenario.tscn" id="12_tf5ef"]
 [ext_resource type="PackedScene" uid="uid://fywlwgjbt75w" path="res://ui/hud/fade_transition.tscn" id="12_xio0d"]
+
+[sub_resource type="Sky" id="Sky_s4pem"]
+sky_material = ExtResource("8_s4pem")
+
+[sub_resource type="Environment" id="Environment_xio0d"]
+background_mode = 2
+sky = SubResource("Sky_s4pem")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mlgns"]
 resource_name = "Metal_04"
@@ -81,57 +88,51 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_xq28v")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bws42"]
-albedo_color = Color(0.101960786, 0.101960786, 0.101960786, 1)
-
-[sub_resource type="Sky" id="Sky_s4pem"]
-sky_material = ExtResource("8_s4pem")
-
-[sub_resource type="Environment" id="Environment_xio0d"]
-background_mode = 2
-sky = SubResource("Sky_s4pem")
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_6tl50"]
 size = Vector3(1.617157, 0.4807129, 0.043945313)
 
 [node name="MainMenu" type="Node3D" unique_id=944016157]
 script = ExtResource("1_bws42")
 
+[node name="Fade_transition" parent="." unique_id=865143108 instance=ExtResource("12_xio0d")]
+visible = false
+
+[node name="Fade_timer" type="Timer" parent="Fade_transition" unique_id=1372340370]
+wait_time = 5.0
+
+[node name="Env" type="Node3D" parent="." unique_id=298357268]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Env" unique_id=1868436296]
+transform = Transform3D(-0.84224045, -0.3287587, -0.42725736, -0.4069195, -0.13217302, 0.90385115, -0.35362074, 0.9351193, -0.022456832, 0, 0, 0)
+light_color = Color(1, 0.49019608, 0.011764706, 1)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Env" unique_id=2027843275]
+environment = SubResource("Environment_xio0d")
+
 [node name="Table_31" type="MeshInstance3D" parent="." unique_id=7062581]
-transform = Transform3D(-0.8369528, -0.2810479, -1.0731468e-06, -1.4788192e-07, -6.43298e-08, 9.002208, -0.28104794, 0.8369528, 0, 0.30519325, 0.23089442, 0.33721805)
+transform = Transform3D(-0.7663016, -0.43847442, -1.0526506e-06, -1.4788192e-07, -6.43298e-08, 9.002208, -0.43847442, 0.7663016, -2.0873593e-07, -0.017799646, 0.23089442, 0.07784951)
 mesh = SubResource("ArrayMesh_k6eem")
 
-[node name="CuboMilenario" type="CSGBox3D" parent="." unique_id=879636563]
-transform = Transform3D(-0.08878997, 0, 0.9960506, 0, 1, 0, -0.9960506, 0, -0.08878997, 0.4973403, 0.81626487, 0.4541212)
-material_overlay = SubResource("StandardMaterial3D_bws42")
-size = Vector3(0.5, 0.5, 0.5)
-
-[node name="PlayButton" type="Node3D" parent="CuboMilenario" unique_id=794513480]
-transform = Transform3D(0.6629467, 0, -0.7486664, 0, 1, 0, 0.7486664, 0, 0.6629467, 0.038849145, -0.8238016, -0.7036363)
-
-[node name="Area3D" parent="CuboMilenario/PlayButton" unique_id=1417454990 instance=ExtResource("4_3f7m4")]
-transform = Transform3D(0.112700984, 0, 0.12727334, 0, 0.17, 0, -0.12727334, 0, 0.112700984, 0.6885245, 0.95680517, 0.6652272)
-texto_boton = "JUGAR"
-
-[node name="OptionsButton" type="Node3D" parent="CuboMilenario" unique_id=835526142]
-transform = Transform3D(0.6629467, 0, -0.7486664, 0, 1, 0, 0.7486664, 0, 0.6629467, 0.038849145, -0.8527787, -0.7036363)
-
-[node name="Area3D" parent="CuboMilenario/OptionsButton" unique_id=1939398885 instance=ExtResource("4_3f7m4")]
-transform = Transform3D(0.112700984, 0, 0.12727334, 0, 0.17, 0, -0.12727334, 0, 0.112700984, 0.6885245, 0.8513288, 0.6652272)
-texto_boton = "OPCIONES"
-
-[node name="SalirButton" type="Node3D" parent="CuboMilenario" unique_id=61765435]
-transform = Transform3D(0.6629467, 0, -0.7486664, 0, 1, 0, 0.7486664, 0, 0.6629467, 0.038849145, -0.8663676, -0.7036363)
-
-[node name="Area3D" parent="CuboMilenario/SalirButton" unique_id=348406365 instance=ExtResource("4_3f7m4")]
-transform = Transform3D(0.112700984, 0, 0.12727334, 0, 0.17, 0, -0.12727334, 0, 0.112700984, 0.6885245, 0.73255324, 0.6652272)
-texto_boton = "SALIR"
-
 [node name="Camera3D" type="Camera3D" parent="." unique_id=613478874]
-transform = Transform3D(0.609359, -0.046434183, 0.79153365, 0.004191888, 0.99845856, 0.05534602, -0.7928834, -0.030407574, 0.6086143, 1.6951778, 1.0160984, 1.0082415)
+transform = Transform3D(1, 0, 0, 0, 0.9961978, -0.087120965, 0, 0.087120965, 0.9961978, 0, 0.87225616, 1.5087154)
 fov = 45.0
 
+[node name="Copyright" type="Label3D" parent="Camera3D" unique_id=1079143512]
+transform = Transform3D(0.0019994408, 8.38378e-06, -4.6541623e-05, -1.0944597e-05, 0.001996917, -0.00011046823, 4.6006695e-05, 0.00011069203, 0.0019964043, 0.48508322, -0.3281418, -0.8878044)
+pixel_size = 1.0
+double_sided = false
+modulate = Color(1, 1, 1, 0.020000001)
+outline_modulate = Color(0, 0, 0, 0)
+text = "GEOMETRICKS es un proyecto académico independiente.
+© 2026. Todos los derechos reservados."
+font = ExtResource("6_6tl50")
+font_size = 15
+horizontal_alignment = 2
+uppercase = true
+
 [node name="World" type="Node3D" parent="." unique_id=1765461141]
+transform = Transform3D(0.6635085, 0, -0.74816877, 0, 1, 0, 0.74816877, 0, 0.6635085, 0.14908451, 0, 0)
 
 [node name="LogColumn" parent="World" unique_id=1142263542 instance=ExtResource("11_s4pem")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0067332, 0.15459919, -0.7914546)
@@ -148,25 +149,15 @@ material_override = ExtResource("5_6at21")
 use_collision = true
 size = Vector3(1.9689348, 0, 2.0468307)
 
-[node name="Env" type="Node3D" parent="." unique_id=298357268]
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Env" unique_id=1868436296]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
-light_color = Color(1, 0.49019608, 0.011764706, 1)
-shadow_enabled = true
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="Env" unique_id=2027843275]
-environment = SubResource("Environment_xio0d")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=313261818]
-transform = Transform3D(0.6276507, 0, 0.7784951, 0, 1, 0, -0.7784951, 0, 0.6276507, 0.3167355, 1.3594737, 0.030828953)
+[node name="Logo+URL" type="StaticBody3D" parent="." unique_id=313261818]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0.00989905, 1.3594737, 0.01290977)
 script = ExtResource("5_t6bnd")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=190920587]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Logo+URL" unique_id=190920587]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.032458156, 0, -0.03283623)
 shape = SubResource("BoxShape3D_6tl50")
 
-[node name="URL" type="Label3D" parent="StaticBody3D/CollisionShape3D" unique_id=1711783081]
+[node name="URL" type="Label3D" parent="Logo+URL/CollisionShape3D" unique_id=1711783081]
 transform = Transform3D(0.0016500001, 0, 0, 0, 0.0016500001, 0, 0, 0, 0.0016500001, 0.007339239, -0.16774935, 0.022196412)
 pixel_size = 1.0
 double_sided = false
@@ -175,31 +166,26 @@ text = "github.com/HeOpen/TFG_Geometricks"
 font = ExtResource("6_6tl50")
 uppercase = true
 
-[node name="Logo" type="Sprite3D" parent="StaticBody3D/CollisionShape3D" unique_id=768649911]
+[node name="Logo" type="Sprite3D" parent="Logo+URL/CollisionShape3D" unique_id=768649911]
 transform = Transform3D(0.16, 0, 0, 0, 0.16, 0, 0, 0, 0.16, -0.0070126057, 0.036070704, -0.018101096)
 texture = ExtResource("9_w2r0d")
 
-[node name="Copyright" type="Label3D" parent="." unique_id=1079143512]
-transform = Transform3D(0.0012553014, 0, 0.0015569902, 0, 0.002, 0, -0.0015569902, 0, 0.0012553014, 1.3032775, 0.6413593, 0.09327468)
-pixel_size = 1.0
-double_sided = false
-modulate = Color(1, 1, 1, 0.020000001)
-outline_modulate = Color(0, 0, 0, 0)
-text = "GEOMETRICKS es un proyecto académico independiente.
-© 2026. Todos los derechos reservados."
-font = ExtResource("6_6tl50")
-font_size = 15
-horizontal_alignment = 2
-uppercase = true
+[node name="CuboMilenario" parent="." unique_id=1841013009 instance=ExtResource("12_tf5ef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0047240257, 0.7938652, 0.10360658)
 
-[node name="Fade_transition" parent="." unique_id=865143108 instance=ExtResource("12_xio0d")]
-visible = false
-
-[node name="Fade_timer" type="Timer" parent="Fade_transition" unique_id=1372340370]
-wait_time = 5.0
-
-[connection signal="presionado" from="CuboMilenario/PlayButton/Area3D" to="." method="_on_button_presionado"]
-[connection signal="presionado" from="CuboMilenario/OptionsButton/Area3D" to="." method="_on_button_presionado"]
-[connection signal="presionado" from="CuboMilenario/SalirButton/Area3D" to="." method="_on_button_presionado"]
-[connection signal="input_event" from="StaticBody3D" to="." method="_input_event"]
 [connection signal="timeout" from="Fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]
+[connection signal="input_event" from="Logo+URL" to="." method="_input_event"]
+[connection signal="presionado" from="CuboMilenario/Cubo/CaraFrontal/Boton_Jugar" to="." method="_on_boton_presionado"]
+[connection signal="presionado" from="CuboMilenario/Cubo/CaraFrontal/Boton_Opciones" to="." method="_on_boton_presionado"]
+[connection signal="presionado" from="CuboMilenario/Cubo/CaraFrontal/Boton_Salir" to="." method="_on_boton_presionado"]
+[connection signal="presionado" from="CuboMilenario/Cara_Derecha/Boton_Audio" to="." method="_on_boton_presionado"]
+[connection signal="presionado" from="CuboMilenario/Cara_Derecha/Boton_Video" to="." method="_on_boton_presionado"]
+[connection signal="presionado" from="CuboMilenario/Cara_Derecha/Boton_Volver" to="." method="_on_boton_presionado"]
+[connection signal="presionado" from="CuboMilenario/Cara_Trasera/Boton_Musica" to="." method="_on_boton_presionado"]
+[connection signal="presionado" from="CuboMilenario/Cara_Trasera/Boton_VolumenFX" to="." method="_on_boton_presionado"]
+[connection signal="presionado" from="CuboMilenario/Cara_Trasera/Boton_VolverOpciones" to="." method="_on_boton_presionado"]
+[connection signal="presionado" from="CuboMilenario/Cara_Izquierda/Boton_VHS" to="." method="_on_boton_presionado"]
+[connection signal="presionado" from="CuboMilenario/Cara_Izquierda/Boton_Pantalla" to="." method="_on_boton_presionado"]
+[connection signal="presionado" from="CuboMilenario/Cara_Izquierda/Boton_VolverOpciones" to="." method="_on_boton_presionado"]
+
+[editable path="CuboMilenario"]

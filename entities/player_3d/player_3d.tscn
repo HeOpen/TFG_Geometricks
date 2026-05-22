@@ -88,7 +88,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=2103998805]
+[node name="Crosshair" type="Label" parent="CanvasLayer/Control" unique_id=2103998805]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

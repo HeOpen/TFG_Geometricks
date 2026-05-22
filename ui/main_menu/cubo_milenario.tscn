@@ -1,0 +1,84 @@
+[gd_scene format=4 uid="uid://dfodt17jrw78d"]
+
+[ext_resource type="Texture2D" uid="uid://b5arkwyrhd2jm" path="res://assets/textures/Horror Textures by Canvas Coven/Metal grille/Metal_grille_05.png" id="1_gw5v4"]
+[ext_resource type="PackedScene" uid="uid://brn3oavhdankg" path="res://ui/main_menu/button.tscn" id="2_rhfgq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qao3l"]
+albedo_texture = ExtResource("1_gw5v4")
+uv1_scale = Vector3(4.99, 4.99, 4.99)
+uv1_triplanar = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_lknku"]
+_surfaces = [{
+"aabb": AABB(-0.25, -0.25, -0.25, 0.5, 0.5, 0.5),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("AACAvgAAgL4AAIA+AACAvgAAgL4AAIC+AACAvgAAgD4AAIC+AACAPgAAgL4AAIC+AACAvgAAgL4AAIC+AACAvgAAgL4AAIA+AACAvgAAgD4AAIC+AACAvgAAgL4AAIC+AACAPgAAgL4AAIC+AACAvgAAgD4AAIC+AACAvgAAgD4AAIA+AACAvgAAgL4AAIA+AACAvgAAgL4AAIA+AACAvgAAgD4AAIA+AACAPgAAgD4AAIA+AACAPgAAgD4AAIA+AACAvgAAgD4AAIA+AACAvgAAgD4AAIC+AACAvgAAgL4AAIA+AACAPgAAgL4AAIA+AACAPgAAgL4AAIC+AACAPgAAgD4AAIA+AACAPgAAgL4AAIA+AACAvgAAgL4AAIA+AACAPgAAgL4AAIC+AACAPgAAgL4AAIA+AACAPgAAgD4AAIA+AACAPgAAgL4AAIC+AACAPgAAgD4AAIC+AACAvgAAgD4AAIC+AACAvgAAgD4AAIC+AACAPgAAgD4AAIC+AACAPgAAgD4AAIA+AACAPgAAgD4AAIA+AACAPgAAgD4AAIC+AACAPgAAgL4AAIC+AAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
+}]
+
+[node name="CuboNode" type="Node3D" unique_id=1841013009]
+
+[node name="Cubo" type="MeshInstance3D" parent="." unique_id=801209848]
+material_override = SubResource("StandardMaterial3D_qao3l")
+mesh = SubResource("ArrayMesh_lknku")
+
+[node name="CaraFrontal" type="Node3D" parent="Cubo" unique_id=648207319]
+transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 0, 0, 0)
+
+[node name="Boton_Jugar" parent="Cubo/CaraFrontal" unique_id=1417454990 instance=ExtResource("2_rhfgq")]
+transform = Transform3D(0.17, 0, 0, 0, 0.17, 0, 0, 0, 0.17, -0.0010836126, 0.124548346, 0.23870349)
+texto_boton = "JUGAR"
+
+[node name="Boton_Opciones" parent="Cubo/CaraFrontal" unique_id=1099451515 instance=ExtResource("2_rhfgq")]
+transform = Transform3D(0.17, 0, 0, 0, 0.17, 0, 0, 0, 0.17, -0.0010836126, 0, 0.23870349)
+texto_boton = "OPCIONES"
+
+[node name="Boton_Salir" parent="Cubo/CaraFrontal" unique_id=63335186 instance=ExtResource("2_rhfgq")]
+transform = Transform3D(0.17, 0, 0, 0, 0.17, 0, 0, 0, 0.17, -0.0010836126, -0.10905143, 0.23870349)
+texto_boton = "SALIR"
+color_hover = Color(1, 0.0075757504, 0, 1)
+
+[node name="Cara_Derecha" type="Node3D" parent="." unique_id=1217211500]
+
+[node name="Boton_Audio" parent="Cara_Derecha" unique_id=24722813 instance=ExtResource("2_rhfgq")]
+transform = Transform3D(-7.430935e-09, 0, 0.16999999, 0, 0.17, 0, -0.16999999, 0, -7.430935e-09, 0.23473838, 0.124548346, -0.0040944517)
+texto_boton = "AUDIO"
+
+[node name="Boton_Video" parent="Cara_Derecha" unique_id=1407351118 instance=ExtResource("2_rhfgq")]
+transform = Transform3D(-7.430935e-09, 0, 0.16999999, 0, 0.17, 0, -0.16999999, 0, -7.430935e-09, 0.23473838, 0, -0.0040944517)
+texto_boton = "VIDEO"
+
+[node name="Boton_Volver" parent="Cara_Derecha" unique_id=609008103 instance=ExtResource("2_rhfgq")]
+transform = Transform3D(-7.430936e-09, 0, 0.17, 0, 0.17, 0, -0.17, 0, -7.430936e-09, 0.23473838, -0.10905143, -0.0040944517)
+texto_boton = "VOLVER"
+
+[node name="Cara_Trasera" type="Node3D" parent="." unique_id=1704223761]
+
+[node name="Boton_Musica" parent="Cara_Trasera" unique_id=1890943889 instance=ExtResource("2_rhfgq")]
+transform = Transform3D(-0.16999999, 0, -1.486187e-08, 0, 0.17, 0, 1.486187e-08, 0, -0.16999999, -0.0010836124, 0.124548346, -0.23348184)
+texto_boton = "MUSICA"
+
+[node name="Boton_VolumenFX" parent="Cara_Trasera" unique_id=947646259 instance=ExtResource("2_rhfgq")]
+transform = Transform3D(-0.16999999, 0, -1.486187e-08, 0, 0.17, 0, 1.486187e-08, 0, -0.16999999, -0.0010836124, 0, -0.23348184)
+texto_boton = "VOLUMEN FX"
+
+[node name="Boton_VolverOpciones" parent="Cara_Trasera" unique_id=768533337 instance=ExtResource("2_rhfgq")]
+transform = Transform3D(-0.17, 0, -2.5669287e-08, 0, 0.17, 0, 2.5669287e-08, 0, -0.17, -0.0010836124, -0.10905143, -0.23348184)
+texto_boton = "VOLVER"
+
+[node name="Cara_Izquierda" type="Node3D" parent="." unique_id=240482726]
+
+[node name="Boton_VHS" parent="Cara_Izquierda" unique_id=140580167 instance=ExtResource("2_rhfgq")]
+transform = Transform3D(-7.4309354e-09, 0, -0.16999999, 0, 0.17, 0, 0.16999999, 0, -7.4309354e-09, -0.23335682, 0.124548346, -0.0040944517)
+texto_boton = "VHS"
+
+[node name="Boton_Pantalla" parent="Cara_Izquierda" unique_id=893174744 instance=ExtResource("2_rhfgq")]
+transform = Transform3D(-7.4309354e-09, 0, -0.16999999, 0, 0.17, 0, 0.16999999, 0, -7.4309354e-09, -0.23335682, 0, -0.0040944517)
+texto_boton = "FULLSCREEN"
+
+[node name="Boton_VolverOpciones" parent="Cara_Izquierda" unique_id=487665465 instance=ExtResource("2_rhfgq")]
+transform = Transform3D(-7.430936e-09, 0, -0.17, 0, 0.17, 0, 0.17, 0, -7.430936e-09, -0.23335682, -0.10905143, -0.0040944517)
+texto_boton = "VOLVER"
