@@ -331,13 +331,13 @@ transform = Transform3D(0.007048765, 0.0654598, 0.07526838, 3.1053724e-09, 0.075
 transform = Transform3D(-0.012799943, 0.06508323, 0.07483539, 1.5384056e-09, 0.07545607, -0.06562302, -0.09917743, -0.008399706, -0.0096583385, -4.6924543, 0.931008, 7.505572)
 
 [node name="PsxCasePal" type="MeshInstance3D" parent="Furniture" unique_id=1585706155]
-transform = Transform3D(0.0027887123, 0.0011059312, -4.8341792e-11, 0, -1.3113413e-10, -0.003, -0.0011059314, 0.0027887118, -1.2189849e-10, -4.6946363, 0.88280386, 7.3062325)
+transform = Transform3D(0.0029980477, 8.324301e-05, -6.915551e-05, -6.842626e-05, -2.713622e-05, -0.0029990966, -8.3843246e-05, 0.002998722, -2.5219904e-05, -4.573764, 0.88079536, 7.2546134)
 mesh = ExtResource("12_t82o6")
 surface_material_override/2 = SubResource("StandardMaterial3D_2ftla")
 surface_material_override/3 = SubResource("StandardMaterial3D_wygva")
 
 [node name="PsxCasePal2" type="MeshInstance3D" parent="Furniture" unique_id=1603489839]
-transform = Transform3D(-0.002966737, -1.947341e-11, -0.00044549978, -0.00044549978, 1.2968016e-10, 0.002966737, 0, 0.002999999, -1.3113416e-10, -4.858349, 0.88280386, 7.3062325)
+transform = Transform3D(-0.0027966134, -0.0010278313, -0.00035002228, -0.00037257126, 1.3011893e-10, 0.0029767752, -0.0010198745, 0.0028184322, -0.00012764694, -4.727521, 0.88481236, 7.198541)
 mesh = ExtResource("12_t82o6")
 surface_material_override/0 = SubResource("StandardMaterial3D_lbmob")
 surface_material_override/2 = SubResource("StandardMaterial3D_2ftla")
@@ -354,6 +354,7 @@ transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, -5.4
 
 [node name="Mesh_VHS_01" parent="Furniture" unique_id=1862911067 instance=ExtResource("13_lbmob")]
 transform = Transform3D(-0.2534021, 0, 1.9838818, 0, 2, 0, -1.9838818, 0, -0.2534021, -5.360444, 0.299851, 5.34099)
+visible = false
 
 [node name="Sillon" parent="Furniture" unique_id=842937594 instance=ExtResource("15_ysnjt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4260707, 0.41521287, 3.9506886)

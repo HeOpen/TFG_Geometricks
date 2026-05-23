@@ -14,8 +14,6 @@ height = 1.8
 radius = 0.4
 height = 1.8
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_b1hij"]
-
 [node name="Jugador" type="CharacterBody3D" unique_id=2146257891]
 collision_layer = 2
 script = ExtResource("1_mfgp6")
@@ -70,14 +68,6 @@ double_sided = false
 texture = ExtResource("2_sddfd")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1190599710]
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1067258412]
-material = SubResource("ShaderMaterial_b1hij")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=1047053599]
 layout_mode = 3

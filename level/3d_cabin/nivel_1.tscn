@@ -14,6 +14,7 @@ edge_fade = 27.437391
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1560316449]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+visible = false
 light_color = Color(0.61328125, 0.61328125, 0.61328125, 1)
 light_energy = 6.47
 shadow_enabled = true
@@ -66,6 +67,9 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.0
 destination_front = "TP_In_LivingRoom1"
 destination_back = "TP_Out_LivingRoom2"
 
+[node name="Lock_Sotano" parent="Cabin" index="2" unique_id=311865494]
+transform = Transform3D(-0.9922955, 0.04349328, -0.11600858, 0.11511088, -0.022614002, -0.9930952, -0.045816384, -0.9987978, 0.017433222, -0.91629475, 0.21129614, -5.8802824)
+
 [node name="plane" parent="Cabin/Wall_Clock" parent_id_path=PackedInt32Array(293068168, 1228142654) index="1" unique_id=949128227]
 transform = Transform3D(0.9645591, 0.0047024763, 0.3070058, -0.32234064, -0.00043791294, 0.91867924, 0.003307138, -1.4142057, 0.0007363751, -0.127, 2.125, -0.25)
 
@@ -106,7 +110,7 @@ omni_range = 0.1
 omni_attenuation = 1.69
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=79574776]
-transform = Transform3D(-6.5567074e-10, 0, 0.014999998, 0, 0.014999999, 0, -0.014999998, 0, -6.5567074e-10, -7.28295, 1.442129, 7.130961)
+transform = Transform3D(-6.5567074e-10, 0, 0.014999998, 0, 0.014999999, 0, -0.014999998, 0, -6.5567074e-10, -7.2813106, 1.367412, 7.296193)
 billboard = 1
 texture = ExtResource("4_gxhxh")
 

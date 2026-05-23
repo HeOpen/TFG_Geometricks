@@ -4,6 +4,7 @@ extends Node3D
 @onready var global_env = $Env/WorldEnvironment.environment
 @onready var cubo = $CuboMilenario
 @onready var efecto_vhs = $CanvasLayer/VHS_Filter
+@onready var sfx_boton = $SFX_Boton
 
 # --- Constantes de Valores por Defecto ---
 # El audio en Godot utiliza valores lineales (0.0 a 1.0) que luego convertimos a decibelios (dB)
@@ -27,6 +28,7 @@ func _ready() -> void:
 	# La inicialización se ejecuta un único fotograma al cargar el menú
 	_cargar_configuracion_por_defecto()
 	_conectar_senales_sliders()
+	MusicManager.reproducir_menu()
 
 func _cargar_configuracion_por_defecto() -> void:
 	# 1. Inicialización del Subsistema de Audio
@@ -53,7 +55,8 @@ func _cargar_configuracion_por_defecto() -> void:
 			boton_vhs.texto_boton = "VHS: OFF"
 
 func _on_boton_presionado(nombre_del_boton: String) -> void:
-	print("Evento recibido: ", nombre_del_boton)
+	print("Botón pulsado: ", nombre_del_boton)
+	sfx_boton.play()
 	
 	match nombre_del_boton:
 		# --- NAVEGACIÓN ---
@@ -129,23 +132,24 @@ func _conectar_senales_sliders() -> void:
 	# --- SLIDER MÚSICA ---
 	var area_musica = cubo.find_child("Slider_Musica", true, false)
 	if area_musica:
-		# Extraemos el nodo de interfaz nativo anidado en el SubViewport
 		var ui_musica = area_musica.find_child("HSlider", true, false)
 		if ui_musica:
 			ui_musica.value = DEFAULT_MUSIC_VOLUME
-			ui_musica.value_changed.connect(_on_slider_musica_cambiado)
+			
+			# Comprobación de seguridad: Solo conectamos si la conexión NO existe
+			if not ui_musica.value_changed.is_connected(_on_slider_musica_cambiado):
+				ui_musica.value_changed.connect(_on_slider_musica_cambiado)
 		else:
 			push_error("Error: HSlider no encontrado dentro de Slider_Musica")
-	else:
-		push_error("Error: No se encontró la escena 'Slider_Musica' en el cubo")
-		
+			
 	# --- SLIDER FX ---
 	var area_fx = cubo.find_child("Slider_FX", true, false)
 	if area_fx:
 		var ui_fx = area_fx.find_child("HSlider", true, false)
 		if ui_fx:
 			ui_fx.value = DEFAULT_FX_VOLUME
-			ui_fx.value_changed.connect(_on_slider_fx_cambiado)
+			if not ui_fx.value_changed.is_connected(_on_slider_fx_cambiado):
+				ui_fx.value_changed.connect(_on_slider_fx_cambiado)
 			
 	# --- SLIDER BRILLO ---
 	var area_brillo = cubo.find_child("Slider_Brillo", true, false)
@@ -153,7 +157,8 @@ func _conectar_senales_sliders() -> void:
 		var ui_brillo = area_brillo.find_child("HSlider", true, false)
 		if ui_brillo:
 			ui_brillo.value = DEFAULT_BRIGHTNESS
-			ui_brillo.value_changed.connect(_on_slider_brillo_cambiado)
+			if not ui_brillo.value_changed.is_connected(_on_slider_brillo_cambiado):
+				ui_brillo.value_changed.connect(_on_slider_brillo_cambiado)
 			
 	# --- SLIDER CONTRASTE ---
 	var area_contraste = cubo.find_child("Slider_Contraste", true, false)
@@ -161,7 +166,8 @@ func _conectar_senales_sliders() -> void:
 		var ui_contraste = area_contraste.find_child("HSlider", true, false)
 		if ui_contraste:
 			ui_contraste.value = DEFAULT_CONTRAST
-			ui_contraste.value_changed.connect(_on_slider_contraste_cambiado)
+			if not ui_contraste.value_changed.is_connected(_on_slider_contraste_cambiado):
+				ui_contraste.value_changed.connect(_on_slider_contraste_cambiado)
 
 # --- FUNCIONES RECEPTORAS DE SEÑALES ---
 
