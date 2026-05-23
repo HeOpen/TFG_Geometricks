@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://dd2evn5jjn43f"]
+
+[ext_resource type="Script" uid="uid://bmanagercu3d0" path="res://scripts_2d/cubo_manager.gd" id="0_mgr"]
+[ext_resource type="PackedScene" uid="uid://bwv258yiba267" path="res://level/scenes_2D/caras/cara_z0.tscn" id="1_5lphy"]
+[ext_resource type="PackedScene" uid="uid://di24f576o320x" path="res://level/scenes_2D/caras/cara_x0.tscn" id="2_2mf3b"]
+[ext_resource type="PackedScene" uid="uid://nkvrgnaj3gts" path="res://level/scenes_2D/caras/cara_z1.tscn" id="3_8g237"]
+[ext_resource type="PackedScene" uid="uid://e1ig483i6mj0" path="res://level/scenes_2D/caras/cara_x1.tscn" id="4_5amgo"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_pt2aq"]
+viewport_path = NodePath("Cara_z0/SubViewport_z0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pt2aq"]
+resource_local_to_scene = true
+shading_mode = 0
+texture_filter = 1
+albedo_texture = SubResource("ViewportTexture_pt2aq")
+
+[sub_resource type="QuadMesh" id="QuadMesh_pt2aq"]
+resource_local_to_scene = true
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_5lphy"]
+viewport_path = NodePath("Cara_x0/SubViewport_x0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ylnut"]
+resource_local_to_scene = true
+shading_mode = 0
+texture_filter = 1
+albedo_texture = SubResource("ViewportTexture_5lphy")
+
+[sub_resource type="QuadMesh" id="QuadMesh_5lphy"]
+resource_local_to_scene = true
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ylnut"]
+viewport_path = NodePath("Cara_z1/SubViewport_z1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wttxf"]
+resource_local_to_scene = true
+shading_mode = 0
+texture_filter = 1
+albedo_texture = SubResource("ViewportTexture_ylnut")
+
+[sub_resource type="QuadMesh" id="QuadMesh_ylnut"]
+resource_local_to_scene = true
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_wttxf"]
+viewport_path = NodePath("Cara_x1/SubViewport_x1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2mf3b"]
+resource_local_to_scene = true
+shading_mode = 0
+texture_filter = 1
+albedo_texture = SubResource("ViewportTexture_wttxf")
+
+[sub_resource type="QuadMesh" id="QuadMesh_wttxf"]
+resource_local_to_scene = true
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_2mf3b"]
+viewport_path = NodePath("Cara_Y/SubViewport_Y")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8g237"]
+resource_local_to_scene = true
+shading_mode = 0
+texture_filter = 1
+albedo_texture = SubResource("ViewportTexture_2mf3b")
+
+[sub_resource type="QuadMesh" id="QuadMesh_2mf3b"]
+resource_local_to_scene = true
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_8g237"]
+viewport_path = NodePath("Cara_y/SubViewport_y")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5amgo"]
+resource_local_to_scene = true
+shading_mode = 0
+texture_filter = 1
+albedo_texture = SubResource("ViewportTexture_8g237")
+
+[sub_resource type="QuadMesh" id="QuadMesh_8g237"]
+resource_local_to_scene = true
+
+[node name="Cubo_3D" type="Node3D" unique_id=370014385]
+script = ExtResource("0_mgr")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1436729448]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+projection = 1
+size = 2.0
+
+[node name="Cara_z0" type="MeshInstance3D" parent="." unique_id=1214428216]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 1)
+material_override = SubResource("StandardMaterial3D_pt2aq")
+mesh = SubResource("QuadMesh_pt2aq")
+
+[node name="SubViewport_z0" type="SubViewport" parent="Cara_z0" unique_id=1971269785]
+size = Vector2i(512, 512)
+
+[node name="Cara_z0" parent="Cara_z0/SubViewport_z0" unique_id=1930801849 instance=ExtResource("1_5lphy")]
+
+[node name="Cara_x0" type="MeshInstance3D" parent="." unique_id=1659996999]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 1, 0, 0)
+material_override = SubResource("StandardMaterial3D_ylnut")
+mesh = SubResource("QuadMesh_5lphy")
+
+[node name="SubViewport_x0" type="SubViewport" parent="Cara_x0" unique_id=753540173]
+size = Vector2i(512, 512)
+
+[node name="Cara_x0" parent="Cara_x0/SubViewport_x0" unique_id=535879903 instance=ExtResource("2_2mf3b")]
+
+[node name="Cara_z1" type="MeshInstance3D" parent="." unique_id=717805401]
+transform = Transform3D(-2, 0, -2.3841858e-07, 0, 2, 0, 2.3841858e-07, 0, -2, 0, 0, -1)
+material_override = SubResource("StandardMaterial3D_wttxf")
+mesh = SubResource("QuadMesh_ylnut")
+
+[node name="SubViewport_z1" type="SubViewport" parent="Cara_z1" unique_id=1869981219]
+size = Vector2i(512, 512)
+
+[node name="Cara_z1" parent="Cara_z1/SubViewport_z1" unique_id=279371869 instance=ExtResource("3_8g237")]
+
+[node name="Cara_x1" type="MeshInstance3D" parent="." unique_id=359092460]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -1, 0, 0)
+material_override = SubResource("StandardMaterial3D_2mf3b")
+mesh = SubResource("QuadMesh_wttxf")
+
+[node name="SubViewport_x1" type="SubViewport" parent="Cara_x1" unique_id=1029506443]
+size = Vector2i(512, 512)
+
+[node name="Cara_x1" parent="Cara_x1/SubViewport_x1" unique_id=1623277928 instance=ExtResource("4_5amgo")]
+
+[node name="Cara_Y" type="MeshInstance3D" parent="." unique_id=2004682118]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 1, 0)
+material_override = SubResource("StandardMaterial3D_8g237")
+mesh = SubResource("QuadMesh_2mf3b")
+
+[node name="SubViewport_Y" type="SubViewport" parent="Cara_Y" unique_id=671756416]
+size = Vector2i(512, 512)
+
+[node name="Cara_y" type="MeshInstance3D" parent="." unique_id=637056490]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, -2, 0, 2, -8.742278e-08, 0, -1, 0)
+material_override = SubResource("StandardMaterial3D_5amgo")
+mesh = SubResource("QuadMesh_8g237")
+
+[node name="SubViewport_y" type="SubViewport" parent="Cara_y" unique_id=1167474482]
+size = Vector2i(512, 512)

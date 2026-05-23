@@ -1,8 +1,0 @@
-Node3D
-CSGBox3D
-MeshInstance3D
-OmniLight3D
-DirectionalLight3D
-StaticBody3D
-CollisionShape3D
-FogVolume

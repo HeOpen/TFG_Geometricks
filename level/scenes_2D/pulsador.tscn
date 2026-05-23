@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bnc63qb0lo178"]
+
+[ext_resource type="Script" uid="uid://cf6m8gqsytqmx" path="res://scripts_2d/pulsador.gd" id="1_05bha"]
+[ext_resource type="Texture2D" uid="uid://v82mmr5v37hg" path="res://assets/models_2d/Pulsador.png" id="1_ax2yv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_05bha"]
+size = Vector2(26, 2.5)
+
+[node name="Pulsador" type="Area2D" unique_id=13915304]
+script = ExtResource("1_05bha")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2437322]
+position = Vector2(0, 2.5)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_05bha")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=944677823]
+scale = Vector2(0.1, 0.08)
+texture = ExtResource("1_ax2yv")

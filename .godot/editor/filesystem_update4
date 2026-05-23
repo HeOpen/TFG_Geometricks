@@ -1,9 +1,0 @@
-res://ui/main_menu/main_menu.tscn
-res://level/3d_cabin/cabin_intro_structure.tscn
-res://entities/env_lightning/intro_sunset_env.tres
-res://ui/main_menu/main_menu.gd
-res://ui/main_menu/cubo_milenario.tscn
-res://ui/main_menu/slider.gd
-res://default_bus_layout.tres
-res://core/transition_manager.gd
-res://ui/main_menu/slider.tscn
