@@ -27,7 +27,8 @@ func execute_door_transition(player_node: CharacterBody3D, target_position: Vect
 	anim_player.play("Opening_Door")
 
 # Esta función se ejecuta automáticamente cuando los 5 segundos de animación terminan
-func _on_door_opened(anim_name: StringName, anim_instance: Node, player_node: CharacterBody3D, target_position: Vector3):
+# Código corregido
+func _on_door_opened(_anim_name: StringName, anim_instance: Node, player_node: CharacterBody3D, target_position: Vector3):
 	
 	# Movemos físicamente al jugador a su nuevo destino (al otro lado de la puerta en el mapa)
 	player_node.global_position = target_position

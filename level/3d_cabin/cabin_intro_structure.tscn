@@ -1,9 +1,7 @@
 [gd_scene format=4 uid="uid://vef148s8cj82"]
 
 [ext_resource type="PackedScene" uid="uid://bn3v0umcbf8ww" path="res://objects/modular_architecture/MESH_Floor.tscn" id="1_a8v70"]
-[ext_resource type="Script" uid="uid://qdm2p4gnitu8" path="res://level/3d_cabin/cabin_intro_structure.gd" id="1_evuln"]
 [ext_resource type="Environment" uid="uid://bfhf63wtq60ir" path="res://entities/env_lightning/intro_sunset_env.tres" id="2_36f10"]
-[ext_resource type="PackedScene" uid="uid://fywlwgjbt75w" path="res://ui/hud/fade_transition.tscn" id="2_aiwdk"]
 [ext_resource type="PackedScene" uid="uid://8fq1gfnfnl5h" path="res://objects/modular_architecture/MESH_log_75wall.tscn" id="2_jcjsx"]
 [ext_resource type="PackedScene" uid="uid://bqiw721ebocq5" path="res://objects/modular_architecture/MESH_log_wall_50medium.tscn" id="3_dgrx3"]
 [ext_resource type="PackedScene" uid="uid://86rhbrl7ars4" path="res://objects/modular_architecture/MESH_log_column.tscn" id="4_ufbth"]
@@ -324,16 +322,17 @@ size = Vector3(0.3173828, 2.7711792, 1.979248)
 [sub_resource type="BoxShape3D" id="BoxShape3D_sr0v5"]
 size = Vector3(0.64941406, 1.2645264, 1.6940918)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ovth3"]
+size = Vector3(0.8676758, 2.1848755, 1.6756592)
+
 [node name="Node3D" type="Node3D" unique_id=1927939690]
-script = ExtResource("1_evuln")
-
-[node name="Fade_transition" parent="." unique_id=865143108 instance=ExtResource("2_aiwdk")]
-
-[node name="Fade_timer" type="Timer" parent="Fade_transition" unique_id=1826057302]
-wait_time = 5.0
 
 [node name="Jugador" parent="." unique_id=2146257891 instance=ExtResource("20_jcjsx")]
 transform = Transform3D(-0.5088911, 0, 0.8608309, 0, 1, 0, -0.8608309, 0, -0.5088911, -3.2999835, -0.26503158, 3.025759)
+
+[node name="ColorRect" parent="Jugador/CanvasLayer" parent_id_path=PackedInt32Array(2146257891, 1190599710) index="0" unique_id=1067258412]
+visible = false
+metadata/_edit_use_anchors_ = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=682652495]
 transform = Transform3D(-0.66147554, -0.5663326, -0.49164817, -0.4740645, -0.19223088, 0.8592498, -0.5811311, 0.8014456, -0.14132214, -8.065992, 2.5518427, 4.458272)
@@ -488,27 +487,27 @@ transform = Transform3D(-2.8412401e-09, 0, -0.065, 0, 0.065, 0, 0.065, 0, -2.841
 texture = ExtResource("31_per1h")
 
 [node name="Poster4" type="Sprite3D" parent="Furniture" unique_id=437062649]
-transform = Transform3D(-2.8412401e-09, 0, -0.065, 0, 0.065, 0, 0.065, 0, -2.8412401e-09, -2.1554937, 1.878127, 4.5497646)
+transform = Transform3D(-2.8412401e-09, 0, -0.065, 0, 0.065, 0, 0.065, 0, -2.8412401e-09, -2.1554937, 1.8279022, 4.5497646)
 material_override = SubResource("StandardMaterial3D_ovth3")
 texture = ExtResource("31_sr0v5")
 
 [node name="Poster10" type="Sprite3D" parent="Furniture" unique_id=1388230271]
-transform = Transform3D(-5.6824803e-09, 0, -0.13, 0, 0.13, 0, 0.13, 0, -5.6824803e-09, -2.1554937, 1.1391301, 5.4899564)
+transform = Transform3D(-5.6824803e-09, 0, -0.13, 0, 0.13, 0, 0.13, 0, -5.6824803e-09, -2.1554937, 1.0793266, 5.4899564)
 material_override = SubResource("StandardMaterial3D_aiwdk")
 texture = ExtResource("32_ovth3")
 
 [node name="Poster5" type="Sprite3D" parent="Furniture" unique_id=1265292985]
-transform = Transform3D(-2.8412401e-09, 0, -0.065, 0, 0.065, 0, 0.065, 0, -2.8412401e-09, -2.1554937, 1.0548565, 4.86235)
+transform = Transform3D(-2.8412401e-09, 0, -0.065, 0, 0.065, 0, 0.065, 0, -2.8412401e-09, -2.1554937, 0.99505305, 4.86235)
 material_override = SubResource("StandardMaterial3D_evuln")
 texture = ExtResource("32_hnaum")
 
 [node name="Poster11" type="Sprite3D" parent="Furniture" unique_id=1723278439]
-transform = Transform3D(-2.8412401e-09, 0, -0.065, 0, 0.065, 0, 0.065, 0, -2.8412401e-09, -2.1554937, 1.9097451, 5.1409874)
+transform = Transform3D(-2.8412401e-09, 0, -0.065, 0, 0.065, 0, 0.065, 0, -2.8412401e-09, -2.1554937, 1.8595203, 5.1409874)
 material_override = SubResource("StandardMaterial3D_2x7qg")
 texture = ExtResource("34_ehn6b")
 
 [node name="Poster12" type="Sprite3D" parent="Furniture" unique_id=817481851]
-transform = Transform3D(-3.496911e-09, 0, -0.08, 0, 0.08, 0, 0.08, 0, -3.496911e-09, -2.1554937, 1.1310416, 4.2774963)
+transform = Transform3D(-3.496911e-09, 0, -0.08, 0, 0.08, 0, 0.08, 0, -3.496911e-09, -2.1554937, 1.0712382, 4.2774963)
 material_override = SubResource("StandardMaterial3D_per1h")
 texture = ExtResource("35_ovth3")
 
@@ -528,4 +527,8 @@ shape = SubResource("BoxShape3D_i16pj")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3867636, 0.13226318, 4.894541)
 shape = SubResource("BoxShape3D_sr0v5")
 
-[connection signal="timeout" from="Fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Boundaries/StaticBody3D" unique_id=780076340]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4958944, 0.59243774, 3.1316688)
+shape = SubResource("BoxShape3D_ovth3")
+
+[editable path="Jugador"]
