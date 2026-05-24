@@ -157,23 +157,24 @@ func check_input_mappings():
 
 @onready var interaction_raycast = $Head/Camera3D/RayCast3D
 
-func _input(event):
+# Así debe quedar tu función _input tras la limpieza:
+func _input(event: InputEvent) -> void:
+	# Mouse capturing
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+		capture_mouse()
+	if Input.is_key_pressed(KEY_ESCAPE):
+		release_mouse()
 	
-	# Cuando el jugador presione la tecla de interactuar (ej. 'E' o botón de acción)
-	if event.is_action_pressed("interactuar"):
-		print("Jugador pulsó E")
-		
-		# Verificamos si el raycast está colisionando con algo
-		if interaction_raycast.is_colliding():
-			print("Raycast tocó en algo")
-			
-			# Obtenemos el objeto físico contra el que chocó el rayo (ej. la puerta)
-			var hit_object = interaction_raycast.get_collider()
-			
-			# Verificamos si ese objeto tiene la función "interact" programada
-			if hit_object.has_method("interactuar"):
-				# Llamamos a la función y le pasamos el propio jugador (self) como argumento
-				hit_object.interactuar()
+	# Look around
+	if mouse_captured and event is InputEventMouseMotion:
+		rotate_look(event.relative)
+	
+	# Toggle freefly mode
+	if can_freefly and Input.is_action_just_pressed(input_freefly):
+		if not freeflying:
+			enable_freefly()
+		else:
+			disable_freefly()
 
 func _process(_delta: float) -> void:
 	# 1. Comprobamos si el rayo detecta colisión física

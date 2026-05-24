@@ -14,7 +14,7 @@ height = 1.8
 radius = 0.4
 height = 1.8
 
-[node name="Jugador" type="CharacterBody3D" unique_id=2146257891]
+[node name="Jugador" type="CharacterBody3D" unique_id=2146257891 groups=["Player"]]
 collision_layer = 2
 script = ExtResource("1_mfgp6")
 can_jump = false

@@ -3,23 +3,7 @@
 [ext_resource type="Material" uid="uid://bd36hxh1yiesq" path="res://assets/materials/wall_texture.tres" id="1_gh322"]
 [ext_resource type="ArrayMesh" uid="uid://dgbmsds5lc2h5" path="res://assets/models_3d/ModularHouse/Structure_Wall_Door.obj" id="2_oliuu"]
 [ext_resource type="ArrayMesh" uid="uid://clfgrn2hgrlcd" path="res://assets/models_3d/ModularHouse/Structure_Wall_Doorway.obj" id="3_ghhne"]
-[ext_resource type="Script" uid="uid://df56djgf3xhl7" path="res://entities/player_3d/player3d.gd" id="4_24x3s"]
-[ext_resource type="Texture2D" uid="uid://bxqoku762shnd" path="res://assets/textures/obama.png" id="5_5fqtq"]
 [ext_resource type="Material" uid="uid://x8e77kr2c664" path="res://assets/materials/floor_texture.tres" id="9_j5q3g"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5fqtq"]
-sky_top_color = Color(0, 0, 0, 1)
-sky_horizon_color = Color(0, 0, 0, 1)
-ground_bottom_color = Color(0, 0, 0, 1)
-ground_horizon_color = Color(0, 0, 0, 1)
-
-[sub_resource type="Sky" id="Sky_j5q3g"]
-sky_material = SubResource("ProceduralSkyMaterial_5fqtq")
-
-[sub_resource type="Environment" id="Environment_x1bxq"]
-background_mode = 2
-sky = SubResource("Sky_j5q3g")
-tonemap_mode = 2
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_sm2xp"]
 resource_local_to_scene = true
@@ -61,14 +45,14 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Jugador:position")
+tracks/2/path = NodePath("AnimationPlayer/Camera3D:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.56666666, 1.5, 2.1666667, 5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1.9466667, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(0.08424473, -0.12576616, -1.6031134), Vector3(0.08424473, -0.12576616, -1.3631628), Vector3(0.08424473, -0.12576616, -1.1253122), Vector3(0.08424473, -0.12576616, -0.81437397), Vector3(0.08424473, -0.12576616, 1.6135421)]
+"values": [Vector3(0, 1.421431, -0.9843581), Vector3(0, 1.421431, -0.6281988), Vector3(0, 1.421431, 1.0356197)]
 }
 
 [sub_resource type="Animation" id="Animation_oliuu"]
@@ -100,14 +84,14 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Jugador:position")
+tracks/2/path = NodePath("AnimationPlayer/Camera3D:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0.08424473, -0.12576616, 1.6135421)]
+"values": [Vector3(0, 1.421431, -0.9843581)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ghhne"]
@@ -116,21 +100,11 @@ _data = {
 &"RESET": SubResource("Animation_oliuu")
 }
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iof21"]
-albedo_color = Color(0.91806, 0.575202, 0.222449, 1)
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_ucva2"]
-radius = 0.4
-height = 1.8
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_iof21"]
-radius = 0.4
-height = 1.8
+[sub_resource type="FogMaterial" id="FogMaterial_dxlfn"]
+density = 8.0
+albedo = Color(0.1796875, 0.1796875, 0.1796875, 1)
 
 [node name="LogWall" type="Node3D" unique_id=1997429010]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=19628192]
-environment = SubResource("Environment_x1bxq")
 
 [node name="Node3D2" type="Node3D" parent="." unique_id=723943201]
 
@@ -261,58 +235,22 @@ mesh = ExtResource("2_oliuu")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=849156381]
 libraries/ = SubResource("AnimationLibrary_ghhne")
 
-[node name="Jugador" type="CharacterBody3D" parent="." unique_id=2146257891]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.08424473, -0.12576616, 1.6135421)
-collision_layer = 2
-script = ExtResource("4_24x3s")
-can_sprint = true
-can_freefly = true
-base_speed = 3.0
-
-[node name="Mesh" type="MeshInstance3D" parent="Jugador" unique_id=940037550]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
-layers = 2
-material_override = SubResource("StandardMaterial3D_iof21")
-cast_shadow = 0
-mesh = SubResource("CapsuleMesh_ucva2")
-
-[node name="Collider" type="CollisionShape3D" parent="Jugador" unique_id=170814028]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
-shape = SubResource("CapsuleShape3D_iof21")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="Jugador" unique_id=1038113874]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.483967, -0.35388273)
-light_color = Color(0.37036434, 0.37036452, 0.37036446, 1)
-light_energy = 3.0
-light_volumetric_fog_energy = 0.0
-omni_range = 2.0
-
-[node name="Head" type="Node3D" parent="Jugador" unique_id=1958393506]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
-
-[node name="Camera3D" type="Camera3D" parent="Jugador/Head" unique_id=851470035]
-transform = Transform3D(1, 1.7010441e-08, 1.670891e-09, -1.701044e-08, 0.98088735, 0.19457677, 1.6708839e-09, -0.19457677, 0.98088735, -1.4901161e-08, -0.12530899, 0.23610938)
-current = true
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Jugador/Head/Camera3D" unique_id=1076554066]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.04202473, -0.025304228)
-light_color = Color(0.7529412, 0.50980395, 0.14901961, 1)
-light_energy = 2.3
-light_cull_mask = 4294967293
-shadow_enabled = true
-shadow_bias = 0.01
-shadow_normal_bias = 2.0
-spot_angle = 15.75
-spot_angle_attenuation = 0.0018865991
-
-[node name="Sprite3D" type="Sprite3D" parent="Jugador" unique_id=919673764]
-transform = Transform3D(0.29937467, -0.019359691, -1.4589873e-08, -0.010769724, -0.16654083, -0.24929535, 0.016087595, 0.24877572, -0.1668887, 0, 2.1817033, -0.29188937)
-modulate = Color(1, 1, 1, 0.030000001)
-double_sided = false
-texture = ExtResource("5_5fqtq")
+[node name="Camera3D" type="Camera3D" parent="AnimationPlayer" unique_id=86539428]
+transform = Transform3D(-1, -2.1175824e-22, -8.742278e-08, -1.9970495e-08, 0.973559, 0.22843584, 8.5111225e-08, 0.22843584, -0.973559, 0, 1.421431, -0.9843581)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1482188836]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1275635, 0.9295654)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1275635, 1.2576294)
 flip_faces = true
-size = Vector3(3.2226563, 2.4763184, 6.96167)
+size = Vector3(8.610352, 2.4763184, 6.305542)
 material = ExtResource("9_j5q3g")
+
+[node name="FogVolume" type="FogVolume" parent="." unique_id=242682033]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0840282, 1.0198294, 3.0934482)
+size = Vector3(9.620342, 2, 2.8394775)
+material = SubResource("FogMaterial_dxlfn")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1904301378]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.071601465, -0.086524725, -0.30574417)
+light_color = Color(0.4765625, 0.4765625, 0.4765625, 1)
+omni_range = 2.281
+omni_attenuation = -0.887

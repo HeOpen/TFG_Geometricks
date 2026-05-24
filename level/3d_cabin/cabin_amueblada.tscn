@@ -39,14 +39,6 @@
 albedo_color = Color(0, 0.16544117, 0.52734375, 1)
 metallic = 0.89
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tjwvp"]
-albedo_texture = ExtResource("30_cd7s3")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6bov7"]
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("30_61dr2")
-metallic = 0.99
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hy7tc"]
 emission_enabled = true
 emission = Color(1, 0.00837636, 0, 1)
@@ -254,6 +246,14 @@ shadow_mesh = SubResource("ArrayMesh_yyye3")
 [sub_resource type="BoxShape3D" id="BoxShape3D_0x3xf"]
 size = Vector3(4.243469, 3.2622986, 1.8730164)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tjwvp"]
+albedo_texture = ExtResource("30_cd7s3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6bov7"]
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("30_61dr2")
+metallic = 0.99
+
 [node name="Node3D" type="Node3D" unique_id=293068168]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08, 0, 0)
 
@@ -279,9 +279,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1232243, 0.035841137, 11.12
 
 [node name="Lock_PC_Room" parent="." unique_id=340485007 instance=ExtResource("16_36tuj")]
 transform = Transform3D(0.10855601, 0, -0.3849878, 0, 0.4, 0, 0.3849878, 0, 0.10855601, -1.7791007, 0.9174485, 10.103961)
-
-[node name="Lock_Sotano" parent="." unique_id=311865494 instance=ExtResource("16_36tuj")]
-transform = Transform3D(-0.9922955, 0.04349328, -0.11600858, 0.11511088, -0.022614002, -0.9930952, -0.045816384, -0.9987978, 0.017433222, -0.91629475, 0.21129614, -6.3419905)
 
 [node name="Windows" type="Node3D" parent="." unique_id=809931369]
 
@@ -353,12 +350,6 @@ transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -4.292143, -2.7119386, 
 
 [node name="Wall_Clock" parent="." unique_id=1228142654 instance=ExtResource("11_bdrwf")]
 transform = Transform3D(-0.7, 0, -6.119594e-08, 0, 0.7, 0, 6.119594e-08, 0, -0.7, 0.0052081794, -0.130009, -2.452329)
-
-[node name="TapaSotano" type="CSGBox3D" parent="." unique_id=1634475269]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9844829, -0.078098774, -6.635259)
-material_override = SubResource("StandardMaterial3D_tjwvp")
-size = Vector3(2.367, 0.101, 2.461661)
-material = SubResource("StandardMaterial3D_6bov7")
 
 [node name="Cuadros" type="Node3D" parent="." unique_id=764420766]
 
@@ -485,12 +476,32 @@ mesh = SubResource("ArrayMesh_7g1k8")
 transform = Transform3D(-2.3604159e-08, -1, -4.468656e-16, 0.022066759, -1.7862383e-09, -0.8043276, 0.53954893, -4.367489e-08, 0.032895815, -7.7448196, 1.0044854, -3.9800196)
 mesh = SubResource("ArrayMesh_7g1k8")
 
+[node name="Wooden_Plank_39" type="MeshInstance3D" parent="Barriers" unique_id=1424628084]
+transform = Transform3D(-2.3604159e-08, -1, -4.468656e-16, 0.022066759, -1.7862383e-09, -0.8043276, 0.53954893, -4.367489e-08, 0.032895815, -7.7448196, 1.0044854, -1.269578)
+mesh = SubResource("ArrayMesh_7g1k8")
+
 [node name="Wooden_Plank_8" type="MeshInstance3D" parent="Barriers" unique_id=238023344]
 transform = Transform3D(-2.3604159e-08, -1, -4.468656e-16, 0.022066759, -1.7862383e-09, -0.8043276, 0.53954893, -4.367489e-08, 0.032895815, -7.824852, 1.0044854, -4.7466426)
 mesh = SubResource("ArrayMesh_7g1k8")
 
+[node name="Wooden_Plank_40" type="MeshInstance3D" parent="Barriers" unique_id=342663138]
+transform = Transform3D(-2.3604159e-08, -1, -4.468656e-16, 0.022066759, -1.7862383e-09, -0.8043276, 0.53954893, -4.367489e-08, 0.032895815, -7.824852, 1.0044854, -1.8473356)
+mesh = SubResource("ArrayMesh_7g1k8")
+
 [node name="Wooden_Plank_9" type="MeshInstance3D" parent="Barriers" unique_id=2094619444]
 transform = Transform3D(-2.3604159e-08, -1, -4.4723975e-16, 0.5346274, -4.3276504e-08, -0.113272384, 0.07598396, -6.15068e-09, 0.79699075, -7.774393, 1.0044854, -4.414432)
+mesh = SubResource("ArrayMesh_7g1k8")
+
+[node name="Wooden_Plank_37" type="MeshInstance3D" parent="Barriers" unique_id=447223244]
+transform = Transform3D(-2.3604159e-08, -1, -5.405445e-16, 0.45623487, -3.693086e-08, -0.4306404, 0.2888768, -2.3383727e-08, 0.68012786, -7.774393, 0.7398433, -1.6584175)
+mesh = SubResource("ArrayMesh_7g1k8")
+
+[node name="Wooden_Plank_41" type="MeshInstance3D" parent="Barriers" unique_id=763142172]
+transform = Transform3D(-2.3604159e-08, -1, -5.405445e-16, 0.47610417, -3.853922e-08, 0.37984613, -0.25480366, 2.0625599e-08, 0.70974785, -7.774393, 1.0590701, -1.6584175)
+mesh = SubResource("ArrayMesh_7g1k8")
+
+[node name="Wooden_Plank_38" type="MeshInstance3D" parent="Barriers" unique_id=2122810704]
+transform = Transform3D(-2.3604159e-08, -1, -1.081089e-15, 0.53955513, -4.3675385e-08, 0.032671183, -0.021916091, 1.7740369e-09, 0.8043369, -7.774393, 1.590452, -1.6584175)
 mesh = SubResource("ArrayMesh_7g1k8")
 
 [node name="Wooden_Plank_10" type="MeshInstance3D" parent="Barriers" unique_id=2026904942]
@@ -542,23 +553,23 @@ transform = Transform3D(0.0055963695, -0.99938285, -0.027017884, 0.51596177, -4.
 mesh = SubResource("ArrayMesh_7g1k8")
 
 [node name="Wooden_Plank_22" type="MeshInstance3D" parent="Barriers" unique_id=552718173]
-transform = Transform3D(-2.3604159e-08, -1, -4.468656e-16, 0.022066759, -1.7862383e-09, -0.8043276, 0.53954893, -4.367489e-08, 0.032895815, 7.9062386, 1.0044854, 12.572069)
+transform = Transform3D(-2.3604159e-08, -1, -4.468656e-16, 0.022066759, -1.7862383e-09, -0.8043276, 0.53954893, -4.367489e-08, 0.032895815, 7.815052, 1.0044854, 12.572069)
 mesh = SubResource("ArrayMesh_7g1k8")
 
 [node name="Wooden_Plank_23" type="MeshInstance3D" parent="Barriers" unique_id=849749902]
-transform = Transform3D(-2.3604159e-08, -1, -4.468656e-16, 0.022066759, -1.7862383e-09, -0.8043276, 0.53954893, -4.367489e-08, 0.032895815, 7.826206, 1.0044854, 11.805446)
+transform = Transform3D(-2.3604159e-08, -1, -4.468656e-16, 0.022066759, -1.7862383e-09, -0.8043276, 0.53954893, -4.367489e-08, 0.032895815, 7.7350197, 1.0044854, 11.805446)
 mesh = SubResource("ArrayMesh_7g1k8")
 
 [node name="Wooden_Plank_24" type="MeshInstance3D" parent="Barriers" unique_id=1238350804]
-transform = Transform3D(-2.3604159e-08, -1, -4.4723975e-16, 0.5346274, -4.3276504e-08, -0.113272384, 0.07598396, -6.15068e-09, 0.79699075, 7.876665, 1.0044854, 12.137656)
+transform = Transform3D(-2.3604159e-08, -1, -4.4723975e-16, 0.5346274, -4.3276504e-08, -0.113272384, 0.07598396, -6.15068e-09, 0.79699075, 7.7854786, 1.0044854, 12.137656)
 mesh = SubResource("ArrayMesh_7g1k8")
 
 [node name="Wooden_Plank_25" type="MeshInstance3D" parent="Barriers" unique_id=1833568832]
-transform = Transform3D(-2.3604159e-08, -1, -4.4723975e-16, 0.5346274, -4.3276504e-08, -0.113272384, 0.07598396, -6.15068e-09, 0.79699075, 7.876665, 1.7395091, 12.137656)
+transform = Transform3D(-2.3604159e-08, -1, -4.4723975e-16, 0.5346274, -4.3276504e-08, -0.113272384, 0.07598396, -6.15068e-09, 0.79699075, 7.7854786, 1.7395091, 12.137656)
 mesh = SubResource("ArrayMesh_7g1k8")
 
 [node name="Wooden_Plank_26" type="MeshInstance3D" parent="Barriers" unique_id=813743293]
-transform = Transform3D(0.0055963695, -0.99938285, -0.027017884, 0.51596177, -4.176557e-08, 0.23750818, -0.15922396, -0.03512624, 0.76869035, 7.903882, 1.2761838, 12.137656)
+transform = Transform3D(0.0055963695, -0.99938285, -0.027017884, 0.51596177, -4.176557e-08, 0.23750818, -0.15922396, -0.03512624, 0.76869035, 7.8126955, 1.2761838, 12.137656)
 mesh = SubResource("ArrayMesh_7g1k8")
 
 [node name="Wooden_Plank_27" type="MeshInstance3D" parent="Barriers" unique_id=865185739]
@@ -609,8 +620,21 @@ mesh = SubResource("ArrayMesh_mxr04")
 transform = Transform3D(2.87042, -3.1017396, -0.49501792, 0.9547571, 0.22275156, 4.1405272, -2.9923687, -2.9042618, 0.8462478, -6.680505, 0.31940138, -6.728713)
 mesh = SubResource("ArrayMesh_ut052")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Barriers" unique_id=1134506312]
+[node name="StaticBody3D" type="StaticBody3D" parent="Barriers" unique_id=1231486121]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Barriers/StaticBody3D" unique_id=1134506312]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.367819, 1.4068451, -6.4978485)
 shape = SubResource("BoxShape3D_0x3xf")
+
+[node name="PuertaSotano" type="Node3D" parent="." unique_id=705214495]
+
+[node name="Lock_Sotano" parent="PuertaSotano" unique_id=311865494 instance=ExtResource("16_36tuj")]
+transform = Transform3D(-0.9922955, 0.04349328, -0.11600858, 0.11511088, -0.022614002, -0.9930952, -0.045816384, -0.9987978, 0.017433222, -0.91629475, 0.21129614, -6.3419905)
+
+[node name="TapaSotano" type="CSGBox3D" parent="PuertaSotano" unique_id=1634475269]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9844829, -0.078098774, -6.635259)
+material_override = SubResource("StandardMaterial3D_tjwvp")
+size = Vector3(2.367, 0.101, 2.461661)
+material = SubResource("StandardMaterial3D_6bov7")
 
 [editable path="Wall_Clock"]

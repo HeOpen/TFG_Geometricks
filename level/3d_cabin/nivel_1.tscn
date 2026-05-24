@@ -4,11 +4,55 @@
 [ext_resource type="PackedScene" uid="uid://5mgb2l278x3l" path="res://entities/player_3d/player_3d.tscn" id="2_27ww1"]
 [ext_resource type="PackedScene" uid="uid://c18tc2son874o" path="res://level/3d_cabin/cabin_amueblada.tscn" id="3_27ww1"]
 [ext_resource type="Texture2D" uid="uid://cm5kkk16rphha" path="res://assets/textures/goods.png" id="4_gxhxh"]
+[ext_resource type="PackedScene" uid="uid://bbmvtbhgny10t" path="res://objects/interactables/vhs_tape.tscn" id="4_infdn"]
+[ext_resource type="PackedScene" uid="uid://blipekt62xeax" path="res://level/3d_cabin/door_animation.tscn" id="6_infdn"]
 [ext_resource type="PackedScene" uid="uid://vka0leii2h10" path="res://objects/props/avingnon_seal.tscn" id="6_kblf1"]
 
 [sub_resource type="FogMaterial" id="FogMaterial_11ijd"]
 albedo = Color(0.9011674, 0.115409225, 0, 1)
 edge_fade = 27.437391
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_infdn"]
+resource_local_to_scene = true
+lightmap_size_hint = Vector2i(6, 9)
+top_radius = 0.14
+bottom_radius = 0.14
+height = 1.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ek28t"]
+resource_local_to_scene = true
+lightmap_size_hint = Vector2i(6, 9)
+top_radius = 0.14
+bottom_radius = 0.14
+height = 1.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_vo1nr"]
+resource_local_to_scene = true
+lightmap_size_hint = Vector2i(6, 9)
+top_radius = 0.14
+bottom_radius = 0.14
+height = 1.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_m6ppd"]
+resource_local_to_scene = true
+lightmap_size_hint = Vector2i(6, 9)
+top_radius = 0.14
+bottom_radius = 0.14
+height = 1.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_7y83b"]
+resource_local_to_scene = true
+lightmap_size_hint = Vector2i(6, 9)
+top_radius = 0.14
+bottom_radius = 0.14
+height = 1.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_nnw0q"]
+resource_local_to_scene = true
+lightmap_size_hint = Vector2i(6, 9)
+top_radius = 0.14
+bottom_radius = 0.14
+height = 1.0
 
 [node name="Nivel1" type="Node3D" unique_id=1505825485]
 
@@ -38,40 +82,346 @@ material = SubResource("FogMaterial_11ijd")
 [node name="Cabin" parent="." unique_id=293068168 instance=ExtResource("3_27ww1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07394417, 0, 0.002947092)
 
-[node name="Door_PcRoom" parent="Cabin/Cabin_Structure/Door" parent_id_path=PackedInt32Array(293068168, 125884885, 132746731) index="0" unique_id=388257934]
+[node name="Door_PcRoom" parent="Cabin/Cabin_Structure/Door" parent_id_path=PackedInt32Array(293068168, 125884885, 132746731) index="0" unique_id=388257934 groups=["interactuable"]]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.008, 0.007, 9.66428)
 destination_front = "TP_In_PcRoom"
 destination_back = "TP_Out_PcRoom"
 
-[node name="Door_Batroom" parent="Cabin/Cabin_Structure/Door" parent_id_path=PackedInt32Array(293068168, 125884885, 132746731) index="1" unique_id=1641116012]
+[node name="MeshInstance3D4" parent="Cabin/Cabin_Structure/Door/Door_PcRoom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 388257934, 723943201) index="0" unique_id=1088496746]
+mesh = SubResource("CylinderMesh_infdn")
+
+[node name="MeshInstance3D5" parent="Cabin/Cabin_Structure/Door/Door_PcRoom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 388257934, 723943201) index="1" unique_id=290503933]
+mesh = SubResource("CylinderMesh_infdn")
+
+[node name="MeshInstance3D6" parent="Cabin/Cabin_Structure/Door/Door_PcRoom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 388257934, 723943201) index="2" unique_id=184420218]
+mesh = SubResource("CylinderMesh_infdn")
+
+[node name="MeshInstance3D7" parent="Cabin/Cabin_Structure/Door/Door_PcRoom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 388257934, 723943201) index="3" unique_id=711647973]
+mesh = SubResource("CylinderMesh_infdn")
+
+[node name="MeshInstance3D8" parent="Cabin/Cabin_Structure/Door/Door_PcRoom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 388257934, 723943201) index="4" unique_id=1833462076]
+mesh = SubResource("CylinderMesh_infdn")
+
+[node name="MeshInstance3D9" parent="Cabin/Cabin_Structure/Door/Door_PcRoom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 388257934, 723943201) index="5" unique_id=2022941532]
+mesh = SubResource("CylinderMesh_infdn")
+
+[node name="MeshInstance3D10" parent="Cabin/Cabin_Structure/Door/Door_PcRoom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 388257934, 723943201) index="6" unique_id=2074261080]
+mesh = SubResource("CylinderMesh_infdn")
+
+[node name="MeshInstance3D12" parent="Cabin/Cabin_Structure/Door/Door_PcRoom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 388257934, 723943201) index="7" unique_id=795232771]
+mesh = SubResource("CylinderMesh_infdn")
+
+[node name="MeshInstance3D13" parent="Cabin/Cabin_Structure/Door/Door_PcRoom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 388257934, 723943201) index="8" unique_id=1957856337]
+mesh = SubResource("CylinderMesh_infdn")
+
+[node name="MeshInstance3D15" parent="Cabin/Cabin_Structure/Door/Door_PcRoom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 388257934, 723943201) index="9" unique_id=941997252]
+mesh = SubResource("CylinderMesh_infdn")
+
+[node name="MeshInstance3D16" parent="Cabin/Cabin_Structure/Door/Door_PcRoom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 388257934, 723943201) index="10" unique_id=1962385522]
+mesh = SubResource("CylinderMesh_infdn")
+
+[node name="MeshInstance3D18" parent="Cabin/Cabin_Structure/Door/Door_PcRoom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 388257934, 723943201) index="11" unique_id=1272074732]
+mesh = SubResource("CylinderMesh_infdn")
+
+[node name="MeshInstance3D19" parent="Cabin/Cabin_Structure/Door/Door_PcRoom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 388257934, 723943201) index="12" unique_id=1007264049]
+mesh = SubResource("CylinderMesh_infdn")
+
+[node name="MeshInstance3D11" parent="Cabin/Cabin_Structure/Door/Door_PcRoom/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 388257934, 1774372310) index="0" unique_id=2125210952]
+mesh = SubResource("CylinderMesh_infdn")
+
+[node name="MeshInstance3D15" parent="Cabin/Cabin_Structure/Door/Door_PcRoom/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 388257934, 1774372310) index="1" unique_id=1258700631]
+mesh = SubResource("CylinderMesh_infdn")
+
+[node name="MeshInstance3D16" parent="Cabin/Cabin_Structure/Door/Door_PcRoom/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 388257934, 1774372310) index="2" unique_id=1314294936]
+mesh = SubResource("CylinderMesh_infdn")
+
+[node name="MeshInstance3D17" parent="Cabin/Cabin_Structure/Door/Door_PcRoom/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 388257934, 1774372310) index="3" unique_id=12575180]
+mesh = SubResource("CylinderMesh_infdn")
+
+[node name="MeshInstance3D18" parent="Cabin/Cabin_Structure/Door/Door_PcRoom/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 388257934, 1774372310) index="4" unique_id=2112863140]
+mesh = SubResource("CylinderMesh_infdn")
+
+[node name="MeshInstance3D19" parent="Cabin/Cabin_Structure/Door/Door_PcRoom/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 388257934, 1774372310) index="5" unique_id=1685057232]
+mesh = SubResource("CylinderMesh_infdn")
+
+[node name="MeshInstance3D20" parent="Cabin/Cabin_Structure/Door/Door_PcRoom/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 388257934, 1774372310) index="6" unique_id=2127290500]
+mesh = SubResource("CylinderMesh_infdn")
+
+[node name="Door_Batroom" parent="Cabin/Cabin_Structure/Door" parent_id_path=PackedInt32Array(293068168, 125884885, 132746731) index="1" unique_id=1641116012 groups=["interactuable"]]
 destination_front = "TP_In_Bath"
 destination_back = "TP_Out_Bath"
 
-[node name="Door_Bedroom" parent="Cabin/Cabin_Structure/Door" parent_id_path=PackedInt32Array(293068168, 125884885, 132746731) index="2" unique_id=1997389752]
+[node name="MeshInstance3D4" parent="Cabin/Cabin_Structure/Door/Door_Batroom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1641116012, 723943201) index="0" unique_id=1088496746]
+mesh = SubResource("CylinderMesh_ek28t")
+
+[node name="MeshInstance3D5" parent="Cabin/Cabin_Structure/Door/Door_Batroom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1641116012, 723943201) index="1" unique_id=290503933]
+mesh = SubResource("CylinderMesh_ek28t")
+
+[node name="MeshInstance3D6" parent="Cabin/Cabin_Structure/Door/Door_Batroom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1641116012, 723943201) index="2" unique_id=184420218]
+mesh = SubResource("CylinderMesh_ek28t")
+
+[node name="MeshInstance3D7" parent="Cabin/Cabin_Structure/Door/Door_Batroom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1641116012, 723943201) index="3" unique_id=711647973]
+mesh = SubResource("CylinderMesh_ek28t")
+
+[node name="MeshInstance3D8" parent="Cabin/Cabin_Structure/Door/Door_Batroom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1641116012, 723943201) index="4" unique_id=1833462076]
+mesh = SubResource("CylinderMesh_ek28t")
+
+[node name="MeshInstance3D9" parent="Cabin/Cabin_Structure/Door/Door_Batroom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1641116012, 723943201) index="5" unique_id=2022941532]
+mesh = SubResource("CylinderMesh_ek28t")
+
+[node name="MeshInstance3D10" parent="Cabin/Cabin_Structure/Door/Door_Batroom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1641116012, 723943201) index="6" unique_id=2074261080]
+mesh = SubResource("CylinderMesh_ek28t")
+
+[node name="MeshInstance3D12" parent="Cabin/Cabin_Structure/Door/Door_Batroom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1641116012, 723943201) index="7" unique_id=795232771]
+mesh = SubResource("CylinderMesh_ek28t")
+
+[node name="MeshInstance3D13" parent="Cabin/Cabin_Structure/Door/Door_Batroom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1641116012, 723943201) index="8" unique_id=1957856337]
+mesh = SubResource("CylinderMesh_ek28t")
+
+[node name="MeshInstance3D15" parent="Cabin/Cabin_Structure/Door/Door_Batroom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1641116012, 723943201) index="9" unique_id=941997252]
+mesh = SubResource("CylinderMesh_ek28t")
+
+[node name="MeshInstance3D16" parent="Cabin/Cabin_Structure/Door/Door_Batroom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1641116012, 723943201) index="10" unique_id=1962385522]
+mesh = SubResource("CylinderMesh_ek28t")
+
+[node name="MeshInstance3D18" parent="Cabin/Cabin_Structure/Door/Door_Batroom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1641116012, 723943201) index="11" unique_id=1272074732]
+mesh = SubResource("CylinderMesh_ek28t")
+
+[node name="MeshInstance3D19" parent="Cabin/Cabin_Structure/Door/Door_Batroom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1641116012, 723943201) index="12" unique_id=1007264049]
+mesh = SubResource("CylinderMesh_ek28t")
+
+[node name="MeshInstance3D11" parent="Cabin/Cabin_Structure/Door/Door_Batroom/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 1641116012, 1774372310) index="0" unique_id=2125210952]
+mesh = SubResource("CylinderMesh_ek28t")
+
+[node name="MeshInstance3D15" parent="Cabin/Cabin_Structure/Door/Door_Batroom/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 1641116012, 1774372310) index="1" unique_id=1258700631]
+mesh = SubResource("CylinderMesh_ek28t")
+
+[node name="MeshInstance3D16" parent="Cabin/Cabin_Structure/Door/Door_Batroom/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 1641116012, 1774372310) index="2" unique_id=1314294936]
+mesh = SubResource("CylinderMesh_ek28t")
+
+[node name="MeshInstance3D17" parent="Cabin/Cabin_Structure/Door/Door_Batroom/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 1641116012, 1774372310) index="3" unique_id=12575180]
+mesh = SubResource("CylinderMesh_ek28t")
+
+[node name="MeshInstance3D18" parent="Cabin/Cabin_Structure/Door/Door_Batroom/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 1641116012, 1774372310) index="4" unique_id=2112863140]
+mesh = SubResource("CylinderMesh_ek28t")
+
+[node name="MeshInstance3D19" parent="Cabin/Cabin_Structure/Door/Door_Batroom/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 1641116012, 1774372310) index="5" unique_id=1685057232]
+mesh = SubResource("CylinderMesh_ek28t")
+
+[node name="MeshInstance3D20" parent="Cabin/Cabin_Structure/Door/Door_Batroom/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 1641116012, 1774372310) index="6" unique_id=2127290500]
+mesh = SubResource("CylinderMesh_ek28t")
+
+[node name="Door_Bedroom" parent="Cabin/Cabin_Structure/Door" parent_id_path=PackedInt32Array(293068168, 125884885, 132746731) index="2" unique_id=1997389752 groups=["interactuable"]]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2, 0.005, 14.388)
 destination_front = "TP_In_Bedroom"
 destination_back = "TP_Out_Bedroom"
 
-[node name="Door_LivingRoom1" parent="Cabin/Cabin_Structure/Door" parent_id_path=PackedInt32Array(293068168, 125884885, 132746731) index="3" unique_id=986305764]
+[node name="MeshInstance3D4" parent="Cabin/Cabin_Structure/Door/Door_Bedroom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1997389752, 723943201) index="0" unique_id=1088496746]
+mesh = SubResource("CylinderMesh_vo1nr")
+
+[node name="MeshInstance3D5" parent="Cabin/Cabin_Structure/Door/Door_Bedroom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1997389752, 723943201) index="1" unique_id=290503933]
+mesh = SubResource("CylinderMesh_vo1nr")
+
+[node name="MeshInstance3D6" parent="Cabin/Cabin_Structure/Door/Door_Bedroom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1997389752, 723943201) index="2" unique_id=184420218]
+mesh = SubResource("CylinderMesh_vo1nr")
+
+[node name="MeshInstance3D7" parent="Cabin/Cabin_Structure/Door/Door_Bedroom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1997389752, 723943201) index="3" unique_id=711647973]
+mesh = SubResource("CylinderMesh_vo1nr")
+
+[node name="MeshInstance3D8" parent="Cabin/Cabin_Structure/Door/Door_Bedroom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1997389752, 723943201) index="4" unique_id=1833462076]
+mesh = SubResource("CylinderMesh_vo1nr")
+
+[node name="MeshInstance3D9" parent="Cabin/Cabin_Structure/Door/Door_Bedroom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1997389752, 723943201) index="5" unique_id=2022941532]
+mesh = SubResource("CylinderMesh_vo1nr")
+
+[node name="MeshInstance3D10" parent="Cabin/Cabin_Structure/Door/Door_Bedroom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1997389752, 723943201) index="6" unique_id=2074261080]
+mesh = SubResource("CylinderMesh_vo1nr")
+
+[node name="MeshInstance3D12" parent="Cabin/Cabin_Structure/Door/Door_Bedroom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1997389752, 723943201) index="7" unique_id=795232771]
+mesh = SubResource("CylinderMesh_vo1nr")
+
+[node name="MeshInstance3D13" parent="Cabin/Cabin_Structure/Door/Door_Bedroom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1997389752, 723943201) index="8" unique_id=1957856337]
+mesh = SubResource("CylinderMesh_vo1nr")
+
+[node name="MeshInstance3D15" parent="Cabin/Cabin_Structure/Door/Door_Bedroom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1997389752, 723943201) index="9" unique_id=941997252]
+mesh = SubResource("CylinderMesh_vo1nr")
+
+[node name="MeshInstance3D16" parent="Cabin/Cabin_Structure/Door/Door_Bedroom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1997389752, 723943201) index="10" unique_id=1962385522]
+mesh = SubResource("CylinderMesh_vo1nr")
+
+[node name="MeshInstance3D18" parent="Cabin/Cabin_Structure/Door/Door_Bedroom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1997389752, 723943201) index="11" unique_id=1272074732]
+mesh = SubResource("CylinderMesh_vo1nr")
+
+[node name="MeshInstance3D19" parent="Cabin/Cabin_Structure/Door/Door_Bedroom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1997389752, 723943201) index="12" unique_id=1007264049]
+mesh = SubResource("CylinderMesh_vo1nr")
+
+[node name="MeshInstance3D11" parent="Cabin/Cabin_Structure/Door/Door_Bedroom/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 1997389752, 1774372310) index="0" unique_id=2125210952]
+mesh = SubResource("CylinderMesh_vo1nr")
+
+[node name="MeshInstance3D15" parent="Cabin/Cabin_Structure/Door/Door_Bedroom/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 1997389752, 1774372310) index="1" unique_id=1258700631]
+mesh = SubResource("CylinderMesh_vo1nr")
+
+[node name="MeshInstance3D16" parent="Cabin/Cabin_Structure/Door/Door_Bedroom/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 1997389752, 1774372310) index="2" unique_id=1314294936]
+mesh = SubResource("CylinderMesh_vo1nr")
+
+[node name="MeshInstance3D17" parent="Cabin/Cabin_Structure/Door/Door_Bedroom/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 1997389752, 1774372310) index="3" unique_id=12575180]
+mesh = SubResource("CylinderMesh_vo1nr")
+
+[node name="MeshInstance3D18" parent="Cabin/Cabin_Structure/Door/Door_Bedroom/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 1997389752, 1774372310) index="4" unique_id=2112863140]
+mesh = SubResource("CylinderMesh_vo1nr")
+
+[node name="MeshInstance3D19" parent="Cabin/Cabin_Structure/Door/Door_Bedroom/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 1997389752, 1774372310) index="5" unique_id=1685057232]
+mesh = SubResource("CylinderMesh_vo1nr")
+
+[node name="MeshInstance3D20" parent="Cabin/Cabin_Structure/Door/Door_Bedroom/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 1997389752, 1774372310) index="6" unique_id=2127290500]
+mesh = SubResource("CylinderMesh_vo1nr")
+
+[node name="Door_LivingRoom1" parent="Cabin/Cabin_Structure/Door" parent_id_path=PackedInt32Array(293068168, 125884885, 132746731) index="3" unique_id=986305764 groups=["interactuable"]]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -6.8802676, 0.005359851, 2.0941277)
 destination_front = "TP_In_LivingRoom3"
 destination_back = "TP_Out_LivingRoom4"
 
-[node name="Door_DiningRoom" parent="Cabin/Cabin_Structure/Door" parent_id_path=PackedInt32Array(293068168, 125884885, 132746731) index="4" unique_id=1887231876]
+[node name="Door_DiningRoom" parent="Cabin/Cabin_Structure/Door" parent_id_path=PackedInt32Array(293068168, 125884885, 132746731) index="4" unique_id=1887231876 groups=["interactuable"]]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5.104264, 0.027033769, 1.9927464)
 destination_front = "TP_In_DiningRoom"
 destination_back = "TP_Out_DiningRoom"
 
-[node name="Door_LivingRoom2" parent="Cabin/Cabin_Structure/Door" parent_id_path=PackedInt32Array(293068168, 125884885, 132746731) index="5" unique_id=1726044719]
+[node name="MeshInstance3D4" parent="Cabin/Cabin_Structure/Door/Door_DiningRoom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1887231876, 723943201) index="0" unique_id=1088496746]
+mesh = SubResource("CylinderMesh_m6ppd")
+
+[node name="MeshInstance3D5" parent="Cabin/Cabin_Structure/Door/Door_DiningRoom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1887231876, 723943201) index="1" unique_id=290503933]
+mesh = SubResource("CylinderMesh_m6ppd")
+
+[node name="MeshInstance3D6" parent="Cabin/Cabin_Structure/Door/Door_DiningRoom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1887231876, 723943201) index="2" unique_id=184420218]
+mesh = SubResource("CylinderMesh_m6ppd")
+
+[node name="MeshInstance3D7" parent="Cabin/Cabin_Structure/Door/Door_DiningRoom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1887231876, 723943201) index="3" unique_id=711647973]
+mesh = SubResource("CylinderMesh_m6ppd")
+
+[node name="MeshInstance3D8" parent="Cabin/Cabin_Structure/Door/Door_DiningRoom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1887231876, 723943201) index="4" unique_id=1833462076]
+mesh = SubResource("CylinderMesh_m6ppd")
+
+[node name="MeshInstance3D9" parent="Cabin/Cabin_Structure/Door/Door_DiningRoom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1887231876, 723943201) index="5" unique_id=2022941532]
+mesh = SubResource("CylinderMesh_m6ppd")
+
+[node name="MeshInstance3D10" parent="Cabin/Cabin_Structure/Door/Door_DiningRoom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1887231876, 723943201) index="6" unique_id=2074261080]
+mesh = SubResource("CylinderMesh_m6ppd")
+
+[node name="MeshInstance3D12" parent="Cabin/Cabin_Structure/Door/Door_DiningRoom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1887231876, 723943201) index="7" unique_id=795232771]
+mesh = SubResource("CylinderMesh_m6ppd")
+
+[node name="MeshInstance3D13" parent="Cabin/Cabin_Structure/Door/Door_DiningRoom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1887231876, 723943201) index="8" unique_id=1957856337]
+mesh = SubResource("CylinderMesh_m6ppd")
+
+[node name="MeshInstance3D15" parent="Cabin/Cabin_Structure/Door/Door_DiningRoom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1887231876, 723943201) index="9" unique_id=941997252]
+mesh = SubResource("CylinderMesh_m6ppd")
+
+[node name="MeshInstance3D16" parent="Cabin/Cabin_Structure/Door/Door_DiningRoom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1887231876, 723943201) index="10" unique_id=1962385522]
+mesh = SubResource("CylinderMesh_m6ppd")
+
+[node name="MeshInstance3D18" parent="Cabin/Cabin_Structure/Door/Door_DiningRoom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1887231876, 723943201) index="11" unique_id=1272074732]
+mesh = SubResource("CylinderMesh_m6ppd")
+
+[node name="MeshInstance3D19" parent="Cabin/Cabin_Structure/Door/Door_DiningRoom/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1887231876, 723943201) index="12" unique_id=1007264049]
+mesh = SubResource("CylinderMesh_m6ppd")
+
+[node name="MeshInstance3D11" parent="Cabin/Cabin_Structure/Door/Door_DiningRoom/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 1887231876, 1774372310) index="0" unique_id=2125210952]
+mesh = SubResource("CylinderMesh_m6ppd")
+
+[node name="MeshInstance3D15" parent="Cabin/Cabin_Structure/Door/Door_DiningRoom/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 1887231876, 1774372310) index="1" unique_id=1258700631]
+mesh = SubResource("CylinderMesh_m6ppd")
+
+[node name="MeshInstance3D16" parent="Cabin/Cabin_Structure/Door/Door_DiningRoom/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 1887231876, 1774372310) index="2" unique_id=1314294936]
+mesh = SubResource("CylinderMesh_m6ppd")
+
+[node name="MeshInstance3D17" parent="Cabin/Cabin_Structure/Door/Door_DiningRoom/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 1887231876, 1774372310) index="3" unique_id=12575180]
+mesh = SubResource("CylinderMesh_m6ppd")
+
+[node name="MeshInstance3D18" parent="Cabin/Cabin_Structure/Door/Door_DiningRoom/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 1887231876, 1774372310) index="4" unique_id=2112863140]
+mesh = SubResource("CylinderMesh_m6ppd")
+
+[node name="MeshInstance3D19" parent="Cabin/Cabin_Structure/Door/Door_DiningRoom/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 1887231876, 1774372310) index="5" unique_id=1685057232]
+mesh = SubResource("CylinderMesh_m6ppd")
+
+[node name="MeshInstance3D20" parent="Cabin/Cabin_Structure/Door/Door_DiningRoom/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 1887231876, 1774372310) index="6" unique_id=2127290500]
+mesh = SubResource("CylinderMesh_m6ppd")
+
+[node name="Door_LivingRoom2" parent="Cabin/Cabin_Structure/Door" parent_id_path=PackedInt32Array(293068168, 125884885, 132746731) index="5" unique_id=1726044719 groups=["interactuable"]]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.016726, 0.0030129775, 6.9730005)
 destination_front = "TP_In_LivingRoom1"
 destination_back = "TP_Out_LivingRoom2"
 
-[node name="Lock_Sotano" parent="Cabin" index="2" unique_id=311865494]
-transform = Transform3D(-0.9922955, 0.04349328, -0.11600858, 0.11511088, -0.022614002, -0.9930952, -0.045816384, -0.9987978, 0.017433222, -0.91629475, 0.21129614, -5.8802824)
+[node name="MeshInstance3D4" parent="Cabin/Cabin_Structure/Door/Door_LivingRoom2/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1726044719, 723943201) index="0" unique_id=1088496746]
+mesh = SubResource("CylinderMesh_7y83b")
+
+[node name="MeshInstance3D5" parent="Cabin/Cabin_Structure/Door/Door_LivingRoom2/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1726044719, 723943201) index="1" unique_id=290503933]
+mesh = SubResource("CylinderMesh_7y83b")
+
+[node name="MeshInstance3D6" parent="Cabin/Cabin_Structure/Door/Door_LivingRoom2/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1726044719, 723943201) index="2" unique_id=184420218]
+mesh = SubResource("CylinderMesh_7y83b")
+
+[node name="MeshInstance3D7" parent="Cabin/Cabin_Structure/Door/Door_LivingRoom2/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1726044719, 723943201) index="3" unique_id=711647973]
+mesh = SubResource("CylinderMesh_7y83b")
+
+[node name="MeshInstance3D8" parent="Cabin/Cabin_Structure/Door/Door_LivingRoom2/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1726044719, 723943201) index="4" unique_id=1833462076]
+mesh = SubResource("CylinderMesh_7y83b")
+
+[node name="MeshInstance3D9" parent="Cabin/Cabin_Structure/Door/Door_LivingRoom2/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1726044719, 723943201) index="5" unique_id=2022941532]
+mesh = SubResource("CylinderMesh_7y83b")
+
+[node name="MeshInstance3D10" parent="Cabin/Cabin_Structure/Door/Door_LivingRoom2/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1726044719, 723943201) index="6" unique_id=2074261080]
+mesh = SubResource("CylinderMesh_7y83b")
+
+[node name="MeshInstance3D12" parent="Cabin/Cabin_Structure/Door/Door_LivingRoom2/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1726044719, 723943201) index="7" unique_id=795232771]
+mesh = SubResource("CylinderMesh_7y83b")
+
+[node name="MeshInstance3D13" parent="Cabin/Cabin_Structure/Door/Door_LivingRoom2/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1726044719, 723943201) index="8" unique_id=1957856337]
+mesh = SubResource("CylinderMesh_7y83b")
+
+[node name="MeshInstance3D15" parent="Cabin/Cabin_Structure/Door/Door_LivingRoom2/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1726044719, 723943201) index="9" unique_id=941997252]
+mesh = SubResource("CylinderMesh_7y83b")
+
+[node name="MeshInstance3D16" parent="Cabin/Cabin_Structure/Door/Door_LivingRoom2/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1726044719, 723943201) index="10" unique_id=1962385522]
+mesh = SubResource("CylinderMesh_7y83b")
+
+[node name="MeshInstance3D18" parent="Cabin/Cabin_Structure/Door/Door_LivingRoom2/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1726044719, 723943201) index="11" unique_id=1272074732]
+mesh = SubResource("CylinderMesh_7y83b")
+
+[node name="MeshInstance3D19" parent="Cabin/Cabin_Structure/Door/Door_LivingRoom2/LogWall/Node3D2" parent_id_path=PackedInt32Array(293068168, 125884885, 1726044719, 723943201) index="12" unique_id=1007264049]
+mesh = SubResource("CylinderMesh_7y83b")
+
+[node name="MeshInstance3D11" parent="Cabin/Cabin_Structure/Door/Door_LivingRoom2/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 1726044719, 1774372310) index="0" unique_id=2125210952]
+mesh = SubResource("CylinderMesh_7y83b")
+
+[node name="MeshInstance3D15" parent="Cabin/Cabin_Structure/Door/Door_LivingRoom2/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 1726044719, 1774372310) index="1" unique_id=1258700631]
+mesh = SubResource("CylinderMesh_7y83b")
+
+[node name="MeshInstance3D16" parent="Cabin/Cabin_Structure/Door/Door_LivingRoom2/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 1726044719, 1774372310) index="2" unique_id=1314294936]
+mesh = SubResource("CylinderMesh_7y83b")
+
+[node name="MeshInstance3D17" parent="Cabin/Cabin_Structure/Door/Door_LivingRoom2/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 1726044719, 1774372310) index="3" unique_id=12575180]
+mesh = SubResource("CylinderMesh_7y83b")
+
+[node name="MeshInstance3D18" parent="Cabin/Cabin_Structure/Door/Door_LivingRoom2/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 1726044719, 1774372310) index="4" unique_id=2112863140]
+mesh = SubResource("CylinderMesh_7y83b")
+
+[node name="MeshInstance3D19" parent="Cabin/Cabin_Structure/Door/Door_LivingRoom2/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 1726044719, 1774372310) index="5" unique_id=1685057232]
+mesh = SubResource("CylinderMesh_7y83b")
+
+[node name="MeshInstance3D20" parent="Cabin/Cabin_Structure/Door/Door_LivingRoom2/LogWall/Node3D" parent_id_path=PackedInt32Array(293068168, 125884885, 1726044719, 1774372310) index="6" unique_id=2127290500]
+mesh = SubResource("CylinderMesh_7y83b")
+
+[node name="StaticBody3D" parent="Cabin/Cabin_Structure/Door" parent_id_path=PackedInt32Array(293068168, 125884885, 132746731) index="6" unique_id=1005967043 instance=ExtResource("4_infdn")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -5.171426, 0.38245314, 5.282037)
+
+[node name="Lock_PC_Room" parent="Cabin" index="1" unique_id=340485007]
+transform = Transform3D(-0.08957904, 0, -0.3898405, 0, 0.39999998, 0, 0.3898405, 0, -0.08957904, -1.8406919, 0.9174486, 9.387973)
 
 [node name="plane" parent="Cabin/Wall_Clock" parent_id_path=PackedInt32Array(293068168, 1228142654) index="1" unique_id=949128227]
-transform = Transform3D(0.9645591, 0.0047024763, 0.3070058, -0.32234064, -0.00043791294, 0.91867924, 0.003307138, -1.4142057, 0.0007363751, -0.127, 2.125, -0.25)
+transform = Transform3D(0.9645593, 0.004702476, 0.3070058, -0.32234073, -0.0004379129, 0.91867924, 0.003307139, -1.4142056, 0.0007363751, -0.127, 2.125, -0.25)
+
+[node name="Lock_Sotano" parent="Cabin/PuertaSotano" parent_id_path=PackedInt32Array(293068168, 705214495) index="0" unique_id=311865494]
+transform = Transform3D(-0.9922955, 0.04349328, -0.11600858, 0.11511088, -0.022614002, -0.9930952, -0.045816384, -0.9987978, 0.017433222, -0.91629475, 0.21129614, -5.8802824)
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=79574776]
 transform = Transform3D(-6.5567074e-10, 0, 0.014999998, 0, 0.014999999, 0, -0.014999998, 0, -6.5567074e-10, -7.2813106, 1.367412, 7.296193)
@@ -229,7 +579,82 @@ light_color = Color(0, 1, 0, 1)
 omni_range = 0.1
 omni_attenuation = 1.69
 
+[node name="OpeningDoorAnimation" parent="." unique_id=1997429010 instance=ExtResource("6_infdn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.133713, 0, 0.30839443)
+
+[node name="MeshInstance3D4" parent="OpeningDoorAnimation/Node3D2" parent_id_path=PackedInt32Array(1997429010, 723943201) index="0" unique_id=1088496746]
+mesh = SubResource("CylinderMesh_nnw0q")
+
+[node name="MeshInstance3D5" parent="OpeningDoorAnimation/Node3D2" parent_id_path=PackedInt32Array(1997429010, 723943201) index="1" unique_id=290503933]
+mesh = SubResource("CylinderMesh_nnw0q")
+
+[node name="MeshInstance3D6" parent="OpeningDoorAnimation/Node3D2" parent_id_path=PackedInt32Array(1997429010, 723943201) index="2" unique_id=184420218]
+mesh = SubResource("CylinderMesh_nnw0q")
+
+[node name="MeshInstance3D7" parent="OpeningDoorAnimation/Node3D2" parent_id_path=PackedInt32Array(1997429010, 723943201) index="3" unique_id=711647973]
+mesh = SubResource("CylinderMesh_nnw0q")
+
+[node name="MeshInstance3D8" parent="OpeningDoorAnimation/Node3D2" parent_id_path=PackedInt32Array(1997429010, 723943201) index="4" unique_id=1833462076]
+mesh = SubResource("CylinderMesh_nnw0q")
+
+[node name="MeshInstance3D9" parent="OpeningDoorAnimation/Node3D2" parent_id_path=PackedInt32Array(1997429010, 723943201) index="5" unique_id=2022941532]
+mesh = SubResource("CylinderMesh_nnw0q")
+
+[node name="MeshInstance3D10" parent="OpeningDoorAnimation/Node3D2" parent_id_path=PackedInt32Array(1997429010, 723943201) index="6" unique_id=2074261080]
+mesh = SubResource("CylinderMesh_nnw0q")
+
+[node name="MeshInstance3D12" parent="OpeningDoorAnimation/Node3D2" parent_id_path=PackedInt32Array(1997429010, 723943201) index="7" unique_id=795232771]
+mesh = SubResource("CylinderMesh_nnw0q")
+
+[node name="MeshInstance3D13" parent="OpeningDoorAnimation/Node3D2" parent_id_path=PackedInt32Array(1997429010, 723943201) index="8" unique_id=1957856337]
+mesh = SubResource("CylinderMesh_nnw0q")
+
+[node name="MeshInstance3D15" parent="OpeningDoorAnimation/Node3D2" parent_id_path=PackedInt32Array(1997429010, 723943201) index="9" unique_id=941997252]
+mesh = SubResource("CylinderMesh_nnw0q")
+
+[node name="MeshInstance3D16" parent="OpeningDoorAnimation/Node3D2" parent_id_path=PackedInt32Array(1997429010, 723943201) index="10" unique_id=1962385522]
+mesh = SubResource("CylinderMesh_nnw0q")
+
+[node name="MeshInstance3D18" parent="OpeningDoorAnimation/Node3D2" parent_id_path=PackedInt32Array(1997429010, 723943201) index="11" unique_id=1272074732]
+mesh = SubResource("CylinderMesh_nnw0q")
+
+[node name="MeshInstance3D19" parent="OpeningDoorAnimation/Node3D2" parent_id_path=PackedInt32Array(1997429010, 723943201) index="12" unique_id=1007264049]
+mesh = SubResource("CylinderMesh_nnw0q")
+
+[node name="MeshInstance3D11" parent="OpeningDoorAnimation/Node3D" parent_id_path=PackedInt32Array(1997429010, 1774372310) index="0" unique_id=2125210952]
+mesh = SubResource("CylinderMesh_nnw0q")
+
+[node name="MeshInstance3D15" parent="OpeningDoorAnimation/Node3D" parent_id_path=PackedInt32Array(1997429010, 1774372310) index="1" unique_id=1258700631]
+mesh = SubResource("CylinderMesh_nnw0q")
+
+[node name="MeshInstance3D16" parent="OpeningDoorAnimation/Node3D" parent_id_path=PackedInt32Array(1997429010, 1774372310) index="2" unique_id=1314294936]
+mesh = SubResource("CylinderMesh_nnw0q")
+
+[node name="MeshInstance3D17" parent="OpeningDoorAnimation/Node3D" parent_id_path=PackedInt32Array(1997429010, 1774372310) index="3" unique_id=12575180]
+mesh = SubResource("CylinderMesh_nnw0q")
+
+[node name="MeshInstance3D18" parent="OpeningDoorAnimation/Node3D" parent_id_path=PackedInt32Array(1997429010, 1774372310) index="4" unique_id=2112863140]
+mesh = SubResource("CylinderMesh_nnw0q")
+
+[node name="MeshInstance3D19" parent="OpeningDoorAnimation/Node3D" parent_id_path=PackedInt32Array(1997429010, 1774372310) index="5" unique_id=1685057232]
+mesh = SubResource("CylinderMesh_nnw0q")
+
+[node name="MeshInstance3D20" parent="OpeningDoorAnimation/Node3D" parent_id_path=PackedInt32Array(1997429010, 1774372310) index="6" unique_id=2127290500]
+mesh = SubResource("CylinderMesh_nnw0q")
+
+[node name="CSGBox3D" parent="OpeningDoorAnimation" index="6" unique_id=1482188836]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9037924, 1.1275635, 1.2576294)
+
+[node name="FogVolume" parent="OpeningDoorAnimation" index="7" unique_id=242682033]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2995396, 1.0198294, 3.0934482)
+
 [editable path="Player"]
 [editable path="Cabin"]
 [editable path="Cabin/Cabin_Structure"]
+[editable path="Cabin/Cabin_Structure/Door/Door_PcRoom"]
+[editable path="Cabin/Cabin_Structure/Door/Door_Batroom"]
+[editable path="Cabin/Cabin_Structure/Door/Door_Bedroom"]
+[editable path="Cabin/Cabin_Structure/Door/Door_DiningRoom"]
+[editable path="Cabin/Cabin_Structure/Door/Door_LivingRoom2"]
 [editable path="Cabin/Wall_Clock"]
+[editable path="OpeningDoorAnimation"]
