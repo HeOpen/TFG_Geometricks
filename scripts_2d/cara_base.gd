@@ -21,3 +21,9 @@ func _physics_process(_delta: float) -> void:
 	elif player.position.x <= EXIT_THRESHOLD:
 		_exit_pending = true
 		player_exiting.emit("left", player.position.y, player.velocity)
+	elif player.position.y <= EXIT_THRESHOLD:
+		_exit_pending = true
+		player_exiting.emit("top", player.position.x, player.velocity)
+	elif player.position.y >= VIEWPORT_SIZE - EXIT_THRESHOLD:
+		_exit_pending = true
+		player_exiting.emit("bottom", player.position.x, player.velocity)

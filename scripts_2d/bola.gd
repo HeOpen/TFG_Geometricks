@@ -3,7 +3,8 @@ extends CharacterBody2D
 enum Forma { CIRCULO, CUADRADO, TRIANGULO, RECTANGULO }
 
 const SPEED = 300.0
-const RADIUS = 8.0
+const JUMP_VELOCITY = -200.0
+const RADIUS = 6.0
 const LEVITATION_ACCEL = 150.0
 const MAX_LEVITATION_SPEED = 250.0
 
@@ -32,11 +33,11 @@ var escalas := {
 
 func _ready() -> void:
 	shape_circulo.radius = RADIUS
-	shape_cuadrado.size = Vector2(25.0, 25.0)
+	shape_cuadrado.size = Vector2(10.0, 10.0)
 	shape_triangulo.points = PackedVector2Array([
-		Vector2(0.0, -10.0), Vector2(10.0, 10.0), Vector2(-10.0, 10.0)
+		Vector2(0.0, -5.0), Vector2(5.0, 5.0), Vector2(-5.0, 5.0)
 	])
-	shape_rectangulo.size = Vector2(12.0, 25.0)
+	shape_rectangulo.size = Vector2(5.0, 10.0)
 
 # Detecta cambio de forma y delega la física según la forma activa
 func _physics_process(delta: float) -> void:
@@ -62,10 +63,12 @@ func _cambiar_forma() -> void:
 	sprite.scale = escalas[forma_actual]
 	sprite.rotation = 0.0
 
-# Círculo: gravedad normal, rotación visual al moverse
+# Círculo: gravedad normal, rotación visual al moverse, salto leve
 func _fisica_circulo(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+	elif Input.is_action_just_pressed("jump"):
+		velocity.y = JUMP_VELOCITY
 	var direction := Input.get_axis("ui_left", "ui_right")
 	velocity.x = direction * SPEED if direction else move_toward(velocity.x, 0.0, SPEED)
 	sprite.rotation += velocity.x / RADIUS * delta
