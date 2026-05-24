@@ -5,8 +5,6 @@
 [ext_resource type="ArrayMesh" uid="uid://clfgrn2hgrlcd" path="res://assets/models_3d/ModularHouse/Structure_Wall_Doorway.obj" id="3_ghhne"]
 [ext_resource type="Script" uid="uid://df56djgf3xhl7" path="res://entities/player_3d/player3d.gd" id="4_24x3s"]
 [ext_resource type="Texture2D" uid="uid://bxqoku762shnd" path="res://assets/textures/obama.png" id="5_5fqtq"]
-[ext_resource type="PackedScene" uid="uid://c2xr6tv7tiarr" path="res://assets/models_3d/VHS_Tape.tscn" id="6_j5q3g"]
-[ext_resource type="PackedScene" uid="uid://c5xwjrq7h1m2p" path="res://assets/models_3d/VHS.tscn" id="7_x1bxq"]
 [ext_resource type="Material" uid="uid://x8e77kr2c664" path="res://assets/materials/floor_texture.tres" id="9_j5q3g"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5fqtq"]
@@ -312,14 +310,6 @@ transform = Transform3D(0.29937467, -0.019359691, -1.4589873e-08, -0.010769724, 
 modulate = Color(1, 1, 1, 0.030000001)
 double_sided = false
 texture = ExtResource("5_5fqtq")
-
-[node name="VHS-Tape" parent="Jugador" unique_id=1811958041 instance=ExtResource("6_j5q3g")]
-transform = Transform3D(-0.011545129, -0.041614775, -0.025197625, -0.04701046, 0.016207531, -0.005227873, 0.012518964, 0.022483919, -0.042868968, 0.26912647, 1.2111514, -0.27109176)
-visible = false
-
-[node name="Mesh_VHS_01" parent="Jugador" unique_id=1862911067 instance=ExtResource("7_x1bxq")]
-transform = Transform3D(1.4134083, -1.2768292, -0.60990596, 0.45525956, 1.2265434, -1.5127236, 1.3397827, 0.93021464, 1.1574477, 0.23178384, 1.1935999, -0.35323483)
-visible = false
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1482188836]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1275635, 0.9295654)

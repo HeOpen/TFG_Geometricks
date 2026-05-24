@@ -2,8 +2,6 @@
 
 [ext_resource type="Script" uid="uid://df56djgf3xhl7" path="res://entities/player_3d/player3d.gd" id="1_mfgp6"]
 [ext_resource type="Texture2D" uid="uid://bxqoku762shnd" path="res://assets/textures/obama.png" id="2_sddfd"]
-[ext_resource type="PackedScene" uid="uid://c2xr6tv7tiarr" path="res://assets/models_3d/VHS_Tape.tscn" id="3_vlt6u"]
-[ext_resource type="PackedScene" uid="uid://c5xwjrq7h1m2p" path="res://assets/models_3d/VHS.tscn" id="4_04scv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iof21"]
 albedo_color = Color(0.91806, 0.575202, 0.222449, 1)
@@ -50,7 +48,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12530899, 0)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Head/Camera3D" unique_id=1076554066]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.04202473, -0.025304228)
-visible = false
 light_color = Color(0.7529412, 0.50980395, 0.14901961, 1)
 light_energy = 2.3
 light_cull_mask = 4294967293
@@ -61,21 +58,14 @@ spot_angle = 15.75
 spot_angle_attenuation = 0.0018865991
 
 [node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D" unique_id=845778856]
-transform = Transform3D(1, 0, 0, 0, -0.00993073, -0.9999507, 0, 0.9999507, -0.00993073, 0, -0.10814357, -0.39720905)
+transform = Transform3D(1, 0, 0, 0, -0.00993073, -0.9999507, 0, 0.9999507, -0.00993073, 0, -0.0053014755, -0.39720905)
+target_position = Vector3(0, -1.23, 0)
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=919673764]
 transform = Transform3D(0.29937467, -0.019359691, -1.4589873e-08, -0.010769724, -0.16654083, -0.24929535, 0.016087595, 0.24877572, -0.1668887, 0, 2.1817033, -0.29188937)
 modulate = Color(1, 1, 1, 0.030000001)
 double_sided = false
 texture = ExtResource("2_sddfd")
-
-[node name="VHS-Tape" parent="." unique_id=1811958041 instance=ExtResource("3_vlt6u")]
-transform = Transform3D(-0.011545129, -0.041614775, -0.025197625, -0.04701046, 0.016207531, -0.005227873, 0.012518964, 0.022483919, -0.042868968, 0.26912647, 1.2111514, -0.27109176)
-visible = false
-
-[node name="Mesh_VHS_01" parent="." unique_id=1862911067 instance=ExtResource("4_04scv")]
-transform = Transform3D(1.4134083, -1.2768292, -0.60990596, 0.45525956, 1.2265434, -1.5127236, 1.3397827, 0.93021464, 1.1574477, 0.23178384, 1.1935999, -0.35323483)
-visible = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1190599710]
 
@@ -105,3 +95,28 @@ theme_override_font_sizes/font_size = 4
 text = "."
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="TextoCentro" type="Label" parent="CanvasLayer/Control" unique_id=630843659]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -7.0
+offset_top = 5.0
+offset_right = 6.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 10
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InventarioUI" type="HBoxContainer" parent="CanvasLayer/Control" unique_id=671052485]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 226.0
+offset_right = 161.0
+offset_bottom = 226.0
+scale = Vector2(0.194, 0.154)

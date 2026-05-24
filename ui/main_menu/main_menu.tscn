@@ -11,7 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://ba40k8ka1bu8a" path="res://objects/modular_architecture/MESH_log_wall_25small.tscn" id="10_4e78x"]
 [ext_resource type="PackedScene" uid="uid://86rhbrl7ars4" path="res://objects/modular_architecture/MESH_log_column.tscn" id="11_s4pem"]
 [ext_resource type="PackedScene" uid="uid://dfodt17jrw78d" path="res://ui/main_menu/cubo_milenario.tscn" id="12_tf5ef"]
-[ext_resource type="PackedScene" uid="uid://fywlwgjbt75w" path="res://ui/hud/fade_transition.tscn" id="12_xio0d"]
+[ext_resource type="AudioStream" uid="uid://wx7y6yorvv4g" path="res://assets/audio/efectos/button_sound.ogg" id="12_xio0d"]
+[ext_resource type="AudioStream" uid="uid://b7w5kxf5s7qta" path="res://assets/audio/Title_Geometricks.wav" id="13_tf5ef"]
 
 [sub_resource type="Sky" id="Sky_s4pem"]
 sky_material = ExtResource("8_s4pem")
@@ -19,6 +20,7 @@ sky_material = ExtResource("8_s4pem")
 [sub_resource type="Environment" id="Environment_xio0d"]
 background_mode = 2
 sky = SubResource("Sky_s4pem")
+adjustment_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mlgns"]
 resource_name = "Metal_04"
@@ -91,19 +93,129 @@ shadow_mesh = SubResource("ArrayMesh_xq28v")
 [sub_resource type="BoxShape3D" id="BoxShape3D_6tl50"]
 size = Vector3(1.617157, 0.4807129, 0.043945313)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tf5ef"]
+resource_local_to_scene = true
+albedo_color = Color(0.41960785, 0.08627451, 0.08235294, 1)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_qao3l"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lknku"]
+resource_local_to_scene = true
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_qao3l")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_u2jyo"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bpbph"]
+resource_local_to_scene = true
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_u2jyo")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_qewnw"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_db6af"]
+resource_local_to_scene = true
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_qewnw")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_rkggs"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1bnxd"]
+resource_local_to_scene = true
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_rkggs")
+
+[sub_resource type="Shader" id="Shader_xio0d"]
+code = "shader_type canvas_item;
+
+// Variables 'uniform'. Exportan estos valores al Inspector de Godot 
+// para que el diseñador de niveles pueda ajustarlos sin modificar código.
+uniform sampler2D screen_texture : hint_screen_texture, filter_linear_mipmap;
+uniform float scanline_count : hint_range(0.0, 1000.0) = 250.0;
+uniform float chromatic_aberration : hint_range(0.0, 0.05) = 0.005;
+
+// Función fragment() - Se ejecuta una vez por cada píxel de la pantalla en cada fotograma
+void fragment() {
+    // SCREEN_UV representa las coordenadas 2D absolutas de la pantalla (de 0.0 a 1.0)
+    vec2 uv = SCREEN_UV;
+
+    // 1. ABERRACIÓN CROMÁTICA
+    // Desplazamos las coordenadas de lectura de los canales Rojo (R) y Azul (B) en el eje X
+    float r = texture(screen_texture, uv + vec2(chromatic_aberration, 0.0)).r;
+    float g = texture(screen_texture, uv).g;
+    float b = texture(screen_texture, uv - vec2(chromatic_aberration, 0.0)).b;
+    vec3 color = vec3(r, g, b);
+
+    // 2. SCANLINES (Líneas de tubo catódico)
+    // Generamos una onda senoidal estática multiplicada por la altura del píxel (uv.y)
+    float scanline = sin(uv.y * scanline_count * 3.14159);
+    // Normalizamos la onda a valores entre 0.0 y 1.0
+    scanline = (scanline * 0.5) + 0.5; 
+    // Oscurecemos el color final un 20% en las áreas donde cruza la onda
+    color = mix(color, color * 0.8, scanline);
+
+    // Salida final a la pantalla
+    COLOR = vec4(color, 1.0);
+}"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qao3l"]
+shader = SubResource("Shader_xio0d")
+shader_parameter/scanline_count = 250.0
+shader_parameter/chromatic_aberration = 0.005
+
+[sub_resource type="Animation" id="Animation_v8m7a"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_wprsl"]
+resource_name = "fade_in"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainMenu/CanvasLayer/Fade_Rect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ubvtf"]
+resource_name = "fade_out"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainMenu/CanvasLayer/Fade_Rect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s4pem"]
+_data = {
+&"RESET": SubResource("Animation_v8m7a"),
+&"fade_in": SubResource("Animation_wprsl"),
+&"fade_out": SubResource("Animation_ubvtf")
+}
+
 [node name="MainMenu" type="Node3D" unique_id=944016157]
 script = ExtResource("1_bws42")
-
-[node name="Fade_transition" parent="." unique_id=865143108 instance=ExtResource("12_xio0d")]
-visible = false
-
-[node name="Fade_timer" type="Timer" parent="Fade_transition" unique_id=1372340370]
-wait_time = 5.0
 
 [node name="Env" type="Node3D" parent="." unique_id=298357268]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Env" unique_id=1868436296]
-transform = Transform3D(-0.84224045, -0.3287587, -0.42725736, -0.4069195, -0.13217302, 0.90385115, -0.35362074, 0.9351193, -0.022456832, 0, 0, 0)
+transform = Transform3D(0.07545447, 0.7820513, 0.61862946, -0.99693155, 0.046199005, 0.06319284, 0.02083999, -0.62149936, 0.7831374, -1.4198554, 0, 0.40846026)
 light_color = Color(1, 0.49019608, 0.011764706, 1)
 shadow_enabled = true
 
@@ -119,15 +231,15 @@ transform = Transform3D(1, 0, 0, 0, 0.9961978, -0.087120965, 0, 0.087120965, 0.9
 fov = 45.0
 
 [node name="Copyright" type="Label3D" parent="Camera3D" unique_id=1079143512]
-transform = Transform3D(0.0019994408, 8.38378e-06, -4.6541623e-05, -1.0944597e-05, 0.001996917, -0.00011046823, 4.6006695e-05, 0.00011069203, 0.0019964043, 0.48508322, -0.3281418, -0.8878044)
+transform = Transform3D(0.0019994408, 8.383784e-06, -4.6541514e-05, -1.0944599e-05, 0.001996917, -0.00011046829, 4.6006695e-05, 0.00011069207, 0.0019964045, 0.50122315, -0.3388372, -0.88686943)
 pixel_size = 1.0
 double_sided = false
-modulate = Color(1, 1, 1, 0.020000001)
+modulate = Color(1, 1, 1, 0.039215688)
 outline_modulate = Color(0, 0, 0, 0)
 text = "GEOMETRICKS es un proyecto académico independiente.
 © 2026. Todos los derechos reservados."
 font = ExtResource("6_6tl50")
-font_size = 15
+font_size = 12
 horizontal_alignment = 2
 uppercase = true
 
@@ -150,7 +262,7 @@ use_collision = true
 size = Vector3(1.9689348, 0, 2.0468307)
 
 [node name="Logo+URL" type="StaticBody3D" parent="." unique_id=313261818]
-transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0.00989905, 1.3594737, 0.01290977)
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, -0.0055808574, 1.3594737, 0.01290977)
 script = ExtResource("5_t6bnd")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Logo+URL" unique_id=190920587]
@@ -173,7 +285,73 @@ texture = ExtResource("9_w2r0d")
 [node name="CuboMilenario" parent="." unique_id=1841013009 instance=ExtResource("12_tf5ef")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0047240257, 0.7938652, 0.10360658)
 
-[connection signal="timeout" from="Fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]
+[node name="Label3D" parent="CuboMilenario/Cara_Derecha/Boton_Audio" parent_id_path=PackedInt32Array(1841013009, 1984489169) index="0" unique_id=2124245023]
+text = "AUDIO"
+
+[node name="MeshInstance3D" parent="CuboMilenario/Cara_Derecha/Boton_Audio" parent_id_path=PackedInt32Array(1841013009, 1984489169) index="1" unique_id=1884674552]
+surface_material_override/0 = SubResource("StandardMaterial3D_tf5ef")
+
+[node name="MeshInstance3D" parent="CuboMilenario/Cara_Trasera/Musica/Slider_Musica" parent_id_path=PackedInt32Array(1841013009, 1573478637) index="1" unique_id=1810741111]
+material_override = SubResource("StandardMaterial3D_lknku")
+
+[node name="HSlider" parent="CuboMilenario/Cara_Trasera/Musica/Slider_Musica/SubViewport" parent_id_path=PackedInt32Array(1841013009, 1573478637, 172893491) index="0" unique_id=42036256]
+max_value = 2.0
+step = 0.01
+value = 1.0
+
+[node name="MeshInstance3D" parent="CuboMilenario/Cara_Trasera/Efectos/Slider_FX" parent_id_path=PackedInt32Array(1841013009, 1355686957) index="1" unique_id=1810741111]
+material_override = SubResource("StandardMaterial3D_bpbph")
+
+[node name="MeshInstance3D" parent="CuboMilenario/Cara_Izquierda/Brillo/Slider_Brillo" parent_id_path=PackedInt32Array(1841013009, 1709546785) index="1" unique_id=1810741111]
+material_override = SubResource("StandardMaterial3D_db6af")
+
+[node name="HSlider" parent="CuboMilenario/Cara_Izquierda/Brillo/Slider_Brillo/SubViewport" parent_id_path=PackedInt32Array(1841013009, 1709546785, 172893491) index="0" unique_id=42036256]
+min_value = 0.7
+max_value = 1.3
+step = 0.1
+value = 0.7
+
+[node name="MeshInstance3D" parent="CuboMilenario/Cara_Izquierda/Contraste/Slider_Contraste" parent_id_path=PackedInt32Array(1841013009, 824964423) index="1" unique_id=1810741111]
+material_override = SubResource("StandardMaterial3D_1bnxd")
+
+[node name="HSlider" parent="CuboMilenario/Cara_Izquierda/Contraste/Slider_Contraste/SubViewport" parent_id_path=PackedInt32Array(1841013009, 824964423, 172893491) index="0" unique_id=42036256]
+min_value = 0.7
+max_value = 1.3
+step = 0.1
+value = 1.2999999999999998
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1756892693]
+
+[node name="VHS_Filter" type="ColorRect" parent="CanvasLayer" unique_id=1414961974]
+material = SubResource("ShaderMaterial_qao3l")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Fade_Rect" type="ColorRect" parent="CanvasLayer" unique_id=453247278]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer" unique_id=46572885]
+root_node = NodePath("../../..")
+libraries/ = SubResource("AnimationLibrary_s4pem")
+
+[node name="SFX_Boton" type="AudioStreamPlayer" parent="." unique_id=445134269]
+stream = ExtResource("12_xio0d")
+bus = &"FX"
+
+[node name="SFX_Title" type="AudioStreamPlayer" parent="." unique_id=1330474654]
+stream = ExtResource("13_tf5ef")
+bus = &"FX"
+
 [connection signal="input_event" from="Logo+URL" to="." method="_input_event"]
 [connection signal="presionado" from="CuboMilenario/Cubo/CaraFrontal/Boton_Jugar" to="." method="_on_boton_presionado"]
 [connection signal="presionado" from="CuboMilenario/Cubo/CaraFrontal/Boton_Opciones" to="." method="_on_boton_presionado"]
@@ -181,11 +359,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0047240257, 0.7938652, 0.1
 [connection signal="presionado" from="CuboMilenario/Cara_Derecha/Boton_Audio" to="." method="_on_boton_presionado"]
 [connection signal="presionado" from="CuboMilenario/Cara_Derecha/Boton_Video" to="." method="_on_boton_presionado"]
 [connection signal="presionado" from="CuboMilenario/Cara_Derecha/Boton_Volver" to="." method="_on_boton_presionado"]
-[connection signal="presionado" from="CuboMilenario/Cara_Trasera/Boton_Musica" to="." method="_on_boton_presionado"]
-[connection signal="presionado" from="CuboMilenario/Cara_Trasera/Boton_VolumenFX" to="." method="_on_boton_presionado"]
+[connection signal="value_changed" from="CuboMilenario/Cara_Trasera/Musica/Slider_Musica/SubViewport/HSlider" to="." method="_on_slider_musica_cambiado"]
+[connection signal="value_changed" from="CuboMilenario/Cara_Trasera/Efectos/Slider_FX/SubViewport/HSlider" to="." method="_on_slider_fx_cambiado"]
 [connection signal="presionado" from="CuboMilenario/Cara_Trasera/Boton_VolverOpciones" to="." method="_on_boton_presionado"]
 [connection signal="presionado" from="CuboMilenario/Cara_Izquierda/Boton_VHS" to="." method="_on_boton_presionado"]
-[connection signal="presionado" from="CuboMilenario/Cara_Izquierda/Boton_Pantalla" to="." method="_on_boton_presionado"]
+[connection signal="value_changed" from="CuboMilenario/Cara_Izquierda/Brillo/Slider_Brillo/SubViewport/HSlider" to="." method="_on_slider_brillo_cambiado"]
+[connection signal="value_changed" from="CuboMilenario/Cara_Izquierda/Contraste/Slider_Contraste/SubViewport/HSlider" to="." method="_on_slider_contraste_cambiado"]
 [connection signal="presionado" from="CuboMilenario/Cara_Izquierda/Boton_VolverOpciones" to="." method="_on_boton_presionado"]
 
 [editable path="CuboMilenario"]
+[editable path="CuboMilenario/Cara_Derecha/Boton_Audio"]
+[editable path="CuboMilenario/Cara_Trasera/Musica/Slider_Musica"]
+[editable path="CuboMilenario/Cara_Trasera/Efectos/Slider_FX"]
+[editable path="CuboMilenario/Cara_Izquierda/Brillo/Slider_Brillo"]
+[editable path="CuboMilenario/Cara_Izquierda/Contraste/Slider_Contraste"]

@@ -2,6 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://b5arkwyrhd2jm" path="res://assets/textures/Horror Textures by Canvas Coven/Metal grille/Metal_grille_05.png" id="1_gw5v4"]
 [ext_resource type="PackedScene" uid="uid://brn3oavhdankg" path="res://ui/main_menu/button.tscn" id="2_rhfgq"]
+[ext_resource type="PackedScene" uid="uid://dultgxy0vfqf0" path="res://ui/main_menu/slider.tscn" id="3_rhfgq"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_rhfgq"]
+data = PackedVector3Array(-0.25, -0.25, 0.25, -0.25, -0.25, -0.25, -0.25, 0.25, -0.25, 0.25, -0.25, -0.25, -0.25, -0.25, -0.25, -0.25, -0.25, 0.25, -0.25, 0.25, -0.25, -0.25, -0.25, -0.25, 0.25, -0.25, -0.25, -0.25, 0.25, -0.25, -0.25, 0.25, 0.25, -0.25, -0.25, 0.25, -0.25, -0.25, 0.25, -0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, -0.25, 0.25, 0.25, -0.25, 0.25, -0.25, -0.25, -0.25, 0.25, 0.25, -0.25, 0.25, 0.25, -0.25, -0.25, 0.25, 0.25, 0.25, 0.25, -0.25, 0.25, -0.25, -0.25, 0.25, 0.25, -0.25, -0.25, 0.25, -0.25, 0.25, 0.25, 0.25, 0.25, 0.25, -0.25, -0.25, 0.25, 0.25, -0.25, -0.25, 0.25, -0.25, -0.25, 0.25, -0.25, 0.25, 0.25, -0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, -0.25, 0.25, -0.25, -0.25)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qao3l"]
 albedo_texture = ExtResource("1_gw5v4")
@@ -19,7 +23,44 @@ _surfaces = [{
 "vertex_data": PackedByteArray("AACAvgAAgL4AAIA+AACAvgAAgL4AAIC+AACAvgAAgD4AAIC+AACAPgAAgL4AAIC+AACAvgAAgL4AAIC+AACAvgAAgL4AAIA+AACAvgAAgD4AAIC+AACAvgAAgL4AAIC+AACAPgAAgL4AAIC+AACAvgAAgD4AAIC+AACAvgAAgD4AAIA+AACAvgAAgL4AAIA+AACAvgAAgL4AAIA+AACAvgAAgD4AAIA+AACAPgAAgD4AAIA+AACAPgAAgD4AAIA+AACAvgAAgD4AAIA+AACAvgAAgD4AAIC+AACAvgAAgL4AAIA+AACAPgAAgL4AAIA+AACAPgAAgL4AAIC+AACAPgAAgD4AAIA+AACAPgAAgL4AAIA+AACAvgAAgL4AAIA+AACAPgAAgL4AAIC+AACAPgAAgL4AAIA+AACAPgAAgD4AAIA+AACAPgAAgL4AAIC+AACAPgAAgD4AAIC+AACAvgAAgD4AAIC+AACAvgAAgD4AAIC+AACAPgAAgD4AAIC+AACAPgAAgD4AAIA+AACAPgAAgD4AAIA+AACAPgAAgD4AAIC+AACAPgAAgL4AAIC+AAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
 }]
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_bvb5v"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_07c2a"]
+resource_local_to_scene = true
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_bvb5v")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_wh88l"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vxfru"]
+resource_local_to_scene = true
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_wh88l")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_rhfgq"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bvb5v"]
+resource_local_to_scene = true
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_rhfgq")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_07c2a"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wh88l"]
+resource_local_to_scene = true
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_07c2a")
+
 [node name="CuboNode" type="Node3D" unique_id=1841013009]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1135052422]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=323274716]
+shape = SubResource("ConcavePolygonShape3D_rhfgq")
 
 [node name="Cubo" type="MeshInstance3D" parent="." unique_id=801209848]
 material_override = SubResource("StandardMaterial3D_qao3l")
@@ -43,12 +84,12 @@ color_hover = Color(1, 0.0075757504, 0, 1)
 
 [node name="Cara_Derecha" type="Node3D" parent="." unique_id=1217211500]
 
-[node name="Boton_Audio" parent="Cara_Derecha" unique_id=24722813 instance=ExtResource("2_rhfgq")]
-transform = Transform3D(-7.430935e-09, 0, 0.16999999, 0, 0.17, 0, -0.16999999, 0, -7.430935e-09, 0.23473838, 0.124548346, -0.0040944517)
+[node name="Boton_Audio" parent="Cara_Derecha" unique_id=1984489169 instance=ExtResource("2_rhfgq")]
+transform = Transform3D(-7.430936e-09, 0, 0.17, 0, 0.17, 0, -0.17, 0, -7.430936e-09, 0.235, 0.125, -0.004)
 texto_boton = "AUDIO"
 
-[node name="Boton_Video" parent="Cara_Derecha" unique_id=1407351118 instance=ExtResource("2_rhfgq")]
-transform = Transform3D(-7.430935e-09, 0, 0.16999999, 0, 0.17, 0, -0.16999999, 0, -7.430935e-09, 0.23473838, 0, -0.0040944517)
+[node name="Boton_Video" parent="Cara_Derecha" unique_id=1543338073 instance=ExtResource("2_rhfgq")]
+transform = Transform3D(-7.430936e-09, 0, 0.17, 0, 0.17, 0, -0.17, 0, -7.430936e-09, 0.235, 0, -0.004)
 texto_boton = "VIDEO"
 
 [node name="Boton_Volver" parent="Cara_Derecha" unique_id=609008103 instance=ExtResource("2_rhfgq")]
@@ -57,13 +98,32 @@ texto_boton = "VOLVER"
 
 [node name="Cara_Trasera" type="Node3D" parent="." unique_id=1704223761]
 
-[node name="Boton_Musica" parent="Cara_Trasera" unique_id=1890943889 instance=ExtResource("2_rhfgq")]
-transform = Transform3D(-0.16999999, 0, -1.486187e-08, 0, 0.17, 0, 1.486187e-08, 0, -0.16999999, -0.0010836124, 0.124548346, -0.23348184)
-texto_boton = "MUSICA"
+[node name="Musica" type="Label3D" parent="Cara_Trasera" unique_id=1772398224]
+transform = Transform3D(-0.17, 0, 1.4861872e-08, 0, 0.17000002, 0, -1.4861872e-08, 0, -0.17, 0.003, 0.17243204, -0.261)
+pixel_size = 0.008
+text = "MÚSICA"
 
-[node name="Boton_VolumenFX" parent="Cara_Trasera" unique_id=947646259 instance=ExtResource("2_rhfgq")]
-transform = Transform3D(-0.16999999, 0, -1.486187e-08, 0, 0.17, 0, 1.486187e-08, 0, -0.16999999, -0.0010836124, 0, -0.23348184)
-texto_boton = "VOLUMEN FX"
+[node name="Slider_Musica" parent="Cara_Trasera/Musica" unique_id=1573478637 instance=ExtResource("3_rhfgq")]
+transform = Transform3D(0.6470588, 0, 1.7763568e-15, 0, 0.6470588, 0, -1.7763568e-15, 0, 0.6470588, 0.0036059618, -0.33993077, 0.00051379204)
+
+[node name="MeshInstance3D" parent="Cara_Trasera/Musica/Slider_Musica" index="1" unique_id=1810741111]
+material_override = SubResource("StandardMaterial3D_07c2a")
+
+[node name="Efectos" type="Label3D" parent="Cara_Trasera" unique_id=1680735118]
+transform = Transform3D(-0.17, 0, 1.4861872e-08, 0, 0.17000002, 0, -1.4861872e-08, 0, -0.17, 0.00023967773, 0.047335714, -0.251)
+pixel_size = 0.008
+text = "EFECTOS"
+
+[node name="Slider_FX" parent="Cara_Trasera/Efectos" unique_id=1355686957 instance=ExtResource("3_rhfgq")]
+transform = Transform3D(0.6470588, 0, -3.5527137e-15, 0, 0.6470588, 0, 3.5527137e-15, 0, 0.6470588, 0.010999382, -0.3399308, 0.00051379204)
+
+[node name="MeshInstance3D" parent="Cara_Trasera/Efectos/Slider_FX" index="1" unique_id=1810741111]
+material_override = SubResource("StandardMaterial3D_vxfru")
+
+[node name="HSlider" parent="Cara_Trasera/Efectos/Slider_FX/SubViewport" parent_id_path=PackedInt32Array(1355686957, 172893491) index="0" unique_id=42036256]
+max_value = 5.0
+step = 0.1
+value = 5.0
 
 [node name="Boton_VolverOpciones" parent="Cara_Trasera" unique_id=768533337 instance=ExtResource("2_rhfgq")]
 transform = Transform3D(-0.17, 0, -2.5669287e-08, 0, 0.17, 0, 2.5669287e-08, 0, -0.17, -0.0010836124, -0.10905143, -0.23348184)
@@ -75,10 +135,37 @@ texto_boton = "VOLVER"
 transform = Transform3D(-7.4309354e-09, 0, -0.16999999, 0, 0.17, 0, 0.16999999, 0, -7.4309354e-09, -0.23335682, 0.124548346, -0.0040944517)
 texto_boton = "VHS"
 
-[node name="Boton_Pantalla" parent="Cara_Izquierda" unique_id=893174744 instance=ExtResource("2_rhfgq")]
-transform = Transform3D(-7.4309354e-09, 0, -0.16999999, 0, 0.17, 0, 0.16999999, 0, -7.4309354e-09, -0.23335682, 0, -0.0040944517)
-texto_boton = "FULLSCREEN"
+[node name="Brillo" type="Label3D" parent="Cara_Izquierda" unique_id=116756364]
+transform = Transform3D(-7.430936e-09, 0, -0.17, 0, 0.17, 0, 0.17, 0, -7.430936e-09, -0.2504504, 0.039115027, -0.120171905)
+text = "BRILLO"
+
+[node name="Slider_Brillo" parent="Cara_Izquierda/Brillo" unique_id=1709546785 instance=ExtResource("3_rhfgq")]
+transform = Transform3D(0.6470588, 0, -3.5527137e-15, 0, 0.6470588, 0, 3.5527137e-15, 0, 0.6470588, 0.010999382, -0.3399308, 0.00051379204)
+
+[node name="MeshInstance3D" parent="Cara_Izquierda/Brillo/Slider_Brillo" index="1" unique_id=1810741111]
+material_override = SubResource("StandardMaterial3D_bvb5v")
+
+[node name="HSlider" parent="Cara_Izquierda/Brillo/Slider_Brillo/SubViewport" parent_id_path=PackedInt32Array(1709546785, 172893491) index="0" unique_id=42036256]
+step = 0.01
+
+[node name="Contraste" type="Label3D" parent="Cara_Izquierda" unique_id=225704628]
+transform = Transform3D(-7.430936e-09, 0, -0.17, 0, 0.17, 0, 0.17, 0, -7.430936e-09, -0.2504504, 0.039115027, 0.107742205)
+text = "CONTRASTE"
+
+[node name="Slider_Contraste" parent="Cara_Izquierda/Contraste" unique_id=824964423 instance=ExtResource("3_rhfgq")]
+transform = Transform3D(0.6470588, 0, 0, 0, 0.6470588, 0, 0, 0, 0.6470588, 0.06574392, -0.3399308, 0.00051379204)
+
+[node name="MeshInstance3D" parent="Cara_Izquierda/Contraste/Slider_Contraste" index="1" unique_id=1810741111]
+material_override = SubResource("StandardMaterial3D_wh88l")
+
+[node name="HSlider" parent="Cara_Izquierda/Contraste/Slider_Contraste/SubViewport" parent_id_path=PackedInt32Array(824964423, 172893491) index="0" unique_id=42036256]
+step = 0.01
 
 [node name="Boton_VolverOpciones" parent="Cara_Izquierda" unique_id=487665465 instance=ExtResource("2_rhfgq")]
 transform = Transform3D(-7.430936e-09, 0, -0.17, 0, 0.17, 0, 0.17, 0, -7.430936e-09, -0.23335682, -0.10905143, -0.0040944517)
 texto_boton = "VOLVER"
+
+[editable path="Cara_Trasera/Musica/Slider_Musica"]
+[editable path="Cara_Trasera/Efectos/Slider_FX"]
+[editable path="Cara_Izquierda/Brillo/Slider_Brillo"]
+[editable path="Cara_Izquierda/Contraste/Slider_Contraste"]
