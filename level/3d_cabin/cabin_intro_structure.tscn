@@ -22,7 +22,6 @@
 [ext_resource type="PackedScene" uid="uid://dlirrr6nwebrr" path="res://objects/props/TV_CRT.tscn" id="22_ufbth"]
 [ext_resource type="PackedScene" uid="uid://b5hfd8nr3b50k" path="res://objects/props/mini_table.tscn" id="23_1lwsv"]
 [ext_resource type="PackedScene" uid="uid://mxpamgq1llqc" path="res://objects/props/tv_table.tscn" id="23_a3yov"]
-[ext_resource type="PackedScene" uid="uid://c5xwjrq7h1m2p" path="res://assets/models_3d/VHS.tscn" id="23_i16pj"]
 [ext_resource type="Texture2D" uid="uid://qlmbh5ccqchk" path="res://assets/textures/Posters/game3.jpg" id="24_0stqn"]
 [ext_resource type="Texture2D" uid="uid://4o35ljrqu0pt" path="res://assets/textures/Posters/game4.jpg" id="25_hnaum"]
 [ext_resource type="Texture2D" uid="uid://b3bbolllgoxch" path="res://assets/textures/Posters/game5.jpg" id="26_ovth3"]
@@ -36,6 +35,8 @@
 [ext_resource type="Texture2D" uid="uid://lwux5blliw5a" path="res://assets/models_3d/Objects_Interior(Village)_Demo/Textures/Bookcase.png" id="33_hnaum"]
 [ext_resource type="Texture2D" uid="uid://ccsqw3kbr7ycb" path="res://assets/textures/Posters/movie4.jpg" id="34_ehn6b"]
 [ext_resource type="Texture2D" uid="uid://cjiya3af6ssrt" path="res://assets/textures/Posters/movie5.jpg" id="35_ovth3"]
+[ext_resource type="PackedScene" uid="uid://bbmvtbhgny10t" path="res://objects/interactables/vhs_tape.tscn" id="37_aiwdk"]
+[ext_resource type="PackedScene" uid="uid://c4hfqelxhnyat" path="res://objects/interactables/key.tscn" id="37_evuln"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v5b82"]
 albedo_color = Color(0.59575874, 0.5872641, 0.962526, 1)
@@ -425,13 +426,13 @@ transform = Transform3D(0.007048765, 0.0654598, 0.07526838, 3.1053724e-09, 0.075
 transform = Transform3D(-0.012799943, 0.06508323, 0.07483539, 1.5384056e-09, 0.07545607, -0.06562302, -0.09917743, -0.008399706, -0.0096583385, -4.6924543, 0.931008, 7.505572)
 
 [node name="PsxCasePal" type="MeshInstance3D" parent="Furniture" unique_id=643032468]
-transform = Transform3D(0.002836181, -0.0009777932, 4.2740717e-11, 0, -1.3113413e-10, -0.003, 0.0009777935, 0.0028361804, -1.2397339e-10, -4.5642786, 0.88280386, 7.286482)
+transform = Transform3D(0.002961233, 0.00048072916, -2.101333e-11, -5.992855e-18, -1.3113415e-10, -0.003, -0.0004807294, 0.0029612326, -1.294396e-10, -4.5874257, 0.88280386, 7.257215)
 mesh = ExtResource("17_ovth3")
 surface_material_override/2 = SubResource("StandardMaterial3D_so5ee")
 surface_material_override/3 = SubResource("StandardMaterial3D_dqh3j")
 
 [node name="PsxCasePal2" type="MeshInstance3D" parent="Furniture" unique_id=1678689231]
-transform = Transform3D(-0.002250738, -0.001954468, -0.00033798176, -0.00044549984, 1.2968017e-10, 0.0029667374, -0.0019327981, 0.0022759726, -0.00029023853, -4.6884804, 0.88280386, 7.179825)
+transform = Transform3D(-0.0028974076, -0.00064476824, -0.0004350889, -0.00044549984, 1.2968017e-10, 0.0029667374, -0.0006376193, 0.0029298926, -9.574814e-05, -4.747312, 0.88280386, 7.222029)
 mesh = ExtResource("17_ovth3")
 surface_material_override/0 = SubResource("StandardMaterial3D_5mss5")
 surface_material_override/2 = SubResource("StandardMaterial3D_so5ee")
@@ -445,9 +446,6 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5.3
 
 [node name="Player_01" parent="Furniture" unique_id=1922792998 instance=ExtResource("22_i16pj")]
 transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, -5.425863, 0.8859005, 7.5894547)
-
-[node name="Mesh_VHS_01" parent="Furniture" unique_id=1862911067 instance=ExtResource("23_i16pj")]
-transform = Transform3D(-0.2534021, 0, 1.9838818, 0, 2, 0, -1.9838818, 0, -0.2534021, -5.360444, 0.299851, 5.34099)
 
 [node name="Sillon" parent="Furniture" unique_id=842937594 instance=ExtResource("22_a3yov")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4260707, 0.3892215, 3.9506886)
@@ -528,5 +526,11 @@ shape = SubResource("BoxShape3D_sr0v5")
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="Boundaries/StaticBody3D" unique_id=780076340]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4958944, 0.59243774, 3.1316688)
 shape = SubResource("BoxShape3D_ovth3")
+
+[node name="VHS_Tape" parent="." unique_id=1005967043 instance=ExtResource("37_aiwdk")]
+transform = Transform3D(0.048535194, 0, 0.012013944, 0, 0.05, 0, -0.012013944, 0, 0.048535194, -5.2547727, 0.33849555, 5.4150047)
+
+[node name="Key" parent="." unique_id=507974105 instance=ExtResource("37_evuln")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -4.940296, 0.3111652, 5.4136167)
 
 [editable path="Jugador"]

@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://c2xr6tv7tiarr"]
-
-[ext_resource type="PackedScene" uid="uid://bbmtps01cdtwp" path="res://assets/models_3d/VHS-Tape.fbx" id="1_auy1m"]
-
-[node name="VHS-Tape" unique_id=1811958041 instance=ExtResource("1_auy1m")]

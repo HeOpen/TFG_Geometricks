@@ -5,43 +5,26 @@
 
 extends CharacterBody3D
 
-## Can we move around?
 @export var can_move : bool = true
-## Are we affected by gravity?
 @export var has_gravity : bool = true
-## Can we press to jump?
 @export var can_jump : bool = true
-## Can we hold to run?
 @export var can_sprint : bool = false
-## Can we press to enter freefly mode (noclip)?
 @export var can_freefly : bool = false
 
 @export_group("Speeds")
-## Look around rotation speed.
 @export var look_speed : float = 0.002
-## Normal speed.
 @export var base_speed : float = 7.0
-## Speed of jump.
 @export var jump_velocity : float = 4.5
-## How fast do we run?
 @export var sprint_speed : float = 10.0
-## How fast do we freefly?
 @export var freefly_speed : float = 25.0
 
 @export_group("Input Actions")
-## Name of Input Action to move Left.
 @export var input_left : String = "ui_left"
-## Name of Input Action to move Right.
 @export var input_right : String = "ui_right"
-## Name of Input Action to move Forward.
 @export var input_forward : String = "ui_up"
-## Name of Input Action to move Backward.
 @export var input_back : String = "ui_down"
-## Name of Input Action to Jump.
 @export var input_jump : String = "ui_accept"
-## Name of Input Action to Sprint.
 @export var input_sprint : String = "sprint"
-## Name of Input Action to toggle freefly mode.
 @export var input_freefly : String = "freefly"
 
 var mouse_captured : bool = false
@@ -49,14 +32,18 @@ var look_rotation : Vector2
 var move_speed : float = 0.0
 var freeflying : bool = false
 
-## IMPORTANT REFERENCES
 @onready var head: Node3D = $Head
 @onready var collider: CollisionShape3D = $Collider
+@onready var raycast = $Head/Camera3D/RayCast3D
+@onready var texto_centro = $CanvasLayer/Control/TextoCentro
+@onready var barra_inventario = $CanvasLayer/Control/InventarioUI
 
 func _ready() -> void:
 	check_input_mappings()
 	look_rotation.y = rotation.y
 	look_rotation.x = head.rotation.x
+	InventoryManager.inventario_actualizado.connect(_actualizar_ui_inventario)
+	texto_centro.text = ""
 
 func _unhandled_input(event: InputEvent) -> void:
 	# Mouse capturing
@@ -118,10 +105,6 @@ func _physics_process(delta: float) -> void:
 	# Use velocity to actually move
 	move_and_slide()
 
-
-## Rotate us to look around.
-## Base of controller rotates around y (left/right). Head rotates around x (up/down).
-## Modifies look_rotation based on rot_input, then resets basis and rotates by look_rotation.
 func rotate_look(rot_input : Vector2):
 	look_rotation.x -= rot_input.y * look_speed
 	look_rotation.x = clamp(look_rotation.x, deg_to_rad(-85), deg_to_rad(85))
@@ -130,7 +113,6 @@ func rotate_look(rot_input : Vector2):
 	rotate_y(look_rotation.y)
 	head.transform.basis = Basis()
 	head.rotate_x(look_rotation.x)
-
 
 func enable_freefly():
 	collider.disabled = true
@@ -141,18 +123,14 @@ func disable_freefly():
 	collider.disabled = false
 	freeflying = false
 
-
 func capture_mouse():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	mouse_captured = true
-
 
 func release_mouse():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	mouse_captured = false
 
-
-## Checks if some Input Actions haven't been created.
 ## Disables functionality accordingly.
 func check_input_mappings():
 	if can_move and not InputMap.has_action(input_left):
@@ -177,13 +155,12 @@ func check_input_mappings():
 		push_error("Freefly disabled. No InputAction found for input_freefly: " + input_freefly)
 		can_freefly = false
 
-###
-# Asegúrate de tener una referencia a tu nodo RayCast3D en el script del jugador
 @onready var interaction_raycast = $Head/Camera3D/RayCast3D
 
 func _input(event):
+	
 	# Cuando el jugador presione la tecla de interactuar (ej. 'E' o botón de acción)
-	if event.is_action_pressed("interact"):
+	if event.is_action_pressed("interactuar"):
 		print("Jugador pulsó E")
 		
 		# Verificamos si el raycast está colisionando con algo
@@ -194,6 +171,46 @@ func _input(event):
 			var hit_object = interaction_raycast.get_collider()
 			
 			# Verificamos si ese objeto tiene la función "interact" programada
-			if hit_object.has_method("interact"):
+			if hit_object.has_method("interactuar"):
 				# Llamamos a la función y le pasamos el propio jugador (self) como argumento
-				hit_object.interact(self)
+				hit_object.interactuar()
+
+func _process(_delta: float) -> void:
+	# 1. Comprobamos si el rayo detecta colisión física
+	if raycast.is_colliding():
+		var objeto = raycast.get_collider()
+		
+		# 2. VALIDACIÓN DE SEGURIDAD (El cortafuegos)
+		# Comprobamos que el objeto realmente existe en memoria antes de leerlo
+		if objeto != null:
+			
+			# 3. Validamos si pertenece a nuestro sistema de inventario
+			if objeto.is_in_group("interactuable"):
+				# Dibujamos el texto en la interfaz
+				texto_centro.text = objeto.texto_interfaz
+				
+				# 4. Capturamos la entrada del usuario
+				if Input.is_action_just_pressed("interactuar"):
+					objeto.interactuar()
+			else:
+				# Si choca con una pared normal, limpiamos el texto
+				texto_centro.text = ""
+		else:
+			# Si el objeto es un remanente destruido (null), limpiamos el texto
+			texto_centro.text = ""
+	else:
+		# Si el rayo apunta al vacío, limpiamos el texto
+		texto_centro.text = ""
+
+func _actualizar_ui_inventario() -> void:
+	# Borramos los iconos viejos
+	for hijo in barra_inventario.get_children():
+		hijo.queue_free()
+	
+	# Creamos un icono nuevo por cada ítem en la memoria global
+	for id_item in InventoryManager.items:
+		var icono = TextureRect.new()
+		icono.texture = InventoryManager.iconos_items[id_item]
+		icono.expand_mode = TextureRect.EXPAND_FIT_WIDTH
+		icono.custom_minimum_size = Vector2(64, 64)
+		barra_inventario.add_child(icono)

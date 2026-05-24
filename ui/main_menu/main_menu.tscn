@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://86rhbrl7ars4" path="res://objects/modular_architecture/MESH_log_column.tscn" id="11_s4pem"]
 [ext_resource type="PackedScene" uid="uid://dfodt17jrw78d" path="res://ui/main_menu/cubo_milenario.tscn" id="12_tf5ef"]
 [ext_resource type="AudioStream" uid="uid://wx7y6yorvv4g" path="res://assets/audio/efectos/button_sound.ogg" id="12_xio0d"]
+[ext_resource type="AudioStream" uid="uid://b7w5kxf5s7qta" path="res://assets/audio/Title_Geometricks.wav" id="13_tf5ef"]
 
 [sub_resource type="Sky" id="Sky_s4pem"]
 sky_material = ExtResource("8_s4pem")
@@ -92,41 +93,41 @@ shadow_mesh = SubResource("ArrayMesh_xq28v")
 [sub_resource type="BoxShape3D" id="BoxShape3D_6tl50"]
 size = Vector3(1.617157, 0.4807129, 0.043945313)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xio0d"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tf5ef"]
 resource_local_to_scene = true
 albedo_color = Color(0.41960785, 0.08627451, 0.08235294, 1)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_tf5ef"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_qao3l"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qao3l"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lknku"]
 resource_local_to_scene = true
 shading_mode = 0
-albedo_texture = SubResource("ViewportTexture_tf5ef")
+albedo_texture = SubResource("ViewportTexture_qao3l")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_lknku"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_u2jyo"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u2jyo"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bpbph"]
 resource_local_to_scene = true
 shading_mode = 0
-albedo_texture = SubResource("ViewportTexture_lknku")
+albedo_texture = SubResource("ViewportTexture_u2jyo")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_bpbph"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_qewnw"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qewnw"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_db6af"]
 resource_local_to_scene = true
 shading_mode = 0
-albedo_texture = SubResource("ViewportTexture_bpbph")
+albedo_texture = SubResource("ViewportTexture_qewnw")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_db6af"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_rkggs"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rkggs"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1bnxd"]
 resource_local_to_scene = true
 shading_mode = 0
-albedo_texture = SubResource("ViewportTexture_db6af")
+albedo_texture = SubResource("ViewportTexture_rkggs")
 
 [sub_resource type="Shader" id="Shader_xio0d"]
 code = "shader_type canvas_item;
@@ -288,10 +289,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0047240257, 0.7938652, 0.1
 text = "AUDIO"
 
 [node name="MeshInstance3D" parent="CuboMilenario/Cara_Derecha/Boton_Audio" parent_id_path=PackedInt32Array(1841013009, 1984489169) index="1" unique_id=1884674552]
-surface_material_override/0 = SubResource("StandardMaterial3D_xio0d")
+surface_material_override/0 = SubResource("StandardMaterial3D_tf5ef")
 
 [node name="MeshInstance3D" parent="CuboMilenario/Cara_Trasera/Musica/Slider_Musica" parent_id_path=PackedInt32Array(1841013009, 1573478637) index="1" unique_id=1810741111]
-material_override = SubResource("StandardMaterial3D_qao3l")
+material_override = SubResource("StandardMaterial3D_lknku")
 
 [node name="HSlider" parent="CuboMilenario/Cara_Trasera/Musica/Slider_Musica/SubViewport" parent_id_path=PackedInt32Array(1841013009, 1573478637, 172893491) index="0" unique_id=42036256]
 max_value = 2.0
@@ -299,10 +300,10 @@ step = 0.01
 value = 1.0
 
 [node name="MeshInstance3D" parent="CuboMilenario/Cara_Trasera/Efectos/Slider_FX" parent_id_path=PackedInt32Array(1841013009, 1355686957) index="1" unique_id=1810741111]
-material_override = SubResource("StandardMaterial3D_u2jyo")
+material_override = SubResource("StandardMaterial3D_bpbph")
 
 [node name="MeshInstance3D" parent="CuboMilenario/Cara_Izquierda/Brillo/Slider_Brillo" parent_id_path=PackedInt32Array(1841013009, 1709546785) index="1" unique_id=1810741111]
-material_override = SubResource("StandardMaterial3D_qewnw")
+material_override = SubResource("StandardMaterial3D_db6af")
 
 [node name="HSlider" parent="CuboMilenario/Cara_Izquierda/Brillo/Slider_Brillo/SubViewport" parent_id_path=PackedInt32Array(1841013009, 1709546785, 172893491) index="0" unique_id=42036256]
 min_value = 0.7
@@ -311,7 +312,7 @@ step = 0.1
 value = 0.7
 
 [node name="MeshInstance3D" parent="CuboMilenario/Cara_Izquierda/Contraste/Slider_Contraste" parent_id_path=PackedInt32Array(1841013009, 824964423) index="1" unique_id=1810741111]
-material_override = SubResource("StandardMaterial3D_rkggs")
+material_override = SubResource("StandardMaterial3D_1bnxd")
 
 [node name="HSlider" parent="CuboMilenario/Cara_Izquierda/Contraste/Slider_Contraste/SubViewport" parent_id_path=PackedInt32Array(1841013009, 824964423, 172893491) index="0" unique_id=42036256]
 min_value = 0.7
@@ -345,6 +346,10 @@ libraries/ = SubResource("AnimationLibrary_s4pem")
 
 [node name="SFX_Boton" type="AudioStreamPlayer" parent="." unique_id=445134269]
 stream = ExtResource("12_xio0d")
+bus = &"FX"
+
+[node name="SFX_Title" type="AudioStreamPlayer" parent="." unique_id=1330474654]
+stream = ExtResource("13_tf5ef")
 bus = &"FX"
 
 [connection signal="input_event" from="Logo+URL" to="." method="_input_event"]

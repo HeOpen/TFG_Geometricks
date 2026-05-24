@@ -19,11 +19,11 @@ albedo_texture = ExtResource("2_6bye6")
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 
 [node name="Cube" parent="." index="0" unique_id=1698866258]
-transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, 0.99999994, 0, -0.99999994, -4.3711385e-08, -0.026469253, 0.20945594, 0.14490482)
+transform = Transform3D(0.98003906, -8.689975e-09, 0.19880342, -0.19880342, -4.2838874e-08, 0.98003906, 0, -0.99999976, -4.371138e-08, -0.017642202, 0.112781554, 0.1449048)
 material_override = SubResource("StandardMaterial3D_o06dg")
 
 [node name="Cube_001" parent="." index="1" unique_id=227878866]
-transform = Transform3D(0.8849713, 2.0354005e-08, -0.46564534, 0.46564534, -3.8683318e-08, 0.88497114, 0, -0.99999976, -4.3711378e-08, -0.1359239, 0.33013514, 0.14460821)
+transform = Transform3D(0.88497126, 2.0354005e-08, -0.4656453, 0.4656453, -3.8683318e-08, 0.88497114, 0, -0.99999976, -4.3711367e-08, -0.08699667, 0.23346074, 0.1446082)
 material_override = SubResource("StandardMaterial3D_b37e7")
 
 [node name="Cylinder" parent="." index="2" unique_id=371754850]
@@ -31,5 +31,5 @@ transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, 0.99999994, 0, -0.99999994, 
 material_override = SubResource("StandardMaterial3D_p7h1b")
 
 [node name="Plane" parent="." index="3" unique_id=185687556]
-transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, 0.99999994, 0, -0.99999994, -4.3711385e-08, -0.20919004, 0.45142508, 0.21311954)
+transform = Transform3D(-0.99999994, 8.742276e-08, 3.8213705e-15, 0, -4.371138e-08, 0.9999998, 8.742277e-08, 0.9999998, 4.371138e-08, -0.84970564, 0.45142508, 0.21311952)
 material_override = SubResource("StandardMaterial3D_6uj6r")

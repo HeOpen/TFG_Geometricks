@@ -5,6 +5,7 @@ extends Node3D
 @onready var cubo = $CuboMilenario
 @onready var efecto_vhs = $CanvasLayer/VHS_Filter
 @onready var sfx_boton = $SFX_Boton
+@onready var sfx_narrator = $SFX_Title
 
 # --- Constantes de Valores por Defecto ---
 # El audio en Godot utiliza valores lineales (0.0 a 1.0) que luego convertimos a decibelios (dB)
@@ -81,6 +82,7 @@ func _on_boton_presionado(nombre_del_boton: String) -> void:
 		
 		# --- ACCIONES ---
 		"JUGAR":
+			sfx_narrator.play()
 			_empezar_juego()
 		"SALIR":
 			get_tree().quit()
