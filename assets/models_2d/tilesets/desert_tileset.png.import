@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3fy5qg3rnrc5"
-path="res://.godot/imported/farm_tileset.png-9fbfb5a0a6b81942942802bd48776dfa.ctex"
+uid="uid://cxialhfho3kaw"
+path="res://.godot/imported/desert_tileset.png-804929839133cabc7ad7c990b9c58c66.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/models_2d/farm_tileset.png"
-dest_files=["res://.godot/imported/farm_tileset.png-9fbfb5a0a6b81942942802bd48776dfa.ctex"]
+source_file="res://assets/models_2d/tilesets/desert_tileset.png"
+dest_files=["res://.godot/imported/desert_tileset.png-804929839133cabc7ad7c990b9c58c66.ctex"]
 
 [params]
 

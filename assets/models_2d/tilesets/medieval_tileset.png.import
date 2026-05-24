@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bct3kx32c6uiu"
-path="res://.godot/imported/blackwhite_tileset.png-b162009b1403280b5a5329e1b2bb9cb6.ctex"
+uid="uid://5b4u0j5xb10n"
+path="res://.godot/imported/medieval_tileset.png-16029b95a74f0b0942fddb18a9b1b12e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/models_2d/blackwhite_tileset.png"
-dest_files=["res://.godot/imported/blackwhite_tileset.png-b162009b1403280b5a5329e1b2bb9cb6.ctex"]
+source_file="res://assets/models_2d/tilesets/medieval_tileset.png"
+dest_files=["res://.godot/imported/medieval_tileset.png-16029b95a74f0b0942fddb18a9b1b12e.ctex"]
 
 [params]
 

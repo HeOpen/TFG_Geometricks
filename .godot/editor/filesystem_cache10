@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1779443601
+::res://::1779645061
 README.md::TextFile::-1::1779438352::0::1::::<><><>0<>0<><>::
 ::res://assets/::1779438352
 ::res://assets/fonts/::1779438352
@@ -10,18 +10,22 @@ floor_bathroom.tres::StandardMaterial3D::8043895564023148367::1779438352::0::1::
 floor_texture.tres::StandardMaterial3D::1682769579938587543::1779438352::0::1::::<><><>0<>0<><>::uid://dywqgv23iocba::::res://assets/textures/Horror Textures by Canvas Coven/Wooden/Wooden_13.png
 wall_bathroom.tres::StandardMaterial3D::7289863103777554998::1779438352::0::1::::<><><>0<>0<><>::uid://bu4bu2kgpcc8q::::res://assets/textures/Horror Textures by Canvas Coven/Stone tiles/Stone_tiles_01.png
 wall_texture.tres::StandardMaterial3D::2656685739118363588::1779438352::0::1::::<><><>0<>0<><>::uid://bldht0dkn70ib::::res://assets/textures/Horror Textures by Canvas Coven/Tree bark/Tree_Bark_04.png
-::res://assets/models_2d/::1779443613
-blackwhite_tileset.png::CompressedTexture2D::2567740734555059436::1779438352::1779443586::1::::<><><>0<>0<>f0855b2470723cbb2e38651e675a2fa9<>res://.godot/imported/blackwhite_tileset.png-b162009b1403280b5a5329e1b2bb9cb6.ctex::
-blackwhite_tileset.tres::TileSet::5190931809269289868::1779443586::0::1::::<><><>0<>0<><>::uid://bct3kx32c6uiu::::res://assets/models_2d/blackwhite_tileset.png
+::res://assets/models_2d/::1779645061
+blackwhite_tileset.tres::TileSet::5190931809269289868::1779645061::0::1::::<><><>0<>0<><>::uid://bct3kx32c6uiu::::res://assets/models_2d/tilesets/blackwhite_tileset.png<>uid://b7ynmcovxfwoh::::res://assets/models_2d/tilesets/forge_tileset.png<>uid://bqk44spsqu8um::::res://assets/models_2d/tilesets/dungeon_tileset.png<>uid://5b4u0j5xb10n::::res://assets/models_2d/tilesets/medieval_tileset.png
 bola.png::CompressedTexture2D::2255756428502314899::1779438352::1779439239::1::::<><><>0<>0<>0a26fb2777515b152ee685d6ac4d600b<>res://.godot/imported/bola.png-a6bc1e756af4fd96a81b87c857ab8651.ctex::
 cuadrado.png::CompressedTexture2D::6733080221896764993::1779438352::1779439238::1::::<><><>0<>0<>86d4b8203b5af28b2fcda9a276393e01<>res://.godot/imported/cuadrado.png-fd3f34edbfa47d63029efe3cb007c8c2.ctex::
-dungeon_tileset.png::CompressedTexture2D::3531899509688099160::1779443613::1779443613::1::::<><><>0<>0<>9962086607bc34b39553e62ae3f52aff<>res://.godot/imported/dungeon_tileset.png-0f693c3e2ef2a1c37fe88b16dcb5f640.ctex::
-farm_tileset.png::CompressedTexture2D::6749962510602818846::1779443613::1779443613::1::::<><><>0<>0<>ae9ffc98e0bfab4c51aaa73fd1b59a7b<>res://.godot/imported/farm_tileset.png-9fbfb5a0a6b81942942802bd48776dfa.ctex::
-forge_tileset.png::CompressedTexture2D::4682819624299458931::1779443613::1779443613::1::::<><><>0<>0<>94088affecd0ca743f0f558e2812a6fa<>res://.godot/imported/forge_tileset.png-f3080402105f3f11e5210a142bcc47df.ctex::
 Porton.png::CompressedTexture2D::8070749885307066656::1779438352::1779439239::1::::<><><>0<>0<>6e523c88602c7c7937b1d897f84535b5<>res://.godot/imported/Porton.png-214d9d833081d826aeb3ce2406081ebb.ctex::
 Pulsador.png::CompressedTexture2D::1543751628548346276::1779438352::1779439239::1::::<><><>0<>0<>c4a3b9e2abbb930384d136aafffedb1d<>res://.godot/imported/Pulsador.png-0da35c72a8bffb31c7eece9a6468b732.ctex::
 rectangulo.png::CompressedTexture2D::2626917537414573482::1779438352::1779439239::1::::<><><>0<>0<>5371b00f0141e42bc312283a822ea668<>res://.godot/imported/rectangulo.png-bab0ce729d48f1f1dd0167501aa05081.ctex::
 triangulo.png::CompressedTexture2D::5027982675131569577::1779438352::1779439238::1::::<><><>0<>0<>e756fcd6b3528998c86237032d15725d<>res://.godot/imported/triangulo.png-68a28159298e69925de1d8c6da03a49b.ctex::
+::res://assets/models_2d/tilesets/::1779645061
+blackwhite_tileset.png::CompressedTexture2D::2567740734555059436::1779438352::1779645061::1::::<><><>0<>0<>92c1545f00598a8d4bec951826c59945<>res://.godot/imported/blackwhite_tileset.png-ad159d953e575ab4971685d7c22636ca.ctex::
+desert_tileset.png::CompressedTexture2D::6403719812551720862::1779643864::1779645054::1::::<><><>0<>0<>fe24fac0421f6e467a63c396ef5f4abe<>res://.godot/imported/desert_tileset.png-804929839133cabc7ad7c990b9c58c66.ctex::
+dungeon_tileset.png::CompressedTexture2D::3531899509688099160::1779443613::1779645054::1::::<><><>0<>0<>db118dddce7e7c52f74e225f792e0c7f<>res://.godot/imported/dungeon_tileset.png-90b788268835e57482eadb81f05e0979.ctex::
+farm_tileset.png::CompressedTexture2D::6749962510602818846::1779443613::1779645054::1::::<><><>0<>0<>c674a2920f98853e303eea09e48adfc7<>res://.godot/imported/farm_tileset.png-3bf80fe6633e79d7b4385e2882780084.ctex::
+forge_tileset.png::CompressedTexture2D::4682819624299458931::1779443613::1779645054::1::::<><><>0<>0<>04b12b550543ba58ca189fb4689a98ce<>res://.godot/imported/forge_tileset.png-5944d0cc8cecfc799b6ab76a7ac1c147.ctex::
+ice_tileset.png::CompressedTexture2D::1580406763016782555::1779643846::1779645054::1::::<><><>0<>0<>cc1cd25d0fbdb2254a59fa656e7d4b2d<>res://.godot/imported/ice_tileset.png-bc94df4096de9099c0253ff56c0b89a4.ctex::
+medieval_tileset.png::CompressedTexture2D::2109527523944218687::1779643789::1779645054::1::::<><><>0<>0<>7701a3606b67fb19219a9c311917d6d9<>res://.godot/imported/medieval_tileset.png-16029b95a74f0b0942fddb18a9b1b12e.ctex::
 ::res://assets/models_3d/::1779439238
 box.tscn::PackedScene::6907884603874962486::1779438352::0::1::::<><><>0<>0<><>::uid://7mkl1tktnqty::::res://assets/models_3d/Street Furniture/Box/Box.fbx<>uid://dn8xrj83e0w6n::::res://assets/models_3d/Street Furniture/Box/Box.png
 closed_lock.tscn::PackedScene::5753769379142527023::1779438352::0::1::::<><><>0<>0<><>::uid://ddih6je0kbdhx::::res://assets/models_3d/Street Furniture/OldLock/OldLock.fbx<>uid://dlhgp6rn2d5p2::::res://assets/models_3d/Street Furniture/OldLock/OldLock.png
@@ -1138,15 +1142,16 @@ nivel_1.tscn::PackedScene::7991115282500850150::1779438352::0::1::::<><><>0<>0<>
 oscuridad_env.tres::Environment::2823327530011802407::1779438352::0::1::::<><><>0<>0<><>::
 pesadilla_env.tres::Environment::8922087331637343666::1779438352::0::1::::<><><>0<>0<><>::
 sunset.tres::Environment::6065727269450365716::1779438352::0::1::::<><><>0<>0<><>::
-::res://level/scenes_2D/::1779440288
-bola.tscn::PackedScene::1149155734204807244::1779438352::0::1::::<><><>0<>0<><>::uid://dd0fbsjdvxe5t::::res://scripts_2d/bola.gd<>uid://7ex8jrbooywx::::res://assets/models_2d/bola.png
-cubo.tscn::PackedScene::7425847880565258569::1779440288::0::1::::<><><>0<>0<><>::uid://bmanagercu3d0::::res://scripts_2d/cubo_manager.gd<>uid://c47k8vq3ctb5o::::res://level/scenes_2D/caras/cara_z0.tscn<>uid://di24f576o320x::::res://level/scenes_2D/caras/cara_x0.tscn<>uid://nkvrgnaj3gts::::res://level/scenes_2D/caras/cara_z1.tscn<>uid://e1ig483i6mj0::::res://level/scenes_2D/caras/cara_x1.tscn
+::res://level/scenes_2D/::1779456132
+bola.tscn::PackedScene::1149155734204807244::1779454916::0::1::::<><><>0<>0<><>::uid://dd0fbsjdvxe5t::::res://scripts_2d/bola.gd<>uid://7ex8jrbooywx::::res://assets/models_2d/bola.png
+cubo.tscn::PackedScene::7425847880565258569::1779456131::0::1::::<><><>0<>0<><>::uid://bmanagercu3d0::::res://scripts_2d/cubo_manager.gd<>uid://bwv258yiba267::::res://level/scenes_2D/caras/cara_z0.tscn<>uid://di24f576o320x::::res://level/scenes_2D/caras/cara_x0.tscn<>uid://nkvrgnaj3gts::::res://level/scenes_2D/caras/cara_z1.tscn<>uid://e1ig483i6mj0::::res://level/scenes_2D/caras/cara_x1.tscn
 porton.tscn::PackedScene::3512640094222486879::1779438352::0::1::::<><><>0<>0<><>::uid://dm8scouwfn4jc::::res://assets/models_2d/Porton.png<>uid://ckiqiba5y8o56::::res://scripts_2d/porton.gd
 pulsador.tscn::PackedScene::3304937478570312521::1779438352::0::1::::<><><>0<>0<><>::uid://cf6m8gqsytqmx::::res://scripts_2d/pulsador.gd<>uid://v82mmr5v37hg::::res://assets/models_2d/Pulsador.png
-::res://level/scenes_2D/caras/::1779443601
-cara_x0.tscn::PackedScene::7778282347865513205::1779443601::0::1::::<><><>0<>0<><>::uid://bh3gor0jb6444::::res://scripts_2d/cara_base.gd<>uid://cf7r5hdmtjcns::::res://assets/models_2d/blackwhite_tileset.tres
-cara_x1.tscn::PackedScene::334927222303059891::1779443601::0::1::::<><><>0<>0<><>::uid://bh3gor0jb6444::::res://scripts_2d/cara_base.gd<>uid://cf7r5hdmtjcns::::res://assets/models_2d/blackwhite_tileset.tres
-cara_z0.tscn::PackedScene::6875045151128417478::1779443601::0::1::::<><><>0<>0<><>::uid://bh3gor0jb6444::::res://scripts_2d/cara_base.gd<>uid://cf7r5hdmtjcns::::res://assets/models_2d/blackwhite_tileset.tres<>uid://qmworwyof6f5::::res://level/scenes_2D/bola.tscn<>uid://bnc63qb0lo178::::res://level/scenes_2D/pulsador.tscn<>uid://bqbsw0shrcw5l::::res://level/scenes_2D/porton.tscn
+::res://level/scenes_2D/caras/::1779645061
+cara_x0.tscn::PackedScene::7778282347865513205::1779645061::0::1::::<><><>0<>0<><>::uid://bh3gor0jb6444::::res://scripts_2d/cara_base.gd<>uid://bct3kx32c6uiu::::res://assets/models_2d/tilesets/blackwhite_tileset.png<>uid://c3fy5qg3rnrc5::::res://assets/models_2d/tilesets/farm_tileset.png
+cara_x1.tscn::PackedScene::334927222303059891::1779454012::0::1::::<><><>0<>0<><>::uid://bh3gor0jb6444::::res://scripts_2d/cara_base.gd<>uid://cf7r5hdmtjcns::::res://assets/models_2d/blackwhite_tileset.tres
+cara_z0.tscn::PackedScene::3975621879897622970::1779643353::0::1::::<><><>0<>0<><>::uid://bh3gor0jb6444::::res://scripts_2d/cara_base.gd<>uid://cf7r5hdmtjcns::::res://assets/models_2d/blackwhite_tileset.tres<>uid://qmworwyof6f5::::res://level/scenes_2D/bola.tscn
+cara_z1.tscn::PackedScene::934404495415191136::1779644956::0::1::::<><><>0<>0<><>::uid://bh3gor0jb6444::::res://scripts_2d/cara_base.gd<>uid://cf7r5hdmtjcns::::res://assets/models_2d/blackwhite_tileset.tres
 ::res://objects/::1779438352
 ::res://objects/modular_architecture/::1779438352
 3x2.tscn::PackedScene::7456993607969459641::1779438352::0::1::::<><><>0<>0<><>::uid://cor5b5oxlam32::::res://objects/modular_architecture/MESH_log_100wall.tscn<>uid://de3xteiwir712::::res://objects/modular_architecture/MESH_log_door.tscn<>uid://8fq1gfnfnl5h::::res://objects/modular_architecture/MESH_log_75wall.tscn
@@ -1185,8 +1190,8 @@ trash_and_debris.tscn::PackedScene::8797921472107022310::1779438352::0::1::::<><
 TV_CRT.tscn::PackedScene::7948917841909658935::1779438352::0::1::::<><><>0<>0<><>::uid://sswm1qk82kat::::res://assets/models_3d/PSX - Assets/Textures/Electronics.jpg
 tv_table.tscn::PackedScene::890658207202445766::1779438352::0::1::::<><><>0<>0<><>::uid://m5dorkqjugh2::::res://assets/models_3d/Objects_Interior(Village)_Demo/Textures/Chest_drawers_05.png
 wall_clock.tscn::PackedScene::1809883548771299079::1779438352::0::1::::<><><>0<>0<><>::uid://c5ofiyecgwvub::::res://assets/models_3d/Clocks by T4Kum/MODELS/Clocks_0.png
-::res://scripts_2d/::1779440288
-bola.gd::GDScript::7421744356091453255::1779438352::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://scripts_2d/::1779454916
+bola.gd::GDScript::7421744356091453255::1779454916::0::1::::<>CharacterBody2D<><>0<>0<><>::
 cara_base.gd::GDScript::2935935401272839763::1779440015::0::1::::<>Node2D<><>0<>0<><>::
 cubo_manager.gd::GDScript::3229476450350665679::1779440288::0::1::::<>Node3D<><>0<>0<><>::
 porton.gd::GDScript::5492230637954305947::1779438352::0::1::::<>AnimatableBody2D<><>0<>0<><>::

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7ynmcovxfwoh"
-path="res://.godot/imported/forge_tileset.png-f3080402105f3f11e5210a142bcc47df.ctex"
+uid="uid://wrtclf2cjvpb"
+path="res://.godot/imported/ice_tileset.png-bc94df4096de9099c0253ff56c0b89a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/models_2d/forge_tileset.png"
-dest_files=["res://.godot/imported/forge_tileset.png-f3080402105f3f11e5210a142bcc47df.ctex"]
+source_file="res://assets/models_2d/tilesets/ice_tileset.png"
+dest_files=["res://.godot/imported/ice_tileset.png-bc94df4096de9099c0253ff56c0b89a4.ctex"]
 
 [params]
 
