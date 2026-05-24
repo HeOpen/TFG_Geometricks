@@ -9,9 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dlirrr6nwebrr" path="res://objects/props/TV_CRT.tscn" id="11_2ftla"]
 [ext_resource type="PackedScene" uid="uid://dc5fhfo0k70js" path="res://assets/models_3d/PS1_Controller/scene.gltf" id="11_2t2gr"]
 [ext_resource type="ArrayMesh" uid="uid://dst2dhge6e67m" path="res://assets/models_3d/PSX_Case/Models/psx_case_PAL.obj" id="12_t82o6"]
-[ext_resource type="PackedScene" uid="uid://baktdh2euejty" path="res://assets/models_3d/VHS_player.tscn" id="12_wygva"]
 [ext_resource type="Texture2D" uid="uid://da2n81v7s8i6i" path="res://assets/models_3d/PSX_Case/PSX_Case_Front.png" id="13_fm63u"]
-[ext_resource type="PackedScene" uid="uid://c5xwjrq7h1m2p" path="res://assets/models_3d/VHS.tscn" id="13_lbmob"]
 [ext_resource type="Texture2D" uid="uid://ce5p6wde87j5" path="res://assets/models_3d/PSX_Case/PSX_Case_Back.png" id="14_lfedq"]
 [ext_resource type="PackedScene" uid="uid://b5bbvocoge220" path="res://objects/props/sillon.tscn" id="15_ysnjt"]
 [ext_resource type="PackedScene" uid="uid://mxpamgq1llqc" path="res://objects/props/tv_table.tscn" id="16_ffeji"]
@@ -24,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://suqn0jysg4u3" path="res://assets/textures/Posters/misc1.jpg" id="22_k3y4f"]
 [ext_resource type="Texture2D" uid="uid://bahx1v2ipushh" path="res://assets/textures/Posters/movie3.jpg" id="23_wygva"]
 [ext_resource type="Texture2D" uid="uid://d2cqsu8tigumb" path="res://assets/textures/Posters/movie2.jpg" id="24_lbmob"]
+[ext_resource type="PackedScene" uid="uid://bl7vcbpqgagg0" path="res://objects/interactables/vhs_player.tscn" id="25_2ftla"]
 [ext_resource type="Texture2D" uid="uid://ccsqw3kbr7ycb" path="res://assets/textures/Posters/movie4.jpg" id="25_le5ns"]
 [ext_resource type="Texture2D" uid="uid://cjiya3af6ssrt" path="res://assets/textures/Posters/movie5.jpg" id="26_wygva"]
 
@@ -300,6 +299,9 @@ albedo_texture = ExtResource("25_le5ns")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_prbld"]
 albedo_texture = ExtResource("26_wygva")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_2ftla"]
+size = Vector3(1, 1.6349487, 1)
+
 [node name="LivingRoom" type="Node3D" unique_id=1620067552]
 
 [node name="Furniture" type="Node3D" parent="." unique_id=457295960]
@@ -347,14 +349,7 @@ surface_material_override/3 = SubResource("StandardMaterial3D_wygva")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3062606, 0.07639535, 5.4182334)
 
 [node name="TV" parent="Furniture" unique_id=2025396337 instance=ExtResource("11_2ftla")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5.378168, 1.3685726, 7.5935397)
-
-[node name="Mesh_VHSPlayer_01" parent="Furniture" unique_id=1922792998 instance=ExtResource("12_wygva")]
-transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, -5.425863, 0.8859005, 7.5894547)
-
-[node name="Mesh_VHS_01" parent="Furniture" unique_id=1862911067 instance=ExtResource("13_lbmob")]
-transform = Transform3D(-0.2534021, 0, 1.9838818, 0, 2, 0, -1.9838818, 0, -0.2534021, -5.360444, 0.299851, 5.34099)
-visible = false
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5.378168, 1.288709, 7.5935397)
 
 [node name="Sillon" parent="Furniture" unique_id=842937594 instance=ExtResource("15_ysnjt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4260707, 0.41521287, 3.9506886)
@@ -415,3 +410,10 @@ texture = ExtResource("25_le5ns")
 transform = Transform3D(-3.496911e-09, 0, -0.08, 0, 0.08, 0, 0.08, 0, -3.496911e-09, 1.4937006, 1.1310415, -0.8091063)
 material_override = SubResource("StandardMaterial3D_prbld")
 texture = ExtResource("26_wygva")
+
+[node name="VHS_Player" parent="." unique_id=1601522618 instance=ExtResource("25_2ftla")]
+transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, -1.7294402, 0.8694469, 2.3828373)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1807171896]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.532574, 0.7073059, 2.0823336)
+shape = SubResource("BoxShape3D_2ftla")

@@ -18,7 +18,6 @@
 [ext_resource type="PackedScene" uid="uid://5mgb2l278x3l" path="res://entities/player_3d/player_3d.tscn" id="20_jcjsx"]
 [ext_resource type="PackedScene" uid="uid://de3xteiwir712" path="res://objects/modular_architecture/MESH_log_door.tscn" id="21_dgrx3"]
 [ext_resource type="PackedScene" uid="uid://b5bbvocoge220" path="res://objects/props/sillon.tscn" id="22_a3yov"]
-[ext_resource type="PackedScene" uid="uid://baktdh2euejty" path="res://assets/models_3d/VHS_player.tscn" id="22_i16pj"]
 [ext_resource type="PackedScene" uid="uid://dlirrr6nwebrr" path="res://objects/props/TV_CRT.tscn" id="22_ufbth"]
 [ext_resource type="PackedScene" uid="uid://b5hfd8nr3b50k" path="res://objects/props/mini_table.tscn" id="23_1lwsv"]
 [ext_resource type="PackedScene" uid="uid://mxpamgq1llqc" path="res://objects/props/tv_table.tscn" id="23_a3yov"]
@@ -34,9 +33,12 @@
 [ext_resource type="Texture2D" uid="uid://bahx1v2ipushh" path="res://assets/textures/Posters/movie3.jpg" id="32_ovth3"]
 [ext_resource type="Texture2D" uid="uid://lwux5blliw5a" path="res://assets/models_3d/Objects_Interior(Village)_Demo/Textures/Bookcase.png" id="33_hnaum"]
 [ext_resource type="Texture2D" uid="uid://ccsqw3kbr7ycb" path="res://assets/textures/Posters/movie4.jpg" id="34_ehn6b"]
+[ext_resource type="AudioStream" uid="uid://bdmtqwq14pbne" path="res://assets/audio/Narrador_Introduccion.wav" id="35_aiwdk"]
 [ext_resource type="Texture2D" uid="uid://cjiya3af6ssrt" path="res://assets/textures/Posters/movie5.jpg" id="35_ovth3"]
+[ext_resource type="PackedScene" uid="uid://bl7vcbpqgagg0" path="res://objects/interactables/vhs_player.tscn" id="37_2x7qg"]
 [ext_resource type="PackedScene" uid="uid://bbmvtbhgny10t" path="res://objects/interactables/vhs_tape.tscn" id="37_aiwdk"]
-[ext_resource type="PackedScene" uid="uid://c4hfqelxhnyat" path="res://objects/interactables/key.tscn" id="37_evuln"]
+[ext_resource type="Script" uid="uid://d2gxhlgh3bi5i" path="res://level/3d_cabin/gestor_intro.gd" id="37_evuln"]
+[ext_resource type="PackedScene" uid="uid://fywlwgjbt75w" path="res://ui/hud/fade_transition.tscn" id="39_2x7qg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v5b82"]
 albedo_color = Color(0.59575874, 0.5872641, 0.962526, 1)
@@ -331,7 +333,7 @@ size = Vector3(0.8676758, 2.1848755, 1.6756592)
 script = ExtResource("1_ehn6b")
 
 [node name="Jugador" parent="." unique_id=2146257891 instance=ExtResource("20_jcjsx")]
-transform = Transform3D(-0.5088911, 0, 0.8608309, 0, 1, 0, -0.8608309, 0, -0.5088911, -3.2999835, -0.26503158, 3.025759)
+transform = Transform3D(-0.5088911, 0, 0.8608309, 0, 1, 0, -0.8608309, 0, -0.5088911, -3.1090908, -0.26503158, 2.4159377)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=682652495]
 transform = Transform3D(-0.66147554, -0.5663326, -0.49164817, -0.4740645, -0.19223088, 0.8592498, -0.5811311, 0.8014456, -0.14132214, -8.065992, 2.5518427, 4.458272)
@@ -417,13 +419,13 @@ transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1
 mesh = SubResource("ArrayMesh_jwsuf")
 
 [node name="PS1_Console" parent="Furniture" unique_id=1664131362 instance=ExtResource("14_sr0v5")]
-transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, -4.8452406, 0.9220549, 7.6313415)
+transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, -4.925654, 0.9220549, 7.6301923)
 
 [node name="PS1_Controller" parent="Furniture" unique_id=1495225644 instance=ExtResource("15_0stqn")]
-transform = Transform3D(0.007048765, 0.0654598, 0.07526838, 3.1053724e-09, 0.07545607, -0.06562302, -0.099751264, 0.0046256166, 0.0053187218, -4.703427, 0.92838585, 7.7413955)
+transform = Transform3D(0.007048765, 0.0654598, 0.07526838, 3.1053724e-09, 0.07545607, -0.06562302, -0.099751264, 0.0046256166, 0.0053187218, -4.78384, 0.92838585, 7.7402463)
 
 [node name="PS1_Controller2" parent="Furniture" unique_id=136381317 instance=ExtResource("15_0stqn")]
-transform = Transform3D(-0.012799943, 0.06508323, 0.07483539, 1.5384056e-09, 0.07545607, -0.06562302, -0.09917743, -0.008399706, -0.0096583385, -4.6924543, 0.931008, 7.505572)
+transform = Transform3D(-0.012799943, 0.06508323, 0.07483539, 1.5384056e-09, 0.07545607, -0.06562302, -0.09917743, -0.008399706, -0.0096583385, -4.7728677, 0.931008, 7.5044227)
 
 [node name="PsxCasePal" type="MeshInstance3D" parent="Furniture" unique_id=643032468]
 transform = Transform3D(0.002961233, 0.00048072916, -2.101333e-11, -5.992855e-18, -1.3113415e-10, -0.003, -0.0004807294, 0.0029612326, -1.294396e-10, -4.5874257, 0.88280386, 7.257215)
@@ -440,12 +442,6 @@ surface_material_override/3 = SubResource("StandardMaterial3D_dqh3j")
 
 [node name="Table" parent="Furniture" unique_id=1367461039 instance=ExtResource("23_1lwsv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3062606, 0.06422283, 5.4182334)
-
-[node name="TV" parent="Furniture" unique_id=2025396337 instance=ExtResource("22_ufbth")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5.378168, 1.3685726, 7.5935397)
-
-[node name="Player_01" parent="Furniture" unique_id=1922792998 instance=ExtResource("22_i16pj")]
-transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, -5.425863, 0.8859005, 7.5894547)
 
 [node name="Sillon" parent="Furniture" unique_id=842937594 instance=ExtResource("22_a3yov")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4260707, 0.3892215, 3.9506886)
@@ -527,10 +523,31 @@ shape = SubResource("BoxShape3D_sr0v5")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4958944, 0.59243774, 3.1316688)
 shape = SubResource("BoxShape3D_ovth3")
 
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Boundaries/StaticBody3D" unique_id=397405265]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.27031, 0.59243774, 7.608557)
+shape = SubResource("BoxShape3D_ovth3")
+
+[node name="TV" parent="." unique_id=2025396337 instance=ExtResource("22_ufbth")]
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, -5.4119687, 1.2873743, 7.5935397)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="TV" unique_id=127783691]
+stream = ExtResource("35_aiwdk")
+
 [node name="VHS_Tape" parent="." unique_id=1005967043 instance=ExtResource("37_aiwdk")]
 transform = Transform3D(0.048535194, 0, 0.012013944, 0, 0.05, 0, -0.012013944, 0, 0.048535194, -5.2547727, 0.33849555, 5.4150047)
 
-[node name="Key" parent="." unique_id=507974105 instance=ExtResource("37_evuln")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -4.940296, 0.3111652, 5.4136167)
+[node name="VHS_Player" parent="." unique_id=1601522618 instance=ExtResource("37_2x7qg")]
+transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, -5.4550533, 0.8694469, 7.5103207)
+
+[node name="GestorIntro" type="Node3D" parent="." unique_id=1340781949 node_paths=PackedStringArray("audio_noticias", "cinta_vhs")]
+script = ExtResource("37_evuln")
+audio_noticias = NodePath("../TV/AudioStreamPlayer3D")
+cinta_vhs = NodePath("../VHS_Tape")
+
+[node name="CanvasLayer" parent="." unique_id=1478569276 instance=ExtResource("39_2x7qg")]
+
+[node name="ColorRect" parent="CanvasLayer" index="0" unique_id=166991014]
+metadata/_edit_use_anchors_ = true
 
 [editable path="Jugador"]
+[editable path="CanvasLayer"]
