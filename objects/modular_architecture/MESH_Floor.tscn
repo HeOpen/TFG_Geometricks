@@ -1,12 +1,29 @@
-[gd_scene format=3 uid="uid://bn3v0umcbf8ww"]
+[gd_scene format=4 uid="uid://bn3v0umcbf8ww"]
 
 [ext_resource type="Material" uid="uid://x8e77kr2c664" path="res://assets/materials/floor_texture.tres" id="1_rjeav"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_rjeav"]
+_surfaces = [{
+"aabb": AABB(-4, -0.1, -4, 8, 0.2, 8),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("AACAwM3MzL0AAIBAAACAwM3MzL0AAIDAAACAwM3MzD0AAIDAAACAQM3MzL0AAIDAAACAwM3MzL0AAIDAAACAwM3MzL0AAIBAAACAwM3MzD0AAIDAAACAwM3MzL0AAIDAAACAQM3MzL0AAIDAAACAwM3MzD0AAIDAAACAwM3MzD0AAIBAAACAwM3MzL0AAIBAAACAwM3MzL0AAIBAAACAwM3MzD0AAIBAAACAQM3MzD0AAIBAAACAQM3MzD0AAIBAAACAwM3MzD0AAIBAAACAwM3MzD0AAIDAAACAwM3MzL0AAIBAAACAQM3MzL0AAIBAAACAQM3MzL0AAIDAAACAQM3MzD0AAIBAAACAQM3MzL0AAIBAAACAwM3MzL0AAIBAAACAQM3MzL0AAIDAAACAQM3MzL0AAIBAAACAQM3MzD0AAIBAAACAQM3MzL0AAIDAAACAQM3MzD0AAIDAAACAwM3MzD0AAIDAAACAwM3MzD0AAIDAAACAQM3MzD0AAIDAAACAQM3MzD0AAIBAAACAQM3MzD0AAIBAAACAQM3MzD0AAIDAAACAQM3MzL0AAIDAAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
+}]
 
 [node name="Floor" type="Node3D" unique_id=1797847355]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=203579885]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+visible = false
 material_override = ExtResource("1_rjeav")
 operation = 2
 use_collision = true
-size = Vector3(8, 0.01, 8)
+size = Vector3(8, 0.2, 8)
+
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="." unique_id=1506428286]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+material_override = ExtResource("1_rjeav")
+mesh = SubResource("ArrayMesh_rjeav")

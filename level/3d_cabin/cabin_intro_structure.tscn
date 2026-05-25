@@ -12,9 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://cy1cgd7y8pc0d" path="res://assets/models_3d/PSX - Assets/Textures/Plastic_02.jpg" id="11_36acl"]
 [ext_resource type="PackedScene" uid="uid://d0s6qr3e0xma3" path="res://assets/models_3d/PS1_Console/scene.gltf" id="14_sr0v5"]
 [ext_resource type="PackedScene" uid="uid://dc5fhfo0k70js" path="res://assets/models_3d/PS1_Controller/scene.gltf" id="15_0stqn"]
-[ext_resource type="ArrayMesh" uid="uid://dst2dhge6e67m" path="res://assets/models_3d/PSX_Case/Models/psx_case_PAL.obj" id="17_ovth3"]
-[ext_resource type="Texture2D" uid="uid://da2n81v7s8i6i" path="res://assets/models_3d/PSX_Case/PSX_Case_Front.png" id="18_ehn6b"]
-[ext_resource type="Texture2D" uid="uid://ce5p6wde87j5" path="res://assets/models_3d/PSX_Case/PSX_Case_Back.png" id="19_evuln"]
 [ext_resource type="PackedScene" uid="uid://5mgb2l278x3l" path="res://entities/player_3d/player_3d.tscn" id="20_jcjsx"]
 [ext_resource type="PackedScene" uid="uid://de3xteiwir712" path="res://objects/modular_architecture/MESH_log_door.tscn" id="21_dgrx3"]
 [ext_resource type="PackedScene" uid="uid://b5bbvocoge220" path="res://objects/props/sillon.tscn" id="22_a3yov"]
@@ -38,6 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://bl7vcbpqgagg0" path="res://objects/interactables/vhs_player.tscn" id="37_2x7qg"]
 [ext_resource type="PackedScene" uid="uid://bbmvtbhgny10t" path="res://objects/interactables/vhs_tape.tscn" id="37_aiwdk"]
 [ext_resource type="Script" uid="uid://d2gxhlgh3bi5i" path="res://level/3d_cabin/gestor_intro.gd" id="37_evuln"]
+[ext_resource type="PackedScene" uid="uid://mxmnuak3dbs0" path="res://objects/props/PSX_Case.tscn" id="37_per1h"]
 [ext_resource type="PackedScene" uid="uid://fywlwgjbt75w" path="res://ui/hud/fade_transition.tscn" id="39_2x7qg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v5b82"]
@@ -281,15 +279,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0stqn")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_so5ee"]
-albedo_texture = ExtResource("18_ehn6b")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dqh3j"]
-albedo_texture = ExtResource("19_evuln")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5mss5"]
-albedo_texture = ExtResource("19_evuln")
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ia0qc"]
 albedo_texture = ExtResource("25_hnaum")
 
@@ -328,6 +317,55 @@ size = Vector3(0.64941406, 1.2645264, 1.6940918)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ovth3"]
 size = Vector3(0.8676758, 2.1848755, 1.6756592)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_evuln"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bxrs5"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_evuln")
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_2t08j"]
+resource_local_to_scene = true
+file = "res://assets/textures/vhs_static.ogv"
+
+[sub_resource type="Shader" id="Shader_thnxg"]
+code = "shader_type canvas_item;
+
+// Variables 'uniform'. Exportan estos valores al Inspector de Godot 
+// para que el diseñador de niveles pueda ajustarlos sin modificar código.
+uniform sampler2D screen_texture : hint_screen_texture, filter_linear_mipmap;
+uniform float scanline_count : hint_range(0.0, 1000.0) = 250.0;
+uniform float chromatic_aberration : hint_range(0.0, 0.05) = 0.005;
+
+// Función fragment() - Se ejecuta una vez por cada píxel de la pantalla en cada fotograma
+void fragment() {
+    // SCREEN_UV representa las coordenadas 2D absolutas de la pantalla (de 0.0 a 1.0)
+    vec2 uv = SCREEN_UV;
+
+    // 1. ABERRACIÓN CROMÁTICA
+    // Desplazamos las coordenadas de lectura de los canales Rojo (R) y Azul (B) en el eje X
+    float r = texture(screen_texture, uv + vec2(chromatic_aberration, 0.0)).r;
+    float g = texture(screen_texture, uv).g;
+    float b = texture(screen_texture, uv - vec2(chromatic_aberration, 0.0)).b;
+    vec3 color = vec3(r, g, b);
+
+    // 2. SCANLINES (Líneas de tubo catódico)
+    // Generamos una onda senoidal estática multiplicada por la altura del píxel (uv.y)
+    float scanline = sin(uv.y * scanline_count * 3.14159);
+    // Normalizamos la onda a valores entre 0.0 y 1.0
+    scanline = (scanline * 0.5) + 0.5; 
+    // Oscurecemos el color final un 20% en las áreas donde cruza la onda
+    color = mix(color, color * 0.8, scanline);
+
+    // Salida final a la pantalla
+    COLOR = vec4(color, 1.0);
+}"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_evuln"]
+shader = SubResource("Shader_thnxg")
+shader_parameter/scanline_count = 250.0
+shader_parameter/chromatic_aberration = 0.005
 
 [node name="Cabin_intro" type="Node3D" unique_id=1927939690]
 script = ExtResource("1_ehn6b")
@@ -421,24 +459,11 @@ mesh = SubResource("ArrayMesh_jwsuf")
 [node name="PS1_Console" parent="Furniture" unique_id=1664131362 instance=ExtResource("14_sr0v5")]
 transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, -4.925654, 0.9220549, 7.6301923)
 
-[node name="PS1_Controller" parent="Furniture" unique_id=1495225644 instance=ExtResource("15_0stqn")]
+[node name="PS1_Controller" parent="Furniture" unique_id=1424300709 instance=ExtResource("15_0stqn")]
 transform = Transform3D(0.007048765, 0.0654598, 0.07526838, 3.1053724e-09, 0.07545607, -0.06562302, -0.099751264, 0.0046256166, 0.0053187218, -4.78384, 0.92838585, 7.7402463)
 
-[node name="PS1_Controller2" parent="Furniture" unique_id=136381317 instance=ExtResource("15_0stqn")]
+[node name="PS1_Controller2" parent="Furniture" unique_id=774079693 instance=ExtResource("15_0stqn")]
 transform = Transform3D(-0.012799943, 0.06508323, 0.07483539, 1.5384056e-09, 0.07545607, -0.06562302, -0.09917743, -0.008399706, -0.0096583385, -4.7728677, 0.931008, 7.5044227)
-
-[node name="PsxCasePal" type="MeshInstance3D" parent="Furniture" unique_id=643032468]
-transform = Transform3D(0.002961233, 0.00048072916, -2.101333e-11, -5.992855e-18, -1.3113415e-10, -0.003, -0.0004807294, 0.0029612326, -1.294396e-10, -4.5874257, 0.88280386, 7.257215)
-mesh = ExtResource("17_ovth3")
-surface_material_override/2 = SubResource("StandardMaterial3D_so5ee")
-surface_material_override/3 = SubResource("StandardMaterial3D_dqh3j")
-
-[node name="PsxCasePal2" type="MeshInstance3D" parent="Furniture" unique_id=1678689231]
-transform = Transform3D(-0.0028974076, -0.00064476824, -0.0004350889, -0.00044549984, 1.2968017e-10, 0.0029667374, -0.0006376193, 0.0029298926, -9.574814e-05, -4.747312, 0.88280386, 7.222029)
-mesh = ExtResource("17_ovth3")
-surface_material_override/0 = SubResource("StandardMaterial3D_5mss5")
-surface_material_override/2 = SubResource("StandardMaterial3D_so5ee")
-surface_material_override/3 = SubResource("StandardMaterial3D_dqh3j")
 
 [node name="Table" parent="Furniture" unique_id=1367461039 instance=ExtResource("23_1lwsv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3062606, 0.06422283, 5.4182334)
@@ -530,8 +555,16 @@ shape = SubResource("BoxShape3D_ovth3")
 [node name="TV" parent="." unique_id=2025396337 instance=ExtResource("22_ufbth")]
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, -5.4119687, 1.2873743, 7.5935397)
 
+[node name="TV_02" parent="TV/StaticBody3D" parent_id_path=PackedInt32Array(2025396337, 1467537158) index="0" unique_id=604649455]
+surface_material_override/2 = SubResource("StandardMaterial3D_bxrs5")
+
+[node name="VideoStreamPlayer" parent="TV/SubViewport" parent_id_path=PackedInt32Array(2025396337, 2083337021) index="0" unique_id=1150574430]
+stream = SubResource("VideoStreamTheora_2t08j")
+bus = &"FX"
+
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="TV" unique_id=127783691]
 stream = ExtResource("35_aiwdk")
+bus = &"FX"
 
 [node name="VHS_Tape" parent="." unique_id=1005967043 instance=ExtResource("37_aiwdk")]
 transform = Transform3D(0.048535194, 0, 0.012013944, 0, 0.05, 0, -0.012013944, 0, 0.048535194, -5.2547727, 0.33849555, 5.4150047)
@@ -546,8 +579,21 @@ cinta_vhs = NodePath("../VHS_Tape")
 
 [node name="CanvasLayer" parent="." unique_id=1478569276 instance=ExtResource("39_2x7qg")]
 
-[node name="ColorRect" parent="CanvasLayer" index="0" unique_id=166991014]
+[node name="VHS_Filter" type="ColorRect" parent="CanvasLayer" unique_id=94754224]
+material = SubResource("ShaderMaterial_evuln")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" parent="CanvasLayer" index="1" unique_id=166991014]
 metadata/_edit_use_anchors_ = true
 
+[node name="Node3D" parent="." unique_id=432635781 instance=ExtResource("37_per1h")]
+transform = Transform3D(0.003, 0, 0, 0, 0.003, 0, 0, 0, 0.003, -4.644779, 0.92910576, 7.252067)
+
 [editable path="Jugador"]
+[editable path="TV"]
 [editable path="CanvasLayer"]

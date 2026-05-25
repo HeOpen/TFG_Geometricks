@@ -172,6 +172,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.997, 0.075, 2)
 [node name="Column5" parent="Columns/0" unique_id=1432949471 instance=ExtResource("6_gyucb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9904633, 0.07517803, 0.018045425)
 
+[node name="Column12" parent="Columns/0" unique_id=1029978390 instance=ExtResource("6_gyucb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9904633, 0.07517803, -2.1819777)
+
+[node name="Column13" parent="Columns/0" unique_id=919866465 instance=ExtResource("6_gyucb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9904633, 0.07517803, -1.1216147)
+
+[node name="Column14" parent="Columns/0" unique_id=431751583 instance=ExtResource("6_gyucb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9904633, 0.07517803, 1.0363748)
+
 [node name="Column6" parent="Columns/0" unique_id=749514145 instance=ExtResource("6_gyucb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.939598, 0.07517803, -7.9060726)
 

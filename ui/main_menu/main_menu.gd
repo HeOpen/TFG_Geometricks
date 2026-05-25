@@ -26,10 +26,37 @@ const ANGULO_TRASERA = deg_to_rad(-180)
 const ANGULO_IZQUIERDA = deg_to_rad(90)
 
 func _ready() -> void:
-	# La inicialización se ejecuta un único fotograma al cargar el menú
-	_cargar_configuracion_por_defecto()
+	# 1. Forzamos al Autoload a cargar el archivo de disco si existe
+	PauseMenu.cargar_configuracion()
+	
+	# 2. Sincronizamos la escena física del menú con los datos globales
+	_sincronizar_menu_con_estado_global()
 	_conectar_senales_sliders()
+	
 	MusicManager.reproducir_menu()
+	
+func _sincronizar_menu_con_estado_global() -> void:
+	# Aplicamos el audio del Autoload a los buses del motor
+	var bus_musica = AudioServer.get_bus_index("Musica")
+	if bus_musica != -1:
+		AudioServer.set_bus_volume_db(bus_musica, linear_to_db(PauseMenu.musica_global))
+		
+	var bus_fx = AudioServer.get_bus_index("FX")
+	if bus_fx != -1:
+		AudioServer.set_bus_volume_db(bus_fx, linear_to_db(PauseMenu.fx_global))
+	
+	# Aplicamos el post-procesado del Autoload al entorno del menú
+	if global_env:
+		global_env.adjustment_brightness = PauseMenu.brillo_global
+		global_env.adjustment_contrast = PauseMenu.contraste_global
+	
+	# Aplicamos el estado del VHS
+	if efecto_vhs:
+		efecto_vhs.visible = PauseMenu.vhs_activado_global
+		
+		var boton_vhs = cubo.find_child("Boton_VHS", true, false)
+		if boton_vhs != null:
+			boton_vhs.texto_boton = "VHS: ON" if PauseMenu.vhs_activado_global else "VHS: OFF"
 
 func _cargar_configuracion_por_defecto() -> void:
 	# 1. Inicialización del Subsistema de Audio
@@ -115,21 +142,16 @@ func _alternar_vhs() -> void:
 	if not efecto_vhs:
 		return
 		
-	efecto_vhs.visible = not efecto_vhs.visible
+	# Modificamos el valor global directamente
+	PauseMenu.vhs_activado_global = not PauseMenu.vhs_activado_global
+	efecto_vhs.visible = PauseMenu.vhs_activado_global
 	
-	# ADVERTENCIA: Ve a la escena de tu cubo y asegúrate de que el nodo de este botón
-	# ha sido renombrado a "BotonVHS" en el panel de jerarquía.
+	# Guardamos el cambio inmediatamente en el disco duro
+	PauseMenu.guardar_configuracion()
+	
 	var boton_vhs = cubo.find_child("Boton_VHS", true, false)
-	
 	if boton_vhs != null:
-		if efecto_vhs.visible:
-			boton_vhs.texto_boton = "VHS: ON"
-		else:
-			boton_vhs.texto_boton = "VHS: OFF"
-	else:
-		# Imprimimos un error en rojo en el depurador si el nodo no se encuentra
-		push_error("Error: No se encontró un nodo llamado 'Boton_VHS' dentro del cubo.")
-
+		boton_vhs.texto_boton = "VHS: ON" if PauseMenu.vhs_activado_global else "VHS: OFF"
 func _conectar_senales_sliders() -> void:
 	# --- SLIDER MÚSICA ---
 	var area_musica = cubo.find_child("Slider_Musica", true, false)
@@ -173,20 +195,30 @@ func _conectar_senales_sliders() -> void:
 
 # --- FUNCIONES RECEPTORAS DE SEÑALES ---
 
+# --- Receptores de Sliders Actualizados ---
+
 func _on_slider_musica_cambiado(valor: float) -> void:
+	PauseMenu.musica_global = valor
 	var bus_musica = AudioServer.get_bus_index("Musica")
 	if bus_musica != -1:
 		AudioServer.set_bus_volume_db(bus_musica, linear_to_db(valor))
+	PauseMenu.guardar_configuracion()
 
 func _on_slider_fx_cambiado(valor: float) -> void:
+	PauseMenu.fx_global = valor
 	var bus_fx = AudioServer.get_bus_index("FX")
 	if bus_fx != -1:
 		AudioServer.set_bus_volume_db(bus_fx, linear_to_db(valor))
+	PauseMenu.guardar_configuracion()
 
 func _on_slider_brillo_cambiado(valor: float) -> void:
+	PauseMenu.brillo_global = valor
 	if global_env:
 		global_env.adjustment_brightness = valor
+	PauseMenu.guardar_configuracion()
 
 func _on_slider_contraste_cambiado(valor: float) -> void:
+	PauseMenu.contraste_global = valor
 	if global_env:
 		global_env.adjustment_contrast = valor
+	PauseMenu.guardar_configuracion()

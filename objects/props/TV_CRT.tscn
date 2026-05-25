@@ -136,4 +136,5 @@ offset_bottom = 720.0
 stream = SubResource("VideoStreamTheora_vvq5o")
 autoplay = true
 loop = true
+bus = &"FX"
 metadata/_edit_use_anchors_ = true

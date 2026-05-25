@@ -129,7 +129,7 @@ resource_local_to_scene = true
 shading_mode = 0
 albedo_texture = SubResource("ViewportTexture_rkggs")
 
-[sub_resource type="Shader" id="Shader_xio0d"]
+[sub_resource type="Shader" id="Shader_tf5ef"]
 code = "shader_type canvas_item;
 
 // Variables 'uniform'. Exportan estos valores al Inspector de Godot 
@@ -163,7 +163,7 @@ void fragment() {
 }"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qao3l"]
-shader = SubResource("Shader_xio0d")
+shader = SubResource("Shader_tf5ef")
 shader_parameter/scanline_count = 250.0
 shader_parameter/chromatic_aberration = 0.005
 
@@ -295,12 +295,19 @@ surface_material_override/0 = SubResource("StandardMaterial3D_tf5ef")
 material_override = SubResource("StandardMaterial3D_lknku")
 
 [node name="HSlider" parent="CuboMilenario/Cara_Trasera/Musica/Slider_Musica/SubViewport" parent_id_path=PackedInt32Array(1841013009, 1573478637, 172893491) index="0" unique_id=42036256]
+min_value = 0.01
 max_value = 2.0
 step = 0.01
 value = 1.0
 
 [node name="MeshInstance3D" parent="CuboMilenario/Cara_Trasera/Efectos/Slider_FX" parent_id_path=PackedInt32Array(1841013009, 1355686957) index="1" unique_id=1810741111]
 material_override = SubResource("StandardMaterial3D_bpbph")
+
+[node name="HSlider" parent="CuboMilenario/Cara_Trasera/Efectos/Slider_FX/SubViewport" parent_id_path=PackedInt32Array(1841013009, 1355686957, 172893491) index="0" unique_id=42036256]
+min_value = 0.01
+max_value = 2.0
+step = 0.01
+value = 1.0
 
 [node name="MeshInstance3D" parent="CuboMilenario/Cara_Izquierda/Brillo/Slider_Brillo" parent_id_path=PackedInt32Array(1841013009, 1709546785) index="1" unique_id=1810741111]
 material_override = SubResource("StandardMaterial3D_db6af")

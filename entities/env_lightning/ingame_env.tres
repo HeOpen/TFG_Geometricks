@@ -1,7 +1,7 @@
 [gd_resource type="Environment" format=3 uid="uid://4nd2xkar5b3u"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_80ujw"]
-sky_top_color = Color(0.28627452, 0.28627452, 0.28627452, 1)
+sky_top_color = Color(0.0703125, 0.0703125, 0.0703125, 1)
 sky_horizon_color = Color(0, 0, 0, 1)
 ground_bottom_color = Color(0, 0, 0, 1)
 ground_horizon_color = Color(0, 0, 0, 1)
@@ -18,3 +18,4 @@ fog_enabled = true
 fog_light_color = Color(0, 0, 0, 1)
 fog_light_energy = 1.21
 volumetric_fog_enabled = true
+adjustment_enabled = true

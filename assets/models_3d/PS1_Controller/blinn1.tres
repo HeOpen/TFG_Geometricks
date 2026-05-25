@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bttxf6q03y8dj"]
+
+[ext_resource type="Texture2D" uid="uid://bh6axrymexeb8" path="res://assets/models_3d/PS1_Controller/textures/blinn1_baseColor.png" id="1_mm0q8"]
+[ext_resource type="Texture2D" uid="uid://c3xo43pxhoy2a" path="res://assets/models_3d/PS1_Controller/textures/blinn1_metallicRoughness.png" id="2_d8o57"]
+[ext_resource type="Texture2D" uid="uid://yn4i7e6e6e8k" path="res://assets/models_3d/PS1_Controller/textures/blinn1_normal.png" id="3_iauk5"]
+
+[resource]
+resource_name = "blinn1"
+cull_mode = 2
+albedo_texture = ExtResource("1_mm0q8")
+metallic_texture = ExtResource("2_d8o57")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_d8o57")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_iauk5")

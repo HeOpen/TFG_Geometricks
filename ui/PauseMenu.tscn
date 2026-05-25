@@ -1,0 +1,156 @@
+[gd_scene format=3 uid="uid://d1dcj2a7gum1f"]
+
+[ext_resource type="Script" uid="uid://b6mu056k5h75b" path="res://ui/pause_menu.gd" id="1_c7v6e"]
+[ext_resource type="FontFile" uid="uid://dcqnyivqqql1t" path="res://assets/fonts/JMH Typewriter.ttf" id="2_8tehv"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=2054896459 node_paths=PackedStringArray("slider_musica", "slider_fx", "slider_brillo", "slider_contraste", "boton_vhs", "boton_volver", "boton_menu_principal")]
+process_mode = 3
+script = ExtResource("1_c7v6e")
+slider_musica = NodePath("ColorRect/MarginContainer/VBoxContainer/HSlider_Musica")
+slider_fx = NodePath("ColorRect/MarginContainer/VBoxContainer/HSlider_Efectos")
+slider_brillo = NodePath("ColorRect/MarginContainer/VBoxContainer/HSlider_Brillo")
+slider_contraste = NodePath("ColorRect/MarginContainer/VBoxContainer/HSlider_Contraste")
+boton_vhs = NodePath("ColorRect/MarginContainer/VBoxContainer/Button_VHS")
+boton_volver = NodePath("ColorRect/MarginContainer/VBoxContainer/Button_Reanudar")
+boton_menu_principal = NodePath("ColorRect/MarginContainer/VBoxContainer/Button_Menu")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1545372707]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.421875, 0.421875, 0.421875, 0.24705882)
+
+[node name="Pausa" type="Label" parent="ColorRect" unique_id=2061975830]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -72.5
+offset_top = 8.475
+offset_right = 72.5
+offset_bottom = 31.475
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_8tehv")
+theme_override_font_sizes/font_size = 23
+text = "PAUSA"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect" unique_id=1225685451]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.0
+offset_top = -89.0
+offset_right = 98.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.65, 0.65)
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer" unique_id=1238734536]
+layout_mode = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="Button_Reanudar" type="Button" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=891223919]
+process_mode = 3
+modulate = Color(0.99999994, 0.29519534, 0.1296202, 1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_8tehv")
+text = "REANUDAR"
+
+[node name="Button_VHS" type="Button" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=285480546]
+process_mode = 3
+modulate = Color(0.99999994, 0.29519534, 0.1296202, 1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_8tehv")
+text = "VHS"
+
+[node name="Musica" type="Label" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=294699457]
+modulate = Color(0.82718074, 0.16285309, 0.1040945, 1)
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_8tehv")
+text = "MUSICA"
+horizontal_alignment = 1
+
+[node name="HSlider_Musica" type="HSlider" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=2144915505]
+process_mode = 3
+modulate = Color(0.35401013, 0.41206387, 1, 1)
+layout_mode = 2
+min_value = 0.01
+max_value = 2.0
+step = 0.01
+value = 1.0
+
+[node name="Efectos" type="Label" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=1789942536]
+modulate = Color(0.82718074, 0.16285309, 0.1040945, 1)
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_8tehv")
+text = "EFECTOS"
+horizontal_alignment = 1
+
+[node name="HSlider_Efectos" type="HSlider" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=773464221]
+process_mode = 3
+modulate = Color(0.35401013, 0.41206387, 1, 1)
+layout_mode = 2
+min_value = 0.01
+max_value = 2.0
+step = 0.01
+value = 1.0
+
+[node name="Brillo" type="Label" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=1699699677]
+modulate = Color(0.82718074, 0.16285309, 0.1040945, 1)
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_8tehv")
+text = "BRILLO"
+horizontal_alignment = 1
+
+[node name="HSlider_Brillo" type="HSlider" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=1099752329]
+process_mode = 3
+modulate = Color(0.35401013, 0.41206387, 1, 1)
+layout_mode = 2
+min_value = 0.1
+max_value = 2.0
+step = 0.1
+value = 1.0
+
+[node name="Contraste" type="Label" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=1204154484]
+modulate = Color(0.82718074, 0.16285309, 0.1040945, 1)
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_8tehv")
+text = "CONTRASTE"
+horizontal_alignment = 1
+
+[node name="HSlider_Contraste" type="HSlider" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=1324413826]
+process_mode = 3
+modulate = Color(0.35401013, 0.41206387, 1, 1)
+layout_mode = 2
+min_value = 0.7
+max_value = 2.0
+step = 0.1
+value = 1.0
+
+[node name="Button_Menu" type="Button" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=1458603811]
+process_mode = 3
+modulate = Color(0.99999994, 0.29519534, 0.1296202, 1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_8tehv")
+text = "VOLVER AL MENU"
+
+[connection signal="toggled" from="ColorRect/MarginContainer/VBoxContainer/Button_VHS" to="." method="_alternar_vhs"]
+[connection signal="value_changed" from="ColorRect/MarginContainer/VBoxContainer/HSlider_Musica" to="." method="_on_slider_musica_cambiado"]
+[connection signal="value_changed" from="ColorRect/MarginContainer/VBoxContainer/HSlider_Efectos" to="." method="_on_slider_fx_cambiado"]
+[connection signal="value_changed" from="ColorRect/MarginContainer/VBoxContainer/HSlider_Brillo" to="." method="_on_slider_brillo_cambiado"]
+[connection signal="value_changed" from="ColorRect/MarginContainer/VBoxContainer/HSlider_Contraste" to="." method="_on_slider_contraste_cambiado"]
+[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/Button_Menu" to="." method="_on_volver_al_menu_presionado"]
