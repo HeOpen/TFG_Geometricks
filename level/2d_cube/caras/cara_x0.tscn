@@ -1544,3 +1544,9 @@ custom_minimum_size = Vector2(512, 512)
 offset_right = 512.0
 offset_bottom = 43.0
 color = Color(0.5257475, 0.859375, 0.4598999, 1)
+
+[node name="EntradaDesde_Cara_z1" type="Marker2D" parent="." unique_id=993937173]
+position = Vector2(501, 483)
+
+[node name="EntradaDesde_Cara_z0" type="Marker2D" parent="." unique_id=1128757457]
+position = Vector2(11, 471)
