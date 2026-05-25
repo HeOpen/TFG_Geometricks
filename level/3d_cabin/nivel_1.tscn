@@ -633,12 +633,6 @@ light_color = Color(0, 1, 0, 1)
 omni_range = 0.1
 omni_attenuation = 1.69
 
-[node name="OmniLight3D14" type="OmniLight3D" parent="ItemSpawn" unique_id=87094611]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.092613, 1.0132774, 7.2432084)
-light_color = Color(0, 1, 0, 1)
-omni_range = 0.1
-omni_attenuation = 1.69
-
 [node name="OpeningDoorAnimation" parent="." unique_id=1997429010 instance=ExtResource("6_infdn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.133713, 0, 0.30839443)
 

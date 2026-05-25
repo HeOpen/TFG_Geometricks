@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://dd2evn5jjn43f"]
 
 [ext_resource type="Script" uid="uid://bmanagercu3d0" path="res://scripts_2d/cubo_manager.gd" id="0_mgr"]
-[ext_resource type="PackedScene" uid="uid://bwv258yiba267" path="res://level/scenes_2D/caras/cara_z0.tscn" id="1_5lphy"]
-[ext_resource type="PackedScene" uid="uid://di24f576o320x" path="res://level/scenes_2D/caras/cara_x0.tscn" id="2_2mf3b"]
-[ext_resource type="PackedScene" uid="uid://nkvrgnaj3gts" path="res://level/scenes_2D/caras/cara_z1.tscn" id="3_8g237"]
-[ext_resource type="PackedScene" uid="uid://e1ig483i6mj0" path="res://level/scenes_2D/caras/cara_x1.tscn" id="4_5amgo"]
-[ext_resource type="PackedScene" uid="uid://ceaals07t220j" path="res://level/scenes_2D/caras/cara_y0.tscn" id="6_jb3wi"]
-[ext_resource type="PackedScene" uid="uid://vmaedwe2xbv1" path="res://level/scenes_2D/caras/cara_y1.tscn" id="7_qhuce"]
+[ext_resource type="PackedScene" uid="uid://bwv258yiba267" path="res://level/2d_cube/caras/cara_z0.tscn" id="1_5lphy"]
+[ext_resource type="PackedScene" uid="uid://di24f576o320x" path="res://level/2d_cube/caras/cara_x0.tscn" id="2_2mf3b"]
+[ext_resource type="PackedScene" uid="uid://nkvrgnaj3gts" path="res://level/2d_cube/caras/cara_z1.tscn" id="3_8g237"]
+[ext_resource type="PackedScene" uid="uid://e1ig483i6mj0" path="res://level/2d_cube/caras/cara_x1.tscn" id="4_5amgo"]
+[ext_resource type="PackedScene" uid="uid://ceaals07t220j" path="res://level/2d_cube/caras/cara_y0.tscn" id="6_jb3wi"]
+[ext_resource type="PackedScene" uid="uid://vmaedwe2xbv1" path="res://level/2d_cube/caras/cara_y1.tscn" id="7_qhuce"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_pt2aq"]
 viewport_path = NodePath("Cara_z0/SubViewport_z0")

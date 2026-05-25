@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bh3gor0jb6444" path="res://scripts_2d/cara_base.gd" id="0_cbase"]
 [ext_resource type="TileSet" uid="uid://cf7r5hdmtjcns" path="res://assets/models_2d/blackwhite_tileset.tres" id="1_los4r"]
-[ext_resource type="PackedScene" uid="uid://qmworwyof6f5" path="res://level/scenes_2D/bola.tscn" id="2_jvjao"]
+[ext_resource type="PackedScene" uid="uid://qmworwyof6f5" path="res://level/2d_cube/bola.tscn" id="2_jvjao"]
 
 [node name="Cara_z0" type="Node2D" unique_id=1930801849]
 script = ExtResource("0_cbase")
