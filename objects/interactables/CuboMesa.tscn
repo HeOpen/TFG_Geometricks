@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cwrnbjtab8f2e"]
+
+[ext_resource type="Script" uid="uid://bbiioeds3mo8k" path="res://objects/interactables/cuboMesa.gd" id="1_6c6ly"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5c0wu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7oh8l"]
+albedo_color = Color(1, 0, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2gyys"]
+material = SubResource("StandardMaterial3D_7oh8l")
+
+[node name="CuboMesa" type="Node3D" unique_id=688615468]
+
+[node name="cubo" type="StaticBody3D" parent="." unique_id=971560672 groups=["interactuable"]]
+script = ExtResource("1_6c6ly")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cubo" unique_id=562564719]
+shape = SubResource("BoxShape3D_5c0wu")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="cubo" unique_id=690843928]
+mesh = SubResource("BoxMesh_2gyys")
