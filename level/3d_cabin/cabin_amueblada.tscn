@@ -255,7 +255,10 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_yyye3")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0x3xf"]
-size = Vector3(4.243469, 3.2622986, 1.8730164)
+size = Vector3(4.600174, 3.2622986, 1.8730164)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hy7tc"]
+size = Vector3(2.2006836, 1.1589813, 1.8730164)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tjwvp"]
 albedo_texture = ExtResource("30_cd7s3")
@@ -664,6 +667,10 @@ mesh = SubResource("ArrayMesh_ut052")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Barriers/StaticBody3D" unique_id=1134506312]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.367819, 1.4068451, -6.4978485)
 shape = SubResource("BoxShape3D_0x3xf")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Barriers/StaticBody3D" unique_id=859558843]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9675834, 0.35518646, -6.4978485)
+shape = SubResource("BoxShape3D_hy7tc")
 
 [node name="PuertaSotano" type="Node3D" parent="." unique_id=705214495]
 

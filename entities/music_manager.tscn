@@ -6,15 +6,17 @@
 [ext_resource type="AudioStream" uid="uid://c0qne47o7sxc4" path="res://assets/audio/musica/ingame_awekaning.wav" id="4_j8sly"]
 [ext_resource type="AudioStream" uid="uid://i4hwj8qg4da0" path="res://assets/audio/musica/ingame_downtime.wav" id="5_0m5fy"]
 [ext_resource type="AudioStream" uid="uid://cfof05630ilgl" path="res://assets/audio/musica/ingame_moonchild.wav" id="6_ca6j6"]
-[ext_resource type="AudioStream" uid="uid://ccjhp6gstbfh7" path="res://assets/audio/musica/ingame_nightmare.wav" id="7_xreuq"]
+[ext_resource type="AudioStream" uid="uid://begsli2el0ix3" path="res://assets/audio/musica/ingame_followtheleader.wav" id="6_j8sly"]
+[ext_resource type="AudioStream" uid="uid://muydpc7a11gi" path="res://assets/audio/musica/ingame_heads2.wav" id="7_0m5fy"]
 [ext_resource type="AudioStream" uid="uid://c3f0qsiiyydic" path="res://assets/audio/musica/ingame_thestarttheend.wav" id="8_k22kk"]
+[ext_resource type="AudioStream" uid="uid://dqu0a2y8qa1c3" path="res://assets/audio/musica/Ingame_SH1_RisingSun.wav" id="9_ca6j6"]
 [ext_resource type="AudioStream" uid="uid://bs824csrnxdtb" path="res://assets/audio/musica/final_prayer.wav" id="9_qhoy8"]
 
 [node name="MusicManager" type="Node" unique_id=1454249148]
 script = ExtResource("1_lmks1")
 tema_menu = ExtResource("2_w8w03")
 tema_intro = ExtResource("3_fta8o")
-lista_ambiente = Array[AudioStream]([ExtResource("4_j8sly"), ExtResource("5_0m5fy"), ExtResource("6_ca6j6"), ExtResource("7_xreuq"), ExtResource("8_k22kk")])
+lista_ambiente = Array[AudioStream]([ExtResource("4_j8sly"), ExtResource("5_0m5fy"), ExtResource("6_j8sly"), ExtResource("7_0m5fy"), ExtResource("6_ca6j6"), ExtResource("9_ca6j6"), ExtResource("8_k22kk")])
 tema_final = ExtResource("9_qhoy8")
 
 [node name="AudioPlayer" type="AudioStreamPlayer" parent="." unique_id=1029260323]

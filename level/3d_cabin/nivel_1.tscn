@@ -678,7 +678,7 @@ spot_range = 2.587
 spot_angle = 21.83
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="LucesAmbiente" unique_id=1407256555]
-transform = Transform3D(-0.9907193, 0.031072147, 0.13232487, 0.09820174, 0.83671385, 0.53876376, -0.09397751, 0.5467582, -0.8319999, -4.662295, 2.3322802, 11.214847)
+transform = Transform3D(-0.9916181, 0.11709881, -0.05460398, 0.08399167, 0.905361, 0.4162532, 0.09817902, 0.4081779, -0.9076077, -4.7570496, 2.3322802, 9.3688545)
 light_energy = 16.0
 light_volumetric_fog_energy = 1.792
 shadow_enabled = true
