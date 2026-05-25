@@ -41,26 +41,25 @@ metallic = 0.89
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hy7tc"]
 emission_enabled = true
-emission = Color(1, 0.00837636, 0, 1)
-emission_energy_multiplier = 3.0
+emission_energy_multiplier = 2.0
 emission_texture = ExtResource("12_33qu4")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ut052"]
 albedo_texture = ExtResource("14_ibg3d")
 emission_enabled = true
-emission_energy_multiplier = 5.0
+emission_energy_multiplier = 2.0
 emission_texture = ExtResource("14_ibg3d")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xf5mu"]
 albedo_texture = ExtResource("21_keyu8")
 emission_enabled = true
-emission_energy_multiplier = 5.0
+emission_energy_multiplier = 2.0
 emission_texture = ExtResource("21_keyu8")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aiaxv"]
 albedo_texture = ExtResource("16_61dr2")
 emission_enabled = true
-emission_energy_multiplier = 10.0
+emission_energy_multiplier = 5.0
 emission_texture = ExtResource("16_61dr2")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yjibc"]
@@ -72,13 +71,13 @@ emission_texture = ExtResource("17_cd7s3")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8qnur"]
 albedo_texture = ExtResource("20_iwbte")
 emission_enabled = true
-emission_energy_multiplier = 5.0
+emission_energy_multiplier = 2.0
 emission_texture = ExtResource("20_iwbte")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_whjgk"]
 albedo_texture = ExtResource("18_7g1k8")
 emission_enabled = true
-emission_energy_multiplier = 5.0
+emission_energy_multiplier = 2.0
 emission_texture = ExtResource("18_7g1k8")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2rtus"]
@@ -95,12 +94,21 @@ emission_texture = ExtResource("20_hy7tc")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0igfk"]
 albedo_texture = ExtResource("13_w7afj")
+emission_enabled = true
+emission_energy_multiplier = 0.1
+emission_texture = ExtResource("13_w7afj")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q60kn"]
 albedo_texture = ExtResource("13_keyu8")
+emission_enabled = true
+emission_energy_multiplier = 0.1
+emission_texture = ExtResource("13_keyu8")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_33qu4"]
 albedo_texture = ExtResource("14_iwbte")
+emission_enabled = true
+emission_energy_multiplier = 0.1
+emission_texture = ExtResource("14_iwbte")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ibg3d"]
 albedo_texture = ExtResource("15_keyu8")
@@ -119,6 +127,9 @@ albedo_texture = ExtResource("19_xxbhc")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_atbve"]
 albedo_texture = ExtResource("12_hdp7s")
+emission_enabled = true
+emission_energy_multiplier = 0.1
+emission_texture = ExtResource("12_hdp7s")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mxr04"]
 albedo_texture = ExtResource("30_ibg3d")
@@ -248,11 +259,20 @@ size = Vector3(4.243469, 3.2622986, 1.8730164)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tjwvp"]
 albedo_texture = ExtResource("30_cd7s3")
+emission = Color(1, 0, 0, 1)
+emission_energy_multiplier = 0.09
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6bov7"]
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("30_61dr2")
 metallic = 0.99
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_85g6l"]
+albedo_texture = ExtResource("30_cd7s3")
+uv1_scale = Vector3(-1.755, -1.755, -1.755)
+
+[sub_resource type="TorusMesh" id="TorusMesh_fjfuf"]
+inner_radius = 0.726
 
 [node name="Cabin_Amueblada" type="Node3D" unique_id=293068168]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08, 0, 0)
@@ -428,7 +448,7 @@ shaded = true
 texture = ExtResource("14_iwbte")
 
 [node name="Sprite3D4" type="Sprite3D" parent="Cuadros" unique_id=1844523607]
-transform = Transform3D(-0.23728071, 0.106076114, 0.0067624315, 0.0036584027, -0.008381513, 0.2598391, 0.106228456, 0.23722899, 0.0061565493, 7.425586, -0.103019714, 15.320732)
+transform = Transform3D(-0.23728071, 0.106076114, 0.0067624315, 0.0036584027, -0.008381513, 0.2598391, 0.106228456, 0.23722899, 0.0061565493, 6.9734273, -0.012868479, 14.940436)
 material_override = SubResource("StandardMaterial3D_ibg3d")
 shaded = true
 texture = ExtResource("15_keyu8")
@@ -648,12 +668,18 @@ shape = SubResource("BoxShape3D_0x3xf")
 [node name="PuertaSotano" type="Node3D" parent="." unique_id=705214495]
 
 [node name="Lock_Sotano" parent="PuertaSotano" unique_id=311865494 instance=ExtResource("16_36tuj")]
-transform = Transform3D(-0.9922955, 0.04349328, -0.11600858, 0.11511088, -0.022614002, -0.9930952, -0.045816384, -0.9987978, 0.017433222, -0.91629475, 0.21129614, -6.3419905)
+transform = Transform3D(-0.75254714, -0.65455484, -0.07232364, 0.115110874, -0.022614004, -0.9930952, 0.6483997, -0.7556762, 0.092364475, -0.6432317, 0.21129614, -5.174963)
 
 [node name="TapaSotano" type="CSGBox3D" parent="PuertaSotano" unique_id=1634475269]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9844829, -0.078098774, -6.635259)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.176424, -0.078098774, -6.635259)
 material_override = SubResource("StandardMaterial3D_tjwvp")
-size = Vector3(2.367, 0.101, 2.461661)
+size = Vector3(2.7508829, 0.101, 2.461661)
 material = SubResource("StandardMaterial3D_6bov7")
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=811302217]
+transform = Transform3D(0.24615787, -0.04366125, 0, 0.04366125, 0.24615787, 0, 0, 0, 0.25, -0.7509809, 1.1920929e-07, -6.721288)
+material_override = SubResource("StandardMaterial3D_85g6l")
+mesh = SubResource("TorusMesh_fjfuf")
+
 [editable path="Wall_Clock"]
+[editable path="PuertaSotano/Lock_Sotano"]
