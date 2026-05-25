@@ -254,7 +254,7 @@ vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("30_61dr2")
 metallic = 0.99
 
-[node name="Node3D" type="Node3D" unique_id=293068168]
+[node name="Cabin_Amueblada" type="Node3D" unique_id=293068168]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08, 0, 0)
 
 [node name="Cabin_Structure" parent="." unique_id=125884885 instance=ExtResource("1_n82xp")]

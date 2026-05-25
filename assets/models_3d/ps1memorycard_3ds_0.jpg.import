@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bveeimt7le55l"
-path.s3tc="res://.godot/imported/Glass_01.png-583a35a90432c02b2bf98be0189d8e95.s3tc.ctex"
+uid="uid://dele72b4tbqfx"
+path.s3tc="res://.godot/imported/ps1memorycard_3ds_0.jpg-5125d9c55d4766c67b57fe93bd8aa6b4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "abc3f0bb6932fc740abd69892c9ae51e"
+}
 
 [deps]
 
-source_file="res://assets/textures/Horror Textures by Canvas Coven/Glass/Glass_01.png"
-dest_files=["res://.godot/imported/Glass_01.png-583a35a90432c02b2bf98be0189d8e95.s3tc.ctex"]
+source_file="res://assets/models_3d/ps1memorycard_3ds_0.jpg"
+dest_files=["res://.godot/imported/ps1memorycard_3ds_0.jpg-5125d9c55d4766c67b57fe93bd8aa6b4.s3tc.ctex"]
 
 [params]
 
