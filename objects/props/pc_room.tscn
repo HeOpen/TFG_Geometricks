@@ -1028,10 +1028,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0db6t")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qn1ox"]
-albedo_color = Color(2.603759, 2.603759, 2.603759, 1)
-albedo_texture = ExtResource("15_c6hj2")
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fimin"]
 vertex_color_use_as_albedo = true
 albedo_color = Color(0, 0, 0, 1)
@@ -1207,7 +1203,6 @@ mesh = SubResource("ArrayMesh_1vtr5")
 
 [node name="Corkboard" type="Sprite3D" parent="." unique_id=1181009241]
 transform = Transform3D(-0.09, 0, -7.86805e-09, 0, 0.09, 0, 7.86805e-09, 0, -0.09, 0, 1.1184877, 3.753891)
-material_override = SubResource("StandardMaterial3D_qn1ox")
 texture = ExtResource("15_c6hj2")
 
 [node name="CorkboardFrame" type="CSGBox3D" parent="." unique_id=2121846393]

@@ -318,14 +318,7 @@ size = Vector3(0.64941406, 1.2645264, 1.6940918)
 [sub_resource type="BoxShape3D" id="BoxShape3D_ovth3"]
 size = Vector3(0.8676758, 2.1848755, 1.6756592)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_evuln"]
-viewport_path = NodePath("SubViewport")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bxrs5"]
-resource_local_to_scene = true
-albedo_texture = SubResource("ViewportTexture_evuln")
-
-[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_2t08j"]
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_evuln"]
 resource_local_to_scene = true
 file = "res://assets/textures/vhs_static.ogv"
 
@@ -556,11 +549,10 @@ shape = SubResource("BoxShape3D_ovth3")
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, -5.4119687, 1.2873743, 7.5935397)
 
 [node name="TV_02" parent="TV/StaticBody3D" parent_id_path=PackedInt32Array(2025396337, 1467537158) index="0" unique_id=604649455]
-surface_material_override/2 = SubResource("StandardMaterial3D_bxrs5")
+surface_material_override/2 = null
 
 [node name="VideoStreamPlayer" parent="TV/SubViewport" parent_id_path=PackedInt32Array(2025396337, 2083337021) index="0" unique_id=1150574430]
-stream = SubResource("VideoStreamTheora_2t08j")
-bus = &"FX"
+stream = SubResource("VideoStreamTheora_evuln")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="TV" unique_id=127783691]
 stream = ExtResource("35_aiwdk")
@@ -579,6 +571,9 @@ cinta_vhs = NodePath("../VHS_Tape")
 
 [node name="CanvasLayer" parent="." unique_id=1478569276 instance=ExtResource("39_2x7qg")]
 
+[node name="ColorRect" parent="CanvasLayer" index="0" unique_id=166991014]
+metadata/_edit_use_anchors_ = true
+
 [node name="VHS_Filter" type="ColorRect" parent="CanvasLayer" unique_id=94754224]
 material = SubResource("ShaderMaterial_evuln")
 anchors_preset = 15
@@ -587,9 +582,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-
-[node name="ColorRect" parent="CanvasLayer" index="1" unique_id=166991014]
-metadata/_edit_use_anchors_ = true
 
 [node name="Node3D" parent="." unique_id=432635781 instance=ExtResource("37_per1h")]
 transform = Transform3D(0.003, 0, 0, 0, 0.003, 0, 0, 0, 0.003, -4.644779, 0.92910576, 7.252067)
