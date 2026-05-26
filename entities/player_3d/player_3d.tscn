@@ -119,8 +119,8 @@ vertical_alignment = 1
 
 [node name="InventarioUI" type="HBoxContainer" parent="CanvasLayer/Control" unique_id=671052485]
 layout_mode = 0
-offset_left = 161.0
-offset_top = 226.0
-offset_right = 161.0
-offset_bottom = 226.0
-scale = Vector2(0.194, 0.154)
+offset_left = 21.325
+offset_top = 214.38
+offset_right = 21.325
+offset_bottom = 214.38
+scale = Vector2(0.3, 0.3)
