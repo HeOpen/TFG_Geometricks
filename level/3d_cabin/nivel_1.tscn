@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dv1dka7yb8nv" path="res://objects/interactables/item_cubo_rubik.tscn" id="10_m6ppd"]
 [ext_resource type="PackedScene" uid="uid://dndwemj4be8q1" path="res://objects/interactables/item_canica_bola.tscn" id="11_7y83b"]
 [ext_resource type="PackedScene" uid="uid://5mvso8wdvats" path="res://objects/interactables/item_rectangulo_memorycard.tscn" id="12_nnw0q"]
+[ext_resource type="PackedScene" uid="uid://bixa1kfstwgrl" path="res://objects/interactables/item_triangulo_illuminati.tscn" id="13_kq84s"]
 [ext_resource type="PackedScene" uid="uid://cwrnbjtab8f2e" path="res://objects/interactables/CuboMesa.tscn" id="13_ug3bd"]
 [ext_resource type="PackedScene" uid="uid://c4hfqelxhnyat" path="res://objects/interactables/key.tscn" id="14_lw2i2"]
 
@@ -113,7 +114,7 @@ editor_only = true
 environment = ExtResource("1_gxhxh")
 
 [node name="Player" parent="." unique_id=2146257891 instance=ExtResource("2_27ww1")]
-transform = Transform3D(-0.99962944, 0.019193871, -0.01930194, 0.01919745, 0.9998163, -7.8670254e-10, 0.019298296, -0.00037054907, -0.99981385, 5.949606, -0.13545752, -5.742711)
+transform = Transform3D(0.9930789, -0.019068096, -0.115890935, 0.01919745, 0.9998163, -7.877479e-10, 0.11586964, -0.0022248086, 0.9932621, 5.425473, -0.13545752, 12.471082)
 
 [node name="OmniLight3D" parent="Player" index="2" unique_id=1038113874]
 light_color = Color(0.9779369, 0.97793704, 0.9779369, 1)
@@ -463,7 +464,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.90803, 0.101139724, 8.9902
 [node name="Nevera" parent="Cabin_Amueblada/Cabin_Structure/Kitchen2" parent_id_path=PackedInt32Array(293068168, 733641497) index="29" unique_id=265038388 groups=["interactuable"]]
 
 [node name="Puerta_Abajo" parent="Cabin_Amueblada/Cabin_Structure/Kitchen2/Nevera/Cuerpo_Nevera" parent_id_path=PackedInt32Array(293068168, 733641497, 265038388, 1277572071) index="1" unique_id=969051143]
-transform = Transform3D(0.99893314, 0.04618241, 2.0186957e-09, -0.046182424, 0.9989328, -4.6616957e-11, -2.0186932e-09, -4.6660977e-11, 1.0000008, 0.004263149, 0.0046532783, -0.002900747)
+transform = Transform3D(0.99893314, 0.04618241, 2.0186957e-09, -0.046182424, 0.9989328, -4.6616894e-11, -2.0186932e-09, -4.666104e-11, 1.0000008, 0.004263149, 0.0046532783, -0.002900747)
+
+[node name="Mesita_Noche_L" parent="Cabin_Amueblada/Cabin_Structure/Bedroom" parent_id_path=PackedInt32Array(293068168, 1395123931) index="11" unique_id=183142874 groups=["interactuable"]]
+
+[node name="Mesita_Noche_R" parent="Cabin_Amueblada/Cabin_Structure/Bedroom" parent_id_path=PackedInt32Array(293068168, 1395123931) index="12" unique_id=1801659555 groups=["interactuable"]]
+
+[node name="Item_Triangulo_Illuminati" parent="Cabin_Amueblada/Cabin_Structure/Bedroom/Mesita_Noche_R/Cajon1" parent_id_path=PackedInt32Array(293068168, 1395123931, 1801659555, 1844900732) index="0" unique_id=1361820979 groups=["interactuable"] instance=ExtResource("13_kq84s")]
+transform = Transform3D(0.001, 0, 0, 0, -1.1920936e-10, -0.0010000005, 0, 0.0010000005, -1.1920936e-10, 0.0007150918, -0.0014308617, 0.001305148)
+id_del_item = "piramide_illuminati"
+texto_interfaz = "Coger Illuminati [E]"
 
 [node name="plane" parent="Cabin_Amueblada/Wall_Clock" parent_id_path=PackedInt32Array(293068168, 1228142654) index="1" unique_id=949128227]
 transform = Transform3D(0.9645593, 0.004702476, 0.3070058, -0.32234073, -0.0004379129, 0.91867924, 0.003307139, -1.4142056, 0.0007363751, -0.127, 2.125, -0.25)
@@ -769,6 +779,8 @@ omni_range = 0.1
 [editable path="Cabin_Amueblada/Cabin_Structure/PC_Room"]
 [editable path="Cabin_Amueblada/Cabin_Structure/Kitchen2"]
 [editable path="Cabin_Amueblada/Cabin_Structure/Kitchen2/Nevera"]
+[editable path="Cabin_Amueblada/Cabin_Structure/Bedroom"]
+[editable path="Cabin_Amueblada/Cabin_Structure/Bedroom/Mesita_Noche_R"]
 [editable path="Cabin_Amueblada/Wall_Clock"]
 [editable path="OpeningDoorAnimation"]
 [editable path="CanvasLayer"]
