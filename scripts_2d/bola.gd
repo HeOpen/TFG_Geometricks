@@ -10,6 +10,9 @@ const MAX_LEVITATION_SPEED = 250.0
 
 var forma_actual: Forma = Forma.CIRCULO
 
+# Variable para guardar la posición local de reaparición
+var posicion_inicial: Vector2 
+
 @onready var sprite := $Sprite2D
 @onready var collision := $CollisionShape2D
 
@@ -30,7 +33,6 @@ var escalas := {
 	Forma.RECTANGULO: Vector2(0.02, 0.02),
 }
 
-# Mapeo de teclas (1-4) → (forma, id de ítem requerido)
 const TECLAS_FORMA := [
 	["forma_1", Forma.CIRCULO,    "canica_bola"],
 	["forma_2", Forma.CUADRADO,   "cuadrado_rubik"],
@@ -39,6 +41,9 @@ const TECLAS_FORMA := [
 ]
 
 func _ready() -> void:
+	# Guardamos la posición local inicial (dentro de la primera cara)
+	posicion_inicial = position
+	
 	shape_circulo.radius = RADIUS
 	shape_cuadrado.size = Vector2(10.0, 10.0)
 	shape_triangulo.points = PackedVector2Array([
@@ -59,6 +64,9 @@ func _physics_process(delta: float) -> void:
 		Forma.RECTANGULO: _fisica_rectangulo(delta)
 
 	move_and_slide()
+	
+	# --- MÉTODO ESCÁNER ---
+	_escanear_suelo()
 
 func _aplicar_forma(nueva_forma: Forma) -> void:
 	if forma_actual == nueva_forma:
@@ -94,3 +102,30 @@ func _fisica_rectangulo(_delta: float) -> void:
 	velocity.y = move_toward(velocity.y, 0.0, SPEED)
 	var direction := Input.get_axis("ui_left", "ui_right")
 	velocity.x = direction * SPEED if direction else move_toward(velocity.x, 0.0, SPEED)
+
+# ==========================================
+# --- FUNCIONES DEL ESCÁNER Y RECOLOQUÉ ---
+# ==========================================
+
+func _escanear_suelo() -> void:
+	var tilemap: TileMapLayer = get_parent().get_node_or_null("TileMapLayer")
+	
+	if tilemap:
+		# Escaneamos 10 píxeles por debajo de la bola
+		var posicion_pies = global_position + Vector2(0, 10)
+		var mapa_pos = tilemap.local_to_map(tilemap.to_local(posicion_pies))
+		var tile_data = tilemap.get_cell_tile_data(mapa_pos)
+		
+		if tile_data:
+			if tile_data.get_custom_data("Pinchos") == true:
+				morir_y_reaparecer()
+
+# Función para que el cubo_manager actualice el punto de control al cambiar de cara
+func fijar_nuevo_respawn(nueva_posicion: Vector2) -> void:
+	posicion_inicial = nueva_posicion
+
+func morir_y_reaparecer() -> void:
+	velocity = Vector2.ZERO
+	# Usamos position (local) para que reasigne dentro de la cara actual
+	position = posicion_inicial
+	print("💀 ¡Pinchos! Reapareciendo en la entrada de esta cara.")

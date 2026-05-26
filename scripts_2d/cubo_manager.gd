@@ -63,19 +63,23 @@ func _do_transition(from_name: String, to_name: String, transverse_pos: float, v
 	player.reparent(to_face, false)
 
 	# ==========================================
-	# SISTEMA DE MARCADORES CON DEPURACIÓN Y BÚSQUEDA PROFUNDA
+	# SISTEMA DE MARCADORES CON ACTUALIZACIÓN DE RESPAWN
 	# ==========================================
 	var nombre_marcador = "EntradaDesde_" + from_name
-	
-	# find_child buscará el marcador aunque lo metas dentro de otro nodo sin querer
 	var marcador = to_face.find_child(nombre_marcador, true, false) as Marker2D
 	
 	if marcador != null:
 		print("¡ÉXITO! Marcador '", nombre_marcador, "' encontrado en '", to_name, "'. Moviendo a X:", marcador.position.x, " Y:", marcador.position.y)
 		player.position = marcador.position
+		
+		# NOTA: Sincronizamos el punto de reaparición local con la entrada de la nueva cara
+		player.fijar_nuevo_respawn(player.position)
 	else:
 		print("INFO: No hay marcador '", nombre_marcador, "' en la cara '", to_name, "'. Usando cálculo matemático.")
 		player.position = _compute_entry_pos(from_name, to_name, transverse_pos)
+		
+		# Sincronizamos también si se usa el cálculo por defecto
+		player.fijar_nuevo_respawn(player.position)
 	# ==========================================
 
 	player.velocity = vel
