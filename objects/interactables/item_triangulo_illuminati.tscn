@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bixa1kfstwgrl"]
 
 [ext_resource type="Texture2D" uid="uid://cdvue0583kasv" path="res://assets/models_2d/triangulo.png" id="1_gdw6p"]
+[ext_resource type="Script" uid="uid://bqxje64imlhvm" path="res://objects/interactables/item_recogible.gd" id="1_r7jv5"]
 
 [sub_resource type="PrismMesh" id="PrismMesh_hsr5x"]
 
@@ -17,29 +18,28 @@ uv1_triplanar_sharpness = 117.6878
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_2ot2r"]
 data = PackedVector3Array(0, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0, 0.5, 0.5, 0, 0.5, -0.5, 0.5, -0.5, 0.5, 0, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0, 0.5, -0.5, 0, 0.5, 0.5, -0.5, -0.5, -0.5, 0, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
-[node name="Triangulo_Illuminati" type="Node3D" unique_id=1884141656]
+[node name="Triangulo_Illuminati" type="StaticBody3D" unique_id=1361820979]
+script = ExtResource("1_r7jv5")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1361820979]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1601685622]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1601685622]
 mesh = SubResource("PrismMesh_hsr5x")
 surface_material_override/0 = SubResource("StandardMaterial3D_gdw6p")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=694561841]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=694561841]
 shape = SubResource("ConcavePolygonShape3D_2ot2r")
 
-[node name="Sprite3D" type="Sprite3D" parent="StaticBody3D" unique_id=1192822563]
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1192822563]
 transform = Transform3D(0.46, 0, 0, 0, 0.46, 0, 0, 0, 0.46, -0.026419967, -0.0780531, 0.5039722)
 texture = ExtResource("1_gdw6p")
 
-[node name="Sprite3D2" type="Sprite3D" parent="StaticBody3D" unique_id=56974839]
+[node name="Sprite3D2" type="Sprite3D" parent="." unique_id=56974839]
 transform = Transform3D(0.46, 0, 0, 0, 0.46, 0, 0, 0, 0.46, -0.026419967, -0.0780531, -0.5096292)
 texture = ExtResource("1_gdw6p")
 
-[node name="Sprite3D3" type="Sprite3D" parent="StaticBody3D" unique_id=368620269]
+[node name="Sprite3D3" type="Sprite3D" parent="." unique_id=368620269]
 transform = Transform3D(-0.009043382, 0.20005453, 0.41412127, 0.004367653, 0.41422006, -0.20000683, -0.45989037, 0, -0.010042865, -0.32618955, -0.11790487, 0.06227076)
 texture = ExtResource("1_gdw6p")
 
-[node name="Sprite3D4" type="Sprite3D" parent="StaticBody3D" unique_id=55998726]
+[node name="Sprite3D4" type="Sprite3D" parent="." unique_id=55998726]
 transform = Transform3D(0.0034322813, -0.20003963, -0.4142129, 0.004367653, 0.41422006, -0.20000683, 0.4599664, -0.0024405643, 0.0049900487, 0.32594943, -0.12691471, -0.038128227)
 texture = ExtResource("1_gdw6p")

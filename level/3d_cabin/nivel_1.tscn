@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://blipekt62xeax" path="res://level/3d_cabin/door_animation.tscn" id="6_infdn"]
 [ext_resource type="PackedScene" uid="uid://vka0leii2h10" path="res://objects/props/avingnon_seal.tscn" id="6_kblf1"]
 [ext_resource type="PackedScene" uid="uid://fywlwgjbt75w" path="res://ui/hud/fade_transition.tscn" id="8_ek28t"]
-[ext_resource type="PackedScene" uid="uid://bixa1kfstwgrl" path="res://objects/interactables/item_prisma_triangulo_illuminati.tscn" id="9_vo1nr"]
+[ext_resource type="PackedScene" uid="uid://bixa1kfstwgrl" path="res://objects/interactables/item_triangulo_illuminati.tscn" id="9_vo1nr"]
 [ext_resource type="PackedScene" uid="uid://dv1dka7yb8nv" path="res://objects/interactables/item_cubo_rubik.tscn" id="10_m6ppd"]
 [ext_resource type="PackedScene" uid="uid://dndwemj4be8q1" path="res://objects/interactables/item_canica_bola.tscn" id="11_7y83b"]
 [ext_resource type="PackedScene" uid="uid://5mvso8wdvats" path="res://objects/interactables/item_rectangulo_memorycard.tscn" id="12_nnw0q"]
@@ -114,7 +114,7 @@ editor_only = true
 environment = ExtResource("1_gxhxh")
 
 [node name="Player" parent="." unique_id=2146257891 instance=ExtResource("2_27ww1")]
-transform = Transform3D(0.9994929, -0.01919125, 0.025409076, 0.019197447, 0.9998162, -7.861261e-10, -0.025404308, 0.00048779056, 0.9996773, -4.2541203, -0.13545752, 14.630048)
+transform = Transform3D(-0.99962944, 0.019193871, -0.01930194, 0.01919745, 0.9998163, -7.8670254e-10, 0.019298296, -0.00037054907, -0.99981385, -0.028487206, -0.13545752, 13.823464)
 
 [node name="OmniLight3D" parent="Player" index="2" unique_id=1038113874]
 light_color = Color(0.9779369, 0.97793704, 0.9779369, 1)
@@ -726,21 +726,25 @@ transform = Transform3D(1.3341315, 0, 1.4899977, 0, 2, 0, -1.4899977, 0, 1.33413
 [node name="MemoryCard2" parent="PosicionesPiezas" unique_id=2077422305 instance=ExtResource("12_nnw0q")]
 transform = Transform3D(0.18393141, 0, 0.078544475, 0, 0.2, 0, -0.078544475, 0, 0.18393141, 7.345001, 1.3676665, -4.0442452)
 
-[node name="Canica_Bola" parent="." unique_id=344276329 instance=ExtResource("11_7y83b")]
+[node name="Canica_Bola" parent="." unique_id=344276329 groups=["interactuable"] instance=ExtResource("11_7y83b")]
 transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 0.6668912, 0.9409848, 15.228915)
-visible = false
+id_del_item = "canica_bola"
+texto_interfaz = "Coger canica [E]"
 
-[node name="Cubo_Rubik" parent="." unique_id=270352077 instance=ExtResource("10_m6ppd")]
+[node name="Cubo_Rubik" parent="." unique_id=270352077 groups=["interactuable"] instance=ExtResource("10_m6ppd")]
 transform = Transform3D(1.3341315, 0, 1.4899977, 0, 2, 0, -1.4899977, 0, 1.3341315, 0.26033378, 0.85769176, 15.255322)
-visible = false
+id_del_item = "cuadrado_rubik"
+texto_interfaz = "Coger cubo de Rubik [E]"
 
-[node name="Piramide_Illuminati" parent="." unique_id=579733185 instance=ExtResource("9_vo1nr")]
+[node name="Piramide_Illuminati" parent="." unique_id=579733185 groups=["interactuable"] instance=ExtResource("9_vo1nr")]
 transform = Transform3D(0.13817579, 0, -0.058373418, 0, 0.15, 0, 0.058373418, 0, 0.13817579, -0.078799844, 0.98373926, 15.153794)
-visible = false
+id_del_item = "piramide_illuminati"
+texto_interfaz = "Coger piramide Illuminati [E]"
 
-[node name="MemoryCard" parent="." unique_id=1280837234 instance=ExtResource("12_nnw0q")]
+[node name="MemoryCard" parent="." unique_id=1280837234 groups=["interactuable"] instance=ExtResource("12_nnw0q")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.45783532, 0.9743757, 15.14879)
-visible = false
+id_del_item = "rectangulo_memorycard"
+texto_interfaz = "Coger Memory Card [E]"
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=441527846]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6864451, 0.4500698, -5.6710544)

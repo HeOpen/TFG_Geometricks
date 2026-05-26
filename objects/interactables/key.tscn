@@ -51,7 +51,6 @@ size = Vector3(0.001, 0.001, 0.001)
 [node name="Key" type="StaticBody3D" unique_id=507974105 groups=["interactuable"]]
 script = ExtResource("1_m2vcc")
 id_del_item = "llave_pcroom"
-texto_interfaz = "Coger Llave [E]"
 
 [node name="Mesh_Key_02" type="MeshInstance3D" parent="." unique_id=397728026]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
@@ -60,4 +59,5 @@ mesh = SubResource("ArrayMesh_p13wo")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1543911469]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+visible = false
 shape = SubResource("BoxShape3D_m2vcc")

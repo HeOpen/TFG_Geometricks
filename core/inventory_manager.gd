@@ -10,8 +10,11 @@ var items: Array[String] = []
 # Tendrás que cargar tus texturas retro aquí
 var iconos_items: Dictionary = {
 	"llave_pcroom": preload("res://assets/textures/Icons/key_icon.png"),
-	# "llave_sotano": preload("res://assets/textures/Icons/key_icon.png"),
-	"vhs_tape": preload("res://assets/textures/Icons/vhs_icon.png")
+	"vhs_tape": preload("res://assets/textures/Icons/vhs_icon.png"),
+	"canica_bola" : preload("res://assets/textures/Icons/icon_circulo.png"),
+	"cuadrado_rubik" : preload("res://assets/textures/Icons/icon_cuadrado.png"),
+	"rectangulo_memorycard" : preload("res://assets/textures/Icons/icon_rectangulo.png"),
+	"piramide_illuminati" : preload("res://assets/textures/Icons/icon_triangulo.png")
 }
 
 func anadir_item(id_item: String) -> void:
