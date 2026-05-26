@@ -6,8 +6,14 @@ extends Node
 # --- Definición de Estados del Sistema ---
 # Un enum (enumerado) asigna un valor numérico secuencial e inmutable a palabras clave.
 # MENU = 0, INTRO = 1, JUEGO = 2, FINAL = 3. Esto evita errores de escritura de texto.
-enum EstadosMusica { MENU, INTRO, JUEGO, FINAL }
+enum EstadosMusica { MENU, INTRO, JUEGO, FINAL, TEMPORAL }
 var estado_actual: EstadosMusica = EstadosMusica.MENU
+
+var _stream_guardado: AudioStream = null
+var _posicion_guardada: float = 0.0
+var _indice_guardado: int = 0
+var _estado_guardado: EstadosMusica = EstadosMusica.MENU
+var _volumen_guardado: float = 0.0
 
 # --- Recursos de Audio (@export) ---
 # Al usar Array[AudioStream], forzamos al Inspector a aceptar únicamente archivos de sonido (.ogg/.wav).
@@ -57,9 +63,40 @@ func _reproducir_pista_ambiente(indice: int) -> void:
 	audio_player.stream = lista_ambiente[indice]
 	audio_player.play()
 
+func reproducir_temporal(stream: AudioStream, volumen_db: float = 0.0, duracion_fade: float = 0.4) -> void:
+	_stream_guardado = audio_player.stream
+	_posicion_guardada = audio_player.get_playback_position()
+	_indice_guardado = indice_pista_actual
+	_estado_guardado = estado_actual
+	_volumen_guardado = audio_player.volume_db
+	estado_actual = EstadosMusica.TEMPORAL
+	audio_player.volume_db = -80.0
+	audio_player.stream = stream
+	audio_player.play()
+	var tween = create_tween()
+	tween.tween_property(audio_player, "volume_db", volumen_db, duracion_fade)
+
+func restaurar_anterior(duracion_fade: float = 0.4) -> void:
+	if _stream_guardado == null:
+		return
+	var tween = create_tween()
+	tween.tween_property(audio_player, "volume_db", -80.0, duracion_fade)
+	await tween.finished
+	estado_actual = _estado_guardado
+	indice_pista_actual = _indice_guardado
+	audio_player.stream = _stream_guardado
+	audio_player.play()
+	audio_player.seek(_posicion_guardada)
+	_stream_guardado = null
+	var tween2 = create_tween()
+	tween2.tween_property(audio_player, "volume_db", _volumen_guardado, duracion_fade)
+
 func _on_audio_player_finished() -> void:
 	# Evaluamos el estado actual. Si estamos en MENU, INTRO o FINAL, 
 	# las canciones individuales simplemente se repiten en bucle (loop).
+	if estado_actual == EstadosMusica.TEMPORAL:
+		audio_player.play()
+		return
 	if estado_actual != EstadosMusica.JUEGO:
 		audio_player.play()
 		return

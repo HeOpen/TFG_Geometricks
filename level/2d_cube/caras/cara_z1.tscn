@@ -19,7 +19,7 @@ show_behind_parent = true
 custom_minimum_size = Vector2(512, 512)
 offset_right = 40.0
 offset_bottom = 40.0
-color = Color(1, 0.34765625, 0.34765625, 1)
+color = Color(0.24104936, 0.058374166, 0.058374166, 1)
 
 [node name="EntradaDesde_Cara_x1" type="Marker2D" parent="." unique_id=1944534509]
 position = Vector2(495, 465)

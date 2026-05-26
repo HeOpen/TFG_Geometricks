@@ -1,61 +1,132 @@
 extends StaticBody3D
 
-@export_file("*.tscn") var escena_destino: String = "res://level/2d_cube/cubo.tscn"
-@export var tiempo_zoom: float = 1.4
-@export var tiempo_fundido: float = 0.5
+@export var tiempo_fundido: float = 0.4
+@export var volumen_cubo_db: float = -6.0
 
-# Variables obligatorias para que el sistema de tu compañero reconozca el objeto
 var texto_interfaz: String = "Inspeccionar Cubo [R]"
 var en_proceso: bool = false
 
-# Esta es la función que el script de tu Player va a llamar al pulsar el botón
+var _ventana: CanvasLayer = null
+var _raiz: Control = null
+var _player_ref: Node = null
+
+const CUBO_SCENE = preload("res://level/2d_cube/cubo.tscn")
+const MUSICA_CUBO = preload("res://assets/audio/musica/dance-with-night-wind_sh.wav")
+# Tamaño de la ventana en píxeles de juego (proyecto 320×240)
+const VENTANA_W := 120
+const VENTANA_H := 120
+
 func interactuar() -> void:
-	# Si ya estamos en medio de la cinemática, ignoramos nuevos clics
 	if en_proceso:
 		return
-		
 	en_proceso = true
-	texto_interfaz = "" # Ocultamos el texto de la pantalla
-	
-	var camara = get_viewport().get_camera_3d()
-	if not camara:
-		_saltar_a_escena()
-		return
-		
-	# 1. Animación de Zoom y acercamiento
-	var tween_cine = create_tween().set_parallel(true)
-	tween_cine.set_ease(Tween.EASE_IN_OUT)
-	tween_cine.set_trans(Tween.TRANS_CUBIC)
-	
-	tween_cine.tween_property(camara, "fov", 18.0, tiempo_zoom)
-	
-	var posicion_cercana = camara.global_position.move_toward(global_position, camara.global_position.distance_to(global_position) * 0.4)
-	tween_cine.tween_property(camara, "global_position", posicion_cercana, tiempo_zoom)
-	
-	await tween_cine.finished
-	
-	# 2. Fundido a negro
-	var capa_interfaz = CanvasLayer.new()
-	var rectangulo_negro = ColorRect.new()
-	rectangulo_negro.color = Color(0, 0, 0, 0)
-	rectangulo_negro.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	
-	capa_interfaz.add_child(rectangulo_negro)
-	add_child(capa_interfaz)
-	
-	var tween_fundido = create_tween()
-	tween_fundido.tween_property(rectangulo_negro, "color:a", 1.0, tiempo_fundido)
-	
-	await tween_fundido.finished
-	
-	# 3. Cambio de escena
-	_saltar_a_escena()
+	texto_interfaz = ""
+	_abrir_ventana()
 
-func _saltar_a_escena() -> void:
-	if ResourceLoader.exists(escena_destino):
-		get_tree().change_scene_to_file(escena_destino)
-	else:
-		print("Error crítico: No se encuentra la escena del cubo 2D en: ", escena_destino)
-		# Si falla, reiniciamos el estado para poder volver a intentarlo
-		en_proceso = false
-		texto_interfaz = "Inspeccionar Cubo [R]"
+func _abrir_ventana() -> void:
+	_player_ref = get_tree().get_first_node_in_group("Player")
+	if _player_ref:
+		_player_ref.process_mode = Node.PROCESS_MODE_DISABLED
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
+	_ventana = CanvasLayer.new()
+	_ventana.layer = 10
+
+	# Nodo raíz Control para animar la opacidad del overlay completo
+	_raiz = Control.new()
+	_raiz.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	_raiz.modulate.a = 0.0
+	_ventana.add_child(_raiz)
+
+	# Oscurecer el fondo sin taparlo — el mundo 3D sigue renderizándose detrás
+	var dimmer = ColorRect.new()
+	dimmer.color = Color(0, 0, 0, 0)
+	dimmer.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	dimmer.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_raiz.add_child(dimmer)
+
+	# Marco blanco fino alrededor de la ventana
+	var borde = ColorRect.new()
+	borde.color = Color(0, 0, 0, 1.0)
+	borde.anchor_left = 0.5
+	borde.anchor_right = 0.5
+	borde.anchor_top = 0.5
+	borde.anchor_bottom = 0.5
+	borde.offset_left  = -(VENTANA_W / 2.0 + 1)
+	borde.offset_right =   VENTANA_W / 2.0 + 1
+	borde.offset_top   = -(VENTANA_H / 2.0 + 1)
+	borde.offset_bottom =  VENTANA_H / 2.0 + 1
+	borde.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_raiz.add_child(borde)
+
+	# Ventana centrada con el cubo dentro
+	var contenedor = SubViewportContainer.new()
+	contenedor.stretch = true
+	contenedor.focus_mode = Control.FOCUS_ALL
+	contenedor.anchor_left = 0.5
+	contenedor.anchor_right = 0.5
+	contenedor.anchor_top = 0.5
+	contenedor.anchor_bottom = 0.5
+	contenedor.offset_left  = -VENTANA_W / 2.0
+	contenedor.offset_right =  VENTANA_W / 2.0
+	contenedor.offset_top   = -VENTANA_H / 2.0
+	contenedor.offset_bottom =  VENTANA_H / 2.0
+	_raiz.add_child(contenedor)
+
+	var subviewport = SubViewport.new()
+	subviewport.own_world_3d = true
+	subviewport.size = Vector2i(VENTANA_W, VENTANA_H)
+	contenedor.add_child(subviewport)
+	subviewport.add_child(CUBO_SCENE.instantiate())
+
+	# Pista de cierre en la parte inferior de la pantalla
+	var pista = Label.new()
+	pista.text = "[ESC] Cerrar"
+	pista.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	pista.anchor_left = 0.0
+	pista.anchor_right = 1.0
+	pista.anchor_top = 1.0
+	pista.anchor_bottom = 1.0
+	pista.offset_top = -18
+	pista.offset_bottom = 0
+	pista.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_raiz.add_child(pista)
+
+	get_tree().root.add_child(_ventana)
+	contenedor.grab_focus()
+	MusicManager.reproducir_temporal(MUSICA_CUBO, volumen_cubo_db, tiempo_fundido)
+
+	var tween = create_tween()
+	tween.tween_property(_raiz, "modulate:a", 1.0, tiempo_fundido)
+
+	set_process_input(true)
+
+func _input(event: InputEvent) -> void:
+	if _ventana and event.is_action_pressed("ui_cancel"):
+		_cerrar_ventana()
+		get_viewport().set_input_as_handled()
+
+func _cerrar_ventana() -> void:
+	set_process_input(false)
+
+	# Ambos fades (música y visual) arrancan en paralelo
+	MusicManager.restaurar_anterior(tiempo_fundido)
+
+	if is_instance_valid(_raiz):
+		var tween = create_tween()
+		tween.tween_property(_raiz, "modulate:a", 0.0, tiempo_fundido)
+		await tween.finished
+
+	if is_instance_valid(_ventana):
+		_ventana.queue_free()
+	_ventana = null
+	_raiz = null
+
+	if is_instance_valid(_player_ref):
+		_player_ref.process_mode = Node.PROCESS_MODE_INHERIT
+	_player_ref = null
+
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+	en_proceso = false
+	texto_interfaz = "Inspeccionar Cubo [R]"

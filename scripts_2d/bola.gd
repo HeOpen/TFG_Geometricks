@@ -2,10 +2,10 @@ extends CharacterBody2D
 
 enum Forma { CIRCULO, CUADRADO, TRIANGULO, RECTANGULO }
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -200.0
+const SPEED = 120.0
+const JUMP_VELOCITY = -300.0
 const RADIUS = 6.0
-const LEVITATION_ACCEL = 150.0
+const LEVITATION_ACCEL = 200.0
 const MAX_LEVITATION_SPEED = 250.0
 
 var forma_actual: Forma = Forma.CIRCULO
