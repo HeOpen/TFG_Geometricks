@@ -30,20 +30,13 @@
 [ext_resource type="Texture2D" uid="uid://bahx1v2ipushh" path="res://assets/textures/Posters/movie3.jpg" id="32_ovth3"]
 [ext_resource type="Texture2D" uid="uid://lwux5blliw5a" path="res://assets/models_3d/Objects_Interior(Village)_Demo/Textures/Bookcase.png" id="33_hnaum"]
 [ext_resource type="Texture2D" uid="uid://ccsqw3kbr7ycb" path="res://assets/textures/Posters/movie4.jpg" id="34_ehn6b"]
-[ext_resource type="AudioStream" uid="uid://bdmtqwq14pbne" path="res://assets/audio/Narrador_Introduccion.wav" id="35_aiwdk"]
+[ext_resource type="AudioStream" uid="uid://o7u18rabxh8r" path="res://assets/audio/Narrador_IntroduccionMejorado.wav" id="35_evuln"]
 [ext_resource type="Texture2D" uid="uid://cjiya3af6ssrt" path="res://assets/textures/Posters/movie5.jpg" id="35_ovth3"]
 [ext_resource type="PackedScene" uid="uid://bl7vcbpqgagg0" path="res://objects/interactables/vhs_player.tscn" id="37_2x7qg"]
 [ext_resource type="PackedScene" uid="uid://bbmvtbhgny10t" path="res://objects/interactables/vhs_tape.tscn" id="37_aiwdk"]
 [ext_resource type="Script" uid="uid://d2gxhlgh3bi5i" path="res://level/3d_cabin/gestor_intro.gd" id="37_evuln"]
 [ext_resource type="PackedScene" uid="uid://mxmnuak3dbs0" path="res://objects/props/PSX_Case.tscn" id="37_per1h"]
 [ext_resource type="PackedScene" uid="uid://fywlwgjbt75w" path="res://ui/hud/fade_transition.tscn" id="39_2x7qg"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v5b82"]
-albedo_color = Color(0.59575874, 0.5872641, 0.962526, 1)
-emission_enabled = true
-emission = Color(1, 0.65457314, 0, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vo1w2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8n818"]
 resource_name = "Bookcase_02"
@@ -318,9 +311,12 @@ size = Vector3(0.64941406, 1.2645264, 1.6940918)
 [sub_resource type="BoxShape3D" id="BoxShape3D_ovth3"]
 size = Vector3(0.8676758, 2.1848755, 1.6756592)
 
-[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_evuln"]
-resource_local_to_scene = true
-file = "res://assets/textures/vhs_static.ogv"
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v5b82"]
+albedo_color = Color(0.59575874, 0.5872641, 0.962526, 1)
+emission_enabled = true
+emission = Color(1, 0.65457314, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vo1w2"]
 
 [sub_resource type="Shader" id="Shader_thnxg"]
 code = "shader_type canvas_item;
@@ -363,20 +359,14 @@ shader_parameter/chromatic_aberration = 0.005
 [node name="Cabin_intro" type="Node3D" unique_id=1927939690]
 script = ExtResource("1_ehn6b")
 
-[node name="Jugador" parent="." unique_id=2146257891 instance=ExtResource("20_jcjsx")]
-transform = Transform3D(-0.5088911, 0, 0.8608309, 0, 1, 0, -0.8608309, 0, -0.5088911, -3.1090908, -0.26503158, 2.4159377)
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=682652495]
-transform = Transform3D(-0.66147554, -0.5663326, -0.49164817, -0.4740645, -0.19223088, 0.8592498, -0.5811311, 0.8014456, -0.14132214, -8.065992, 2.5518427, 4.458272)
+transform = Transform3D(-0.66147536, -0.5663325, -0.4916481, -0.47406438, -0.19223087, 0.85924983, -0.581131, 0.8014455, -0.1413221, -8.065992, 2.5518427, 4.458272)
 light_color = Color(1, 0.49019608, 0.011764706, 1)
 light_energy = 0.2
 shadow_enabled = true
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=646517633]
-environment = ExtResource("2_36f10")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1247036135]
-transform = Transform3D(-0.2089512, 0.43283257, -0.8769238, 0.07038426, 0.9010486, 0.42796904, 0.9753899, 0.027703015, -0.21873978, -9.663025, 2.3376148, 4.2130036)
+[node name="LuzSol" type="SpotLight3D" parent="." unique_id=1247036135]
+transform = Transform3D(-0.2089512, 0.43283257, -0.87692386, 0.07038426, 0.9010486, 0.4279691, 0.9753899, 0.027703026, -0.2187398, -9.663025, 2.3376148, 4.2130036)
 light_color = Color(1, 0.49019608, 0.011764706, 1)
 light_energy = 10.0
 light_indirect_energy = 0.0
@@ -384,52 +374,13 @@ light_volumetric_fog_energy = 13.2
 spot_range = 10.353
 spot_angle = 11.25
 
-[node name="Structure" type="Node3D" parent="." unique_id=666381766]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=646517633]
+environment = ExtResource("2_36f10")
 
-[node name="Floor4" parent="Structure" unique_id=1797847355 instance=ExtResource("1_a8v70")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.052882, -0.185, 4.1407022)
-
-[node name="LogWall11" parent="Structure" unique_id=379315962 instance=ExtResource("2_jcjsx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.012466, 0, 8)
-
-[node name="LogWall" parent="Structure" unique_id=269274759 instance=ExtResource("3_dgrx3")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2, 0.01, 4)
-
-[node name="LogWall2" parent="Structure" unique_id=1096471665 instance=ExtResource("3_dgrx3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.01, 2)
-
-[node name="Column" parent="Structure" unique_id=175129357 instance=ExtResource("4_ufbth")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9999526, 0.07517803, 8.0134945)
-
-[node name="Column8" parent="Structure" unique_id=1784548596 instance=ExtResource("4_ufbth")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9999526, 0.07517803, 2.0438988)
-
-[node name="Column11" parent="Structure" unique_id=1725503609 instance=ExtResource("4_ufbth")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0086377, 0.07517803, 6.0091076)
-
-[node name="Column10" parent="Structure" unique_id=1959397016 instance=ExtResource("4_ufbth")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.999998, 0.07517803, 2.085136)
-
-[node name="LogWall6" parent="Structure" unique_id=668088203 instance=ExtResource("5_i16pj")]
-transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -8, 0, 0.014)
-
-[node name="Door1" parent="Structure" unique_id=1997429010 instance=ExtResource("21_dgrx3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.147, -0.04, 1.9514704)
-
-[node name="Door2" parent="Structure" unique_id=2089661249 instance=ExtResource("21_dgrx3")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2, -0.04, 6.973)
-
-[node name="Window" type="CSGBox3D" parent="Structure" unique_id=691906056]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.031906, 1.3743279, 4.5204234)
-size = Vector3(0.35327148, 1, 2.8562574)
-material = SubResource("StandardMaterial3D_v5b82")
-
-[node name="Ceiling_walls" type="CSGBox3D" parent="." unique_id=190003198]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5163984, 0.965, 4.163)
-material_override = ExtResource("6_a3yov")
-flip_faces = true
-size = Vector3(6.974797, 2.54, 7.998)
-material = SubResource("StandardMaterial3D_vo1w2")
+[node name="GestorIntro" type="Node3D" parent="." unique_id=1340781949 node_paths=PackedStringArray("audio_noticias", "cinta_vhs")]
+script = ExtResource("37_evuln")
+audio_noticias = NodePath("../TV/AudioStreamPlayer3D")
+cinta_vhs = NodePath("../VHS_Tape")
 
 [node name="Furniture" type="Node3D" parent="." unique_id=1306919222]
 
@@ -521,6 +472,9 @@ transform = Transform3D(-3.496911e-09, 0, -0.08, 0, 0.08, 0, 0.08, 0, -3.496911e
 material_override = SubResource("StandardMaterial3D_per1h")
 texture = ExtResource("35_ovth3")
 
+[node name="PSX_Case" parent="Furniture" unique_id=432635781 instance=ExtResource("37_per1h")]
+transform = Transform3D(0.003, 0, 0, 0, 0.003, 0, 0, 0, 0.003, -4.644779, 0.92910576, 7.252067)
+
 [node name="Boundaries" type="Node3D" parent="." unique_id=1938084184]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Boundaries" unique_id=1664176696]
@@ -545,29 +499,52 @@ shape = SubResource("BoxShape3D_ovth3")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.27031, 0.59243774, 7.608557)
 shape = SubResource("BoxShape3D_ovth3")
 
-[node name="TV" parent="." unique_id=2025396337 instance=ExtResource("22_ufbth")]
-transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, -5.4119687, 1.2873743, 7.5935397)
+[node name="Structure" type="Node3D" parent="." unique_id=666381766]
 
-[node name="TV_02" parent="TV/StaticBody3D" parent_id_path=PackedInt32Array(2025396337, 1467537158) index="0" unique_id=604649455]
-surface_material_override/2 = null
+[node name="Floor4" parent="Structure" unique_id=1797847355 instance=ExtResource("1_a8v70")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.052882, -0.185, 4.1407022)
 
-[node name="VideoStreamPlayer" parent="TV/SubViewport" parent_id_path=PackedInt32Array(2025396337, 2083337021) index="0" unique_id=1150574430]
-stream = SubResource("VideoStreamTheora_evuln")
+[node name="LogWall11" parent="Structure" unique_id=379315962 instance=ExtResource("2_jcjsx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.012466, 0, 8)
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="TV" unique_id=127783691]
-stream = ExtResource("35_aiwdk")
-bus = &"FX"
+[node name="LogWall" parent="Structure" unique_id=269274759 instance=ExtResource("3_dgrx3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2, 0.01, 4)
 
-[node name="VHS_Tape" parent="." unique_id=1005967043 instance=ExtResource("37_aiwdk")]
-transform = Transform3D(0.048535194, 0, 0.012013944, 0, 0.05, 0, -0.012013944, 0, 0.048535194, -5.2547727, 0.33849555, 5.4150047)
+[node name="LogWall2" parent="Structure" unique_id=1096471665 instance=ExtResource("3_dgrx3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.01, 2)
 
-[node name="VHS_Player" parent="." unique_id=1601522618 instance=ExtResource("37_2x7qg")]
-transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, -5.4550533, 0.8694469, 7.5103207)
+[node name="Column" parent="Structure" unique_id=175129357 instance=ExtResource("4_ufbth")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9999526, 0.07517803, 8.0134945)
 
-[node name="GestorIntro" type="Node3D" parent="." unique_id=1340781949 node_paths=PackedStringArray("audio_noticias", "cinta_vhs")]
-script = ExtResource("37_evuln")
-audio_noticias = NodePath("../TV/AudioStreamPlayer3D")
-cinta_vhs = NodePath("../VHS_Tape")
+[node name="Column8" parent="Structure" unique_id=1784548596 instance=ExtResource("4_ufbth")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9999526, 0.07517803, 2.0438988)
+
+[node name="Column11" parent="Structure" unique_id=1725503609 instance=ExtResource("4_ufbth")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0086377, 0.07517803, 6.0091076)
+
+[node name="Column10" parent="Structure" unique_id=1959397016 instance=ExtResource("4_ufbth")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.999998, 0.07517803, 2.085136)
+
+[node name="LogWall6" parent="Structure" unique_id=668088203 instance=ExtResource("5_i16pj")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -8, 0, 0.014)
+
+[node name="Door1" parent="Structure" unique_id=1997429010 instance=ExtResource("21_dgrx3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.147, -0.04, 1.9514704)
+
+[node name="Door2" parent="Structure" unique_id=2089661249 instance=ExtResource("21_dgrx3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2, -0.04, 6.973)
+
+[node name="Window" type="CSGBox3D" parent="Structure" unique_id=691906056]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.031906, 1.3743279, 4.5204234)
+size = Vector3(0.35327148, 1, 2.8562574)
+material = SubResource("StandardMaterial3D_v5b82")
+
+[node name="Ceiling_walls" type="CSGBox3D" parent="Structure" unique_id=190003198]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5163984, 0.965, 4.163)
+material_override = ExtResource("6_a3yov")
+flip_faces = true
+size = Vector3(6.974797, 2.54, 7.998)
+material = SubResource("StandardMaterial3D_vo1w2")
 
 [node name="CanvasLayer" parent="." unique_id=1478569276 instance=ExtResource("39_2x7qg")]
 
@@ -583,9 +560,22 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Node3D" parent="." unique_id=432635781 instance=ExtResource("37_per1h")]
-transform = Transform3D(0.003, 0, 0, 0, 0.003, 0, 0, 0, 0.003, -4.644779, 0.92910576, 7.252067)
+[node name="Jugador" parent="." unique_id=2146257891 instance=ExtResource("20_jcjsx")]
+transform = Transform3D(-0.5088911, 0, 0.8608309, 0, 1, 0, -0.8608309, 0, -0.5088911, -3.1090908, -0.26503158, 2.4159377)
 
-[editable path="Jugador"]
-[editable path="TV"]
+[node name="TV" parent="." unique_id=2025396337 instance=ExtResource("22_ufbth")]
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, -5.4119687, 1.2873743, 7.5935397)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="TV" unique_id=127783691]
+stream = ExtResource("35_evuln")
+volume_db = 10.0
+bus = &"FX"
+
+[node name="VHS_Player" parent="." unique_id=1601522618 instance=ExtResource("37_2x7qg")]
+transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, -5.4550533, 0.8694469, 7.5103207)
+
+[node name="VHS_Tape" parent="." unique_id=1005967043 instance=ExtResource("37_aiwdk")]
+transform = Transform3D(0.048535194, 0, 0.012013944, 0, 0.05, 0, -0.012013944, 0, 0.048535194, -5.2547727, 0.33849555, 5.4150047)
+
 [editable path="CanvasLayer"]
+[editable path="Jugador"]

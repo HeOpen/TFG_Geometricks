@@ -216,7 +216,7 @@ script = ExtResource("1_bws42")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Env" unique_id=1868436296]
 transform = Transform3D(0.07545447, 0.7820513, 0.61862946, -0.99693155, 0.046199005, 0.06319284, 0.02083999, -0.62149936, 0.7831374, -1.4198554, 0, 0.40846026)
-light_color = Color(1, 0.49019608, 0.011764706, 1)
+light_color = Color(0.999999, 0.5299769, 0.19624096, 1)
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Env" unique_id=2027843275]
