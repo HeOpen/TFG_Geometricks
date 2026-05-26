@@ -112,7 +112,7 @@ editor_only = true
 environment = ExtResource("1_gxhxh")
 
 [node name="Player" parent="." unique_id=2146257891 instance=ExtResource("2_27ww1")]
-transform = Transform3D(-0.9981688, 0.019165825, 0.05737248, 0.019197444, 0.99981606, -6.8830147e-10, -0.057361975, 0.001101404, -0.998353, -0.27235746, -0.13545752, 11.51303)
+transform = Transform3D(-0.9981688, 0.019165825, 0.05737248, 0.019197444, 0.99981606, -6.8830147e-10, -0.057361975, 0.001101404, -0.998353, -5.5110874, -0.13545752, 2.824605)
 
 [node name="OmniLight3D" parent="Player" index="2" unique_id=1038113874]
 light_color = Color(0.9779369, 0.97793704, 0.9779369, 1)

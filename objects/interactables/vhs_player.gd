@@ -36,4 +36,3 @@ func interactuar() -> void:
 		# Verificamos que no se haya insertado en esos 2 segundos antes de restaurar el texto
 		if not reproduciendo:
 			texto_interfaz = "Insertar Cinta [E]"
-"res://level/3d_cabin/nivel_1.tscn"

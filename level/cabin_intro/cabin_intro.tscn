@@ -1,7 +1,7 @@
-[gd_scene format=4 uid="uid://cv58wfwfiga5e"]
+[gd_scene format=4 uid="uid://vef148s8cj82"]
 
 [ext_resource type="PackedScene" uid="uid://bn3v0umcbf8ww" path="res://objects/modular_architecture/MESH_Floor.tscn" id="1_a8v70"]
-[ext_resource type="Script" path="res://level/3d_cabin/cabin_intro.gd" id="1_ehn6b"]
+[ext_resource type="Script" uid="uid://76si7pb28bqo" path="res://level/cabin_intro/cabin_intro.gd" id="1_sl14u"]
 [ext_resource type="Environment" uid="uid://bfhf63wtq60ir" path="res://entities/env_lightning/intro_sunset_env.tres" id="2_36f10"]
 [ext_resource type="PackedScene" uid="uid://8fq1gfnfnl5h" path="res://objects/modular_architecture/MESH_log_75wall.tscn" id="2_jcjsx"]
 [ext_resource type="PackedScene" uid="uid://bqiw721ebocq5" path="res://objects/modular_architecture/MESH_log_wall_50medium.tscn" id="3_dgrx3"]
@@ -357,7 +357,7 @@ shader_parameter/scanline_count = 250.0
 shader_parameter/chromatic_aberration = 0.005
 
 [node name="Cabin_intro" type="Node3D" unique_id=1927939690]
-script = ExtResource("1_ehn6b")
+script = ExtResource("1_sl14u")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=682652495]
 transform = Transform3D(-0.66147536, -0.5663325, -0.4916481, -0.47406438, -0.19223087, 0.85924983, -0.581131, 0.8014455, -0.1413221, -8.065992, 2.5518427, 4.458272)

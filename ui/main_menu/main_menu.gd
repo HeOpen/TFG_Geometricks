@@ -136,7 +136,7 @@ func _empezar_juego() -> void:
 	await anim_player.animation_finished
 	
 	# 4. Una vez la pantalla es 100% negra, destruimos el menú y cargamos el nivel
-	get_tree().change_scene_to_file("res://level/3d_cabin/cabin_intro_structure.tscn")
+	get_tree().change_scene_to_file("res://level/cabin_intro/cabin_intro.tscn")
 	
 func _alternar_vhs() -> void:
 	if not efecto_vhs:
