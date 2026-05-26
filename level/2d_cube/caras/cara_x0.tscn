@@ -1550,3 +1550,9 @@ position = Vector2(501, 483)
 
 [node name="EntradaDesde_Cara_z0" type="Marker2D" parent="." unique_id=1128757457]
 position = Vector2(11, 471)
+
+[node name="EntradaDesde_Cara_y0" type="Marker2D" parent="." unique_id=500233042]
+position = Vector2(32, 11)
+
+[node name="EntradaDesde_Cara_y1" type="Marker2D" parent="." unique_id=310286817]
+position = Vector2(277, 500)

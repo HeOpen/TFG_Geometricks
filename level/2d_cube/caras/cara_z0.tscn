@@ -29,3 +29,7 @@ color = Color(0.0010720865, 0.11465349, 0.15433852, 1)
 position = Vector2(11, 407)
 
 [node name="EntradaDesde_Cara_y0" type="Marker2D" parent="." unique_id=1524204826]
+position = Vector2(296, 11)
+
+[node name="EntradaDesde_Cara_x0" type="Marker2D" parent="." unique_id=194321179]
+position = Vector2(500, 466)

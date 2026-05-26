@@ -1800,4 +1800,7 @@ offset_bottom = 43.0
 color = Color(0.15701294, 0.20843267, 0.41015625, 1)
 
 [node name="EntradaDesde_Cara_z0" type="Marker2D" parent="." unique_id=1856909760]
-position = Vector2(11, 308)
+position = Vector2(10, 287)
+
+[node name="EntradaDesde_Cara_x0" type="Marker2D" parent="." unique_id=1832028388]
+position = Vector2(34, 499)
