@@ -3,12 +3,19 @@ extends StaticBody3D
 # --- Referencias Expuestas ---
 @export var destination_front: String = ""
 @export var destination_back: String = ""
+@export var esta_bloqueada: bool = false
 
 # --- Variables de Interfaz ---
 var texto_interfaz: String = "Abrir Puerta [E]"
 var en_proceso: bool = false
 
 func interactuar() -> void:
+	# Cláusula de guarda 1: Estado físico
+	if esta_bloqueada:
+		print("La puerta está bloqueada por un candado.")
+		return
+		
+	# Cláusula de guarda 2: Estado de ejecución
 	if en_proceso:
 		return
 		
@@ -40,13 +47,14 @@ func interactuar() -> void:
 	var player_node = get_tree().get_first_node_in_group("Player")
 	
 	if marker_node != null and marker_node is Marker3D and player_node != null:
-		# AWAIT ES OBLIGATORIO AQUÍ.
 		# Congela la ejecución de este script hasta que el TransitionManager termine.
 		await TransitionManager.execute_door_transition(player_node, marker_node.global_position)
 	else:
 		push_error("Error crítico: No se encontró el Marker3D o el Jugador en la escena.")
 		
-	# Estas dos líneas solo se ejecutarán cuando el jugador ya haya sido teletransportado
-	# y la animación haya concluido.
+	# Restablecimiento tras la finalización de la transición
 	en_proceso = false
 	texto_interfaz = "Abrir Puerta [E]"
+
+func desbloquear() -> void:
+	esta_bloqueada = false

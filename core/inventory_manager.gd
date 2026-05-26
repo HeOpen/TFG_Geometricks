@@ -10,6 +10,7 @@ var items: Array[String] = []
 # Tendrás que cargar tus texturas retro aquí
 var iconos_items: Dictionary = {
 	"llave_pcroom": preload("res://assets/textures/Icons/key_icon.png"),
+	# "llave_sotano": preload("res://assets/textures/Icons/key_icon.png"),
 	"vhs_tape": preload("res://assets/textures/Icons/vhs_icon.png")
 }
 

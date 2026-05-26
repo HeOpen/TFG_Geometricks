@@ -4,7 +4,7 @@ extends StaticBody3D
 @export var id_requerido: String = "vhs_tape"
 
 # --- Variables de Estado ---
-var texto_interfaz: String = "Insertar Cinta [E]"
+var texto_interfaz: String = "Insertar VHS [E]"
 var reproduciendo: bool = false
 	
 	
@@ -30,9 +30,9 @@ func interactuar() -> void:
 	
 	else:
 		# Feedback visual temporal si no tiene la cinta
-		texto_interfaz = "Necesitas una cinta de vídeo."
+		texto_interfaz = "Necesito una cinta VHS..."
 		await get_tree().create_timer(2.0).timeout
 		
 		# Verificamos que no se haya insertado en esos 2 segundos antes de restaurar el texto
 		if not reproduciendo:
-			texto_interfaz = "Insertar Cinta [E]"
+			texto_interfaz = "Insertar VHS [E]"
