@@ -33,7 +33,7 @@ A medida que explores la cabaña, podrás desbloquear diferentes figuras para el
 
 ---
 
-## 🎮 Controles
+## 🎮 Controles (3D)
 Diseñado principalmente para PC, el juego cuenta con soporte total para teclado/ratón y gamepad.
 
 | Acción | Teclado | Mando (Gamepad) |
@@ -41,8 +41,21 @@ Diseñado principalmente para PC, el juego cuenta con soporte total para teclado
 | **Mover jugador** | `W` `A` `S` `D` | Joystick Izquierdo |
 | **Mover cámara** | Ratón | Joystick Derecho |
 | **Interactuar** | `E` | Botón `A` |
-| **Cambiar forma** | `R` | Botón `RB` |
 | **Menú / Pausa** | `Esc` | `Start` |
+
+---
+
+## 🎮 Controles (2D)
+
+| Acción | Teclado | Mando (Gamepad) |
+| :--- | :--- | :--- |
+| **Mover jugador** | `A` `D` | Joystick Izquierdo |
+| **Saltar** | `Espace` | Joystick Izquierdo |
+| **Cambiar forma (Esfera)** | `1` | Botón `RB` |
+| **Cambiar forma (Cubo)** | `2` | Botón `RT` |
+| **Cambiar forma (Pirámide)** | `3` | Botón `LB` |
+| **Cambiar forma (Ortoedro)** | `4` | Botón `LT` |
+| **Salir del modo 2D** | `Esc` | `Start` |
 
 ---
 
