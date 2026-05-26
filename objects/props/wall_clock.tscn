@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://01yrumtseoqp"]
 
 [ext_resource type="Texture2D" uid="uid://c5ofiyecgwvub" path="res://assets/models_3d/Clocks by T4Kum/MODELS/Clocks_0.png" id="1_pywyq"]
+[ext_resource type="Script" uid="uid://ydejbh8rl23j" path="res://objects/props/wall_clock.gd" id="1_qpklj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nlqpq"]
 resource_name = "material_0"
@@ -149,13 +150,14 @@ _data = {
 }
 
 [node name="Wall_Clock" type="Node3D" unique_id=1228142654]
+script = ExtResource("1_qpklj")
 
 [node name="cuboid" type="MeshInstance3D" parent="." unique_id=794461475]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.003125, 0, 0)
 mesh = SubResource("ArrayMesh_s5j5o")
 
 [node name="plane" type="MeshInstance3D" parent="." unique_id=949128227]
-transform = Transform3D(0.96455896, 0.0047024754, 0.3070058, -0.3223406, -0.00043791288, 0.91867924, 0.0033071379, -1.4142054, 0.0007363751, -0.127, 2.125, -0.25)
+transform = Transform3D(0.96455896, 0.004702476, 0.3070058, -0.3223406, -0.0004379129, 0.91867924, 0.0033071379, -1.4142056, 0.0007363751, -0.127, 2.125, -0.038605213)
 mesh = SubResource("ArrayMesh_6m0b5")
 
 [node name="plane2" type="MeshInstance3D" parent="." unique_id=1288108109]

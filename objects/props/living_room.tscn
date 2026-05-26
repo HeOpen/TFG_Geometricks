@@ -334,9 +334,6 @@ transform = Transform3D(-0.012799943, 0.06508323, 0.07483539, 1.5384056e-09, 0.0
 [node name="Table" parent="Furniture" unique_id=1367461039 instance=ExtResource("10_28xod")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3062606, 0.07639535, 5.4182334)
 
-[node name="TV" parent="Furniture" unique_id=2025396337 instance=ExtResource("11_2ftla")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5.378168, 1.288709, 7.5935397)
-
 [node name="Sillon" parent="Furniture" unique_id=842937594 instance=ExtResource("15_ysnjt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4260707, 0.41521287, 3.9506886)
 
@@ -406,5 +403,8 @@ shape = SubResource("BoxShape3D_2ftla")
 
 [node name="Node3D" parent="." unique_id=432635781 instance=ExtResource("23_ifln4")]
 transform = Transform3D(0.003, 0, 0, 0, 0.003, 0, 0, 0, 0.003, -0.9648103, 0.92910576, 2.1247053)
+
+[node name="StaticBody3D" parent="." unique_id=1467537158 instance=ExtResource("11_2ftla")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.6811441, 1.2957894, 2.437876)
 
 [editable path="Furniture/PS1_Controller"]

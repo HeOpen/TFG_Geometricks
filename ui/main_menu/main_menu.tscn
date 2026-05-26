@@ -14,12 +14,12 @@
 [ext_resource type="AudioStream" uid="uid://wx7y6yorvv4g" path="res://assets/audio/efectos/button_sound.ogg" id="12_xio0d"]
 [ext_resource type="AudioStream" uid="uid://b7w5kxf5s7qta" path="res://assets/audio/Title_Geometricks.wav" id="13_tf5ef"]
 
-[sub_resource type="Sky" id="Sky_s4pem"]
+[sub_resource type="Sky" id="Sky_tf5ef"]
 sky_material = ExtResource("8_s4pem")
 
 [sub_resource type="Environment" id="Environment_xio0d"]
 background_mode = 2
-sky = SubResource("Sky_s4pem")
+sky = SubResource("Sky_tf5ef")
 adjustment_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mlgns"]
@@ -34,7 +34,7 @@ vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("2_3shxk")
 emission_enabled = true
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_xq28v"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_qao3l"]
 _surfaces = [{
 "aabb": AABB(-0.43134412, -0.4313391, -0.025375947, 0.86268324, 0.8626806, 0.05895611),
 "format": 34359742465,
@@ -88,7 +88,7 @@ _surfaces = [{
 "vertex_data": PackedByteArray("QYk8PwrXoza8YwQ9QYk8PwrXozZy+xI9gVAFP3ZRBT9y+xI9gFAFP9NQBb+8YwQ9gVAFP3ZRBT+8YwQ9j8IltziKPD9y+xI9j8IltziKPD+8YwQ9gFAFP9NQBb9y+xI9Ctcjt5OJPL+8YwQ9Ctcjt5OJPL9y+xI9yVEFv9JQBb+8YwQ9yVEFv9JQBb9y+xI9Ctcjt5OJPL9y+xI9Ctcjt5OJPL+8YwQ9iYo8v65HoTa8YwQ9iYo8v65HoTZy+xI9yFEFv3ZRBT+8YwQ9yFEFv3ZRBT9y+xI9iYo8v65HoTZy+xI9iYo8v65HoTa8YwQ9j8IltziKPD+8YwQ9j8IltziKPD9y+xI9yVEFv9JQBb+8YwQ9QYk8PwrXoza8YwQ9gVAFP3ZRBT+8YwQ9j8IltziKPD+8YwQ9yFEFv3ZRBT+8YwQ9iYo8v65HoTa8YwQ9Ctcjt5OJPL+8YwQ9gFAFP9NQBb+8YwQ9iYo8v65HoTZy+xI9gVAFP3ZRBT9y+xI9QYk8PwrXozZy+xI9gFAFP9NQBb9y+xI9Ctcjt5OJPL9y+xI9yVEFv9JQBb9y+xI9yFEFv3ZRBT9y+xI9j8IltziKPD9y+xI9////f/9//7////9//3//v/+//7//f/8//7//P/5//r//v/+//3//P/9//v//f/8//3/+//9//z//v/8//n/+v/9/AAD/f/+//38AAP9//7//P/8//n//v/8//z/+f/+//38AAP9//7//fwAA/3//vwAA/3//f/+/AAD/f/9//7//P/+//3//P/8//7//f/8/AAD/f/9//z8AAP9//3//P/9//v//f/8//3/+//9//z///////7//X///////v/9f//////+//1///////7//X///////v/9f//////+//1///////7//X///////v/9f/3//f/+//5//f/9//7//n/9//3//v/+f/3//f/+//5//f/9//7//n/9//3//v/+f/3//f/+//5//f/9//7//nw==")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_xq28v")
+shadow_mesh = SubResource("ArrayMesh_qao3l")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6tl50"]
 size = Vector3(1.617157, 0.4807129, 0.043945313)
