@@ -289,7 +289,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.90803, 0.010426819, 8.9902
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6743796, 0.03178531, 5.108233)
 
 [node name="Kitchen2" parent="Cabin_Structure" unique_id=733641497 instance=ExtResource("2_gwr2c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.629645, 0.59862053, -6.5659027)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.629645, 0.6849705, -6.5659027)
 
 [node name="Bathroom" parent="Cabin_Structure" unique_id=917038488 instance=ExtResource("3_4jbrx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.0439577, -0.015098214, 14.344795)

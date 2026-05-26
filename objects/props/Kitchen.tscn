@@ -12,12 +12,12 @@
 [ext_resource type="Texture2D" uid="uid://ca731y5ibw6vb" path="res://assets/textures/Horror Textures by Canvas Coven/Stone tiles/Stone_tiles_11.png" id="12_7u6nb"]
 [ext_resource type="Texture2D" uid="uid://dba3nejcygbas" path="res://assets/models_3d/PSX - Assets/Textures/Foods.jpg" id="12_dx82n"]
 [ext_resource type="Texture2D" uid="uid://ciirqxwktepxi" path="res://assets/models_3d/PSX - Assets/Textures/Foods_01.jpg" id="13_cq3mg"]
-[ext_resource type="PackedScene" uid="uid://ngwu7ooje5c" path="res://objects/props/refrigerator.tscn" id="13_dx82n"]
 [ext_resource type="Texture2D" uid="uid://bck1o5pgjyjh1" path="res://assets/models_3d/Trash and Debris/GlassBottles.png" id="14_cq3mg"]
 [ext_resource type="Texture2D" uid="uid://ccg0d2r22l7i2" path="res://assets/models_3d/Trash and Debris/GlassShards_1.png" id="15_8d65h"]
 [ext_resource type="Texture2D" uid="uid://dwnkk8ahtfl45" path="res://assets/models_3d/Trash and Debris/LitterDecal_2.png" id="16_br7e4"]
 [ext_resource type="Texture2D" uid="uid://23qcflglkefd" path="res://assets/models_3d/Trash and Debris/TrashBag.png" id="17_lsm3u"]
 [ext_resource type="Texture2D" uid="uid://dnj7uluhmjpwf" path="res://assets/models_3d/Trash and Debris/MiscTrash_1.png" id="18_lsm3u"]
+[ext_resource type="PackedScene" uid="uid://y2wm4o475lyl" path="res://objects/interactables/nevera.tscn" id="19_5bseu"]
 [ext_resource type="Texture2D" uid="uid://dejxfc2hbvenr" path="res://assets/models_3d/Trash and Debris/Bottles.png" id="19_jhgwq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1p6lu"]
@@ -702,7 +702,6 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_e4ki5")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dx82n"]
-albedo_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
 albedo_texture = ExtResource("12_7u6nb")
 uv1_scale = Vector3(3.025, 3.025, 3.025)
 uv1_triplanar = true
@@ -1182,9 +1181,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6394427, -0.71571535, 1.03
 material_override = SubResource("StandardMaterial3D_dx82n")
 size = Vector3(5.9984174, 0.001, 5.1049232)
 
-[node name="Refrigerator_002" parent="." unique_id=1277572071 instance=ExtResource("13_dx82n")]
-transform = Transform3D(-99.99718, -0.7487507, -3.2728963e-08, -1.9969749e-13, -4.3711393e-06, 100.000015, -0.7487507, 99.99718, 4.3710165e-06, 0.9098091, 0.36695683, 2.4064298)
-
 [node name="GlassBottle_1" type="MeshInstance3D" parent="." unique_id=1311819267]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, -1.7484556e-08, 0, 1.7484556e-08, 0.4, 0.21216547, -0.85579437, 1.8919258)
 mesh = SubResource("ArrayMesh_br7e4")
@@ -1254,3 +1250,6 @@ shape = SubResource("BoxShape3D_jhgwq")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=1560704921]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.8280896, 0.5918579, 0.8122797)
 shape = SubResource("BoxShape3D_jhgwq")
+
+[node name="Nevera" parent="." unique_id=265038388 instance=ExtResource("19_5bseu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 0.85415876, 0.35256648, 2.425303)
