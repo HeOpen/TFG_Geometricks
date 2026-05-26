@@ -716,9 +716,6 @@ mouse_filter = 2
 [node name="Canica_Bola2" parent="PosicionesPiezas" unique_id=309869086 instance=ExtResource("11_7y83b")]
 transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 2.347979, 1.053999, 5.4805865)
 
-[node name="Piramide_Illuminati2" parent="PosicionesPiezas" unique_id=1884141656]
-transform = Transform3D(0.12835072, 0, -0.0776279, 0, 0.15, 0, 0.0776279, 0, 0.12835072, 7.117261, 0.98373926, 8.63941)
-
 [node name="Cubo_Rubik2" parent="PosicionesPiezas" unique_id=659400006 instance=ExtResource("10_m6ppd")]
 transform = Transform3D(1.3341315, 0, 1.4899977, 0, 2, 0, -1.4899977, 0, 1.3341315, -5.1634293, -0.011369586, 10.628847)
 
@@ -734,11 +731,6 @@ texto_interfaz = "Coger canica [E]"
 transform = Transform3D(1.3341315, 0, 1.4899977, 0, 2, 0, -1.4899977, 0, 1.3341315, 0.26033378, 0.85769176, 15.255322)
 id_del_item = "cuadrado_rubik"
 texto_interfaz = "Coger cubo de Rubik [E]"
-
-[node name="Piramide_Illuminati" parent="." unique_id=579733185 groups=["interactuable"]]
-transform = Transform3D(0.13817579, 0, -0.058373418, 0, 0.15, 0, 0.058373418, 0, 0.13817579, -0.078799844, 0.98373926, 15.153794)
-id_del_item = "piramide_illuminati"
-texto_interfaz = "Coger piramide Illuminati [E]"
 
 [node name="MemoryCard" parent="." unique_id=1280837234 groups=["interactuable"] instance=ExtResource("12_nnw0q")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.45783532, 0.9743757, 15.14879)
