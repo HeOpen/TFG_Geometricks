@@ -65,11 +65,8 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	
-	# --- MÉTODO ESCÁNER (Pinchos bajo los pies) ---
-	_escanear_suelo()
-	
-	# --- RADAR DE 360º (Para recolectar la llave) ---
-	_comprobar_contactos()
+	# --- SÚPER ESCÁNER 360º (Pinchos en todas direcciones y Llave) ---
+	_escanear_entorno()
 
 func _aplicar_forma(nueva_forma: Forma) -> void:
 	if forma_actual == nueva_forma:
@@ -110,51 +107,45 @@ func _fisica_rectangulo(_delta: float) -> void:
 # --- FUNCIONES DE DETECCIÓN Y RESPAWN ---
 # ==========================================
 
-func _escanear_suelo() -> void:
+func _escanear_entorno() -> void:
 	var tilemap: TileMapLayer = get_parent().get_node_or_null("TileMapLayer")
 	
 	if tilemap:
-		# Escaneamos 10 píxeles por debajo del centro de la bola
-		var posicion_pies = global_position + Vector2(0, 10)
-		var mapa_pos = tilemap.local_to_map(tilemap.to_local(posicion_pies))
-		var tile_data = tilemap.get_cell_tile_data(mapa_pos)
+		# Establecemos el alcance del radar a 8 píxeles.
+		# Como tus figuras miden máximo 10x10 (radio 5) o círculo (radio 6), 
+		# 8 píxeles cubre el exterior perfecto de todas tus transformaciones.
+		var distancia = 8.0
 		
-		if tile_data:
-			if tile_data.get_custom_data("Pinchos") == true:
-				morir_y_reaparecer()
-
-func _comprobar_contactos() -> void:
-	var tilemap: TileMapLayer = get_parent().get_node_or_null("TileMapLayer")
-	
-	if tilemap:
-		# RADAR: Miramos el centro de la bola y sus 4 bordes exteriores usando su RADIUS
+		# RADAR: Miramos el centro y las 4 direcciones cardianles
 		var puntos_de_comprobacion = [
-			global_position,                                # Centro
-			global_position + Vector2(RADIUS + 2.0, 0),     # Borde derecho
-			global_position + Vector2(-(RADIUS + 2.0), 0),  # Borde izquierdo
-			global_position + Vector2(0, RADIUS + 2.0),     # Borde inferior
-			global_position + Vector2(0, -(RADIUS + 2.0))   # Borde superior
+			global_position,                                 # Centro
+			global_position + Vector2(distancia, 0),         # Derecha
+			global_position + Vector2(-distancia, 0),        # Izquierda
+			global_position + Vector2(0, distancia),         # Abajo (Suelo)
+			global_position + Vector2(0, -distancia)         # Arriba (Techo)
 		]
 		
 		for punto in puntos_de_comprobacion:
 			var mapa_pos = tilemap.local_to_map(tilemap.to_local(punto))
 			var tile_data = tilemap.get_cell_tile_data(mapa_pos)
 			
-			if tile_data and tile_data.get_custom_data("EsLlave") == true:
-				# Pausamos las físicas para evitar doble carga
-				set_physics_process(false) 
+			if tile_data:
+				# 1. ¿HEMOS TOCADO PINCHOS? (Da igual la dirección o la forma)
+				if tile_data.get_custom_data("Pinchos") == true:
+					morir_y_reaparecer()
+					return # Salimos del bucle para no "morir" múltiples veces a la vez
 				
-				print("🗝️ ¡Llave conseguida! Simulando tecla ESC para salir...")
-				InventoryManager.anadir_item("llave_sotano") 
-				
-				# === LA MAGIA: FORZAMOS LA PULSACIÓN DE LA TECLA ESCAPE ===
-				var evento_esc = InputEventKey.new()
-				evento_esc.keycode = KEY_ESCAPE
-				evento_esc.pressed = true
-				Input.parse_input_event(evento_esc)
-				# ==========================================================
-				
-				return # Salimos del bucle para no ejecutar esto múltiples veces
+				# 2. ¿HEMOS TOCADO LA LLAVE?
+				if tile_data.get_custom_data("EsLlave") == true:
+					set_physics_process(false) 
+					print("🗝️ ¡Llave conseguida! Simulando tecla ESC para salir...")
+					InventoryManager.anadir_item("llave_sotano") 
+					
+					var evento_esc = InputEventKey.new()
+					evento_esc.keycode = KEY_ESCAPE
+					evento_esc.pressed = true
+					Input.parse_input_event(evento_esc)
+					return
 
 # Función para que el cubo_manager actualice el punto de control al cambiar de cara
 func fijar_nuevo_respawn(nueva_posicion: Vector2) -> void:
