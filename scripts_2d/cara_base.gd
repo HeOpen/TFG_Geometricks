@@ -3,7 +3,7 @@ extends Node2D
 signal player_exiting(side: String, player_y: float, player_vel: Vector2)
 
 const VIEWPORT_SIZE := 512.0
-const EXIT_THRESHOLD := 8.0
+const EXIT_THRESHOLD := 3.0
 
 var _exit_pending := false
 

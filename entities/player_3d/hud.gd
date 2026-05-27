@@ -8,6 +8,7 @@ extends Control
 var temporizador_nivel: Timer
 
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	# Localizamos de forma segura el nodo raíz del escenario activo
 	var escena_actual = get_tree().current_scene
 	

@@ -3,7 +3,7 @@ extends Node3D
 const VIEWPORT_SIZE := 512.0
 const TRANSITION_DURATION := 0.8
 const CAMERA_RADIUS := 2.0
-const ENTRY_OFFSET := 50.0
+const ENTRY_OFFSET := 10.0
 
 const ADJACENCY: Dictionary = {
 	"Cara_z0": {"right": "Cara_x0", "left": "Cara_x1", "top": "Cara_y0", "bottom": "Cara_y1"},
