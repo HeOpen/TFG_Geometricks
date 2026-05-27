@@ -9,8 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://dlirrr6nwebrr" path="res://objects/props/TV_CRT.tscn" id="11_2ftla"]
 [ext_resource type="PackedScene" uid="uid://dc5fhfo0k70js" path="res://assets/models_3d/PS1_Controller/scene.gltf" id="11_2t2gr"]
 [ext_resource type="PackedScene" uid="uid://b5bbvocoge220" path="res://objects/props/sillon.tscn" id="15_ysnjt"]
+[ext_resource type="Texture2D" uid="uid://dmyvmqsdfqcjf" path="res://assets/textures/LogoCubama (1).png" id="16_2ftla"]
 [ext_resource type="PackedScene" uid="uid://mxpamgq1llqc" path="res://objects/props/tv_table.tscn" id="16_ffeji"]
 [ext_resource type="Texture2D" uid="uid://4o35ljrqu0pt" path="res://assets/textures/Posters/game4.jpg" id="17_t588x"]
+[ext_resource type="Texture2D" uid="uid://cgi1jvs671aih" path="res://assets/textures/EquipoCubama.png" id="17_wygva"]
 [ext_resource type="Texture2D" uid="uid://qlmbh5ccqchk" path="res://assets/textures/Posters/game3.jpg" id="18_8mf2w"]
 [ext_resource type="Texture2D" uid="uid://drstpw0mky4v6" path="res://assets/textures/Posters/game1.jpg" id="19_q7qkt"]
 [ext_resource type="Texture2D" uid="uid://dkheqvxyaa80o" path="res://assets/textures/Posters/game2.jpg" id="20_gfdk5"]
@@ -366,8 +368,16 @@ material_override = SubResource("StandardMaterial3D_8mf2w")
 texture = ExtResource("21_qf86i")
 
 [node name="Poster3" type="Sprite3D" parent="Furniture" unique_id=1748344441]
-transform = Transform3D(-2.8412401e-09, 0, -0.065, 0, 0.065, 0, 0.065, 0, -2.8412401e-09, -2.1554937, 1.1157395, 3.029475)
+transform = Transform3D(-8.7422775e-10, 0, -0.02, 0, 0.02, 0, 0.02, 0, -8.7422775e-10, -2.1554937, 1.5161337, 2.6652658)
 texture = ExtResource("22_k3y4f")
+
+[node name="Poster5" type="Sprite3D" parent="Furniture" unique_id=1225211049]
+transform = Transform3D(-2.8412401e-09, 0, -0.065, 0, 0.065, 0, 0.065, 0, -2.8412401e-09, -2.1554937, 1.6141317, 3.0134711)
+texture = ExtResource("16_2ftla")
+
+[node name="Poster4" type="Sprite3D" parent="Furniture" unique_id=1637221795]
+transform = Transform3D(-4.5896957e-09, 0, -0.105, 0, 0.105, 0, 0.105, 0, -4.5896957e-09, -2.1554937, 1.2729077, 3.1132007)
+texture = ExtResource("17_wygva")
 
 [node name="Poster6" type="Sprite3D" parent="." unique_id=1239746424]
 transform = Transform3D(-2.8412401e-09, 0, -0.065, 0, 0.065, 0, 0.065, 0, -2.8412401e-09, 1.4937006, 1.8781269, -0.536838)
