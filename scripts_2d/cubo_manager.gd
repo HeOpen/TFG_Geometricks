@@ -45,6 +45,8 @@ func _ready() -> void:
 func _on_player_exiting(side: String, transverse_pos: float, player_vel: Vector2, from_name: String) -> void:
 	if _is_transitioning:
 		return
+	_is_transitioning = true
+	await get_tree().create_timer(1.0).timeout
 	var to_name: String = ADJACENCY[from_name][side]
 	_do_transition(from_name, to_name, transverse_pos, player_vel)
 

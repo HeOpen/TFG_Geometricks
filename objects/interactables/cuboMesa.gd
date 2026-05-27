@@ -136,7 +136,7 @@ func _cerrar_ventana() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 	en_proceso = false
-	texto_interfaz = "Inspeccionar Cubo [R]"
+	texto_interfaz = "Inspeccionar Cubo [E]"
 	
 	# Comprobar si hemos ganado al cerrar el 2D
 	if InventoryManager.tiene_item("llave_sotano"):
