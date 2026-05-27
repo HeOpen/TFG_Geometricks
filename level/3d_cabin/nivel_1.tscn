@@ -16,8 +16,13 @@
 [ext_resource type="PackedScene" uid="uid://cwrnbjtab8f2e" path="res://objects/interactables/CuboMesa.tscn" id="13_ug3bd"]
 [ext_resource type="PackedScene" uid="uid://c4hfqelxhnyat" path="res://objects/interactables/key.tscn" id="14_lw2i2"]
 [ext_resource type="Texture2D" uid="uid://d36pdb7lumqjq" path="res://assets/textures/nooki.png" id="16_3b8ne"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://bgk30c7t7gn11" path="res://assets/models_3d/Modelo_Encapuchado/Modelo_1/Lantern.fbx" id="17_a32ws"]
 [ext_resource type="PackedScene" path="res://objects/interactables/key_sotano.tscn" id="18_sdyv5"]
+=======
+[ext_resource type="PackedScene" path="res://objects/interactables/key_sotano.tscn" id="18_sdyv5"]
+[ext_resource type="PackedScene" uid="uid://xi0lt7de14qt" path="res://entities/encapuchado.tscn" id="19_ft8lg"]
+>>>>>>> 1574a25 (Added: Encapuchados, escena final)
 [ext_resource type="PackedScene" path="res://objects/interactables/closed_lock_sotano.tscn" id="19_gqd6k"]
 
 [sub_resource type="FogMaterial" id="FogMaterial_11ijd"]
@@ -104,6 +109,12 @@ shader = SubResource("Shader_xio0d")
 shader_parameter/scanline_count = 250.0
 shader_parameter/chromatic_aberration = 0.005
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_oxud5"]
+size = Vector3(0.5751953, 2.1049805, 0.6611328)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gqd6k"]
+size = Vector3(0.7783203, 0.32910156, 2.114746)
+
 [node name="Nivel1" type="Node3D" unique_id=1505825485]
 script = ExtResource("1_ek28t")
 
@@ -118,10 +129,17 @@ editor_only = true
 environment = ExtResource("1_gxhxh")
 
 [node name="Player" parent="." unique_id=2146257891 instance=ExtResource("2_27ww1")]
+<<<<<<< HEAD
 transform = Transform3D(-0.99805886, 0.019163722, -0.05925387, 0.019197451, 0.9998162, -2.6793265e-09, 0.05924292, -0.0011375295, -0.99824286, -0.024555206, 0.89847136, 6.340589)
+=======
+transform = Transform3D(-0.99805886, 0.019163722, -0.05925387, 0.019197451, 0.9998162, -2.6793265e-09, 0.05924292, -0.0011375295, -0.99824286, -5.2365685, 0.038093567, 6.83148)
+>>>>>>> 1574a25 (Added: Encapuchados, escena final)
 
 [node name="OmniLight3D" parent="Player" index="2" unique_id=1038113874]
 light_color = Color(0.9779369, 0.97793704, 0.9779369, 1)
+
+[node name="Sprite3D" parent="Player" index="4" unique_id=919673764]
+visible = false
 
 [node name="FogVolume2" type="FogVolume" parent="." unique_id=1664138319]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.2106928, 3.8679752)
@@ -800,14 +818,70 @@ spot_range = 1.0
 
 [node name="Timer_CuentraAtras15" type="Timer" parent="." unique_id=1078850542]
 
-[node name="Lantern" parent="." unique_id=1551450341 instance=ExtResource("17_a32ws")]
-transform = Transform3D(0.44963378, 0, -0.7272238, 0, 0.855, 0, 0.7272238, 0, 0.44963378, -2.5846555, -2.4819994, 0.552269)
-
 [node name="key_sotano" parent="." unique_id=1303395038 groups=["interactuable"] instance=ExtResource("18_sdyv5")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 8.778448, 0.123719275, 5.593425)
 
 [node name="lock_sotano" parent="." unique_id=1760413942 instance=ExtResource("19_gqd6k")]
 transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, -4.371139e-08, 1.9106855e-15, 0.005311668, 0.18183169, -6.6860924)
+
+[node name="ColisionesSotano" type="Node3D" parent="." unique_id=59608247]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ColisionesSotano" unique_id=823269773]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ColisionesSotano/StaticBody3D" unique_id=726965558]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3314033, -1.3990698, 12.153137)
+shape = SubResource("BoxShape3D_oxud5")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="ColisionesSotano/StaticBody3D" unique_id=1998887082]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3314033, -1.3990698, 4.36822)
+shape = SubResource("BoxShape3D_oxud5")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="ColisionesSotano/StaticBody3D" unique_id=1921159177]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3314033, -1.3990698, -3.8264885)
+shape = SubResource("BoxShape3D_oxud5")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="ColisionesSotano/StaticBody3D" unique_id=163936604]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0654788, -1.3990698, -0.21608269)
+shape = SubResource("BoxShape3D_oxud5")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="ColisionesSotano/StaticBody3D" unique_id=13203711]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0654788, -1.3990698, 7.7897015)
+shape = SubResource("BoxShape3D_oxud5")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="ColisionesSotano/StaticBody3D" unique_id=1408303591]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.246653, -1.3990698, 4.3260045)
+shape = SubResource("BoxShape3D_oxud5")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="ColisionesSotano/StaticBody3D" unique_id=1935955757]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.246653, -1.3990698, 12.078951)
+shape = SubResource("BoxShape3D_oxud5")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="ColisionesSotano/StaticBody3D" unique_id=1943096971]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.246653, -1.3990698, -3.8253632)
+shape = SubResource("BoxShape3D_oxud5")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=305779297]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3634582, -1.0107169, -6.422193)
+collision_mask = 2
+
+[node name="ColliderMusicaSotano" type="CollisionShape3D" parent="Area3D" unique_id=1790434525]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.17209148, 0, 0)
+shape = SubResource("BoxShape3D_gqd6k")
+debug_color = Color(0.99435204, 0, 0.2307297, 0.41960785)
+
+[node name="Encapuchado" parent="." unique_id=1853024495 instance=ExtResource("19_ft8lg")]
+transform = Transform3D(0.63716155, 0, -0.65669656, 0, 0.91500014, 0, 0.65669656, 0, 0.63716155, -2.7962317, -2.4819992, 1.0032253)
+
+[node name="Encapuchado2" parent="." unique_id=1363014554 instance=ExtResource("19_ft8lg")]
+transform = Transform3D(-0.6323884, 0, 0.6612943, 0, 0.91500014, 0, -0.6612943, 0, -0.6323884, 3.1026983, -2.4819992, 6.9291883)
+
+[node name="Encapuchado3" parent="." unique_id=521797708 instance=ExtResource("19_ft8lg")]
+transform = Transform3D(0.7289795, 0, 0.5530048, 0, 0.91500014, 0, -0.5530048, 0, 0.7289795, -2.7890477, -2.4819992, 6.7607164)
+
+[node name="Encapuchado4" parent="." unique_id=780065094 instance=ExtResource("19_ft8lg")]
+transform = Transform3D(-0.58849335, 0, -0.7006433, 0, 0.91500014, 0, 0.7006433, 0, -0.58849335, 3.0063155, -2.4819992, 1.0050042)
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_collider_musica_sotano_body_entered"]
 
 [editable path="Player"]
 [editable path="Cabin_Amueblada"]

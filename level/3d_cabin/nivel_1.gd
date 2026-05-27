@@ -43,3 +43,14 @@ func _on_timer_timeout() -> void:
 	
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	get_tree().change_scene_to_file(RUTA_GAME_OVER)
+
+func _on_collider_musica_sotano_body_entered(body: Node3D) -> void:
+	# Imprimimos absolutamente cualquier cosa que cruce el Area3D
+	print("El Area3D detectó una colisión con un nodo llamado: ", body.name)
+	
+	if body.name == "Player":
+		print("Validación exitosa: El jugador bajó al sótano")
+		MusicManager.reproducir_final()
+		
+		var area_sotano = $Area3D
+		area_sotano.set_deferred("monitoring", false)
