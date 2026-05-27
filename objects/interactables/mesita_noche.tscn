@@ -315,6 +315,7 @@ script = ExtResource("1_oea3m")
 [node name="Hitbox" type="CollisionShape3D" parent="." unique_id=1813711181]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009521484, 0.5456457, 0.08638176)
 shape = SubResource("BoxShape3D_3usve")
+debug_color = Color(2.0696223e-06, 0.63956106, 0.36738074, 0.41960785)
 
 [node name="Mesita" type="MeshInstance3D" parent="." unique_id=1877418197]
 transform = Transform3D(44.367645, 0, 0, 0, -5.2890355e-06, 44.36764, 0, -44.36764, -5.2890355e-06, -0.027876616, 0.44252062, -0.05029106)

@@ -6,7 +6,7 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uu1i4"]
 emission_enabled = true
 emission = Color(1, 0, 0, 1)
-emission_energy_multiplier = 10.0
+emission_energy_multiplier = 3.0
 
 [node name="AvingnonSeal" type="Node3D" unique_id=1176024472]
 

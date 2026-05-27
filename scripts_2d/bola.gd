@@ -34,10 +34,10 @@ var escalas := {
 }
 
 const TECLAS_FORMA := [
-	["forma_1", Forma.CIRCULO,    "canica_bola"],
-	["forma_2", Forma.CUADRADO,   "cuadrado_rubik"],
-	["forma_3", Forma.TRIANGULO,  "piramide_illuminati"],
-	["forma_4", Forma.RECTANGULO, "rectangulo_memorycard"],
+	["forma_1", Forma.CIRCULO,    "item_canica_bola"],
+	["forma_2", Forma.CUADRADO,   "item_cuadrado_rubik"],
+	["forma_3", Forma.TRIANGULO,  "item_piramide_illuminati"],
+	["forma_4", Forma.RECTANGULO, "item_rectangulo_memorycard"],
 ]
 
 func _ready() -> void:

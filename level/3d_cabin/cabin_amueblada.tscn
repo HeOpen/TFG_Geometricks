@@ -283,7 +283,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08, 0, 0)
 [node name="Cabin_Structure" parent="." unique_id=125884885 instance=ExtResource("1_n82xp")]
 
 [node name="PC_Room" parent="Cabin_Structure" unique_id=649241162 instance=ExtResource("9_8vpnn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.90803, 0.010426819, 8.990203)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.90803, 0.09331411, 8.990203)
 
 [node name="LivingRoom" parent="Cabin_Structure" unique_id=1620067552 instance=ExtResource("5_8vpnn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6743796, 0.03178531, 5.108233)

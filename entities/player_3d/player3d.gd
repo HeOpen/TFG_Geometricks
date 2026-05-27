@@ -1,7 +1,5 @@
 # ProtoController v1.0 by Brackeys
 # CC0 License
-# Intended for rapid prototyping of first-person games.
-# Happy prototyping!
 
 extends CharacterBody3D
 
@@ -9,7 +7,7 @@ extends CharacterBody3D
 @export var has_gravity : bool = true
 @export var can_jump : bool = true
 @export var can_sprint : bool = false
-@export var can_freefly : bool = false
+@export var can_freefly : bool = true
 
 @export_group("Speeds")
 @export var look_speed : float = 0.002

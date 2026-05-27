@@ -11,7 +11,7 @@ var _raiz: Control = null
 var _player_ref: Node = null
 
 const CUBO_SCENE = preload("res://level/2d_cube/cubo.tscn")
-const MUSICA_CUBO = preload("res://assets/audio/musica/dance-with-night-wind_sh.wav")
+const MUSICA_CUBO = preload("res://assets/audio/musica/ingame_cubo2d_dance-with-night-wind_sh.wav")
 # Tamaño de la ventana en píxeles de juego (proyecto 320×240)
 const VENTANA_W := 120
 const VENTANA_H := 120
