@@ -14,7 +14,8 @@ var iconos_items: Dictionary = {
 	"item_canica_bola" : preload("res://assets/textures/Icons/icon_circulo.png"),
 	"item_cuadrado_rubik" : preload("res://assets/textures/Icons/icon_cuadrado.png"),
 	"item_rectangulo_memorycard" : preload("res://assets/textures/Icons/icon_rectangulo.png"),
-	"item_piramide_illuminati" : preload("res://assets/textures/Icons/icon_triangulo.png")
+	"item_piramide_illuminati" : preload("res://assets/textures/Icons/icon_triangulo.png"),
+	"llave_sotano": preload("res://assets/textures/Icons/key_icon.png")
 }
 
 func anadir_item(id_item: String) -> void:

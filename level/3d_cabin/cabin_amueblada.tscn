@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://2xwd867bgjka" path="res://assets/textures/Horror Textures by Canvas Coven/Metal/Metal_02.png" id="30_cd7s3"]
 [ext_resource type="Texture2D" uid="uid://c7bvdcr268sbl" path="res://assets/textures/Cuadros/Totenisel.jpg" id="30_ibg3d"]
 [ext_resource type="Texture2D" uid="uid://dregg4edk3plr" path="res://assets/models_3d/Trash and Debris/WoodMetal.png" id="32_cd7s3"]
+[ext_resource type="Script" uid="uid://d3pap6j6cdo4w" path="res://level/3d_cabin/puerta_sotano.gd" id="32_hy7tc"]
 [ext_resource type="Texture2D" uid="uid://c0cv05w1o2l1d" path="res://assets/models_3d/Objects_Interior(Village)_Demo/Textures/Armchair_06.png" id="33_0x3xf"]
 [ext_resource type="PackedScene" uid="uid://drpkjx5b4fxcq" path="res://objects/interactables/closed_lock.tscn" id="34_0x3xf"]
 [ext_resource type="Texture2D" uid="uid://cd5731jy3q203" path="res://assets/models_3d/Objects_Interior(Village)_Demo/Textures/bed.png" id="34_hy7tc"]
@@ -255,10 +256,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_yyye3")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0x3xf"]
-size = Vector3(4.600174, 3.2622986, 1.8730164)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_hy7tc"]
-size = Vector3(2.2006836, 1.1589813, 1.8730164)
+size = Vector3(4.244664, 3.2622986, 1.8730164)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_85g6l"]
 albedo_texture = ExtResource("30_cd7s3")
@@ -276,6 +274,9 @@ emission_energy_multiplier = 0.09
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("30_61dr2")
 metallic = 0.99
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hy7tc"]
+size = Vector3(2.61, 0.535, 3.395)
 
 [node name="Cabin_Amueblada" type="Node3D" unique_id=293068168]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08, 0, 0)
@@ -665,22 +666,23 @@ mesh = SubResource("ArrayMesh_ut052")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.367819, 1.4068451, -6.4978485)
 shape = SubResource("BoxShape3D_0x3xf")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Barriers/StaticBody3D" unique_id=859558843]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9675834, 0.35518646, -6.4978485)
-shape = SubResource("BoxShape3D_hy7tc")
+[node name="tapa_sotano" type="StaticBody3D" parent="." unique_id=1450623863]
+script = ExtResource("32_hy7tc")
 
-[node name="PuertaSotano" type="Node3D" parent="." unique_id=705214495]
-
-[node name="ManillaSotano" type="MeshInstance3D" parent="PuertaSotano" unique_id=811302217]
+[node name="ManillaSotano" type="MeshInstance3D" parent="tapa_sotano" unique_id=811302217]
 transform = Transform3D(0.24615787, -0.04366125, 0, 0.04366125, 0.24615787, 0, 0, 0, 0.25, -0.7509809, 1.1920929e-07, -6.721288)
 material_override = SubResource("StandardMaterial3D_85g6l")
 mesh = SubResource("TorusMesh_fjfuf")
 
-[node name="TapaSotano" type="CSGBox3D" parent="PuertaSotano" unique_id=1634475269]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.176424, -0.078098774, -6.635259)
+[node name="TapaSotano" type="CSGBox3D" parent="tapa_sotano" unique_id=1634475269]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3715158, -0.078098774, -6.635259)
 material_override = SubResource("StandardMaterial3D_tjwvp")
-size = Vector3(2.7508829, 0.101, 2.461661)
+size = Vector3(3.1410666, 0.101, 2.461661)
 material = SubResource("StandardMaterial3D_6bov7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tapa_sotano" unique_id=1538571039]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -0.16750216, -7)
+shape = SubResource("BoxShape3D_hy7tc")
 
 [node name="Closed_Lock" parent="." unique_id=1718028282 instance=ExtResource("34_0x3xf")]
 transform = Transform3D(-0.15907434, 0, -0.47402042, 0, 0.5, 0, 0.47402042, 0, -0.15907434, -1.8394239, 0.7949109, 9.303328)

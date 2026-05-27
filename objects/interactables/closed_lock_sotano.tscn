@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b27bufigxwtxq"]
+
+[ext_resource type="PackedScene" uid="uid://drpkjx5b4fxcq" path="res://objects/interactables/closed_lock.tscn" id="1_03eka"]
+[ext_resource type="Script" uid="uid://bqpbc1rb5wkfk" path="res://objects/interactables/closed_lock_sotano.gd" id="2_rit10"]
+
+[node name="StaticBody3D" type="StaticBody3D" unique_id=1760413942]
+
+[node name="Closed_Lock" parent="." unique_id=1718028282 groups=["interactuable"] instance=ExtResource("1_03eka")]
+script = ExtResource("2_rit10")
+id_llave_requerida = "llave_sotano"
