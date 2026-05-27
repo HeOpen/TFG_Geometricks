@@ -1,10 +1,10 @@
 extends Control
 
-# --- REFERENCIAS DE INTERFAZ ---
+# REFERENCIAS DE INTERFAZ
 @export var label_tiempo: Label
 @export var label_formas: Label
 
-# --- REFERENCIAS DE LÓGICA ---
+# REFERENCIAS DE LÓGICA
 var temporizador_nivel: Timer
 
 func _ready() -> void:
@@ -32,7 +32,7 @@ func _actualizar_cronometro() -> void:
 	var minutos: int = int(tiempo_segundos / 60.0)
 	var segundos: int = int(tiempo_segundos) % 60
 	
-	# Formateo de texto mediante el operador de máscara de cadena
+	# Formateo de texto
 	label_tiempo.text = "%02d:%02d" % [minutos, segundos]
 
 func _actualizar_contador_inventario() -> void:

@@ -7,7 +7,6 @@ signal inventario_actualizado
 var items: Array[String] = []
 
 # Diccionario para mapear el identificador con su textura 2D para la interfaz inferior
-# Tendrás que cargar tus texturas retro aquí
 var iconos_items: Dictionary = {
 	"llave_pcroom": preload("res://assets/textures/Icons/key_icon.png"),
 	"vhs_tape": preload("res://assets/textures/Icons/vhs_icon.png"),

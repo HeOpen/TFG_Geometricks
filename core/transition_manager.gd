@@ -32,9 +32,6 @@ func execute_door_transition(player_node: CharacterBody3D, target_position: Vect
 	# 5. Reproducción Asíncrona (Sustituye a tu sistema de señales)
 	var anim_player = anim_instance.get_node("AnimationPlayer")
 	anim_player.play("Opening_Door")
-	
-	# El código se pausa exactamente aquí hasta que la puerta termine.
-	# No necesitas crear una función separada.
 	await anim_player.animation_finished
 	
 	# 6. Ejecución del Teletransporte Matemático

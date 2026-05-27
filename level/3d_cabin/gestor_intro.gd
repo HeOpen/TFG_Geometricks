@@ -24,8 +24,6 @@ func _ocultar_cinta_inicialmente() -> void:
 
 func _iniciar_secuencia() -> void:
 	# Retención 1: Silencio inicial
-	# create_timer genera un nodo temporal en memoria que emite la señal 'timeout' tras X segundos
-	# await detiene el avance de esta función hasta recibir dicha señal
 	await get_tree().create_timer(5.0).timeout
 	
 	if audio_noticias:

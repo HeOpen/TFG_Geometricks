@@ -1,11 +1,9 @@
 extends StaticBody3D
 
-# --- Referencias Expuestas ---
 @export var destination_front: String = ""
 @export var destination_back: String = ""
 @export var esta_bloqueada: bool = false
 
-# --- Variables de Interfaz ---
 var texto_interfaz: String = "Abrir Puerta [E]"
 var en_proceso: bool = false
 

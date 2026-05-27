@@ -1,6 +1,5 @@
 extends Node
 
-# --- Referencias a Nodos ---
 @onready var audio_player: AudioStreamPlayer = $AudioPlayer
 
 # --- Definición de Estados del Sistema ---
@@ -15,7 +14,6 @@ var _indice_guardado: int = 0
 var _estado_guardado: EstadosMusica = EstadosMusica.MENU
 var _volumen_guardado: float = 0.0
 
-# --- Recursos de Audio (@export) ---
 # Al usar Array[AudioStream], forzamos al Inspector a aceptar únicamente archivos de sonido (.ogg/.wav).
 @export var tema_menu: AudioStream
 @export var tema_intro: AudioStream
@@ -29,8 +27,6 @@ func _ready() -> void:
 	# Conectamos la señal nativa 'finished'. Godot la emite automáticamente 
 	# cuando una canción llega al último milisegundo de su reproducción.
 	audio_player.finished.connect(_on_audio_player_finished)
-
-# --- Métodos Públicos de Control de Estado ---
 
 func reproducir_menu() -> void:
 	estado_actual = EstadosMusica.MENU

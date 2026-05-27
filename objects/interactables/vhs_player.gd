@@ -1,9 +1,7 @@
 extends StaticBody3D
 
-# --- Variables Expuestas ---
 @export var id_requerido: String = "vhs_tape"
 
-# --- Variables de Estado ---
 var texto_interfaz: String = "Insertar VHS [E]"
 var reproduciendo: bool = false
 	
@@ -21,7 +19,7 @@ func interactuar() -> void:
 		# 3. Consumo del ítem (Opcional: puedes dejarlo si quieres que el jugador conserve la cinta)
 		InventoryManager.quitar_item(id_requerido)
 		
-		# 4. (Opcional) Reproducir un SFX físico de "clac" mecánico del VHS aquí
+		# 4. Reproducir un SFX físico de "clac" mecánico del VHS aquí
 		
 		var anim_player = $"../CanvasLayer/AnimationPlayer"
 		anim_player.play("fade_in")

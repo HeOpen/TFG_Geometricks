@@ -17,12 +17,7 @@ func _ready() -> void:
 	_configurar_e_iniciar_temporizador()
 	
 func _configurar_e_iniciar_temporizador() -> void:
-	# Chuleta tiempo ( minutos * 60 segundos = X segundos )
-	# 15 Minutos = 900.0
-	# 05 segundos = 6.0
-	# ----
-	
-	#game_timer.wait_time = 6.0
+
 	game_timer.wait_time = 900.0
 	
 	# Aseguramos que el temporizador no se ejecute en bucle infinito

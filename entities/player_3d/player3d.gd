@@ -1,6 +1,3 @@
-# ProtoController v1.0 by Brackeys
-# CC0 License
-
 extends CharacterBody3D
 
 @export var can_move : bool = true
@@ -127,7 +124,7 @@ func release_mouse():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	mouse_captured = false
 
-## Disables functionality accordingly.
+# Disables functionality accordingly.
 func check_input_mappings():
 	if can_move and not InputMap.has_action(input_left):
 		push_error("Movement disabled. No InputAction found for input_left: " + input_left)
@@ -153,7 +150,6 @@ func check_input_mappings():
 
 @onready var interaction_raycast = $Head/Camera3D/RayCast3D
 
-# Así debe quedar tu función _input tras la limpieza:
 func _input(event: InputEvent) -> void:
 	# Mouse capturing
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
@@ -177,13 +173,11 @@ func _process(_delta: float) -> void:
 	if raycast.is_colliding():
 		var objeto = raycast.get_collider()
 		
-		# 2. VALIDACIÓN DE SEGURIDAD (El cortafuegos)
-		# Comprobamos que el objeto realmente existe en memoria antes de leerlo
+		# 2. Comprobamos que el objeto realmente existe en memoria antes de leerlo
 		if objeto != null:
 			
 			# 3. Validamos si pertenece a nuestro sistema de inventario
 			if objeto.is_in_group("interactuable"):
-				# Dibujamos el texto en la interfaz
 				texto_centro.text = objeto.texto_interfaz
 				
 				# 4. Capturamos la entrada del usuario
@@ -193,7 +187,7 @@ func _process(_delta: float) -> void:
 				# Si choca con una pared normal, limpiamos el texto
 				texto_centro.text = ""
 		else:
-			# Si el objeto es un remanente destruido (null), limpiamos el texto
+			# Si el objeto es destruido, limpiamos el texto
 			texto_centro.text = ""
 	else:
 		# Si el rayo apunta al vacío, limpiamos el texto

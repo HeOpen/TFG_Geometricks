@@ -12,13 +12,12 @@ var _player_ref: Node = null
 
 const CUBO_SCENE = preload("res://level/2d_cube/cubo.tscn")
 const MUSICA_CUBO = preload("res://assets/audio/musica/ingame_cubo2d_dance-with-night-wind_sh.wav")
+
 # Tamaño de la ventana en píxeles de juego (proyecto 320x240)
 const VENTANA_W := 120
 const VENTANA_H := 120
 
-# ====================================================
-# NUEVO: Gestionar el estado al cargar la habitación
-# ====================================================
+# Gestionar el estado al cargar la habitación
 func _ready() -> void:
 	if InventoryManager.tiene_item("llave_sotano"):
 		self.visible = false
@@ -139,9 +138,7 @@ func _cerrar_ventana() -> void:
 	en_proceso = false
 	texto_interfaz = "Inspeccionar Cubo [R]"
 	
-	# ====================================================
-	# NUEVO: Comprobar si hemos ganado al cerrar el 2D
-	# ====================================================
+	# Comprobar si hemos ganado al cerrar el 2D
 	if InventoryManager.tiene_item("llave_sotano"):
 		self.visible = false
 		self.process_mode = Node.PROCESS_MODE_DISABLED

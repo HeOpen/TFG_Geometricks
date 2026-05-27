@@ -21,7 +21,7 @@ func interactuar() -> void:
 
 func _abrir_candado() -> void:
 		
-	# Opcional: Eliminar la llave del inventario si es de un solo uso
+	# Eliminar la llave del inventario si es de un solo uso
 	InventoryManager.quitar_item(id_llave_requerida)
 	hitbox_sotano.disabled = true
 	

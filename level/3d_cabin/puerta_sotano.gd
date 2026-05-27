@@ -13,7 +13,7 @@ func interactuar() -> void:
 	if procesando:
 		return
 		
-	# Consultamos a tu gestor global si el jugador tiene el string de la llave
+	# Consultamos al gestor global si el jugador tiene el string de la llave
 	if InventoryManager.tiene_item(id_llave_requerida):
 		_abrir_candado()
 	else:
@@ -28,7 +28,7 @@ func interactuar() -> void:
 func _abrir_candado() -> void:
 	procesando = true
 		
-	# Opcional: Eliminar la llave del inventario si es de un solo uso
+	# Eliminar la llave del inventario si es de un solo uso
 	InventoryManager.quitar_item(id_llave_requerida)
 		
 	# 3. Destruimos este candado cerrado

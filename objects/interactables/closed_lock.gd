@@ -12,11 +12,11 @@ func interactuar() -> void:
 	if procesando:
 		return
 		
-	# Consultamos a tu gestor global si el jugador tiene el string de la llave
+	# Consultamos al gestor global si el jugador tiene el string de la llave
 	if InventoryManager.tiene_item(id_llave_requerida):
 		_abrir_candado()
 	else:
-		# Aquí conectas tu sistema de UI para mostrar el mensaje
+		# Conectamos sistema de UI para mostrar el mensaje
 		texto_interfaz = "Está cerrado... necesito una llave naranja"
 		await get_tree().create_timer(2.0).timeout
 		print("Está cerrado. Necesito la llave naranja (", id_llave_requerida, ").")
@@ -43,7 +43,7 @@ func _abrir_candado() -> void:
 	if puerta_asignada and puerta_asignada.has_method("desbloquear"):
 		puerta_asignada.desbloquear()
 		
-	# Opcional: Eliminar la llave del inventario si es de un solo uso
+	# Eliminar la llave del inventario si es de un solo uso
 	InventoryManager.quitar_item(id_llave_requerida)
 		
 	# 3. Destruimos este candado cerrado

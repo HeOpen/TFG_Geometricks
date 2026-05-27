@@ -10,7 +10,6 @@ const MAX_LEVITATION_SPEED = 250.0
 
 var forma_actual: Forma = Forma.CIRCULO
 
-# Variable para guardar la posición local de reaparición
 var posicion_inicial: Vector2 
 
 @onready var sprite := $Sprite2D
@@ -41,7 +40,6 @@ const TECLAS_FORMA := [
 ]
 
 func _ready() -> void:
-	# Guardamos la posición local inicial
 	posicion_inicial = position
 	
 	shape_circulo.radius = RADIUS
@@ -101,15 +99,11 @@ func _fisica_rectangulo(_delta: float) -> void:
 	var direction := Input.get_axis("ui_left", "ui_right")
 	velocity.x = direction * SPEED if direction else move_toward(velocity.x, 0.0, SPEED)
 
-# ==========================================
-# --- FUNCIONES DE DETECCIÓN Y RESPAWN ---
-# ==========================================
 
 func _escanear_entorno() -> void:
 	var tilemap: TileMapLayer = get_parent().get_node_or_null("TileMapLayer")
 	
 	if tilemap:
-		# Tamaño Personaje
 		var distancia = 8.0
 		
 		var puntos_de_comprobacion = [
@@ -139,12 +133,10 @@ func _escanear_entorno() -> void:
 					Input.parse_input_event(evento_esc)
 					return
 
-# Función para que el cubo_manager actualice el punto de control al cambiar de cara
 func fijar_nuevo_respawn(nueva_posicion: Vector2) -> void:
 	posicion_inicial = nueva_posicion
 
 func morir_y_reaparecer() -> void:
 	velocity = Vector2.ZERO
-	# Usamos position (local) para que reasigne dentro de la cara actual
 	position = posicion_inicial
 	print("💀 ¡Pinchos! Reapareciendo en la entrada de esta cara.")
