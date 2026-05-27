@@ -41,7 +41,7 @@ const TECLAS_FORMA := [
 ]
 
 func _ready() -> void:
-	# Guardamos la posición local inicial (dentro de la primera cara)
+	# Guardamos la posición local inicial
 	posicion_inicial = position
 	
 	shape_circulo.radius = RADIUS
@@ -64,8 +64,6 @@ func _physics_process(delta: float) -> void:
 		Forma.RECTANGULO: _fisica_rectangulo(delta)
 
 	move_and_slide()
-	
-	# --- SÚPER ESCÁNER 360º (Pinchos en todas direcciones y Llave) ---
 	_escanear_entorno()
 
 func _aplicar_forma(nueva_forma: Forma) -> void:
@@ -111,18 +109,15 @@ func _escanear_entorno() -> void:
 	var tilemap: TileMapLayer = get_parent().get_node_or_null("TileMapLayer")
 	
 	if tilemap:
-		# Establecemos el alcance del radar a 8 píxeles.
-		# Como tus figuras miden máximo 10x10 (radio 5) o círculo (radio 6), 
-		# 8 píxeles cubre el exterior perfecto de todas tus transformaciones.
+		# Tamaño Personaje
 		var distancia = 8.0
 		
-		# RADAR: Miramos el centro y las 4 direcciones cardianles
 		var puntos_de_comprobacion = [
 			global_position,                                 # Centro
 			global_position + Vector2(distancia, 0),         # Derecha
 			global_position + Vector2(-distancia, 0),        # Izquierda
-			global_position + Vector2(0, distancia),         # Abajo (Suelo)
-			global_position + Vector2(0, -distancia)         # Arriba (Techo)
+			global_position + Vector2(0, distancia),         # Abajo 
+			global_position + Vector2(0, -distancia)         # Arriba 
 		]
 		
 		for punto in puntos_de_comprobacion:
@@ -130,15 +125,12 @@ func _escanear_entorno() -> void:
 			var tile_data = tilemap.get_cell_tile_data(mapa_pos)
 			
 			if tile_data:
-				# 1. ¿HEMOS TOCADO PINCHOS? (Da igual la dirección o la forma)
 				if tile_data.get_custom_data("Pinchos") == true:
 					morir_y_reaparecer()
-					return # Salimos del bucle para no "morir" múltiples veces a la vez
-				
-				# 2. ¿HEMOS TOCADO LA LLAVE?
+					return 
 				if tile_data.get_custom_data("EsLlave") == true:
 					set_physics_process(false) 
-					print("🗝️ ¡Llave conseguida! Simulando tecla ESC para salir...")
+					print("¡Llave conseguida!")
 					InventoryManager.anadir_item("llave_sotano") 
 					
 					var evento_esc = InputEventKey.new()

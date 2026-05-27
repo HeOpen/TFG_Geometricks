@@ -3,9 +3,6 @@ extends StaticBody3D
 @export var tiempo_fundido: float = 0.4
 @export var volumen_cubo_db: float = -6.0
 
-# NUEVO: Referencia a la llave 3D (acuérdate de arrastrarla en el Inspector)
-@export var llave_3d_real: Node3D
-
 var texto_interfaz: String = "Inspeccionar Cubo [R]"
 var en_proceso: bool = false
 
@@ -23,12 +20,6 @@ const VENTANA_H := 120
 # NUEVO: Gestionar el estado al cargar la habitación
 # ====================================================
 func _ready() -> void:
-	# 1. La llave 3D siempre invisible y desactivada por defecto
-	if llave_3d_real:
-		llave_3d_real.visible = false
-		llave_3d_real.process_mode = Node.PROCESS_MODE_DISABLED
-		
-	# 2. Si volvemos a la cabaña más adelante y ya teníamos la llave, el cubo no existe
 	if InventoryManager.tiene_item("llave_sotano"):
 		self.visible = false
 		self.process_mode = Node.PROCESS_MODE_DISABLED
@@ -154,4 +145,4 @@ func _cerrar_ventana() -> void:
 	if InventoryManager.tiene_item("llave_sotano"):
 		self.visible = false
 		self.process_mode = Node.PROCESS_MODE_DISABLED
-		# Como el jugador ya no puede interactuar con esto, el puzzle está oficialmente superado.
+		

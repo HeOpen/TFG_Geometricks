@@ -5,7 +5,7 @@ const TRANSITION_DURATION := 0.8
 const CAMERA_RADIUS := 2.0
 const ENTRY_OFFSET := 50.0
 
-# Adyacencia geométrica correcta basada en orientación de viewports:
+#viewports:
 const ADJACENCY: Dictionary = {
 	"Cara_z0": {"right": "Cara_x0", "left": "Cara_x1", "top": "Cara_y0", "bottom": "Cara_y1"},
 	"Cara_x0": {"right": "Cara_z1", "left": "Cara_z0", "top": "Cara_y0", "bottom": "Cara_y1"},
@@ -72,7 +72,7 @@ func _do_transition(from_name: String, to_name: String, transverse_pos: float, v
 		print("¡ÉXITO! Marcador '", nombre_marcador, "' encontrado en '", to_name, "'. Moviendo a X:", marcador.position.x, " Y:", marcador.position.y)
 		player.position = marcador.position
 		
-		# NOTA: Sincronizamos el punto de reaparición local con la entrada de la nueva cara
+		#Sincronizamos el punto de reaparición local con la entrada de la nueva cara
 		player.fijar_nuevo_respawn(player.position)
 	else:
 		print("INFO: No hay marcador '", nombre_marcador, "' en la cara '", to_name, "'. Usando cálculo matemático.")
@@ -80,8 +80,6 @@ func _do_transition(from_name: String, to_name: String, transverse_pos: float, v
 		
 		# Sincronizamos también si se usa el cálculo por defecto
 		player.fijar_nuevo_respawn(player.position)
-	# ==========================================
-
 	player.velocity = vel
 
 	var target_yaw: float
