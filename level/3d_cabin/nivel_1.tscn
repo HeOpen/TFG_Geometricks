@@ -17,8 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://c4hfqelxhnyat" path="res://objects/interactables/key.tscn" id="14_lw2i2"]
 [ext_resource type="Texture2D" uid="uid://d36pdb7lumqjq" path="res://assets/textures/nooki.png" id="16_3b8ne"]
 [ext_resource type="PackedScene" uid="uid://bgk30c7t7gn11" path="res://assets/models_3d/Modelo_Encapuchado/Modelo_1/Lantern.fbx" id="17_a32ws"]
-[ext_resource type="PackedScene" uid="uid://d3ghy023t6k60" path="res://objects/interactables/key_sotano.tscn" id="18_sdyv5"]
-[ext_resource type="PackedScene" uid="uid://b27bufigxwtxq" path="res://objects/interactables/closed_lock_sotano.tscn" id="19_gqd6k"]
+[ext_resource type="PackedScene" path="res://objects/interactables/key_sotano.tscn" id="18_sdyv5"]
+[ext_resource type="PackedScene" path="res://objects/interactables/closed_lock_sotano.tscn" id="19_gqd6k"]
 
 [sub_resource type="FogMaterial" id="FogMaterial_11ijd"]
 albedo = Color(0.9011674, 0.115409225, 0, 1)
@@ -118,7 +118,7 @@ editor_only = true
 environment = ExtResource("1_gxhxh")
 
 [node name="Player" parent="." unique_id=2146257891 instance=ExtResource("2_27ww1")]
-transform = Transform3D(-0.99805886, 0.019163722, -0.05925387, 0.019197451, 0.9998162, -2.6793265e-09, 0.05924292, -0.0011375295, -0.99824286, -5.4489703, -2.252112, 6.340589)
+transform = Transform3D(-0.99805886, 0.019163722, -0.05925387, 0.019197451, 0.9998162, -2.6793265e-09, 0.05924292, -0.0011375295, -0.99824286, -0.024555206, 0.89847136, 6.340589)
 
 [node name="OmniLight3D" parent="Player" index="2" unique_id=1038113874]
 light_color = Color(0.9779369, 0.97793704, 0.9779369, 1)

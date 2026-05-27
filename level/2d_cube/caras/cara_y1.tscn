@@ -1544,7 +1544,9 @@ texture = ExtResource("4_ardqm")
 3:2/0 = 0
 3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:2/0 = 0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 6:2/0 = 0
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:2/0 = 0
 9:2/0 = 0
 10:2/0 = 0
@@ -1558,7 +1560,9 @@ texture = ExtResource("4_ardqm")
 3:3/0 = 0
 3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:3/0 = 0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 6:3/0 = 0
+6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:3/0 = 0
 9:3/0 = 0
 10:3/0 = 0
@@ -1712,3 +1716,6 @@ position = Vector2(498, 429)
 
 [node name="EntradaDesde_Cara_x0" type="Marker2D" parent="." unique_id=1960315899]
 position = Vector2(272, 18)
+
+[node name="EntradaDesde_Cara_x1" type="Marker2D" parent="." unique_id=2130619523]
+position = Vector2(309, 479)
