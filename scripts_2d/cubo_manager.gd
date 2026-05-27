@@ -1,7 +1,7 @@
 extends Node3D
 
 const VIEWPORT_SIZE := 512.0
-const TRANSITION_DURATION := 0.8
+const TRANSITION_DURATION := 1
 const CAMERA_RADIUS := 2.0
 const ENTRY_OFFSET := 10.0
 
@@ -26,6 +26,7 @@ var _is_transitioning := false
 var _yaw := 0.0
 var _pitch := 0.0
 var _face_nodes: Dictionary = {}
+var _transitioning_player: CharacterBody2D = null
 
 func _ready() -> void:
 	_camera = $Camera3D
@@ -46,7 +47,10 @@ func _on_player_exiting(side: String, transverse_pos: float, player_vel: Vector2
 	if _is_transitioning:
 		return
 	_is_transitioning = true
-	await get_tree().create_timer(1.0).timeout
+	_transitioning_player = _face_nodes[from_name].get_node_or_null("bola_2d")
+	if _transitioning_player:
+		_transitioning_player.set_physics_process(false)
+	await get_tree().create_timer(0.1).timeout
 	var to_name: String = ADJACENCY[from_name][side]
 	_do_transition(from_name, to_name, transverse_pos, player_vel)
 
@@ -165,3 +169,6 @@ func _apply_camera(yaw: float, pitch: float) -> void:
 
 func _on_transition_done() -> void:
 	_is_transitioning = false
+	if _transitioning_player:
+		_transitioning_player.set_physics_process(true)
+		_transitioning_player = null
