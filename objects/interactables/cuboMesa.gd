@@ -3,7 +3,7 @@ extends StaticBody3D
 @export var tiempo_fundido: float = 0.4
 @export var volumen_cubo_db: float = -6.0
 
-var texto_interfaz: String = "Inspeccionar Cubo [R]"
+var texto_interfaz: String = "Inspeccionar Cubo [E]"
 var en_proceso: bool = false
 
 var _ventana: CanvasLayer = null
