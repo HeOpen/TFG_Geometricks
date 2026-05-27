@@ -365,6 +365,9 @@ light_color = Color(1, 0.49019608, 0.011764706, 1)
 light_energy = 0.2
 shadow_enabled = true
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=646517633]
+environment = ExtResource("2_36f10")
+
 [node name="LuzSol" type="SpotLight3D" parent="." unique_id=1247036135]
 transform = Transform3D(-0.2089512, 0.43283257, -0.87692386, 0.07038426, 0.9010486, 0.4279691, 0.9753899, 0.027703026, -0.2187398, -9.663025, 2.3376148, 4.2130036)
 light_color = Color(1, 0.49019608, 0.011764706, 1)
@@ -373,9 +376,6 @@ light_indirect_energy = 0.0
 light_volumetric_fog_energy = 13.2
 spot_range = 10.353
 spot_angle = 11.25
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=646517633]
-environment = ExtResource("2_36f10")
 
 [node name="GestorIntro" type="Node3D" parent="." unique_id=1340781949 node_paths=PackedStringArray("audio_noticias", "cinta_vhs")]
 script = ExtResource("37_evuln")
