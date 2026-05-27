@@ -465,7 +465,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.90803, 0.101139724, 8.9902
 [node name="Nevera" parent="Cabin_Amueblada/Cabin_Structure/Kitchen2" parent_id_path=PackedInt32Array(293068168, 733641497) index="29" unique_id=265038388 groups=["interactuable"]]
 
 [node name="Puerta_Abajo" parent="Cabin_Amueblada/Cabin_Structure/Kitchen2/Nevera/Cuerpo_Nevera" parent_id_path=PackedInt32Array(293068168, 733641497, 265038388, 1277572071) index="1" unique_id=969051143]
-transform = Transform3D(0.99893314, 0.04618241, 2.0186957e-09, -0.046182424, 0.9989328, -4.6616985e-11, -2.0186932e-09, -4.666095e-11, 1.0000008, 0.004263149, 0.0046532783, -0.002900747)
+transform = Transform3D(0.99893314, 0.04618241, 2.0186957e-09, -0.046182424, 0.9989328, -4.661699e-11, -2.0186932e-09, -4.6660942e-11, 1.0000008, 0.004263149, 0.0046532783, -0.002900747)
 
 [node name="Mesita_Noche_L" parent="Cabin_Amueblada/Cabin_Structure/Bedroom" parent_id_path=PackedInt32Array(293068168, 1395123931) index="11" unique_id=183142874 groups=["interactuable"]]
 
