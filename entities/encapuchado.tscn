@@ -2,9 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://bgk30c7t7gn11" path="res://assets/models_3d/Modelo_Encapuchado/Modelo_1/Lantern.fbx" id="1_fpnvc"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_fpnvc"]
+size = Vector3(1, 2.59375, 1)
+
 [node name="Encapuchado" unique_id=1853024495 instance=ExtResource("1_fpnvc")]
 
-[node name="Skeleton3D" parent="Armature_001" parent_id_path=PackedInt32Array(1968746731) index="0" unique_id=1731130924]
+[node name="Skeleton3D" parent="Armature_001" parent_id_path=PackedInt32Array(412473873) index="0" unique_id=1999133614]
 bones/27/rotation = Quaternion(0.115452, 0, 2e-06, 1)
 bones/31/rotation = Quaternion(0.122458, 3.7e-05, 0, 0.993068)
 bones/35/rotation = Quaternion(-0.187925, 0.115561, -0.440896, 0.616402)
@@ -13,3 +16,9 @@ bones/37/rotation = Quaternion(0.078468, -0.884376, 0.152541, 0.985161)
 bones/67/rotation = Quaternion(-0.187922, -0.115558, 0.390896, 0.616403)
 bones/68/rotation = Quaternion(0.51893, -0.028691, -0.003288, 0.973015)
 bones/72/rotation = Quaternion(-0.013432, 1.095573, -0.068295, 0.997559)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=1521517375]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1628520338]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2501183, 0)
+shape = SubResource("BoxShape3D_fpnvc")

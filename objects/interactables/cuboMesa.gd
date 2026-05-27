@@ -94,7 +94,7 @@ func _abrir_ventana() -> void:
 	pista.anchor_right = 1.0
 	pista.anchor_top = 1.0
 	pista.anchor_bottom = 1.0
-	pista.offset_top = -18
+	pista.offset_top = -35
 	pista.offset_bottom = 0
 	pista.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_raiz.add_child(pista)

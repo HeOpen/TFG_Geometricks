@@ -562,6 +562,7 @@ mouse_filter = 2
 
 [node name="Jugador" parent="." unique_id=2146257891 instance=ExtResource("20_jcjsx")]
 transform = Transform3D(-0.5088911, 0, 0.8608309, 0, 1, 0, -0.8608309, 0, -0.5088911, -3.1090908, -0.26503158, 2.4159377)
+can_sprint = false
 
 [node name="TV" parent="." unique_id=2025396337 instance=ExtResource("22_ufbth")]
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, -5.4119687, 1.2873743, 7.5935397)
