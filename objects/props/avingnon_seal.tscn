@@ -2,11 +2,15 @@
 
 [ext_resource type="Texture2D" uid="uid://c1mpvhdmxpkv6" path="res://assets/textures/AvingnonSeal.png" id="1_uu1i4"]
 [ext_resource type="Script" uid="uid://b4xuwt1og2rar" path="res://objects/props/cubo.gd" id="2_0nw8u"]
+[ext_resource type="Script" uid="uid://cquvui2ix5q2t" path="res://objects/props/cuboendgame.gd" id="3_fon6d"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uu1i4"]
 emission_enabled = true
 emission = Color(1, 0, 0, 1)
 emission_energy_multiplier = 3.0
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_0nw8u"]
+data = PackedVector3Array(-0.1, -0.1, 0.1, -0.1, -0.1, -0.1, -0.1, 0.1, -0.1, 0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, 0.1, -0.1, 0.1, -0.1, -0.1, -0.1, -0.1, 0.1, -0.1, -0.1, -0.1, 0.1, -0.1, -0.1, 0.1, 0.1, -0.1, -0.1, 0.1, -0.1, -0.1, 0.1, -0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, -0.1, 0.1, 0.1, -0.1, 0.1, -0.1, -0.1, -0.1, 0.1, 0.1, -0.1, 0.1, 0.1, -0.1, -0.1, 0.1, 0.1, 0.1, 0.1, -0.1, 0.1, -0.1, -0.1, 0.1, 0.1, -0.1, -0.1, 0.1, -0.1, 0.1, 0.1, 0.1, 0.1, 0.1, -0.1, -0.1, 0.1, 0.1, -0.1, -0.1, 0.1, -0.1, -0.1, 0.1, -0.1, 0.1, 0.1, -0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, -0.1, 0.1, -0.1, -0.1)
 
 [node name="AvingnonSeal" type="Node3D" unique_id=1176024472]
 
@@ -22,3 +26,11 @@ material = SubResource("StandardMaterial3D_uu1i4")
 script = ExtResource("2_0nw8u")
 x_speed = 0.0
 z_speed = 0.0
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cubo" unique_id=1511727370]
+transform = Transform3D(0.32845783, 0.37048495, -0.8688247, 0.44872397, 0.7482147, 0.4886937, 0.8311211, -0.5503777, 0.07951152, -0.21318828, -0.43054545, 0.31670403)
+script = ExtResource("3_fon6d")
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Cubo/StaticBody3D" unique_id=1957654570]
+transform = Transform3D(0.5189634, 0.708984, 1.3131714, 0.5853662, 1.1821793, -0.8695969, -1.3727431, 0.7721361, 0.1256282, 0, 0.57543033, 0)
+shape = SubResource("ConcavePolygonShape3D_0nw8u")

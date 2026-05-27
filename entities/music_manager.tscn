@@ -13,13 +13,12 @@
 [ext_resource type="AudioStream" uid="uid://klke1cx0f7r3" path="res://assets/audio/musica/ingame_maternal-heart_sh.wav" id="9_k22kk"]
 [ext_resource type="AudioStream" uid="uid://bs824csrnxdtb" path="res://assets/audio/musica/final_prayer.wav" id="9_qhoy8"]
 [ext_resource type="AudioStream" uid="uid://dox1fi6mgprw2" path="res://assets/audio/musica/ingame_memory-of-the-waters_sh.wav" id="10_qhoy8"]
-[ext_resource type="AudioStream" uid="uid://d1dh2e0ar7mpf" path="res://assets/audio/musica/ingame__SH1_RisingSun.wav" id="13_0fheh"]
 
 [node name="MusicManager" type="Node" unique_id=1454249148]
 script = ExtResource("1_lmks1")
 tema_menu = ExtResource("2_w8w03")
 tema_intro = ExtResource("3_fta8o")
-lista_ambiente = Array[AudioStream]([ExtResource("4_j8sly"), ExtResource("5_xreuq"), ExtResource("5_0m5fy"), ExtResource("6_j8sly"), ExtResource("7_0m5fy"), ExtResource("9_k22kk"), ExtResource("10_qhoy8"), ExtResource("6_ca6j6"), ExtResource("8_k22kk"), ExtResource("13_0fheh")])
+lista_ambiente = Array[AudioStream]([ExtResource("4_j8sly"), ExtResource("5_0m5fy"), ExtResource("6_j8sly"), ExtResource("7_0m5fy"), ExtResource("9_k22kk"), ExtResource("10_qhoy8"), ExtResource("6_ca6j6"), ExtResource("8_k22kk"), ExtResource("5_xreuq")])
 tema_final = ExtResource("9_qhoy8")
 
 [node name="AudioPlayer" type="AudioStreamPlayer" parent="." unique_id=1029260323]

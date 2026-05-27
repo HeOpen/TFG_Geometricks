@@ -118,7 +118,7 @@ editor_only = true
 environment = ExtResource("1_gxhxh")
 
 [node name="Player" parent="." unique_id=2146257891 instance=ExtResource("2_27ww1")]
-transform = Transform3D(-0.99805886, 0.019163722, -0.05925387, 0.019197451, 0.9998162, -2.6793265e-09, 0.05924292, -0.0011375295, -0.99824286, 3.901115, 0.28503752, 6.2275896)
+transform = Transform3D(-0.99805886, 0.019163722, -0.05925387, 0.019197451, 0.9998162, -2.6793265e-09, 0.05924292, -0.0011375295, -0.99824286, -5.4489703, -2.252112, 6.340589)
 
 [node name="OmniLight3D" parent="Player" index="2" unique_id=1038113874]
 light_color = Color(0.9779369, 0.97793704, 0.9779369, 1)
@@ -468,7 +468,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.90803, 0.101139724, 8.9902
 [node name="Nevera" parent="Cabin_Amueblada/Cabin_Structure/Kitchen2" parent_id_path=PackedInt32Array(293068168, 733641497) index="29" unique_id=265038388 groups=["interactuable"]]
 
 [node name="Puerta_Abajo" parent="Cabin_Amueblada/Cabin_Structure/Kitchen2/Nevera/Cuerpo_Nevera" parent_id_path=PackedInt32Array(293068168, 733641497, 265038388, 1277572071) index="1" unique_id=969051143]
-transform = Transform3D(0.99893314, 0.04618241, 2.0186957e-09, -0.046182424, 0.9989328, -4.661713e-11, -2.0186932e-09, -4.6660804e-11, 1.0000008, 0.004263149, 0.0046532783, -0.002900747)
+transform = Transform3D(0.99893314, 0.04618241, 2.0186957e-09, -0.046182424, 0.9989328, -4.661702e-11, -2.0186932e-09, -4.6660915e-11, 1.0000008, 0.004263149, 0.0046532783, -0.002900747)
 
 [node name="Mesita_Noche_L" parent="Cabin_Amueblada/Cabin_Structure/Bedroom" parent_id_path=PackedInt32Array(293068168, 1395123931) index="11" unique_id=183142874 groups=["interactuable"]]
 
@@ -504,8 +504,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07924557, -0.18170786, 3.97
 flip_faces = true
 size = Vector3(16.210571, 4.8473816, 24.234497)
 
-[node name="AvingnonSeal" parent="." unique_id=1176024472 instance=ExtResource("6_kblf1")]
+[node name="AvingnonSeal" parent="." unique_id=1176024472 groups=["interactuable"] instance=ExtResource("6_kblf1")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.18204165, -2.4708228, 3.7709177)
+
+[node name="Cubo" parent="AvingnonSeal" index="1" unique_id=777244558 groups=["interactuable"]]
+
+[node name="StaticBody3D" parent="AvingnonSeal/Cubo" index="0" unique_id=1511727370 groups=["interactuable"]]
 
 [node name="Seal_Center" type="OmniLight3D" parent="AvingnonSeal" unique_id=422133270]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.061466217, 0.08666015, 0.004715085)
@@ -819,5 +823,6 @@ transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1
 [editable path="Cabin_Amueblada/Cabin_Structure/Bedroom"]
 [editable path="Cabin_Amueblada/Cabin_Structure/Bedroom/Mesita_Noche_R"]
 [editable path="Cabin_Amueblada/Wall_Clock"]
+[editable path="AvingnonSeal"]
 [editable path="OpeningDoorAnimation"]
 [editable path="CanvasLayer"]

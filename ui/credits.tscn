@@ -1,0 +1,132 @@
+[gd_scene format=3 uid="uid://cvoywrqsm8ob5"]
+
+[ext_resource type="Script" uid="uid://cf6lqhlvtkf6w" path="res://ui/credits.gd" id="1_orljq"]
+[ext_resource type="FontFile" uid="uid://dcqnyivqqql1t" path="res://assets/fonts/JMH Typewriter.ttf" id="2_74u3g"]
+
+[sub_resource type="Animation" id="Animation_orljq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Creditos:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(35, 197.135)]
+}
+
+[sub_resource type="Animation" id="Animation_1bagf"]
+resource_name = "scroll"
+length = 120.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Creditos:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 120),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(35, 197.135), Vector2(35, -2463.535)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_icdkc"]
+_data = {
+&"RESET": SubResource("Animation_orljq"),
+&"scroll": SubResource("Animation_1bagf")
+}
+
+[node name="Credits" type="Control" unique_id=1538054844]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_orljq")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1003518753]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Creditos" type="Label" parent="." unique_id=1302282189]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 197.135
+offset_right = 297.0
+offset_bottom = 1486.135
+theme_override_fonts/font = ExtResource("2_74u3g")
+theme_override_font_sizes/font_size = 12
+text = "Gracias por jugar nuestra Demo !
+
+* DESARROLLADO POR
+Cubama Studios
+
+* PROGRAMACIÓN Y DISEÑO 2D (EL TABLERO)
+Jose Luis Espadas Gil
+Alejandro Jheremy Zelada de la Rocha
+
+* MODELADO, ENTORNOS Y PROGRAMACIÓN 3D (LA CABAÑA)
+Eliabe Gerson Olah Vilanova
+Elvis Florentin Danciu
+
+* DISEÑO NARRATIVO, GUIÓN Y UX/UI
+Cubama Studios
+
+* TUTOR DEL PROYECTO
+Mario Nuñez Jiménez
+
+* DESARROLLADO EN EL CENTRO
+IES Clara del Rey
+- CURSO -
+CFGS Desarrollo de Aplicaciones Multiplataforma (DAM)
+
+* MOTOR GRÁFICO Y PROGRAMACIÓN
+Godot Engine 4.x (Licencia MIT) GDScript
+
+* HERRAMIENTAS DE DESARROLLO Y ASSETS
+- Modelado 3D: Blender
+- Control de Versiones: GitHub
+- Recursos y Repositorios: Itch.io, Sketchfab
+- Diseño gráfico: GIMP
+
+* BANDA SONORA Y DISEÑO DE AUDIO
+Atmósfera inspirada en las obras de Akira Yamaoka.
+- Tracklist:
+1. Menu - Rain of Brass Petals
+2. Intro - Peace and serenity
+3. Gameplay - Awekaning
+4. Gameplay - Downtime
+5. Gameplay - Follow the Leader
+6. Gameplay - Heads2.
+7. Gameplay - Maternal heart
+8. Gameplay - Memory of the Waters
+9. Gameplay - Moonchild
+10. Gameplay -The start the end
+11. Gameplay 2D - Dance with the wind
+12. Final - Prayer
+13. GameOver - The Ritual
+
+* AGRADECIMIENTOS ESPECIALES
+A Pablo Picasso, por enseñarnos a fracturar la realidad.
+
+A los entusiastas del terror analógico.
+
+Y a ti, por sacrificar tu forma humana en nombre del arte.
+
+Gracias por jugar nuestra Demo !
+ "
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1323217542]
+libraries/ = SubResource("AnimationLibrary_icdkc")
