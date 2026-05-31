@@ -23,11 +23,11 @@ The primary objective is to survive a strict 15-minute time limit by participati
 
 ## Screenshots
 
-* [Sunset_Intro](https://github.com/HeOpen/TFG_Geometricks/blob/main/screenshots/Sunset.png?raw=true)
-* [CRT_VHS](https://github.com/HeOpen/TFG_Geometricks/blob/main/screenshots/CRT_VHS.png?raw=true)
-* [Door_VHS](https://github.com/HeOpen/TFG_Geometricks/blob/main/screenshots/Door_VHS.png?raw=true)
-* [Fruits_VHS](https://github.com/HeOpen/TFG_Geometricks/blob/main/screenshots/Fruits_VHS.png?raw=true)
-* [RedDoor_VHS](https://github.com/HeOpen/TFG_Geometricks/blob/main/screenshots/RedDoor_VHS.png?raw=true)
+![Sunset_Intro](https://raw.githubusercontent.com/HeOpen/TFG_Geometricks/main/screenshots/Sunset.png)
+![CRT_VHS](https://raw.githubusercontent.com/HeOpen/TFG_Geometricks/main/screenshots/CRT_VHS.png)
+![Door_VHS](https://raw.githubusercontent.com/HeOpen/TFG_Geometricks/main/screenshots/Door_VHS.png)
+![Fruits_VHS](https://raw.githubusercontent.com/HeOpen/TFG_Geometricks/main/screenshots/Fruits_VHS.png)
+![RedDoor_VHS](https://raw.githubusercontent.com/HeOpen/TFG_Geometricks/main/screenshots/RedDoor_VHS.png)
 
 ## Installation
 
@@ -174,8 +174,12 @@ Development Team (Cubama Studios):
 > These Copyright-protected materials have been integrated into the source code solely and exclusively under the protection of the **exception of illustration for educational purposes and "Fair Use"**. Cubama Studios does not claim any ownership, right or authorship over these third-party assets, and the repository exists solely as a support and test of the software architecture developed by the students.
 
 © 2026 Cubama Studios. All rights reserved.
-* [CubamaStudios](https://github.com/HeOpen/TFG_Geometricks/blob/main/screenshots/LogoCubama%20(1).png?raw=true)
-* [PSX_Jewel_Case](https://github.com/HeOpen/TFG_Geometricks/blob/main/screenshots/PS1_FullJewelCase.png?raw=true)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/HeOpen/TFG_Geometricks/main/screenshots/LogoCubama%20(1).png" alt="Cubama Studios Logo" width="100" height="100" style="border: 2px solid orange; padding: 5px;">
+</p>
+
+![PSX_Jewel_Case](https://raw.githubusercontent.com/HeOpen/TFG_Geometricks/main/screenshots/PS1_FullJewelCase.png)
 
 The source code, narrative design, and mechanical implementations are the exclusive property of Cubama Studios. Third-party 3D models, textures, and sound effects belong to their respective authors and are utilized under license (refer to the Credits section for detailed attributions).
 
