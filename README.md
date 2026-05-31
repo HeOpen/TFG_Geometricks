@@ -32,24 +32,9 @@ The primary objective is to survive a strict 15-minute time limit by participati
 
 ## Installation
 
+The precompiled binaries are available on the [GitHub Releases page](https://github.com/HeOpen/TFG_Geometricks/releases/latest).
+
 The project is distributed as precompiled binaries and operates as a portable application requiring no system installation.
-
-### Windows Execution
-
-1. Extract `Geometrix_Win_v1.0.zip` to a local drive.
-2. Navigate to the extracted folder.
-3. Execute the `Geometrix.exe` binary.
-
-### Linux Execution
-
-1. Extract `Geometrix_Lin_v1.0.zip` to a local directory.
-2. Open a terminal emulator in that directory.
-3. Grant execution permissions and launch the application:
-
-```bash
-chmod +x Geometrix.x86_64
-./Geometrix.x86_64
-```
 
 ## Gameplay
 
