@@ -1,4 +1,5 @@
 # Geometricks
+![Logo](https://raw.githubusercontent.com/HeOpen/TFG_Geometricks/main/screenshots/logo_Geometrix.png)
 
 Geometricks is a hybrid indie video game that blends 2D puzzles, escape room mechanics, and platforming under an oppressive psychological survival horror atmosphere.
 
