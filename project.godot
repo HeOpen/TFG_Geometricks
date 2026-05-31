@@ -13,7 +13,11 @@ config_version=5
 config/name="Geometrix"
 run/main_scene="uid://dryoqqfdunvm1"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://assets/textures/icon.svg"
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/image="uid://dmyvmqsdfqcjf"
+config/icon="uid://bfd552pyx2x08"
+config/windows_native_icon="res://assets/textures/LogoCubamaWindows.ico"
+boot_splash/minimum_display_time=100
 
 [audio]
 
