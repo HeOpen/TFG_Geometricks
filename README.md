@@ -3,6 +3,25 @@
 
 Geometricks is a hybrid indie video game that blends 2D puzzles, escape room mechanics, and platforming under an oppressive psychological survival horror atmosphere.
 
+## Contents
+
+1. [Overview](#overview)
+2. [Features](#features)
+3. [Screenshots](#screenshots)
+4. [Installation](#installation)
+5. [Gameplay](#gameplay)
+6. [Technologies Used](#technologies-used)
+7. [System Requirements](#system-requirements)
+8. [Controls](#controls)
+9. [Development Process](#development-process)
+10. [Future Improvements](#future-improvements)
+11. [Academic Context](#academic-context)
+12. [Learning Outcomes](#learning-outcomes)
+13. [Credits](#credits)
+14. [License](#license)
+15. [Acknowledgements](#acknowledgements)
+
+    
 ## Overview
 
 * Gameplay Showcase
